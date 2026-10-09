@@ -1,0 +1,101 @@
+/* ============================================================
+   Section: Why This Matters
+   Solid teal band, white text, plain dividers — no cards.
+   ============================================================ */
+
+.why-matters {
+  background: #1e8e96;
+  color: #ffffff;
+  padding-block: 96px;
+}
+
+.why-matters .container {
+  max-width: 1100px;
+}
+
+.why-matters .section-title {
+  color: #ffffff;
+  font-size: 1.9rem;
+  margin: 0 0 0.75rem;
+}
+
+.why-matters > .container > p:first-of-type {
+  max-width: 44rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 2.5rem;
+}
+
+.why-card {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.why-card:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.why-card h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.why-card h3::before {
+  content: '!';
+  color: #f6b95c;
+  font-weight: 800;
+  margin-right: 10px;
+}
+
+.why-card p {
+  margin: 0;
+  max-width: 44rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.why-matters .section-cta {
+  margin-top: 2rem;
+}
+
+.why-matters .section-cta a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.why-matters .section-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 820px) {
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .why-card {
+    padding: 0 0 0 1.75rem;
+    border-top: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .why-card:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-matters {
+    padding-block: 64px;
+  }
+}

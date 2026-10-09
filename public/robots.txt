@@ -1,0 +1,8 @@
+# robots.txt — Women Without Borders Hub
+# Allow all crawlers to index the whole site.
+User-agent: *
+Allow: /
+
+# Sitemap location. Replace YOUR-DOMAIN with the real domain once it is live,
+# e.g. https://yourname.org/sitemap.xml
+Sitemap: https://YOUR-DOMAIN/sitemap.xml

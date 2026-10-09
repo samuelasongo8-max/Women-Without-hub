@@ -1,0 +1,385 @@
+/* Contact form — fills its whole section.
+   NOTE: <section> and <form> share the .contact-form class in Contact.jsx;
+   rules below separate section layout from the form box. Hero, address,
+   map, footer and EmailJS code are untouched.
+   section.contact-form / form.contact-form out-specify the global
+   ".contact-form { display:grid; gap:1rem }" in site.css, so both are
+   switched to block here (no shrink-to-content, no double gaps). */
+
+/* Section wrapper: full-width band, comfortable side padding (mobile-first). */
+section.contact-form {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  background: #f2f2f0;
+  border: 0;
+  border-radius: 0;
+  padding-inline: 16px;
+  padding-block: 2rem;
+}
+
+/* The actual <form> box: full width of the section. */
+form.contact-form {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #f2f2f0;
+  border-radius: 8px;
+  padding: 2rem 1.25rem;
+}
+
+/* Optional inner wrapper (kept in case it is reintroduced). */
+.contact-form__inner {
+  width: 100%;
+  max-width: none;
+}
+
+/* Two-up row (name + email): one column by default, two on tablet/desktop. */
+.contact-form__row--split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.contact-form__field {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  section.contact-form {
+    padding-inline: 48px;
+    padding-block: 3rem;
+  }
+
+  form.contact-form {
+    padding: 3.5rem 4rem;
+  }
+
+  .contact-form__row--split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  section.contact-form {
+    padding-inline: 32px;
+    padding-block: 2.5rem;
+  }
+
+  form.contact-form {
+    padding: 2.5rem;
+  }
+
+  .contact-form__row--split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-form__row {
+  margin-bottom: 1.25rem;
+}
+
+.contact-form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2e8c8c;
+}
+
+.contact-form__input,
+.contact-form__select,
+.contact-form__textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid #f2f2f0;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #1f2430;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.contact-form__input:focus,
+.contact-form__select:focus,
+.contact-form__textarea:focus {
+  outline: 2px solid #2e8c8c;
+  outline-offset: 0;
+  border-color: #2e8c8c;
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+.contact-form__submit {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #f26052;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid #f26052;
+  border-radius: 0;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.contact-form__submit:hover:not(:disabled) {
+  background: #f2865e;
+}
+
+.contact-form__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.contact-form__status {
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.contact-form__status--success {
+  background: #f2f2f0;
+  color: #2e8c8c;
+  border: 1px solid #2e8c8c;
+}
+
+.contact-form__status--error {
+  background: #f2f2f0;
+  color: #f26052;
+  border: 1px solid #f2605e;
+}
+
+/* Responsive: full width on mobile (≤640px) */
+@media (max-width: 640px) {
+  section.contact-form {
+    padding-inline: 16px;
+    padding-block: 2rem;
+  }
+
+  form.contact-form {
+    padding: 2rem 1.25rem;
+  }
+
+  .contact-form__row--split {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form__textarea {
+    min-height: 160px;
+  }
+
+  .contact-form__submit {
+    display: block;
+    width: 100%;
+  }
+}
+/* ============================================================
+   Contact page — hero, address letterhead, and map
+   ============================================================ */
+
+/* ---------- Hero banner ---------- */
+
+.contact-hero {
+  position: relative;
+  min-height: 220px;
+  padding: 48px 100px;
+  background-color: #1b5e5e;
+  background-image: url("Contact us.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: var(--contact-pos, center 30%);
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(14, 50, 50, 0.6) 0%,
+      rgba(14, 50, 50, 0.8) 100%);
+  pointer-events: none;
+}
+
+.contact-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.contact-hero__breadcrumb {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e8f4f4;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-hero__breadcrumb a {
+  color: #e8f4f4;
+  text-decoration: none;
+}
+
+.contact-hero__breadcrumb a:hover,
+.contact-hero__breadcrumb a:focus-visible {
+  color: #fff;
+  outline: 2px solid #f2865e;
+  outline-offset: 2px;
+}
+
+.contact-hero__title {
+  margin: 0 0 1rem 0;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #ffffff;
+}
+
+.contact-hero__intro {
+  margin: 0;
+  max-width: 60ch;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #e8f4f4;
+}
+
+/* ---------- Address letterhead ---------- */
+
+.contact-address {
+  background: #f2f2f0;
+  padding-block: 2.5rem;
+}
+
+.contact-address__block {
+  max-width: 420px;
+  margin-inline: auto;
+  padding-left: 20px;
+  border-left: 3px solid #f2865e;
+  background: #f2f2f0;
+}
+
+.contact-address__heading {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2e8c8c;
+  line-height: 1.2;
+}
+
+.contact-address__lines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-address__line {
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #2b2b2b;
+  font-weight: 400;
+  font-family: 'Cormorant Garamond', 'Lora', Georgia, serif;
+}
+
+.contact-address__line--brand {
+  font-weight: 700;
+}
+
+/* ---------- Map ---------- */
+
+.contact-map {
+  margin-bottom: 0;
+}
+
+.contact-map__text {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-family: 'Cormorant Garamond', 'Lora', Georgia, serif;
+  color: #2b2b2b;
+}
+
+.contact-map__link {
+  display: inline;
+  margin-inline-start: 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2e8c8c;
+  text-decoration: underline;
+}
+
+.contact-map__link:hover,
+.contact-map__link:focus-visible {
+  color: #1b5e5e;
+}
+
+.contact-map__iframe {
+  width: 100%;
+  height: 420px;
+  border: 0;
+  border-radius: 0;
+  display: block;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .contact-hero {
+    min-height: 0;
+    padding: 40px 24px;
+  }
+
+  .contact-hero__title {
+    font-size: 2rem;
+  }
+
+  .contact-hero__intro {
+    font-size: 1rem;
+  }
+
+  .contact-address__block {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 32px 20px;
+  }
+
+  .contact-hero__title {
+    font-size: 1.75rem;
+  }
+
+  .contact-hero__intro {
+    font-size: 0.95rem;
+  }
+
+  .contact-map__iframe {
+    height: 320px;
+  }
+}

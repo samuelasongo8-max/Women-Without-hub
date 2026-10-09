@@ -1,0 +1,133 @@
+/* ============================================================
+   ProgramHero — compact banner for the /programs/:slug/ pages.
+   Palette: brand teal #2E8C8C, bg #F2F2F0, accent gold #F2C572,
+   plus white, black and the dark-teal overlay.
+   All class names start with .program-hero- so they never clash.
+   ============================================================ */
+
+.program-hero {
+  position: relative;
+  /* Fallback colour shown while a photo loads (and for no-image pages
+     it stays hidden behind the gradient). */
+  background-color: #1b5e5e;
+  /* Focus point of the photo; phones override this below. */
+  --hero-pos: center 30%;
+  color: #ffffff;
+  min-height: 260px;
+  padding: 56px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Guard against any horizontal overflow at small widths. */
+  overflow-x: hidden;
+}
+
+/* With a photo: cover, no-repeat, always scroll (never fixed),
+   focused via the --hero-pos variable. */
+.program-hero--has-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: var(--hero-pos);
+}
+
+/* Dark-teal overlay as a gradient layer on top of the photo, so the
+   white text stays easy to read. Sits above the background image. */
+.program-hero--has-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 50, 50, 0.6),
+    rgba(14, 50, 50, 0.8)
+  );
+  pointer-events: none;
+}
+
+/* No photo: a plain teal gradient keeps the same look and sizing. */
+.program-hero--plain {
+  background-image: linear-gradient(135deg, #1b5e5e 0%, #2E8C8C 100%);
+}
+
+/* Content sits above the overlay. */
+.program-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 880px;
+}
+
+/* ---------- Breadcrumb ---------- */
+
+.program-hero__crumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.program-hero__crumb li:not(:last-child)::after {
+  content: '›';
+  margin-left: 0.35rem;
+  color: #F2C572;
+}
+
+.program-hero__crumb a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.program-hero__crumb a:hover {
+  text-decoration: underline;
+}
+
+.program-hero__crumb [aria-current='page'] {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ---------- Heading + intro ---------- */
+
+.program-hero__title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.12;
+  margin: 0 0 0.75rem;
+}
+
+.program-hero__intro {
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 60ch;
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Tablet (under 900px): compact padding, no forced min-height. */
+@media (max-width: 899px) {
+  .program-hero {
+    min-height: 0;
+    padding: 44px 24px;
+  }
+}
+
+/* Phone (under 480px): tighter padding, smaller intro, and shift the
+   photo focus so the main part of each image stays visible. */
+@media (max-width: 479px) {
+  .program-hero {
+    padding: 34px 20px;
+    --hero-pos: 40% center;
+  }
+
+  .program-hero__intro {
+    font-size: 1rem;
+  }
+}

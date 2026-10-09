@@ -1,0 +1,303 @@
+/* ============================================================
+   Page: Get Involved (/get-involved/) — split rows
+   Each involvement card is a split row: image left, info right.
+   Palette: brand teal #2E8C8C, bg #F2F2F0, highlight #F2C572,
+   accents #F2865E / #F26052, plus white, black and gray.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+/* ---------- Header: white background, site-styled text ----------
+   Scoped to this page only so the global .page-header is untouched. */
+
+.getinvolved-page {
+  background: #F2F2F0;
+}
+
+.getinvolved-page .page-header {
+  background: #ffffff;
+  color: #1f2430;
+  padding-bottom: 2.5rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.getinvolved-page .page-header .breadcrumbs a {
+  color: #5b6472;
+}
+
+.getinvolved-page .page-header .breadcrumbs a:hover {
+  color: #2E8C8C;
+}
+
+.getinvolved-page .page-header .breadcrumbs [aria-current='page'] {
+  color: #2E8C8C;
+}
+
+.getinvolved-page .page-header .breadcrumbs li:not(:last-child)::after {
+  color: #5b6472;
+}
+
+.getinvolved-page .page-header h1 {
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #2E8C8C;
+  margin: 1rem 0 0.5rem;
+}
+
+.getinvolved-page .page-intro {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  max-width: 48rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555555;
+  margin: 0;
+}
+
+.getinvolved-split-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+  background: #F2F2F0;
+}
+
+.getinvolved-split-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 360px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Text-only cards grid: 3 per row on desktop. */
+.getinvolved-split-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.getinvolved-split-row--card {
+  grid-template-columns: 1fr;
+  min-height: 0;
+  height: 100%;
+}
+
+.getinvolved-split-row--card .getinvolved-split-panel {
+  padding: 40px 36px;
+}
+
+.getinvolved-split-row--card .getinvolved-split-heading {
+  font-size: 2rem;
+}
+
+.getinvolved-split-row--card .getinvolved-split-divider {
+  width: 100px;
+  margin: 20px 0;
+}
+
+.getinvolved-split-row--card .getinvolved-split-btn {
+  margin-top: 24px;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Image: left half, edge to edge ---------- */
+
+.getinvolved-split-media {
+  position: relative;
+  min-height: 360px;
+}
+
+.getinvolved-split-img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+}
+
+/* Soft fade of the image right edge into the white panel. */
+.getinvolved-split-fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 120px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+  pointer-events: none;
+}
+
+/* ---------- Text: right half, white, vertically centered ---------- */
+
+.getinvolved-split-panel {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 48px 56px;
+}
+
+.getinvolved-split-content {
+  max-width: 560px;
+}
+
+.getinvolved-split-heading {
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #2E8C8C;
+  margin: 0;
+}
+
+.getinvolved-split-divider {
+  display: block;
+  width: 150px;
+  height: 3px;
+  background: #2E8C8C;
+  margin: 28px 0;
+}
+
+.getinvolved-split-body {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 2;
+  color: #555555;
+  margin: 0;
+}
+
+.getinvolved-split-btn {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 12px 28px;
+  border: 2px solid #2E8C8C;
+  border-radius: 0;
+  background: transparent;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2E8C8C;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.getinvolved-split-btn:hover {
+  background: #2E8C8C;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ---------- Detail pages (/get-involved/:slug/) ---------- */
+
+.getinvolved-detail-card {
+  min-height: 0;
+}
+
+.getinvolved-detail-card .getinvolved-split-panel {
+  padding: 48px 56px;
+}
+
+.getinvolved-detail-card .getinvolved-split-heading {
+  font-size: 2.2rem;
+}
+
+.getinvolved-detail-card .getinvolved-split-divider {
+  width: 100px;
+  margin: 20px 0;
+}
+
+.getinvolved-detail-cta {
+  background: #F2C572;
+}
+
+.getinvolved-detail-cta .getinvolved-split-heading,
+.getinvolved-detail-cta .getinvolved-split-body {
+  color: #1f2430;
+}
+
+.getinvolved-detail-cta .getinvolved-split-divider {
+  background: #1f2430;
+}
+
+.getinvolved-split-body a {
+  color: #2E8C8C;
+  font-weight: 600;
+}
+
+.getinvolved-split-body a:hover {
+  color: #1f6f6f;
+}
+
+/* ---------- Tablet: 2 per row ---------- */
+
+@media (max-width: 1100px) and (min-width: 861px) {
+  .getinvolved-split-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Mobile: stack, image on top ---------- */
+
+@media (max-width: 860px) {
+  .getinvolved-split-list {
+    padding: 32px 16px 48px;
+  }
+
+  .getinvolved-split-grid {
+    grid-template-columns: 1fr;
+    margin-top: 24px;
+    gap: 24px;
+  }
+
+  .getinvolved-split-row {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .getinvolved-split-media {
+    min-height: 0;
+    height: 280px;
+    overflow: hidden;
+  }
+
+  .getinvolved-split-img {
+    position: static;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+
+  .getinvolved-split-fade {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+  }
+
+  .getinvolved-split-panel {
+    padding: 32px 24px;
+  }
+
+  .getinvolved-split-heading {
+    font-size: 2.2rem;
+  }
+}

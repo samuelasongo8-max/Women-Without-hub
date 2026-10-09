@@ -1,0 +1,114 @@
+/* ============================================================
+   Our Partners — logo strip, placed directly below Get Involved.
+   Palette: brand teal #2E8C8C, bg #F2F2F0, plus white and gray.
+   Class names are prefixed with .ourpartners- to avoid clashes.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap');
+
+.ourpartners {
+  width: 100%;
+  background: #ffffff;
+  padding: 72px 24px;
+  box-sizing: border-box;
+}
+
+/* Centered content area. */
+.ourpartners__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ourpartners__heading {
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 1.25;
+  color: #2E8C8C;
+  text-align: center;
+  text-transform: none;
+  margin: 0;
+}
+
+.ourpartners__subtitle {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #2b2b2b;
+  text-align: center;
+  margin: 8px 0 40px;
+}
+
+/* Logo strip: six equal slots in one row on desktop. */
+.ourpartners__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* A clear "logo goes here" slot. */
+.ourpartners__slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  height: 80px;
+  padding: 8px;
+  box-sizing: border-box;
+  background: #F2F2F0;
+  border: 2px dashed rgba(46, 140, 140, 0.5);
+  border-radius: 0;
+  color: #6b7777;
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.ourpartners__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* When a real logo image is provided, it fills the slot. */
+.ourpartners__img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.ourpartners__note {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #6b7777;
+  margin: 28px 0 0;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Tablet: 3 columns × 2 rows. */
+@media (max-width: 1023px) {
+  .ourpartners__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Phone: 2 columns × 3 rows, tighter gap and shorter boxes. */
+@media (max-width: 599px) {
+  .ourpartners {
+    padding: 56px 20px;
+  }
+
+  .ourpartners__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .ourpartners__slot {
+    height: 70px;
+  }
+}

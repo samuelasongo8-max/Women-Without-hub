@@ -1,0 +1,189 @@
+{
+  "brand": {
+    "name": "Women Without Borders Hub"
+  },
+  "a11y": {
+    "skipToMain": "Aad nuxurka muhiimka ah",
+    "openMenu": "Fur menu-ga",
+    "closeMenu": "Xir menu-ga",
+    "primaryNav": "Aasaasi",
+    "footerNav": "Footer",
+    "logoLink": "Women Without Borders Hub, home",
+    "routesTrailingSlash": "Fiiro gaar ah: waddooyinka waxay isticmaalaan barta dhammaadka (tusaale"
+  },
+  "nav": {
+    "home": "Bogga Hore",
+    "about": "Nagu saabsan",
+    "programs": "Barnaamijyada",
+    "impact": "Saameynta",
+    "getInvolved": "Ku soo biir",
+    "resources": "Kheyraadka",
+    "contact": "Xiriir",
+    "donate": "Deeq",
+    "ourStory": "Sheekadeenna",
+    "ourTeam": "Kooxdayada",
+    "news": "Wararka",
+    "blogs": "Qoraalo",
+    "report": "Warbixin",
+    "expandSub": "Ballaadhi menu-ga hoose {{label}}",
+    "collapseSub": "Laab menu-ga hoose {{label}}"
+  },
+  "lang": {
+    "label": "Dooro luuqadda",
+    "current": "Luuqadda hadda: {{lang}}",
+    "menu": "Dooro luuqad"
+  },
+  "common": {
+    "learnMore": "Wax badan baro",
+    "readMore": "Akhri dheeraad",
+    "allStoriesAndNews": "Dhammaan sheekooyinka iyo wararka",
+    "storiesAndNews": "Sheekooyinka iyo Wararka",
+    "willBeUpdatedSoon": "Waxaa la cusbooneysiin doonaa",
+    "photoComingSoon": "Sawirka waa la soo socdaa",
+    "underDevelopment": "Horumar ku socda",
+    "partnerLogosSoon": "Logooyinka lammaanayaasha waa horumar ku socda.",
+    "partnerLogo": "Logo lammaane",
+    "viewAll": "Arag dhammaan",
+    "readStory": "Akhri sheekada"
+  },
+  "breadcrumb": {
+    "home": "Bogga Hore",
+    "about": "Nagu saabsan",
+    "ourTeam": "Kooxdayada",
+    "ourStory": "Sheekadeenna",
+    "programs": "Barnaamijyada",
+    "impact": "Saameynta",
+    "getInvolved": "Ku soo biir",
+    "resources": "Kheyraadka",
+    "safeguarding": "Ilaalinta",
+    "contact": "Xiriir",
+    "communityUpdates": "Cusbooneysiinta Bulshada iyo Sheekooyinka",
+    "news": "Wararka",
+    "blogs": "Qoraalo",
+    "report": "Warbixin",
+    "post": "Qoraal"
+  },
+  "footer": {
+    "stayInTouch": "La xiriir",
+    "emailAddress": "Cinwaanka Email-ka",
+    "firstName": "Magaca koowaad",
+    "required": "loo baahan yahay",
+    "subscribe": "Is-diiwaangeli",
+    "subscribing": "Waa la diiwaangelinayaa…",
+    "thankYou": "Mahadsanid! Waad la diiwaangashan tahay.",
+    "errorGeneric": "Waan ka xunnahay, wax baa khaldan. Fadlan isku day mar kale.",
+    "errFirstName": "Fadlan geli magacaaga koowaad.",
+    "errEmail": "Fadlan geli cinwaanka email-kaaga.",
+    "errEmailInvalid": "Fadlan geli cinwaan email oo sax ah.",
+    "about": "Urur bulsho ku salaysan oo ku yaal Kakuma, Degmada Turkana, Kenya, oo abuurayo fursado gabdho nugul, hooyooyin dhalinyaro ah iyo dumar dhalinyaro ah adigoo ku saabsan waxbarasho, xirfado, hagid, caafimaad iyo awood-dhalin dhaqaale.",
+    "explore": "Baadh",
+    "getInvolved": "Ku soo biir",
+    "trustLegal": "Kalsooni & Sharci",
+    "volunteer": "Kaalmeyn",
+    "membership": "Xubinimo",
+    "mentor": "Hagid",
+    "partner": "Lammaane",
+    "safeguarding": "Ilaalinta",
+    "resources": "Kheyraadka",
+    "contact": "Xiriir",
+    "rightsReserved": "Dhammaan xuquuqaha way xafidan yihiin."
+  },
+  "contact": {
+    "title": "Xiriir",
+    "intro": "Su'aalo ka yimaada deeqda bixiyayaal, ururada horumarinta, NGO-oyinka, la-hawlgalayaasha bulshada, dugsiga, hay'adaha tababarka, la-hawlgalayaasha caafimaadka, tababarayaal, ama warbaahinta — waxaan jeclaan lahayn inaan ka maqallo.",
+    "name": "Magaca oo buuxan",
+    "namePlaceholder": "Magacaaga buuxa",
+    "email": "Email",
+    "subject": "Mawduuca",
+    "subjectPlaceholder": "Dooro mawduuc",
+    "subjectDonor": "Deeq bixiye",
+    "subjectDevelopmentOrg": "Urur horumarineed",
+    "subjectNgo": "NGO",
+    "subjectCommunityPartner": "Lammaane bulsho",
+    "subjectSchool": "Dugsi ama hay'ad waxbarasho",
+    "subjectHealthPartner": "Lammaane caafimaad",
+    "subjectVolunteer": "Kaalmeyn",
+    "subjectPress": "Warbaahin",
+    "subjectOther": "Kale",
+    "message": "Farriinta",
+    "messagePlaceholder": "Halkan ku qor farriintaada...",
+    "send": "Dir farriinta",
+    "sending": "Waa la dirayaa…",
+    "errName": "Fadlan geli magacaaga.",
+    "errEmail": "Fadlan geli cinwaan email oo sax ah.",
+    "errSubject": "Fadlan dooro mawduuc.",
+    "errMessage": "Farriinta waa inuu ka koobnaadaa ugu yaraan 10 xaraf.",
+    "successContact": "Mahadsanid inaad la xiriirtay Women Without Borders Hub! Farriintaada waa la direy si guul leh. Kooxdayada ayaa eegaysa codsigaaga waxayna kaa jawaabaysa 24 ilaa 48 saacadood gudahood. Arrimaha degdega ah, fadlan nagu soo wac +254 784 062 882.",
+    "errorSend": "Waan ka xunnahay, farriintaada lama diri karin. Fadlan isku day mar kale ama nagu soo email.",
+    "formHeading": "Noo soo dir fariin",
+    "addressHeading": "Cinwaankayaga",
+    "mapText": "Naga na soo hel Kakuma, Degmada Turkana.",
+    "mapLink": "Ku fur Google Maps"
+  },
+  "notFound": {
+    "title": "Bogga lama helin",
+    "message": "Waan ka xunnahay, bogga aad raadineysid ma jiro ama waa la raray.",
+    "backHome": "Ku noqo Bogga Hore"
+  },
+  "programs": {
+    "title": "Barnaamijyada",
+    "intro": "Sahami barnaamijyada ku socda gabdho nugul, hooyooyin dhalinyaro ah iyo haweenka dhallinyarada ah ee Kakuma.",
+    "howItWorks": "Sida ay u shaqeyso",
+    "readyTitle": "Diyaar ma u tahay inaad qaadato tallaabada xigta?",
+    "thankYouInterest": "Mahadsanid xiisahaaga {{title}}. Kooxdayada waxay jeclaan lahayd inay kula xiriirto ayna kaa wadaagto sida aad qaadi karto tallaabada xigta.",
+    "reachUs": "Haddii aad su'aalo qabto, nala soo xiriir:",
+    "emailUs": "Nagu soo email",
+    "callUs": "Nagu soo wac",
+    "donate": "Deeq"
+  },
+  "getInvolved": {
+    "title": "Ku soo biir",
+    "intro": "Waxaa jira dhowr habood lagu taageeri karo haweenka iyo gabdhaha — bixi, kaalmeyn, hagid, ku biir ama lammaano.",
+    "howItWorks": "Sida ay u shaqeyso",
+    "readyTitle": "Diyaar ma u tahay inaad qaadato tallaabada xigta?",
+    "thankYouInterest": "Mahadsanid xiisahaaga {{title}}. Kooxdayada waxay jeclaan lahayd inay kula xiriirto ayna kaa wadaagto sida aad qaadi karto tallaabada xigta.",
+    "reachUs": "Haddii aad su'aalo qabto, nala soo xiriir:",
+    "emailUs": "Nagu soo email",
+    "callUs": "Nagu soo wac"
+  },
+  "impactSectionPages": {
+    "post": {
+      "intro": "Sheekooyin, ogeysiisyo iyo muhiimad shaqadeena Kakuma."
+    },
+    "blogs": {
+      "intro": "Fikro ka yimid kooxdayada, haggaayaasha iyo haweenka iyo gabdhaha aan la shaqeyno."
+    },
+    "report": {
+      "intro": "Natiijooyinka, gaarsiinta iyo sida aan u cabbiro isbedelka barnaamijyadayada."
+    }
+  },
+  "updates": {
+    "title": "Cusbooneysiinta Bulshada iyo Sheekooyinka",
+    "intro": "Sheekooyin, ogeysiisyo iyo muhiimad shaqadeena bulshada Kakuma."
+  },
+  "news": {
+    "title": "Wararka",
+    "intro": "Wararka iyo ogeysiisyada ugu dambeeyay ee Women Without Borders Hub."
+  },
+  "resources": {
+    "title": "Kheyraadka",
+    "intro": "Warbixiyo, agabyo iyo hagidda shaqadeena — lacag la'aan ayaad ku soo dejisan kartaa aadna ku celin kartaa."
+  },
+  "about": {
+    "title": "Nagu saabsan",
+    "ourTeam": {
+      "title": "Kooxdayada",
+      "intro": "Kulal dadka ka dambeeya Women Without Borders Hub.",
+      "getInvolved": "Ku soo biir"
+    }
+  },
+  "ourStory": {
+    "whatWeDo": "Waxaan Sameyno",
+    "donate": "Deeq",
+    "contactUs": "Nala soo xiriir"
+  },
+  "safeguarding": {
+    "title": "Ilaalinta",
+    "intro": "Ballanqaadkeenna amniga, sharafta iyo ilaalinta gabar kasta iyo haweeneyba aan adeegno."
+  }
+}

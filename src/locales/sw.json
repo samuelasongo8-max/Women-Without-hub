@@ -1,0 +1,189 @@
+{
+  "brand": {
+    "name": "Women Without Borders Hub"
+  },
+  "a11y": {
+    "skipToMain": "Rukia maudhui kuu",
+    "openMenu": "Fungua menyu",
+    "closeMenu": "Funga menyu",
+    "primaryNav": "Urambazaji mkuu",
+    "footerNav": "Urambazaji wa chini",
+    "logoLink": "Women Without Borders Hub, mwanzo",
+    "routesTrailingSlash": "Kumbuka: njia hutumia alama ya mwisho ya slash (mfano"
+  },
+  "nav": {
+    "home": "Mwanzo",
+    "about": "Kutuhusu",
+    "programs": "Programu",
+    "impact": "Athari",
+    "getInvolved": "Shiriki",
+    "resources": "Rasilimali",
+    "contact": "Mawasiliano",
+    "donate": "Changia",
+    "ourStory": "Hadithi Yetu",
+    "ourTeam": "Timu Yetu",
+    "news": "Habari",
+    "blogs": "Blogu",
+    "report": "Ripoti",
+    "expandSub": "Panua menyu ndogo ya {{label}}",
+    "collapseSub": "Kunja menyu ndogo ya {{label}}"
+  },
+  "lang": {
+    "label": "Chagua lugha",
+    "current": "Lugha ya sasa: {{lang}}",
+    "menu": "Chagua lugha"
+  },
+  "common": {
+    "learnMore": "Jifunze zaidi",
+    "readMore": "Soma zaidi",
+    "allStoriesAndNews": "Hadithi na habari zote",
+    "storiesAndNews": "Hadithi na Habari",
+    "willBeUpdatedSoon": "Itasasishwa hivi karibuni",
+    "photoComingSoon": "Picha inakuja hivi karibuni",
+    "underDevelopment": "Inaendelea kutengenezwa",
+    "partnerLogosSoon": "Nembo za washiriki zinatengenezwa.",
+    "partnerLogo": "Nembo ya mshiriki",
+    "viewAll": "Ona zote",
+    "readStory": "Soma hadithi"
+  },
+  "breadcrumb": {
+    "home": "Mwanzo",
+    "about": "Kuhusu",
+    "ourTeam": "Timu Yetu",
+    "ourStory": "Hadithi Yetu",
+    "programs": "Programu",
+    "impact": "Athari",
+    "getInvolved": "Shiriki",
+    "resources": "Rasilimali",
+    "safeguarding": "Ulinzi",
+    "contact": "Mawasiliano",
+    "communityUpdates": "Masasisho ya Jamii na Hadithi",
+    "news": "Habari",
+    "blogs": "Blogu",
+    "report": "Ripoti",
+    "post": "Chapisho"
+  },
+  "footer": {
+    "stayInTouch": "Wasiliana nasi",
+    "emailAddress": "Anwani ya Barua Pepe",
+    "firstName": "Jina la Kwanza",
+    "required": "inahitajika",
+    "subscribe": "Jiandikishe",
+    "subscribing": "Inaandikisha…",
+    "thankYou": "Asante! Umejiandikisha.",
+    "errorGeneric": "Samahani, kuna tatizo. Tafadhali jaribu tena.",
+    "errFirstName": "Tafadhali andika jina lako la kwanza.",
+    "errEmail": "Tafadhali andika anwani yako ya barua pepe.",
+    "errEmailInvalid": "Tafadhali andika anwani sahihi ya barua pepe.",
+    "about": "Shirika linaloendeshwa na jamii katika Kakuma, Kaunti ya Turkana, Kenya, linalotoa fursa kwa wasichana wenye uhatarishi, mama vijana na wanawake vijana kupitia elimu, ujuzi, uongozi, afya na uwezeshaji wa kiuchumi.",
+    "explore": "Gundua",
+    "getInvolved": "Shiriki",
+    "trustLegal": "Uaminifu na Kisheria",
+    "volunteer": "Kujitolea",
+    "membership": "Uanachama",
+    "mentor": "Ushauri",
+    "partner": "Ushirikiano",
+    "safeguarding": "Ulinzi",
+    "resources": "Rasilimali",
+    "contact": "Mawasiliano",
+    "rightsReserved": "Haki zote zimehifadhiwa."
+  },
+  "contact": {
+    "title": "Mawasiliano",
+    "intro": "Maswali kutoka kwa wafadhili, mashirika ya maendeleo, NGO, washirika wa jamii, shule, taasisi za mafunzo, washirika wa afya, wajitoleaji au vyombo vya habari — tungefurahi kusikia kutoka kwako.",
+    "name": "Jina kamili",
+    "namePlaceholder": "Jina lako kamili",
+    "email": "Barua pepe",
+    "subject": "Mada",
+    "subjectPlaceholder": "Chagua mada",
+    "subjectDonor": "Mfadhili",
+    "subjectDevelopmentOrg": "Shirika la maendeleo",
+    "subjectNgo": "NGO",
+    "subjectCommunityPartner": "Mshiriki wa jamii",
+    "subjectSchool": "Shule au taasisi ya mafunzo",
+    "subjectHealthPartner": "Mshiriki wa afya",
+    "subjectVolunteer": "Kujitolea",
+    "subjectPress": "Vyombo vya habari",
+    "subjectOther": "Nyingine",
+    "message": "Ujumbe",
+    "messagePlaceholder": "Andika ujumbe wako hapa...",
+    "send": "Tuma ujumbe",
+    "sending": "Inatuma…",
+    "errName": "Tafadhali andika jina lako.",
+    "errEmail": "Tafadhali andika anwani sahihi ya barua pepe.",
+    "errSubject": "Tafadhali chagua mada.",
+    "errMessage": "Ujumbe lazima uwe na herufi angalau 10.",
+    "successContact": "Asante kwa mawasiliano na Women Without Borders Hub! Ujumbe wako umetumwa kikamilifu. Timu yetu itakagua na kujibu ndani ya saa 24 hadi 48. Kwa masuala ya haraka, tafadhali tupigie moja kwa moja kwa +254 784 062 882.",
+    "errorSend": "Samahani, ujumbe wako haukuweza kutumwa. Tafadhali jaribu tena au tutumie barua pepe moja kwa moja.",
+    "formHeading": "Tutumie ujumbe",
+    "addressHeading": "Anwani yetu",
+    "mapText": "Tupate Kakuma, Kaunti ya Turkana.",
+    "mapLink": "Fungua kwenye Google Maps"
+  },
+  "notFound": {
+    "title": "Ukurasa haujapatikana",
+    "message": "Samahani, ukurasa unaoutafuta haupo au umehamishwa.",
+    "backHome": "Rudi Mwanzo"
+  },
+  "programs": {
+    "title": "Programu",
+    "intro": "Gundua programu zinazotembea na wasichana wenye uhatarishi, mama vijana na wanawake vijana katika Kakuma.",
+    "howItWorks": "Jinsi inavyofanya kazi",
+    "readyTitle": "Uko tayari kuchukua hatua inayofuata?",
+    "thankYouInterest": "Asante kwa nia yako katika {{title}}. Timu yetu ingependa kuwasiliana nawe na kushirikiana jinsi unavyoweza kuchukua hatua inayofuata.",
+    "reachUs": "Kama una maswali yoyote, jisikie huru kuwasiliana nasi:",
+    "emailUs": "Tutumie barua pepe",
+    "callUs": "Tupigie simu",
+    "donate": "Changia"
+  },
+  "getInvolved": {
+    "title": "Shiriki",
+    "intro": "Kuna njia nyingi za kusimama na wanawake na wasichana — toa, jitolee, shauri, jiunge au shirikiana.",
+    "howItWorks": "Jinsi inavyofanya kazi",
+    "readyTitle": "Uko tayari kuchukua hatua inayofuata?",
+    "thankYouInterest": "Asante kwa nia yako katika {{title}}. Timu yetu ingependa kuwasiliana nawe na kushirikiana jinsi unavyoweza kuchukua hatua inayofuata.",
+    "reachUs": "Kama una maswali yoyote, jisikie huru kuwasiliana nasi:",
+    "emailUs": "Tutumie barua pepe",
+    "callUs": "Tupigie simu"
+  },
+  "impactSectionPages": {
+    "post": {
+      "intro": "Hadithi, matangazo na mambo ya kuvutia kutoka kazi yetu katika Kakuma."
+    },
+    "blogs": {
+      "intro": "Tafakari kutoka timu yetu, washauri na wanawake na wasichana tunaofanya kazi nao."
+    },
+    "report": {
+      "intro": "Matokeo, ufikiaji na jinsi tunavyopima mabadiliko katika programu zetu."
+    }
+  },
+  "updates": {
+    "title": "Masasisho ya Jamii na Hadithi",
+    "intro": "Hadithi, matangazo na mambo ya kuvutia kutoka kazi yetu na jamii katika Kakuma."
+  },
+  "news": {
+    "title": "Habari",
+    "intro": "Habari na matangazo ya hivi karibuni kutoka Women Without Borders Hub."
+  },
+  "resources": {
+    "title": "Rasilimali",
+    "intro": "Ripoti, zana na miongozo kutoka kazi yetu — bure kupakua na kutumia tena."
+  },
+  "about": {
+    "title": "Kutuhusu",
+    "ourTeam": {
+      "title": "Timu Yetu",
+      "intro": "Kutana na watu wanaojenga Women Without Borders Hub.",
+      "getInvolved": "Shiriki"
+    }
+  },
+  "ourStory": {
+    "whatWeDo": "Tunachofanya",
+    "donate": "Changia",
+    "contactUs": "Wasiliana Nasi"
+  },
+  "safeguarding": {
+    "title": "Ulinzi",
+    "intro": "Kujitolea kwetu kwa usalama, heshima na ulinzi wa kila msichana na mwanamke tunayehudumia."
+  }
+}

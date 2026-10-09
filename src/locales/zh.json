@@ -1,0 +1,189 @@
+{
+  "brand": {
+    "name": "Women Without Borders Hub"
+  },
+  "a11y": {
+    "skipToMain": "跳到主要内容",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "primaryNav": "主导航",
+    "footerNav": "页脚",
+    "logoLink": "Women Without Borders Hub, home",
+    "routesTrailingSlash": "注意：路由以结尾斜杠匹配（例如"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "programs": "项目",
+    "impact": "影响力",
+    "getInvolved": "参与",
+    "resources": "资源",
+    "contact": "联系",
+    "donate": "捐赠",
+    "ourStory": "我们的故事",
+    "ourTeam": "我们的团队",
+    "news": "新闻",
+    "blogs": "博客",
+    "report": "报告",
+    "expandSub": "展开{{label}}子菜单",
+    "collapseSub": "收起{{label}}子菜单"
+  },
+  "lang": {
+    "label": "选择语言",
+    "current": "当前语言：{{lang}}",
+    "menu": "选择一种语言"
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "readMore": "阅读更多",
+    "allStoriesAndNews": "所有故事与新闻",
+    "storiesAndNews": "故事与新闻",
+    "willBeUpdatedSoon": "即将更新",
+    "photoComingSoon": "照片即将提供",
+    "underDevelopment": "开发中",
+    "partnerLogosSoon": "合作伙伴标志正在开发中。",
+    "partnerLogo": "合作伙伴标志",
+    "viewAll": "查看全部",
+    "readStory": "阅读故事"
+  },
+  "breadcrumb": {
+    "home": "首页",
+    "about": "关于",
+    "ourTeam": "我们的团队",
+    "ourStory": "我们的故事",
+    "programs": "项目",
+    "impact": "影响力",
+    "getInvolved": "参与",
+    "resources": "资源",
+    "safeguarding": "保护",
+    "contact": "联系",
+    "communityUpdates": "社区动态与故事",
+    "news": "新闻",
+    "blogs": "博客",
+    "report": "报告",
+    "post": "文章"
+  },
+  "footer": {
+    "stayInTouch": "保持联系",
+    "emailAddress": "电子邮箱地址",
+    "firstName": "名字",
+    "required": "必填",
+    "subscribe": "订阅",
+    "subscribing": "正在订阅…",
+    "thankYou": "谢谢！您已订阅。",
+    "errorGeneric": "抱歉，出现了一些问题。请重试。",
+    "errFirstName": "请输入您的名字。",
+    "errEmail": "请输入您的电子邮箱地址。",
+    "errEmailInvalid": "请输入有效的电子邮箱地址。",
+    "about": "一家位于肯尼亚图尔卡纳县卡库马的社区主导组织，通过教育、技能、指导、健康和经济赋权为弱势女童、少女母亲和年轻女性创造机会。",
+    "explore": "探索",
+    "getInvolved": "参与",
+    "trustLegal": "信任与法律",
+    "volunteer": "志愿者",
+    "membership": "会员",
+    "mentor": "指导",
+    "partner": "合作伙伴",
+    "safeguarding": "保护",
+    "resources": "资源",
+    "contact": "联系",
+    "rightsReserved": "版权所有。"
+  },
+  "contact": {
+    "title": "联系",
+    "intro": "来自捐赠者、发展组织、非政府组织、社区伙伴、学校、培训机构、健康伙伴、志愿者或媒体的问题——我们很乐意听到您的声音。",
+    "name": "全名",
+    "namePlaceholder": "您的全名",
+    "email": "电子邮箱",
+    "subject": "主题",
+    "subjectPlaceholder": "选择一个主题",
+    "subjectDonor": "捐赠者",
+    "subjectDevelopmentOrg": "发展组织",
+    "subjectNgo": "非政府组织",
+    "subjectCommunityPartner": "社区合作伙伴",
+    "subjectSchool": "学校或培训机构",
+    "subjectHealthPartner": "健康合作伙伴",
+    "subjectVolunteer": "志愿者",
+    "subjectPress": "媒体",
+    "subjectOther": "其他",
+    "message": "留言",
+    "messagePlaceholder": "在此写下您的留言...",
+    "send": "发送留言",
+    "sending": "正在发送…",
+    "errName": "请输入您的姓名。",
+    "errEmail": "请输入有效的电子邮箱地址。",
+    "errSubject": "请选择一个主题。",
+    "errMessage": "留言至少需要10个字符。",
+    "successContact": "感谢您联系 Women Without Borders Hub！您的留言已成功发送。我们的团队将在24至48小时内回复您的咨询。如有紧急事项，请直接致电我们：+254 784 062 882。",
+    "errorSend": "抱歉，您的留言无法发送。请重试或直接给我们发邮件。",
+    "formHeading": "给我们留言",
+    "addressHeading": "我们的地址",
+    "mapText": "在卡库马、图尔卡纳县找到我们。",
+    "mapLink": "在 Google 地图中打开"
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "message": "抱歉，您访问的页面不存在或已被移动。",
+    "backHome": "返回首页"
+  },
+  "programs": {
+    "title": "项目",
+    "intro": "探索那些与卡库马的弱势女童、少女母亲和年轻女性同行的项目。",
+    "howItWorks": "运作方式",
+    "readyTitle": "准备好迈出下一步了吗？",
+    "thankYouInterest": "感谢您对{{title}}的关注。我们的团队很乐意与您联系，分享您可以采取的下一步。",
+    "reachUs": "如有任何疑问，请随时联系我们：",
+    "emailUs": "发邮件给我们",
+    "callUs": "致电我们",
+    "donate": "捐赠"
+  },
+  "getInvolved": {
+    "title": "参与",
+    "intro": "有很多方式可以与女性站在一起——捐赠、志愿服务、指导、加入或合作。",
+    "howItWorks": "运作方式",
+    "readyTitle": "准备好迈出下一步了吗？",
+    "thankYouInterest": "感谢您对{{title}}的关注。我们的团队很乐意与您联系，分享您可以采取的下一步。",
+    "reachUs": "如有任何疑问，请随时联系我们：",
+    "emailUs": "发邮件给我们",
+    "callUs": "致电我们"
+  },
+  "impactSectionPages": {
+    "post": {
+      "intro": "来自我们在卡库马工作的故事、公告和亮点。"
+    },
+    "blogs": {
+      "intro": "来自我们团队、导师以及与我们合作的女性与女童的反思。"
+    },
+    "report": {
+      "intro": "成果、覆盖范围以及我们如何衡量各项目带来的变化。"
+    }
+  },
+  "updates": {
+    "title": "社区动态与故事",
+    "intro": "来自我们与卡库马社区合作的故事、公告和亮点。"
+  },
+  "news": {
+    "title": "新闻",
+    "intro": "来自 Women Without Borders Hub 的最新新闻和公告。"
+  },
+  "resources": {
+    "title": "资源",
+    "intro": "来自我们工作的报告、工具包和指南——可免费下载和复用。"
+  },
+  "about": {
+    "title": "关于",
+    "ourTeam": {
+      "title": "我们的团队",
+      "intro": "认识 Women Without Borders Hub 背后的人们。",
+      "getInvolved": "参与"
+    }
+  },
+  "ourStory": {
+    "whatWeDo": "我们做什么",
+    "donate": "捐赠",
+    "contactUs": "联系我们"
+  },
+  "safeguarding": {
+    "title": "保护",
+    "intro": "我们对所服务的每一位女童和女性的安全、尊严和保护的承诺。"
+  }
+}

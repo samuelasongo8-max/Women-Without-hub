@@ -1,0 +1,104 @@
+/* ============================================================
+   Section: Our Programs (coloured-icon strip)
+   ============================================================ */
+
+.home-programs {
+  background: white;
+  color: #2b3f42;
+  padding: 3.5rem 0 3rem;
+}
+
+/* ---------- Head ---------- */
+
+.home-programs h2 {
+  color: #1e8e96;
+  font-weight: 700;
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin: 0 0 1.5rem;
+}
+
+.home-programs .section-intro {
+  max-width: 46rem;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+/* ---------- Grid ---------- */
+
+.home-programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2.25rem;
+}
+
+/* ---------- Program cell ---------- */
+
+.home-program {
+  text-align: center;
+  padding: 0.5rem 1.75rem;
+  border-left: 1px solid #d9d8d4;
+}
+
+.home-program:nth-child(3n + 1) {
+  border-left: 0;
+}
+
+.home-program-icon {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 0.5rem;
+}
+
+.home-program h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.home-program h3 a {
+  color: #1e8e96;
+  text-decoration: none;
+}
+
+.home-program h3 a:hover {
+  text-decoration: underline;
+}
+
+.home-program p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #2b3f42;
+  margin: 0 0 0.75rem;
+}
+
+.home-program-link {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #ef6f52;
+  text-decoration: none;
+}
+
+.home-program-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .home-programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-program {
+    border-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-programs-grid {
+    grid-template-columns: 1fr;
+  }
+}

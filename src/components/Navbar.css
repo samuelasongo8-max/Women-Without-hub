@@ -1,0 +1,383 @@
+/* ============================================================
+   Component: Navbar (auvd-)
+   Teal bar, white text, image logo, EN/FR switcher.
+   ============================================================ */
+
+.auvd-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: #1e8e96;
+}
+
+.auvd-header-inner {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 0 32px;
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ---------- Logo ---------- */
+
+.auvd-brand {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  text-decoration: none;
+}
+
+.auvd-brand-logo {
+  display: block;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 4px;
+}
+
+/* ---------- Hamburger (desktop hidden) ---------- */
+
+.auvd-nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: 0;
+  padding: 0.6rem;
+  margin: 0 0 0 auto;
+  cursor: pointer;
+}
+
+.auvd-nav-toggle-bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #ffffff;
+}
+
+/* ---------- Nav layout ---------- */
+
+.auvd-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+.auvd-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.auvd-nav-list > li {
+  position: relative;
+}
+
+/* ---------- Links: white, thin white underline ---------- */
+
+.auvd-nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.auvd-nav-link:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.auvd-nav-link.is-active {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.auvd-nav-link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.auvd-nav-parent-link .auvd-nav-chevron {
+  margin-left: 0.35rem;
+  font-size: 0.75em;
+  line-height: 1;
+}
+
+.auvd-nav-sub-toggle {
+  display: none;
+}
+
+/* ---------- Dropdown panel ---------- */
+/* Off-white panel with teal text (deliberately NOT the bar's teal/white).
+   `.auvd-nav-list > li` is position: relative, so this anchors to the
+   "Impact" item at top: 100%; left: 0, above the page hero. */
+
+.auvd-nav-sub {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #f2f2f0;
+  border: 1px solid #2e8c8c;
+  border-radius: 0;
+  z-index: 80;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease,
+    visibility 0s linear 0.15s;
+}
+
+/* Invisible bridge filling the 8px above the panel: the pointer stays
+   "inside" while travelling from the link down into the dropdown, so
+   there is no dead gap and it never flickers shut. */
+.auvd-nav-sub::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+/* Open on hover (desktop), on keyboard focus, or from the JS state
+   used by the mobile arrow toggle. focus-within makes the panel
+   visible as soon as "Impact" is focused, so Tab can reach the links. */
+.auvd-nav-item--has-sub:hover .auvd-nav-sub,
+.auvd-nav-item--has-sub:focus-within .auvd-nav-sub,
+.auvd-nav-item--has-sub.is-open .auvd-nav-sub {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.auvd-nav-sub-link {
+  display: block;
+  padding: 12px 18px;
+  color: #2e8c8c;
+  font-size: 0.92rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+
+.auvd-nav-sub-link:hover,
+.auvd-nav-sub-link:focus {
+  background: #f2c572;
+  color: #2e8c8c; /* text stays dark */
+  border-left-color: #f2865e;
+}
+
+/* Current sub page (e.g. /impact/news/ while on the News page). */
+.auvd-nav-sub-link.is-active {
+  background: #2e8c8c;
+  color: #ffffff;
+  border-left-color: #f2c572;
+}
+
+/* ---------- Language switcher (after Contact) ---------- */
+
+.auvd-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: none;
+}
+
+.auvd-lang-btn {
+  background: none;
+  border: 0;
+  padding: 0.3rem 0.2rem;
+  margin: 0;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.auvd-lang-btn.is-active {
+  opacity: 1;
+  font-weight: 700;
+  border-bottom: 2px solid #ffffff;
+}
+
+.auvd-lang-sep {
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+/* ---------- Donate button ---------- */
+
+.auvd-donate-btn {
+  display: inline-block;
+  flex: none;
+  background: #f6b95c;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border: 0;
+  border-radius: 0;
+  padding: 12px 28px;
+}
+
+.auvd-donate-btn:hover,
+.auvd-donate-btn:focus-visible {
+  background: #e9a93f;
+  color: #ffffff;
+}
+
+/* ---------- Responsive: hamburger below 1000px ---------- */
+
+@media (max-width: 1000px) {
+  .auvd-header-inner {
+    flex-wrap: wrap;
+    padding: 0 20px;
+    min-height: 70px;
+  }
+
+  .auvd-brand-logo {
+    width: 54px;
+    height: 54px;
+  }
+
+  .auvd-nav-toggle {
+    display: flex;
+  }
+
+  .auvd-nav {
+    display: none;
+    flex: 1 1 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-left: 0;
+    padding-bottom: 1.25rem;
+  }
+
+  .auvd-nav.is-open {
+    display: flex;
+  }
+
+  .auvd-nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 0.5rem 0 1rem;
+  }
+
+  .auvd-nav-link {
+    display: block;
+    padding: 0.25rem 0;
+  }
+
+  .auvd-nav-item--has-sub {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .auvd-nav-item--has-sub > .auvd-nav-link {
+    flex: 1 1 auto;
+  }
+
+  .auvd-nav-sub-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  .auvd-nav-item--has-sub.is-open .auvd-nav-sub-toggle .auvd-nav-chevron {
+    transform: rotate(180deg);
+  }
+
+  .auvd-nav-sub {
+    position: static;
+    flex: 1 1 100%;
+    min-width: 0;
+    margin: 0 0 0.25rem 1rem;
+    padding: 0 0 0 0.75rem;
+    background: transparent;
+    border: 0;
+    transform: none;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.25s ease,
+      opacity 0.15s ease,
+      visibility 0s linear 0.25s;
+  }
+
+  .auvd-nav-sub::before {
+    content: none;
+  }
+
+  .auvd-nav-item--has-sub.is-open .auvd-nav-sub {
+    max-height: 16rem;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition:
+      max-height 0.25s ease,
+      opacity 0.2s ease;
+  }
+
+  .auvd-nav-sub-link {
+    white-space: normal;
+    /* On phones the panel sits transparently over the teal bar, so the
+       links stay light here and drop the desktop's left accent border. */
+    color: #ffffff;
+    border-left-color: transparent;
+  }
+
+  .auvd-nav-sub-link:hover,
+  .auvd-nav-sub-link:focus,
+  .auvd-nav-sub-link.is-active {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    border-left-color: #f2c572;
+  }
+
+  .auvd-lang {
+    padding: 0.5rem 0;
+  }
+
+  .auvd-donate-btn {
+    text-align: center;
+  }
+}

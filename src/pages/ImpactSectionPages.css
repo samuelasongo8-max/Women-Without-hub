@@ -1,0 +1,63 @@
+/* ============================================================
+   Impact sub-sections (/impact/post/, /impact/blogs/,
+   /impact/report/) — site-styled header.
+
+   These three pages share the global PageHeader (which draws a
+   violet gradient). This file re-skins ONLY these pages, using the
+   same white-header / teal-heading look as Get Involved and
+   Resources. Scoped with .impact-section-page so the shared
+   PageHeader, the navbar, the footer and every other page that
+   uses PageHeader are untouched.
+
+   Palette: brand teal #2E8C8C, bg #F2F2F0, plus white/black/gray.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+.impact-section-page {
+  background: #F2F2F0;
+}
+
+.impact-section-page .page-header {
+  background: #ffffff;
+  color: #1f2430;
+  padding-bottom: 2.5rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.impact-section-page .page-header .breadcrumbs a {
+  color: #5b6472;
+}
+
+.impact-section-page .page-header .breadcrumbs a:hover {
+  color: #2E8C8C;
+}
+
+.impact-section-page .page-header .breadcrumbs [aria-current='page'] {
+  color: #2E8C8C;
+}
+
+.impact-section-page .page-header .breadcrumbs li:not(:last-child)::after {
+  color: #5b6472;
+}
+
+.impact-section-page .page-header h1 {
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #2E8C8C;
+  margin: 1rem 0 0.5rem;
+}
+
+.impact-section-page .page-intro {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  max-width: 48rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555555;
+  margin: 0;
+}

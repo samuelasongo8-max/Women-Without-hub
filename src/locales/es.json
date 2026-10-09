@@ -1,0 +1,189 @@
+{
+  "brand": {
+    "name": "Women Without Borders Hub"
+  },
+  "a11y": {
+    "skipToMain": "Ir al contenido principal",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "primaryNav": "Navegación principal",
+    "footerNav": "Pie de página",
+    "logoLink": "Women Without Borders Hub, inicio",
+    "routesTrailingSlash": "Nota: las rutas usan barras finales (p. ej."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "programs": "Programas",
+    "impact": "Impacto",
+    "getInvolved": "Participa",
+    "resources": "Recursos",
+    "contact": "Contacto",
+    "donate": "Donar",
+    "ourStory": "Nuestra historia",
+    "ourTeam": "Nuestro equipo",
+    "news": "Noticias",
+    "blogs": "Blogs",
+    "report": "Informe",
+    "expandSub": "Expandir el submenú {{label}}",
+    "collapseSub": "Contraer el submenú {{label}}"
+  },
+  "lang": {
+    "label": "Elegir idioma",
+    "current": "Idioma actual: {{lang}}",
+    "menu": "Seleccionar idioma"
+  },
+  "common": {
+    "learnMore": "Saber más",
+    "readMore": "Leer más",
+    "allStoriesAndNews": "Todas las historias y noticias",
+    "storiesAndNews": "Historias y noticias",
+    "willBeUpdatedSoon": "Se actualizará pronto",
+    "photoComingSoon": "Foto próximamente",
+    "underDevelopment": "En desarrollo",
+    "partnerLogosSoon": "Los logotipos de los socios están en desarrollo.",
+    "partnerLogo": "Logotipo del socio",
+    "viewAll": "Ver todo",
+    "readStory": "Leer la historia"
+  },
+  "breadcrumb": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "ourTeam": "Nuestro equipo",
+    "ourStory": "Nuestra historia",
+    "programs": "Programas",
+    "impact": "Impacto",
+    "getInvolved": "Participa",
+    "resources": "Recursos",
+    "safeguarding": "Protección",
+    "contact": "Contacto",
+    "communityUpdates": "Actualizaciones de la comunidad e historias",
+    "news": "Noticias",
+    "blogs": "Blogs",
+    "report": "Informe",
+    "post": "Publicación"
+  },
+  "footer": {
+    "stayInTouch": "Mantente en contacto",
+    "emailAddress": "Correo electrónico",
+    "firstName": "Nombre",
+    "required": "obligatorio",
+    "subscribe": "Suscribirse",
+    "subscribing": "Suscribiendo…",
+    "thankYou": "¡Gracias! Estás suscrito.",
+    "errorGeneric": "Lo sentimos, algo salió mal. Inténtalo de nuevo.",
+    "errFirstName": "Introduce tu nombre.",
+    "errEmail": "Introduce tu correo electrónico.",
+    "errEmailInvalid": "Introduce un correo electrónico válido.",
+    "about": "Una organización dirigida por la comunidad en Kakuma, condado de Turkana, Kenia, que crea oportunidades para niñas vulnerables, madres adolescentes y jóvenes mujeres a través de la educación, las habilidades, la mentoría, la salud y el empoderamiento económico.",
+    "explore": "Explorar",
+    "getInvolved": "Participa",
+    "trustLegal": "Confianza y legal",
+    "volunteer": "Voluntariado",
+    "membership": "Membresía",
+    "mentor": "Mentoría",
+    "partner": "Colaboración",
+    "safeguarding": "Protección",
+    "resources": "Recursos",
+    "contact": "Contacto",
+    "rightsReserved": "Todos los derechos reservados."
+  },
+  "contact": {
+    "title": "Contacto",
+    "intro": "Preguntas de donantes, organizaciones de desarrollo, ONG, socios comunitarios, escuelas, instituciones de formación, socios de salud, voluntarios o prensa — nos encantaría saber de ti.",
+    "name": "Nombre completo",
+    "namePlaceholder": "Tu nombre completo",
+    "email": "Correo electrónico",
+    "subject": "Asunto",
+    "subjectPlaceholder": "Elige un asunto",
+    "subjectDonor": "Donante",
+    "subjectDevelopmentOrg": "Organización de desarrollo",
+    "subjectNgo": "ONG",
+    "subjectCommunityPartner": "Socio comunitario",
+    "subjectSchool": "Escuela o institución de formación",
+    "subjectHealthPartner": "Socio sanitario",
+    "subjectVolunteer": "Voluntario",
+    "subjectPress": "Prensa",
+    "subjectOther": "Otro",
+    "message": "Mensaje",
+    "messagePlaceholder": "Escribe tu mensaje aquí...",
+    "send": "Enviar mensaje",
+    "sending": "Enviando…",
+    "errName": "Introduce tu nombre.",
+    "errEmail": "Introduce un correo electrónico válido.",
+    "errSubject": "Elige un asunto.",
+    "errMessage": "El mensaje debe tener al menos 10 caracteres.",
+    "successContact": "¡Gracias por contactar a Women Without Borders Hub! Tu mensaje ha sido enviado. Nuestro equipo lo revisará y responderá en un plazo de 24 a 48 horas. Para asuntos urgentes, llámanos directamente al +254 784 062 882.",
+    "errorSend": "Lo sentimos, tu mensaje no pudo enviarse. Inténtalo de nuevo o escríbenos directamente.",
+    "formHeading": "Envíanos un mensaje",
+    "addressHeading": "Nuestra dirección",
+    "mapText": "Encuéntranos en Kakuma, condado de Turkana.",
+    "mapLink": "Abrir en Google Maps"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "message": "Lo sentimos, la página que buscas no existe o se ha movido.",
+    "backHome": "Volver al inicio"
+  },
+  "programs": {
+    "title": "Programas",
+    "intro": "Descubre los programas que acompañan a niñas vulnerables, madres adolescentes y jóvenes mujeres en Kakuma.",
+    "howItWorks": "Cómo funciona",
+    "readyTitle": "¿Listo para dar el siguiente paso?",
+    "thankYouInterest": "Gracias por tu interés en {{title}}. Nuestro equipo quiere contactarte y explicarte cómo dar el siguiente paso.",
+    "reachUs": "Para preguntas, contáctanos en:",
+    "emailUs": "Escríbenos",
+    "callUs": "Llámanos",
+    "donate": "Donar"
+  },
+  "getInvolved": {
+    "title": "Participa",
+    "intro": "Hay muchas formas de apoyar a mujeres y niñas: dona, sé voluntario, sé mentor, únete o colabora.",
+    "howItWorks": "Cómo funciona",
+    "readyTitle": "¿Listo para dar el siguiente paso?",
+    "thankYouInterest": "Gracias por tu interés en {{title}}. Nuestro equipo quiere contactarte y explicarte cómo dar el siguiente paso.",
+    "reachUs": "Para preguntas, contáctanos en:",
+    "emailUs": "Escríbenos",
+    "callUs": "Llámanos"
+  },
+  "impactSectionPages": {
+    "post": {
+      "intro": "Historias, anuncios y momentos destacados de nuestro trabajo en Kakuma."
+    },
+    "blogs": {
+      "intro": "Reflexiones de nuestro equipo, mentores y de las mujeres y niñas con las que trabajamos."
+    },
+    "report": {
+      "intro": "Resultados, alcance y cómo medimos el cambio en nuestros programas."
+    }
+  },
+  "updates": {
+    "title": "Actualizaciones de la comunidad e historias",
+    "intro": "Historias, anuncios y momentos destacados de nuestro trabajo con la comunidad de Kakuma."
+  },
+  "news": {
+    "title": "Noticias",
+    "intro": "Las últimas noticias y anuncios de Women Without Borders Hub."
+  },
+  "resources": {
+    "title": "Recursos",
+    "intro": "Informes, herramientas y guías de nuestro trabajo, gratis para descargar y reutilizar."
+  },
+  "about": {
+    "title": "Acerca de",
+    "ourTeam": {
+      "title": "Nuestro equipo",
+      "intro": "Conoce a las personas detrás de Women Without Borders Hub.",
+      "getInvolved": "Participa"
+    }
+  },
+  "ourStory": {
+    "whatWeDo": "Lo que hacemos",
+    "donate": "DONAR",
+    "contactUs": "Contáctanos"
+  },
+  "safeguarding": {
+    "title": "Protección",
+    "intro": "Nuestro compromiso con la seguridad, la dignidad y la protección de cada niña y mujer a la que servimos."
+  }
+}

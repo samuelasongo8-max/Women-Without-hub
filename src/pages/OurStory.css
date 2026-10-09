@@ -1,0 +1,624 @@
+/* ============================================================
+   Page: Our Story (/about/our-story/)
+   All classes are story-* scoped. Colours honour the page spec:
+   banner #1e8e96, list borders teal/coral/gold, square corners,
+   teal focus outlines. Small text on coloured grounds uses the
+   deeper teals (#17757c / #12666e) so white/teal text keeps >=4.5:1
+   (banner white text is large type at 3.9:1, >=3:1 AA-large).
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@500&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+
+
+.story-page {
+  background: #f4f3f1;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pink founder section is the last thing on the page: it must sit
+   directly against the footer. Inner spacing (padding) is kept;
+   only outer space below is removed. Scoped to this page. */
+.story-page > .auvd-founder:last-child {
+  margin-bottom: 0;
+}
+
+/* Belt-and-braces: nothing inside the section's own grid may add
+   trailing outer space that re-opens the gap. */
+.story-page > .auvd-founder:last-child > :last-child,
+.auvd-founder__inner > :last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Hero: full-width Kakuma photo banner ---------- */
+
+.auvd-story-hero {
+  position: relative;
+  min-height: 70vh;
+  min-height: 500px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #141414;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+/* Re-assert AFTER the legacy .story-banner shorthand lower in the file:
+   a later `background:` reset background-repeat to `repeat` (initial),
+   which tiled Kakuma.jpg. Same specificity (0,1,0), later in source
+   wins, so single attachment, centred, covering. */
+.story-banner.auvd-story-hero {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Kill the legacy tricolor trim on THIS hero only: it carries both
+   .story-banner and .auvd-story-hero, so .story-banner::after was
+   painting an 8px strip over the bottom of Kakuma.jpg. Scoped to the
+   hero so any other page using plain .story-banner keeps its trim. */
+.auvd-story-hero::after {
+  content: none;
+  display: none;
+  background: none;
+  height: 0;
+}
+
+.auvd-story-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7));
+  pointer-events: none;
+}
+
+.auvd-story-content {
+  position: relative;
+  z-index: 1;
+}
+
+.auvd-story-hero .story-title {
+  color: #ffffff;
+  font-weight: 800;
+  max-width: 700px;
+}
+
+.auvd-story-hero .story-lead {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ---------- Banner (legacy teal — kept for other pages) ---------- */
+
+.story-banner {
+  position: relative;
+  background-color: #1e8e96;
+  color: #fff;
+  padding: 3rem 0 3.5rem;
+}
+
+.story-banner::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #1e8e96 0%, #f6b95c 50%, #ef6f52 100%);
+}
+
+.story-title {
+  color: #fff;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.15;
+  max-width: 46rem;
+  margin: 0 0 1rem;
+}
+
+.story-lead {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.55;
+  max-width: 46rem;
+  margin: 0;
+}
+
+/* ---------- Body ---------- */
+
+.story-body {
+  max-width: 44rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.story-body h2 {
+  color: #1e8e96;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  margin: 2.5rem 0 0.75rem;
+}
+
+/* ---------- Founder photo ---------- */
+
+.story-figure {
+  margin: 0 0 2rem;
+}
+
+.story-figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #e8e6e0;
+  border-radius: 0;
+}
+
+.story-caption {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+}
+
+/* ---------- Pull quote ---------- */
+
+.story-quote {
+  background: #fff;
+  border-left: 6px solid #f6b95c;
+  border-radius: 0;
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+}
+
+.story-quote p {
+  font-size: 1.15rem;
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+
+.story-quote footer {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #12666e;
+}
+
+/* ---------- Coloured-border link list ---------- */
+
+.story-links {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.story-links li {
+  margin: 0 0 0.75rem;
+}
+
+.story-links a {
+  display: block;
+  background: #fff;
+  color: #12666e;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.8rem 1rem 0.8rem 1.25rem;
+  border-left: 6px solid #1e8e96;
+  border-radius: 0;
+}
+
+.story-links li:nth-child(2) a {
+  border-left-color: #ef6f52;
+}
+
+.story-links li:nth-child(3) a {
+  border-left-color: #f6b95c;
+}
+
+.story-links li:nth-child(4) a {
+  border-left-color: #1e8e96;
+}
+
+.story-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Action buttons (square corners) ---------- */
+
+.story-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.story-btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 0;
+}
+
+.story-btn-donate {
+  background: #17757c;
+  border-color: #17757c;
+  color: #fff;
+}
+
+.story-btn-donate:hover {
+  background: #12666e;
+  border-color: #12666e;
+  color: #fff;
+}
+
+.story-btn-contact {
+  background: transparent;
+  border-color: #12666e;
+  color: #12666e;
+}
+
+.story-btn-contact:hover {
+  background: #12666e;
+  border-color: #12666e;
+  color: #fff;
+}
+
+.story-page a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 560px) {
+  .story-banner {
+    padding: 2.25rem 0 2.75rem;
+  }
+
+  .story-title {
+    font-size: 1.9rem;
+  }
+
+  .story-lead {
+    font-size: 1.2rem;
+  }
+
+  .story-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .story-btn {
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   Section: Founder band (auvd-) — pink band, second section
+   directly after the hero. Hand-cut green photo shape, speech
+   bubble, story blocks left, programme links right.
+   ============================================================ */
+
+/* ---------- Solid white section after MaLua banner ---------- */
+.auvd-founder {
+  background: #ffffff;
+  color: #2b2b2b;
+  padding: 80px 24px;
+  overflow-x: hidden;
+}
+
+.auvd-founder__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ---------- Photo on a hand-cut green shape ---------- */
+
+.auvd-founder__media {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.auvd-person {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #ffffff;
+  margin: 0;
+}
+
+.auvd-person__shape {
+  display: none;
+}
+
+.auvd-person__img {
+  position: relative;
+  inset: auto;
+  display: block;
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border: 0;
+  border-radius: 0;
+  background-color: #ffffff;
+  clip-path: none;
+}
+
+/* ---------- Speech bubble ---------- */
+
+.auvd-founder__bubble {
+  position: relative;
+  width: auto;
+  margin: 24px 0 0 0;
+  z-index: 3;
+}
+
+.auvd-founder__bubble::before {
+  content: '';
+  position: absolute;
+  top: 46px;
+  left: -25px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 25px solid #F2F2F0;
+}
+
+.auvd-founder__bubble-inner {
+  background: #F2F2F0;
+  color: #2b2b2b;
+  border: 1px solid #d9e2e2;
+  padding: 26px 30px;
+  clip-path: polygon(0 1%, 100% 0, 99.6% 99%, 0.4% 100%);
+}
+
+.auvd-founder__quote {
+  font-family: 'Dosis', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.3;
+  color: #2b2b2b;
+  margin: 0;
+}
+
+.auvd-founder__cite {
+  font-family: 'Dosis', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #2E8C8C;
+  margin: 10px 0 0;
+}
+
+/* ---------- Left column: story blocks ---------- */
+
+.auvd-founder__blocks {
+  margin-top: 44px;
+}
+
+.auvd-founder__block + .auvd-founder__block {
+  margin-top: 28px;
+}
+
+.auvd-founder__block h2 {
+  font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #2E8C8C;
+  margin: 0 0 10px;
+}
+
+.auvd-founder__block p {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #2b2b2b;
+  max-width: 560px;
+  margin: 0;
+}
+
+/* ---------- Right column ---------- */
+
+.auvd-founder__right {
+  padding-top: 190px;
+}
+
+.auvd-founder__heading {
+  font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #2E8C8C;
+  margin: 0;
+}
+
+.auvd-founder__intro {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #2b2b2b;
+  margin: 18px 0 0;
+}
+
+.auvd-founder__links {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+}
+
+.auvd-founder__links li {
+  border-bottom: 1px solid #d9e2e2;
+}
+
+.auvd-founder__links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 14px 0;
+  color: #2E8C8C;
+  text-decoration: none;
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.auvd-founder__links a:hover {
+  text-decoration: underline;
+}
+
+.auvd-founder__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* Decorative photo below the buttons — desktop only (hidden ≤900px). */
+.auvd-founder__aside-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 340px;
+  margin-top: 32px;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0; /* square corners */
+  box-shadow: none;
+  animation: none;
+}
+
+.auvd-founder__btn {
+  display: inline-block;
+  padding: 8px 18px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 0;
+  font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.auvd-founder__btn--donate {
+  background: #F2C572;
+  border-color: #F2C572;
+  color: #2b2b2b;
+}
+
+.auvd-founder__btn--contact {
+  background: transparent;
+  border-color: #2E8C8C;
+  color: #2E8C8C;
+}
+
+.auvd-founder__btn:hover {
+  opacity: 0.85;
+}
+
+/* Keyboard focus on the white founder section: teal outline so it stays
+   visible (the page-wide white outline is for the dark hero). */
+.auvd-founder a:focus-visible {
+  outline: 3px solid #2E8C8C;
+  outline-offset: 2px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .auvd-story-hero {
+    min-height: 420px;
+    padding: 2.5rem 1.25rem;
+    align-items: flex-end;
+  }
+
+  .auvd-story-hero .story-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+
+  .auvd-story-hero .story-lead {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .auvd-founder__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .auvd-founder__right {
+    padding-top: 0;
+  }
+
+  /* Hide the desktop-only decorative photo on tablet and phone. */
+  .auvd-founder__aside-img {
+    display: none;
+  }
+
+  .auvd-person { max-width: 320px; margin: 0 auto; }
+
+  .auvd-founder__media {
+    grid-template-columns: 1fr;
+  }
+
+  .auvd-founder__bubble {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    margin: -44px 0 0 0;
+    z-index: 3;
+  }
+
+  .auvd-founder__bubble::before {
+    display: none;
+  }
+
+  .auvd-founder__btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 44px;
+  }
+}
+
+/* Phone: shrink the director photo further so it stays balanced. */
+@media (max-width: 480px) {
+  .auvd-person { max-width: 260px; }
+}
+

@@ -1,0 +1,104 @@
+/* ============================================================
+   Section: Donate banner
+   Photo background with a solid teal overlay, white text.
+   Sits flush against the footer (no bottom gap).
+   ============================================================ */
+
+.donate-banner {
+  position: relative;
+  margin: 0;
+  padding-block: 120px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1e8e96;
+  background-image: url("/women-hub-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+/* Solid teal overlay above the photo, below the content. */
+.donate-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 142, 150, 0.82);
+  z-index: 0;
+}
+
+.donate-banner > .container {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.donate-banner h2 {
+  color: #ffffff;
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  margin: 0 0 1rem;
+}
+
+.donate-banner p {
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+  color: #ffffff;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.donate-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Square buttons, uppercase, side by side. */
+.donate-banner .btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.donate-banner .btn-donate {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #1e8e96;
+}
+
+.donate-banner .btn-donate:hover,
+.donate-banner .btn-donate:focus-visible {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #12666e;
+  transform: none;
+}
+
+.donate-banner .btn-outline {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.donate-banner .btn-outline:hover,
+.donate-banner .btn-outline:focus-visible {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #1e8e96;
+}
+
+@media (max-width: 640px) {
+  .donate-banner {
+    padding-block: 72px;
+  }
+
+  .donate-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .donate-actions .btn {
+    text-align: center;
+  }
+}

@@ -1,0 +1,103 @@
+/* ============================================================
+   Navigation-bar language dropdown (.lang-switch-*).
+   Matches the Impact dropdown look: #F2F2F0 bg, #2E8C8C text,
+   square corners, thin border, #F2C572 hover, #F2865E left
+   border on hover. Palette only. Appears inside the nav (and
+   the mobile menu), never off-screen.
+   ============================================================ */
+
+.lang-switch {
+  position: relative;
+  display: inline-flex;
+  margin-inline-start: 12px;
+}
+
+.lang-switch__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #2E8C8C;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.lang-switch__trigger:hover {
+  color: #F2C572;
+}
+
+.lang-switch__trigger:focus-visible {
+  outline: 3px solid #2E8C8C;
+  outline-offset: 2px;
+}
+
+.lang-switch__chevron {
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.lang-switch__menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 60;
+  min-width: 180px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #F2F2F0;
+  border: 1px solid #d9e2e2;
+  border-radius: 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.lang-switch__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+  text-align: start;
+  color: #2E8C8C;
+  background: transparent;
+  border: 0;
+  border-left: 3px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.lang-switch__item:hover,
+.lang-switch__item:focus-visible {
+  background: #ffffff;
+  border-left-color: #F2865E;
+  color: #2E8C8C;
+  outline: none;
+}
+
+.lang-switch__item.is-current {
+  font-weight: 700;
+}
+
+.lang-switch__item.is-current .lang-switch__short {
+  color: #F2C572;
+}
+
+.lang-switch__short {
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: #6b7777;
+}
+
+/* Arabic items get a slightly larger font for readability. */
+.lang-switch__native {
+  font-size: 1rem;
+}

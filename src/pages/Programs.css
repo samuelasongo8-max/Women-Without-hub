@@ -1,0 +1,46 @@
+/* ============================================================
+   Programs page (/programs/) — directly related styles.
+   Top header photo background only; scoped with a modifier so
+   the shared PageHeader and every other page are unaffected.
+   ============================================================ */
+
+/* Specificity (0,2,0) beats .page-header's background shorthand
+   regardless of stylesheet order. Image spaces are URL-encoded.
+
+   Photo: "Impact at Women without border.png" — 1448×1086 (≈4:3),
+   a seated group: heads start ~20% down the frame, faces sit at
+   25–43%, feet near the bottom edge.
+   - min-height gives the 4:3 photo real room, so `cover` trims only
+     the very top/bottom instead of over-zooming into a thin strip.
+   - 40vw ≈ half the photo's height once `cover` scales it to the
+     viewport width, keeping a stable ~53% band (walls + every face
+     down to the laps) visible across desktop widths; clamped so
+     small screens stay compact and ultra-wide screens don't become
+     a full-page hero.
+   - position 30% anchors that band just above the heads.
+   - top-weighted scrim keeps breadcrumb/heading/intro legible over
+     the bright corrugated wall while the photo stays clear below. */
+.page-header.auvd-programs-hero {
+  position: relative;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.28) 60%,
+      rgba(0, 0, 0, 0.42)
+    ),
+    url('/Impact%20at%20Women%20without%20border.png');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-color: #141414; /* neutral fallback while the photo loads */
+  min-height: clamp(300px, 40vw, 560px);
+}
+
+/* Narrow screens: `cover` fits the photo almost entirely here (below
+   ~430px wide the full height is visible), so only nudge the focal
+   point down slightly for mid-size phones/tablets. */
+@media (max-width: 640px) {
+  .page-header.auvd-programs-hero {
+    background-position: center 40%;
+  }
+}

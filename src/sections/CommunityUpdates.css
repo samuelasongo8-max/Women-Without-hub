@@ -1,0 +1,424 @@
+/* ============================================================
+   Section: Community Updates (horizontal carousel)
+   ============================================================ */
+
+.updates {
+  --upd-navy: #1e8e96;
+  --upd-bg: #f2eee8;
+  --upd-orange: #ff9500;
+  --upd-pad: clamp(1rem, 4.5vw, 3.5rem);
+
+  background: rgba(255, 255, 255, 0.363);
+  color: var(--upd-navy);
+  padding: 3rem 0 4.5rem;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial,
+    sans-serif;
+}
+
+/* ---------- Head ---------- */
+
+.updates-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 var(--upd-pad);
+}
+
+.updates h2 {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.updates h2 em {
+  display: block;
+  font-style: italic;
+}
+
+.updates-viewall {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.9rem;
+  background: #ef6f52;
+  color: #ffffff;
+  border: 1px solid #ef6f52;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.updates-viewall:visited {
+  color: #ffffff;
+}
+
+.updates-viewall:hover,
+.updates-viewall:focus-visible {
+  background: #d85f44;
+  border-color: #d85f44;
+  color: #ffffff;
+}
+
+.updates-viewall:focus-visible {
+  outline: 3px solid #F2C572;
+  outline-offset: 2px;
+}
+
+/* ---------- Controls ---------- */
+
+.updates-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem var(--upd-pad) 0;
+  margin-bottom: 4rem;
+}
+
+.updates-progress {
+  position: relative;
+  width: 150px;
+  height: 8px;
+  border: 1.5px solid var(--upd-navy);
+  border-radius: 999px;
+}
+
+.updates-progress-thumb {
+  position: absolute;
+  top: -1.5px;
+  width: 14px;
+  height: 8px;
+  background: var(--upd-navy);
+  border-radius: 2px;
+  transition: left 0.15s ease-out;
+}
+
+.updates-arrows {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.updates-arrow {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  background: var(--upd-navy);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.updates-arrow:hover {
+  background: #1e8e96;
+}
+
+.updates-arrow:focus-visible {
+  outline: 3px solid #1e90ff;
+  outline-offset: 2px;
+}
+
+/* ---------- Track ---------- */
+
+.updates-track {
+  display: flex;
+  column-gap: clamp(1.5rem, 4.5vw, 4.25rem);
+  padding-left: var(--upd-pad);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--upd-pad);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.updates-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Card ---------- */
+
+.updates-card {
+  flex: 0 0 clamp(15rem, 21vw, 16rem);
+  scroll-snap-align: start;
+}
+
+.updates-card:last-child {
+  margin-right: var(--upd-pad);
+}
+
+.updates-img-link {
+  display: block;
+  background: #1e8e96;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.updates-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #e8e6e0;
+  border-radius: 8px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.updates-card img:hover {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
+/* Intentional "photo coming soon" placeholder: same 16/9 box as real
+   card images (any update with `image: null` shows this automatically). */
+.updates-card__placeholder,
+.update-detail__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #f2f2f0;
+  border: 2px dashed rgba(46, 140, 140, 0.5);
+  border-radius: 8px;
+}
+
+.update-detail__placeholder {
+  height: 420px;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 700px) {
+  .update-detail__placeholder {
+    height: 260px;
+  }
+}
+
+.updates-card__placeholder-text {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #2e8c8c;
+}
+
+.updates-card h3 {
+  margin: 0 0 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.updates-card h3 a {
+  color: var(--upd-navy);
+  text-decoration: none;
+}
+
+.updates-card h3 a::before {
+  content: "'' ";
+  white-space: nowrap;
+}
+
+.updates-card h3 a:hover {
+  text-decoration: underline;
+}
+
+
+
+.updates-card__date {
+  margin: 0 0 0.75rem;
+  font-size: 0.82rem;
+  color: #1e8e96;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 700px) {
+  .updates {
+    padding: 2.25rem 0 3rem;
+  }
+
+  .updates-controls {
+    padding-top: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .updates-progress {
+    width: 100px;
+  }
+
+  .updates-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .updates-card {
+    flex-basis: 78vw;
+  }
+}
+
+/* ============================================================
+   Full-page grid variant — used by /updates/ (variant="page").
+   Reuses every .updates-card rule above unchanged, so the title,
+   image, tag, text, colours, spacing and the image hover zoom are
+   identical to the Home carousel.
+
+   Deliberately adds NO colours: the section keeps its exact Home
+   background so both views match. The only changes are layout
+   (carousel track -> grid) — new declarations are palette-neutral.
+   ============================================================ */
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: clamp(1.5rem, 4.5vw, 4.25rem);
+  padding: 2.5rem var(--upd-pad) 0;
+}
+
+/* Grid items size themselves; the carousel's flex basis, trailing
+   spacer and min-content floor must not apply here. */
+.updates-grid .updates-card {
+  flex: none;
+  min-width: 0;
+}
+
+.updates-grid .updates-card:last-child {
+  margin-right: 0;
+}
+
+/* ============================================================
+   Detail page — /updates/:slug
+   ============================================================ */
+
+.update-detail-page {
+  color: var(--upd-navy);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial,
+    sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.update-detail__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.update-detail__breadcrumb a {
+  color: #1e8e96;
+  text-decoration: none;
+}
+
+.update-detail__breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.update-detail__breadcrumb span[aria-hidden="true"] {
+  color: #999;
+}
+
+.update-detail__breadcrumb-title {
+  font-weight: 700;
+}
+
+.update-detail__media {
+  margin: 0 0 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.update-detail__media-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .update-detail__media-image {
+    height: 260px;
+  }
+}
+
+.update-detail {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.update-detail__title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  line-height: 1.15;
+  color: var(--upd-navy);
+  margin: 0 0 1rem;
+}
+
+.update-detail__meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.update-detail__body {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.update-detail__body p {
+  margin: 0 0 1.25rem;
+}
+
+.update-detail__body a {
+  color: #2E8C8C;
+  text-decoration: none;
+  border-bottom: 1px solid #2E8C8C;
+}
+
+.update-detail__body a:hover {
+  text-decoration: underline;
+}
+
+.update-detail__back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #1e8e96;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.update-detail__back-link:hover {
+  text-decoration: underline;
+}
+
+.update-detail__error {
+  background: #fdf0f0;
+  border: 1px solid #f26052;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  color: #b3261e;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.update-detail__error + .update-detail__backlink {
+  display: block;
+}

@@ -1,0 +1,153 @@
+/* ============================================================
+   Footer "Stay in touch" subscribe block (left column).
+   Palette: brand teal #2E8C8C, gold #F2C572, plus white/dark gray.
+   All class names start with .footer-subscribe- to avoid clashes.
+   Selectors are scoped under .footer-about so they reliably
+   override the shared footer rules in site.css (e.g. .footer-col h3
+   and .footer-about p), regardless of stylesheet load order.
+   The footer background (#1e8e96, dark teal) is NOT changed here.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap');
+
+/* Logo at the top of the left column, linked to the home page. */
+.footer-about .footer-subscribe__logo-link {
+  display: inline-block;
+  margin: 0 0 20px; /* 20px of space under the logo */
+  text-decoration: none;
+  line-height: 0;
+}
+
+.footer-about .footer-subscribe__logo {
+  display: block;
+  height: 90px;
+  width: auto;
+  object-fit: contain; /* normal image, not a circle */
+}
+
+/* Form wrapper. */
+.footer-about .footer-subscribe {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  margin: 0;
+}
+
+.footer-about .footer-subscribe__heading {
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.25;
+  color: #ffffff;
+  text-transform: none; /* normal case (overrides .footer-col h3 uppercase) */
+  letter-spacing: normal;
+  margin: 0 0 14px;
+}
+
+.footer-about .footer-subscribe__field {
+  margin-bottom: 14px; /* space between fields */
+}
+
+.footer-about .footer-subscribe__label {
+  display: block;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.footer-about .footer-subscribe__input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font-size: 16px; /* 16px+ so phones don't zoom in on focus */
+  color: #2b2b2b;
+  background: #ffffff;
+  border: 1px solid #c9d1d1; /* light border */
+  border-radius: 0; /* square corners */
+}
+
+.footer-about .footer-subscribe__input::placeholder {
+  color: #8a9494;
+}
+
+.footer-about .footer-subscribe__input:focus {
+  outline: 2px solid #2e8c8c; /* focus outline in brand teal */
+  outline-offset: 1px;
+  border-color: #2e8c8c;
+}
+
+/* Field-level validation error. */
+.footer-about .footer-subscribe__error {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f2c572; /* readable gold on the teal footer */
+}
+
+/* Honeypot — hidden from users and assistive tech; bots still fill it. */
+.footer-about .footer-subscribe__honeypot {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Subscribe button. */
+.footer-about .footer-subscribe__button {
+  display: inline-block;
+  width: auto;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2b2b2b;
+  background: #f2c572;
+  border: 1px solid #f2c572;
+  border-radius: 0; /* square corners */
+  cursor: pointer;
+}
+
+.footer-about .footer-subscribe__button:hover {
+  background: #e5b55a;
+  border-color: #e5b55a;
+}
+
+.footer-about .footer-subscribe__button:focus-visible {
+  outline: 3px solid #ffffff; /* visible keyboard focus on the teal bg */
+  outline-offset: 2px;
+}
+
+.footer-about .footer-subscribe__button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Status message (aria-live). */
+.footer-about .footer-subscribe__status {
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.footer-about .footer-subscribe__status--error {
+  color: #f2c572; /* readable gold for errors on the teal footer */
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+  /* Phone: smaller logo and full-width form (footer stacks to 1 column
+     at this width in site.css, so the left column is already on top). */
+  .footer-about .footer-subscribe__logo {
+    height: 72px;
+  }
+
+  .footer-about .footer-subscribe {
+    max-width: 100%;
+  }
+}

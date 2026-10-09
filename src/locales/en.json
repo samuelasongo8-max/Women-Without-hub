@@ -1,0 +1,189 @@
+{
+  "brand": {
+    "name": "Women Without Borders Hub"
+  },
+  "a11y": {
+    "skipToMain": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primaryNav": "Primary",
+    "footerNav": "Footer",
+    "logoLink": "Women Without Borders Hub, home",
+    "routesTrailingSlash": "Note: routes are matched with trailing slashes (e.g."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "impact": "Impact",
+    "getInvolved": "Get Involved",
+    "resources": "Resources",
+    "contact": "Contact",
+    "donate": "Donate",
+    "ourStory": "Our Story",
+    "ourTeam": "Our Team",
+    "news": "News",
+    "blogs": "Blogs",
+    "report": "Report",
+    "expandSub": "Expand {{label}} sub-menu",
+    "collapseSub": "Collapse {{label}} sub-menu"
+  },
+  "lang": {
+    "label": "Choose language",
+    "current": "Current language: {{lang}}",
+    "menu": "Select a language"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "allStoriesAndNews": "All stories & news",
+    "storiesAndNews": "Stories & News",
+    "willBeUpdatedSoon": "Will be updated soon",
+    "photoComingSoon": "Photo coming soon",
+    "underDevelopment": "Under development",
+    "partnerLogosSoon": "Partner logos are under development.",
+    "partnerLogo": "Partner logo",
+    "viewAll": "View all",
+    "readStory": "Read story"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "about": "About",
+    "ourTeam": "Our Team",
+    "ourStory": "Our Story",
+    "programs": "Programs",
+    "impact": "Impact",
+    "getInvolved": "Get Involved",
+    "resources": "Resources",
+    "safeguarding": "Safeguarding",
+    "contact": "Contact",
+    "communityUpdates": "Community Updates & Stories",
+    "news": "News",
+    "blogs": "Blogs",
+    "report": "Report",
+    "post": "Post"
+  },
+  "footer": {
+    "stayInTouch": "Stay in touch",
+    "emailAddress": "Email Address",
+    "firstName": "First Name",
+    "required": "required",
+    "subscribe": "Subscribe",
+    "subscribing": "Subscribing…",
+    "thankYou": "Thank you! You're subscribed.",
+    "errorGeneric": "Sorry, something went wrong. Please try again.",
+    "errFirstName": "Please enter your first name.",
+    "errEmail": "Please enter your email address.",
+    "errEmailInvalid": "Please enter a valid email address.",
+    "about": "A community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women through education, skills, mentorship, health and economic empowerment.",
+    "explore": "Explore",
+    "getInvolved": "Get Involved",
+    "trustLegal": "Trust & Legal",
+    "volunteer": "Volunteer",
+    "membership": "Membership",
+    "mentor": "Mentor",
+    "partner": "Partner",
+    "safeguarding": "Safeguarding",
+    "resources": "Resources",
+    "contact": "Contact",
+    "rightsReserved": "All rights reserved."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Questions from donors, development organizations, NGOs, community partners, schools, training institutions, health partners, volunteers or press — we'd love to hear from you.",
+    "name": "Full name",
+    "namePlaceholder": "Your full name",
+    "email": "Email",
+    "subject": "Subject",
+    "subjectPlaceholder": "Choose a subject",
+    "subjectDonor": "Donor",
+    "subjectDevelopmentOrg": "Development organization",
+    "subjectNgo": "NGO",
+    "subjectCommunityPartner": "Community partner",
+    "subjectSchool": "School or training institution",
+    "subjectHealthPartner": "Health partner",
+    "subjectVolunteer": "Volunteer",
+    "subjectPress": "Press",
+    "subjectOther": "Other",
+    "message": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "send": "Send message",
+    "sending": "Sending…",
+    "errName": "Please enter your name.",
+    "errEmail": "Please enter a valid email address.",
+    "errSubject": "Please choose a subject.",
+    "errMessage": "Message must be at least 10 characters.",
+    "successContact": "Thank you for contacting Women Without Borders Hub! Your message has been sent successfully. Our team will review your inquiry and reply within 24 to 48 hours. For urgent matters, please call us directly at +254 784 062 882.",
+    "errorSend": "Sorry, your message could not be sent. Please try again or email us directly.",
+    "formHeading": "Send us a message",
+    "addressHeading": "Our address",
+    "mapText": "Find us in Kakuma, Turkana County.",
+    "mapLink": "Open in Google Maps"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "message": "Sorry, the page you are looking for doesn't exist or has moved.",
+    "backHome": "Back to Home"
+  },
+  "programs": {
+    "title": "Programs",
+    "intro": "Explore the programmes that walk with vulnerable girls, teenage mothers and young women in Kakuma.",
+    "howItWorks": "How it works",
+    "readyTitle": "Ready to take the next step?",
+    "thankYouInterest": "Thank you for your interest in {{title}}. Our team would love to connect with you and share how you can take the next step.",
+    "reachUs": "If you have any questions, feel free to reach us at:",
+    "emailUs": "Email us",
+    "callUs": "Call us",
+    "donate": "Donate"
+  },
+  "getInvolved": {
+    "title": "Get Involved",
+    "intro": "There are many ways to stand with women and girls — give, volunteer, mentor, join or partner.",
+    "howItWorks": "How it works",
+    "readyTitle": "Ready to take the next step?",
+    "thankYouInterest": "Thank you for your interest in {{title}}. Our team would love to connect with you and share how you can take the next step.",
+    "reachUs": "If you have any questions, feel free to reach us at:",
+    "emailUs": "Email us",
+    "callUs": "Call us"
+  },
+  "impactSectionPages": {
+    "post": {
+      "intro": "Stories, announcements and highlights from our work in Kakuma."
+    },
+    "blogs": {
+      "intro": "Reflections from our team, mentors and the women and girls we work with."
+    },
+    "report": {
+      "intro": "Outcomes, reach and how we measure change across our programmes."
+    }
+  },
+  "updates": {
+    "title": "Community Updates & Stories",
+    "intro": "Stories, announcements and highlights from our work with the community in Kakuma."
+  },
+  "news": {
+    "title": "News",
+    "intro": "The latest news and announcements from Women Without Borders Hub."
+  },
+  "resources": {
+    "title": "Resources",
+    "intro": "Reports, toolkits and guides from our work — free to download and reuse."
+  },
+  "about": {
+    "title": "About",
+    "ourTeam": {
+      "title": "Our Team",
+      "intro": "Meet the people behind Women Without Borders Hub.",
+      "getInvolved": "Get Involved"
+    }
+  },
+  "ourStory": {
+    "whatWeDo": "What We Do",
+    "donate": "Donate",
+    "contactUs": "Contact Us"
+  },
+  "safeguarding": {
+    "title": "Safeguarding",
+    "intro": "Our commitment to the safety, dignity and protection of every girl and woman we serve."
+  }
+}
