@@ -28,7 +28,6 @@ export default function Hero() {
 
         <div className="container hero-grid">
           <div className="hero-copy">
- 
             <h1 className="hero-title">
               Empowering
               <br />
