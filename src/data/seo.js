@@ -12,6 +12,43 @@
  *    canonical/OG/absolute breadcrumb URLs activate automatically.
  */
 
+import { socialLinks } from './site.js'
+
+/**
+ * Normalize the configured site URL into a canonical absolute origin.
+ *
+ * Returns null when no URL is configured (or the value is the old
+ * placeholder), so the site never publishes an invented domain:
+ *  - '' / null / undefined      -> null
+ *  - 'YOUR-DOMAIN' / 'https://YOUR-DOMAIN' -> null
+ *  - 'example.org'              -> 'https://example.org'
+ *  - 'https://example.org/'     -> 'https://example.org'
+ *  - 'http://example.org'       -> 'https://example.org' (force https)
+ */
+export function normalizeSiteUrl(raw) {
+  if (!raw || typeof raw !== 'string') return null
+
+  let value = raw.trim()
+  if (!value) return null
+
+  // Guard against the historical placeholder still being present.
+  if (/^https?:\/\/YOUR-DOMAIN$/i.test(value) || /^YOUR-DOMAIN$/i.test(value)) {
+    return null
+  }
+
+  // Add a scheme when it is missing.
+  if (!/^https?:\/\//i.test(value)) value = `https://${value}`
+
+  try {
+    const url = new URL(value)
+    // Force https and drop any trailing path/query/hash so the value is
+    // a clean origin that can be used to build absolute URLs.
+    return `https://${url.host}`
+  } catch {
+    return null
+  }
+}
+
 export const SITE = {
   // 1. Website name — used consistently in branding, metadata and schema.
   name: 'Women Without Borders Hub',
@@ -20,9 +57,18 @@ export const SITE = {
   homeTitle:
     'Women Without Borders Hub | Empowering Girls & Young Women in Kakuma',
 
-  // Set once the domain is purchased, e.g. 'https://www.example.org'
-  // Left null on purpose — we must not invent a domain.
-  url: null,
+  // The official production domain, e.g. 'https://www.example.org'.
+  //
+  // This is the ONLY place the domain is configured. Set the environment
+  // variable VITE_SITE_URL (in .env / .env.local or the host dashboard)
+  // once the domain is live:
+  //
+  //     VITE_SITE_URL=https://www.example.org
+  //
+  // While it is unset we must NOT invent a domain: canonical links,
+  // og:url and the Organization schema `url` are simply omitted, and the
+  // build does not publish a sitemap (it cannot build absolute URLs).
+  url: normalizeSiteUrl(import.meta.env.VITE_SITE_URL),
 
   // Official logo file — add when provided (used in Organization schema).
   logo: null,
@@ -45,8 +91,9 @@ export const SITE = {
   // Official contact details — add when provided (schema + contact page).
   email: null,
   telephone: null,
-  // e.g. ['https://facebook.com/...', 'https://youtube.com/...', ...]
-  sameAs: [],
+  // Official social profiles — shared with the hero icon row via
+  // src/data/site.js so the site never links to two different Facebook pages.
+  sameAs: [socialLinks.facebook, socialLinks.linkedin],
 
   // 10–12. Mission, vision and core values (from the constitution).
   mission:
@@ -232,6 +279,23 @@ const programSeo = {
 }
 
 /**
+ * Team member profile pages: "/about/our-team/<slug>/".
+ * Each entry carries its own title and description so the profile page
+ * is indexable (noindex) only when it is still a placeholder.
+ */
+const teamProfileSeo = {
+  'malua-lugazo': {
+    name: 'MaLua Lugazo',
+    title: 'MaLua Lugazo - Founder & Executive Director',
+    // Official name of the organization for this profile page.
+    // Kept as SITE.name so branding and metadata never drift apart.
+    orgName: SITE.name,
+    description:
+      `MaLua Lugazo is the Founder and Executive Director of ${SITE.name}, a community-led initiative in Kakuma Refugee Camp, Kenya, empowering refugee and marginalized women and girls through education, mentorship, digital skills, health awareness and economic empowerment.`,
+  },
+}
+
+/**
  * Resolve the SEO metadata for a pathname.
  * Returns { title, description, noindex }.
  */
@@ -257,6 +321,26 @@ export function seoFor(pathname) {
         `${pageSeo[path].title} | ${SITE.name}`,
       description: pageSeo[path].description,
       noindex: false,
+    }
+  }
+
+  // Dynamic team profile pages: "/about/our-team/<slug>/".
+  // Placeholder pages are noindexed so Google does not index empty pages.
+  const profileMatch = path.match(/^\/about\/our-team\/([^/]+)\/$/)
+  if (profileMatch) {
+    const member = teamProfileSeo[profileMatch[1]]
+    if (member) {
+      return {
+        title: `${member.title || member.name} | ${member.orgName || SITE.name}`,
+        description: member.description || SITE.shortDescription,
+        siteName: member.orgName || SITE.name,
+        noindex: false,
+      }
+    }
+    return {
+      title: `Profile not found | ${SITE.name}`,
+      description: SITE.shortDescription,
+      noindex: true,
     }
   }
 
@@ -310,6 +394,50 @@ export function seoFor(pathname) {
  * we do not invent them. Google recommends Organization schema on the
  * homepage or a single organization page, not on every page.
  */
+/**
+ * Person structured data for the MaLua Lugazo profile page.
+ * The organization name is kept identical to the site name
+ * ("Women Without Borders Hub") so the data stays consistent.
+ */
+export function maluaLugazoPersonSchema() {
+  // The organization name is kept identical to the site name
+  // (SITE.name) so the structured data stays consistent with the brand.
+  const orgName = SITE.name
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'MaLua Lugazo',
+    jobTitle: 'Founder and Executive Director',
+    description:
+      `MaLua Lugazo is the Founder and Executive Director of ${SITE.name}, a community-led initiative in Kakuma Refugee Camp, Kenya, with over nine years of experience in humanitarian and community development.`,
+    worksFor: {
+      '@type': 'Organization',
+      name: orgName,
+      description: SITE.shortDescription,
+    },
+    jobLocation: {
+      '@type': 'Place',
+      name: SITE.location,
+    },
+    knowsAbout: [
+      'Community development',
+      'Education in emergencies',
+      'Mentorship',
+      'Digital skills',
+      'Health awareness',
+      'Women’s economic empowerment',
+    ],
+  }
+
+  if (SITE.url) {
+    schema.url = new URL('/about/our-team/malua-lugazo/', SITE.url).toString()
+    schema.worksFor.url = SITE.url
+  }
+  if (SITE.logo) schema.image = SITE.logo
+
+  return schema
+}
+
 export function organizationSchema() {
   const schema = {
     '@context': 'https://schema.org',

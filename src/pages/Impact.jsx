@@ -3,10 +3,9 @@ import ImpactsLayout from '../components/ImpactsLayout.jsx'
 import './Impact.css'
 
 const stats = [
- { number: '500+', label: 'Women & girls reached' },
-  { number: '45', label: 'Communities served' },
-  { number: '150', label: 'Volunteer mentors' },
-  { number: '89%', label: 'Programme completion rate' },
+  { number: '200+', label: 'Women & girls reached' },
+  { number: '6', label: 'Core Programs' },
+  { number: '1', label: 'Kakuma Refugee Camp' },
 ]
 
 export default function Impact() {

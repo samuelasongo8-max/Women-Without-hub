@@ -3,6 +3,7 @@ import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import OurTeam from './pages/OurTeam.jsx'
+import MaluaLugazoProfile from './pages/MaluaLugazoProfile.jsx'
 import Programs from './pages/Programs.jsx'
 import ProgramDetail from './pages/ProgramDetail.jsx'
 import Impact from './pages/Impact.jsx'
@@ -27,6 +28,10 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about/" element={<About />} />
         <Route path="/about/our-team/" element={<OurTeam />} />
+        <Route
+          path="/about/our-team/malua-lugazo/"
+          element={<MaluaLugazoProfile />}
+        />
         <Route path="/programs/" element={<Programs />} />
         <Route path="/programs/:slug/" element={<ProgramDetail />} />
         <Route path="/impact/" element={<Impact />} />

@@ -1,0 +1,155 @@
+/* ============================================================
+   Section: Featured quote (portrait + testimonial)
+   White band, zigzag mark, round portrait on the left.
+   ============================================================ */
+
+.quote-feature {
+  background: #ffffff;
+  padding: 56px 0 64px;
+  color: #111111;
+}
+
+.quote-feature__mark {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 44px;
+  line-height: 0;
+}
+
+.quote-feature__figure {
+  margin: 0;
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 24px 22px;
+  align-items: center;
+}
+
+/* ---------- Portrait ---------- */
+
+.quote-feature__portrait {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #eef1f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.quote-feature__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Face sits in the upper-middle of the source photo — keep it centred
+     and uncropped inside the round frame. */
+  object-position: 50% 32%;
+  display: block;
+}
+
+.quote-feature__initials {
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #8a929c;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+/* ---------- Quote ---------- */
+
+.quote-feature__body {
+  min-width: 0;
+}
+
+.quote-feature__quote {
+  margin: 0;
+  font-family: 'Montserrat', 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 400;
+  line-height: 1.45;
+  color: #111111;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.quote-feature__icon {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 26px;
+  height: 20px;
+  margin-right: 10px;
+  color: #111111;
+  flex-shrink: 0;
+}
+
+.quote-feature__text {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Closing mark — same glyph rotated 180°, sits after the final word. */
+.quote-feature__icon--closing {
+  transform: rotate(180deg);
+  margin-right: 0;
+  margin-left: 6px;
+  vertical-align: -0.05em;
+}
+
+/* ---------- Attribution ---------- */
+
+.quote-feature__attribution {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #f26052;
+}
+
+.quote-feature__name {
+  font-weight: 600;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 720px) {
+  .quote-feature {
+    padding: 40px 16px 48px;
+  }
+
+  .quote-feature__mark {
+    margin-bottom: 32px;
+  }
+
+  .quote-feature__figure {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+    padding-inline: 0;
+  }
+
+  .quote-feature__portrait {
+    width: 200px;
+    height: 200px;
+  }
+
+  .quote-feature__quote {
+    text-align: center;
+  }
+
+  .quote-feature__icon {
+    margin-right: 8px;
+  }
+
+  .quote-feature__attribution {
+    align-items: center;
+  }
+}

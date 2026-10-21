@@ -46,6 +46,11 @@
     "viewAll": "Arag dhammaan",
     "readStory": "Akhri sheekada"
   },
+  "quoteFeature": {
+    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "role": "Xubin ka Women Without Borders Hub",
+    "label": "Xaad ka la mid"
+  },
   "breadcrumb": {
     "home": "Bogga Hore",
     "about": "Nagu saabsan",
@@ -174,7 +179,9 @@
     "ourTeam": {
       "title": "Kooxdayada",
       "intro": "Kulal dadka ka dambeeya Women Without Borders Hub.",
-      "getInvolved": "Ku soo biir"
+      "getInvolved": "Ku soo biir",
+      "viewProfile": "Eeg eegis",
+      "profileComingSoon": "Waxaa loo cusboonaysii doonaa"
     }
   },
   "ourStory": {

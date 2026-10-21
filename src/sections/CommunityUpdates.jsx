@@ -109,26 +109,6 @@ When women learn, communities grow. When women lead, communities move forward.
 Congratulations to our graduates!`,
   },
   {
-    slug: 'ambulex-solutions-collaboration',
-    title: 'Meeting with Betty Ngeno and Ambulex Solutions',
-    image: null,
-    alt: 'Placeholder for health collaboration meeting with Ambulex Solutions',
-    to: '/updates/ambulex-solutions-collaboration',
-    fullText: `Today, we had a truly impactful virtual meeting with Betty Ngeno, the Gender Officer of Ambulex Solutions, a conversation that didn't just exchange ideas, but sparked real collaboration.
-
-What stood out most was the alignment in vision and values.
-
-The discussion gave us space to learn from each other, build on our strengths, and find practical ways our work can intersect to create meaningful impact.
-
-It was one of those rare online conversations that feels intentional, energising, and forward-looking.
-
-Introductions to explore how collaboration can strengthen solutions, expand reach, and serve communities more effectively.
-
-A powerful reminder that distance doesn't limit impact—when missions align, collaboration happens, even virtually.
-
-Grateful for the connection and excited about the work we can build together.`,
-  },
-  {
     slug: 'health-advocacy',
     title: 'Advocating for Health: Women Without Borders Hub',
     image: '/avocating health.jpg',

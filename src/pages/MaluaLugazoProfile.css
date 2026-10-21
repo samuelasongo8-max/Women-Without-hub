@@ -1,0 +1,337 @@
+/* ============================================================
+   MaLua Lugazo profile — /about/our-team/malua-lugazo/
+   Palette: #2E8C8C teal, #F2F2F0 background, #F2C572 accent,
+   Source Sans 3 body, Oswald headings.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+.mlp {
+  background: #f2f2f0;
+  color: #333333;
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  padding: 72px 24px 0;
+}
+
+.mlp > * {
+  max-width: 62rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Hero ---------- */
+
+.mlp-hero {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.mlp-eyebrow {
+  margin: 0 0 0.75rem;
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2e8c8c;
+}
+
+.mlp-title {
+  margin: 0 auto 1.25rem;
+  max-width: 48rem;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.85rem, 4.2vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #2e8c8c;
+}
+
+.mlp-intro {
+  margin: 0 auto;
+  max-width: 46rem;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #555555;
+}
+
+/* ---------- Rules ---------- */
+
+.mlp-rule {
+  max-width: 62rem;
+  margin: 48px auto;
+  border: 0;
+  border-top: 1px solid #dcdcd6;
+}
+
+/* ---------- Two-column feature block ---------- */
+
+.mlp-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.mlp-feature__media {
+  position: sticky;
+  top: 2rem;
+}
+
+.mlp-photo {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  /* Flat palette backing for the transparent PNG. */
+  background: #f2f2f0;
+  border: 1px solid #e3e3dd;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.mlp-photo--fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 488 / 511;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.08em;
+  color: #2e8c8c;
+}
+
+/* ---------- Text blocks ---------- */
+
+.mlp-h2 {
+  margin: 0 0 1rem;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #2e8c8c;
+}
+
+.mlp-p {
+  margin: 0 0 1.15rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444444;
+}
+
+.mlp-section .mlp-p:last-child {
+  margin-bottom: 0;
+}
+
+.mlp-role {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444444;
+}
+
+.mlp-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.mlp-list li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #444444;
+}
+
+.mlp-list li::marker {
+  color: #2e8c8c;
+}
+
+/* ---------- Five focus areas ---------- */
+
+.mlp-focus {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.mlp-focus__card {
+  background: #ffffff;
+  border: 1px solid #e3e3dd;
+  border-top: 3px solid #2e8c8c;
+  border-radius: 4px;
+  padding: 1.5rem 1.35rem 1.35rem;
+}
+
+.mlp-focus__title {
+  margin: 0 0 0.6rem;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #2e8c8c;
+}
+
+.mlp-focus__text {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #555555;
+}
+
+/* ---------- Mission ---------- */
+
+.mlp-section--mission {
+  background: #ffffff;
+  border-left: 4px solid #f2c572;
+  border-radius: 4px;
+  padding: 2rem 2rem 1.75rem;
+}
+
+.mlp-mission {
+  margin: 0;
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333333;
+}
+
+/* ---------- Closing CTA band ---------- */
+
+.mlp-cta {
+  margin-top: 64px;
+  margin-bottom: 0;
+  max-width: none;
+  background: #2e8c8c;
+  color: #ffffff;
+  text-align: center;
+  padding: 3.5rem 24px;
+}
+
+.mlp-cta__title {
+  margin: 0 0 0.75rem;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.mlp-cta__text {
+  margin: 0 auto 1.75rem;
+  max-width: 40rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #f2f7f6;
+}
+
+.mlp-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: center;
+}
+
+.mlp-btn {
+  display: inline-block;
+  padding: 0.8rem 1.9rem;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.mlp-btn--primary {
+  background: #f2c572;
+  color: #23313a;
+  border: 1px solid #f2c572;
+}
+
+.mlp-btn--primary:hover {
+  background: #e8b455;
+  border-color: #e8b455;
+}
+
+.mlp-btn--ghost {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.mlp-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+  .mlp-feature {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mlp-feature__media {
+    position: static;
+  }
+
+  .mlp-photo {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mlp {
+    padding: 48px 16px 0;
+  }
+
+  .mlp-rule {
+    margin: 36px auto;
+  }
+
+  .mlp-section--mission {
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+
+  .mlp-cta {
+    margin-top: 48px;
+    padding: 2.75rem 20px;
+  }
+
+  .mlp-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---------- Internal links ---------- */
+
+.mlp-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.mlp-link {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2e8c8c;
+  text-decoration: none;
+  border-bottom: 2px solid #f2c572;
+  padding-bottom: 2px;
+}
+
+.mlp-link:hover {
+  color: #266f6f;
+  border-bottom-color: #2e8c8c;
+}

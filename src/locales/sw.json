@@ -46,6 +46,11 @@
     "viewAll": "Ona zote",
     "readStory": "Soma hadithi"
   },
+  "quoteFeature": {
+    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "role": "Mwanachama wa Women Without Borders Hub",
+    "label": "Nukuu yenye sifa"
+  },
   "breadcrumb": {
     "home": "Mwanzo",
     "about": "Kuhusu",
@@ -174,7 +179,9 @@
     "ourTeam": {
       "title": "Timu Yetu",
       "intro": "Kutana na watu wanaojenga Women Without Borders Hub.",
-      "getInvolved": "Shiriki"
+      "getInvolved": "Shiriki",
+      "viewProfile": "Onaona wasifu",
+      "profileComingSoon": "Itasajiliwa haraka"
     }
   },
   "ourStory": {

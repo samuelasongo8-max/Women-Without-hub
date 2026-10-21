@@ -35,14 +35,14 @@ export default function Seo() {
   const { pathname } = useLocation()
 
   useEffect(() => {
-    const { title, description, noindex } = seoFor(pathname)
+    const { title, description, noindex, siteName } = seoFor(pathname)
 
     document.title = title
     setMeta('description', description)
     setMeta('robots', noindex ? 'noindex, nofollow' : 'index, follow')
 
     // Open Graph
-    setMeta('og:site_name', SITE.name, 'property')
+    setMeta('og:site_name', siteName || SITE.name, 'property')
     setMeta('og:title', title, 'property')
     setMeta('og:description', description, 'property')
     setMeta('og:type', 'website', 'property')

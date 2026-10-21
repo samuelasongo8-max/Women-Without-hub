@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import './Programs.css'
+import srhrVideo from './video/Sexual & Reproductive Health and Rights video(SRHR).mp4'
+import { programImages } from '../data/programImages.js'
 
 // Programme strip palette: teal / yellow / coral.
 const T = '#1e8e96'
@@ -10,6 +12,7 @@ const C = '#ef6f52'
 // Relative routes only — never a full http://localhost URL.
 const programs = [
   {
+    slug: 'education-literacy',
     title: 'Education & Literacy',
     to: '/programs/education-literacy/',
     text: 'Scholarships, literacy circles, remedial and second-chance education that keep girls in school and open educational opportunities for vulnerable girls in Kakuma.',
@@ -19,8 +22,10 @@ const programs = [
         <path d="M44 10c-9-3-15-1-20 4v26c5-5 11-7 20-4z" fill={C} />
       </>
     ),
+    img: programImages['education-literacy'],
   },
   {
+    slug: 'digital-technical-skills',
     title: 'Digital & Technical Skills',
     to: '/programs/digital-technical-skills/',
     text: 'Computer literacy and digital skills bootcamps alongside vocational training in tailoring, fashion, beauty and hairdressing for young women.',
@@ -30,8 +35,10 @@ const programs = [
         <path d="M3 36h42l-3 5H6z" fill={Y} />
       </>
     ),
+    img: programImages['digital-technical-skills'],
   },
   {
+    slug: 'mentorship-life-skills',
     title: 'Mentorship & Life Skills',
     to: '/programs/mentorship-life-skills/',
     text: 'Mentorship, life skills, leadership, career guidance, goal setting and financial literacy that build confidence and self-reliance.',
@@ -43,8 +50,10 @@ const programs = [
         <path d="M27 42c0-8 3-12 7-12s9 4 9 12z" fill={Y} />
       </>
     ),
+    img: programImages['mentorship-life-skills'],
   },
   {
+    slug: 'health-menstrual-dignity',
     title: 'Health & Menstrual Dignity',
     to: '/programs/health-menstrual-dignity/',
     text: 'Menstrual health education, menstrual products, health awareness and health referrals so no one misses school or work.',
@@ -54,8 +63,10 @@ const programs = [
         fill={C}
       />
     ),
+    img: programImages['health-menstrual-dignity'],
   },
   {
+    slug: 'srhr',
     title: 'Sexual & Reproductive Health and Rights (SRHR)',
     to: '/programs/srhr/',
     text: 'Age-appropriate, culturally sensitive SRHR education, peer education and community awareness built on respect and choice.',
@@ -68,8 +79,10 @@ const programs = [
         <circle cx="36" cy="10" r="5" fill={Y} />
       </>
     ),
+    img: programImages.srhr,
   },
   {
+    slug: 'livelihood-economic-empowerment',
     title: 'Livelihood & Economic Empowerment',
     to: '/programs/livelihood-economic-empowerment/',
     text: 'Entrepreneurship, business mentorship, apprenticeships, market linkages and employment referrals for women’s economic empowerment.',
@@ -84,6 +97,7 @@ const programs = [
         <path d="M14 43h20l-3-5H17z" fill={T} />
       </>
     ),
+    img: programImages['livelihood-economic-empowerment'],
   },
 ]
 
@@ -94,12 +108,24 @@ export default function Programs() {
         <h2>Our Programs</h2>
         <p className="section-intro">
           Six programme areas addressing the barriers facing girls and young
-          women in Kakuma — from the classroom to the marketplace.
+          women in Kakuma from the classroom to the marketplace.
         </p>
 
         <div className="home-programs-grid">
-          {programs.map(({ title, to, text, icon }) => (
+          {programs.map(({ slug, title, to, text, icon, img }) => (
             <article key={to} className="home-program">
+              <div className="home-program-image-wrap">
+                <img
+                  className="home-program-image"
+                  src={encodeURI(img.image)}
+                  alt={img.alt}
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="800"
+                  style={{ objectPosition: img.objectPosition }}
+                />
+              </div>
               <svg
                 className="home-program-icon"
                 viewBox="0 0 48 48"
@@ -114,6 +140,27 @@ export default function Programs() {
               <Link to={to} className="home-program-link">
                 Learn more →
               </Link>
+
+              {slug === 'srhr' && (
+                <div className="home-program-video-wrap">
+                  <video
+                    className="home-program-video"
+                    src={srhrVideo}
+                    poster={encodeURI('/Sexual & Reproductive Health and Rights (SRHR).jpg')}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    aria-label="SRHR awareness session video">
+                    Your browser can&apos;t play this video.
+                  </video>
+                  <h4 className="home-program-video-title">SRHR Awareness Session</h4>
+                  <p className="home-program-video-text">
+                    Participants demonstrate what they learned during an SRHR
+                    awareness session, promoting knowledge, dignity, respect, and
+                    informed choices.
+                  </p>
+                </div>
+              )}
             </article>
           ))}
         </div>

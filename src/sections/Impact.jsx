@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom'
 import './Impact.css'
 
 const stats = [
-  { number: '500+', label: 'Women & girls reached' },
-  { number: '45', label: 'Communities served' },
-  { number: '150', label: 'Volunteer mentors' },
-  { number: '89%', label: 'Programme completion rate' },
+  { number: '200+', label: 'Women & girls reached' },
+  { number: '6', label: 'Core Programs' },
+  { number: '1', label: 'Kakuma Refugee Camp' },
 ]
 
 export default function ImpactSection() {
@@ -20,7 +19,7 @@ export default function ImpactSection() {
           <img
             className="auvd-impact__img"
             src="/Impact%20at%20Women%20without%20border.png"
-            alt="Women Hub training session"
+            alt="Women Without Borders Hub programme impact in Kakuma"
             loading="lazy"
           />
         </div>

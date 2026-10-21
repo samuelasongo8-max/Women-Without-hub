@@ -154,6 +154,71 @@
   transform: translateY(-2px);
 }
 
+/* ---------- Social icon row ----------
+   The icons sit on the plain white hero background (left column), so each
+   one is a filled brand-coloured circle with a white glyph, a white ring and
+   a soft shadow. This keeps them clearly visible against the page instead of
+   blending into the photograph on the right. */
+
+.hero-social-icons {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.hero-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hero-social-link svg {
+  display: block;
+}
+
+/* Official brand colours — hover must NOT change the colour, only lift. */
+.hero-social-facebook {
+  background-color: #1877f2;
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.38);
+}
+
+.hero-social-linkedin {
+  background-color: #0a66c2;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.38);
+}
+
+.hero-social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(43, 63, 66, 0.35);
+}
+
+.hero-social-facebook:hover {
+  background-color: #1877f2;
+}
+
+.hero-social-linkedin:hover {
+  background-color: #0a66c2;
+}
+
+/* Visible keyboard focus ring (only for keyboard users). */
+.hero-social-link:focus-visible {
+  outline: 3px solid var(--hero-coral);
+  outline-offset: 3px;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(43, 63, 66, 0.35);
+}
+
 /* ---------- Photo + brush blobs ---------- */
 
 .hero-art {
