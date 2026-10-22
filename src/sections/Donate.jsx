@@ -17,7 +17,7 @@ export default function DonateSection() {
             {donateCta.label}
           </Link>
           <Link to="/get-involved/partner/" className="btn btn-outline btn-lg">
-            Partner with us
+            Partner with us ||
           </Link>
         </div>
       </div>
