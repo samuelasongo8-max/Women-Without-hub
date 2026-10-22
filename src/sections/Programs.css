@@ -32,7 +32,28 @@
   row-gap: 2.25rem;
 }
 
-/* ---------- Program cell ---------- */
+/* ---------- Program image ---------- */
+
+.home-program-image-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: #1e8e96; /* neutral brand colour fallback */
+  margin: 0 0 0.75rem;
+}
+
+.home-program-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.home-program:hover .home-program-image {
+  transform: scale(1.05);
+}
 
 .home-program {
   text-align: center;
@@ -83,6 +104,48 @@
 
 .home-program-link:hover {
   text-decoration: underline;
+}
+
+/* ---------- Program card video (SRHR) ---------- */
+
+.home-programs-grid {
+  align-items: start;
+}
+
+.home-program-video-wrap {
+  margin-top: 1rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.home-program-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #1a1a1a;
+  border: 1px solid #d9d8d4;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.home-program-video-title {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #12395f;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.home-program-video-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #44515f;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 /* ---------- Responsive ---------- */

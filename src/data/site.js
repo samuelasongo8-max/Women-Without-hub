@@ -4,6 +4,18 @@
  *   /about/, /programs/, /programs/education-literacy/, /get-involved/donate/, ...
  */
 
+/**
+ * Social links — single source of truth for the organisation's social
+ * accounts. Reused by the hero social icon row and by the Organization
+ * structured data ("sameAs" in src/data/seo.js) so the site never links to
+ * two different Facebook pages.
+ */
+
+export const socialLinks = {
+  facebook: 'https://www.facebook.com/profile.php?id=61589301587817',
+  linkedin: 'https://lnkd.in/p/dVuWVzM7',
+}
+
 // Main navigation shown in the header (in order).
 export const mainNav = [
   { label: 'HOME', to: '/' },
@@ -26,7 +38,6 @@ export const mainNav = [
     ],
   },
   { label: 'GET INVOLVED', to: '/get-involved/' },
-  { label: 'RESOURCES', to: '/resources/' },
   { label: 'CONTACT', to: '/contact/' },
 ]
 
@@ -109,6 +120,10 @@ export const routeMeta = {
   '/': { label: 'Home', parent: null },
   '/about/': { label: 'About', parent: '/' },
   '/about/our-team/': { label: 'Our Team', parent: '/about/' },
+  '/about/our-team/malua-lugazo/': {
+    label: 'MaLua Lugazo',
+    parent: '/about/our-team/',
+  },
   '/programs/': { label: 'Programs', parent: '/' },
   '/impact/': { label: 'Impact', parent: '/' },
   '/about/our-story/': { label: 'Our Story', parent: '/about/' },

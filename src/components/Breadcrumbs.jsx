@@ -35,8 +35,14 @@ export default function Breadcrumbs() {
   // Home page doesn't need a breadcrumb trail (nav already shows position).
   if (trail.length <= 1) return null
 
-  const label = (crumb) =>
-    t(CRUMB_KEY[crumb.to] ?? '', { defaultValue: crumb.label })
+  // Use the i18n label when a key exists, otherwise the route label.
+  // An empty key would make i18next return an empty string instead of
+  // the default value, so the fallback is applied explicitly.
+  const label = (crumb) => {
+    const key = CRUMB_KEY[crumb.to]
+    if (!key) return crumb.label
+    return t(key, { defaultValue: crumb.label })
+  }
 
   return (
     <nav className="breadcrumbs container" aria-label="Breadcrumb">

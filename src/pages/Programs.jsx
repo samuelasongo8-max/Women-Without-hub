@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { programImages } from '../data/programImages.js'
+import srhrVideo from '../sections/video/Sexual & Reproductive Health and Rights video(SRHR).mp4'
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
 import { programs } from '../data/site.js'
 // Reuse the exact stylesheet of the home "Our Programs" section (after
@@ -88,6 +90,23 @@ export default function Programs() {
           <div className="home-programs-grid">
             {programs.map((p) => (
               <article key={p.slug} className="home-program">
+              {(() => {
+                const img = programImages[p.slug]
+                return (
+                  <div className="home-program-image-wrap">
+                    <img
+                      className="home-program-image"
+                      src={encodeURI(img.image)}
+                      alt={img.alt}
+                      loading="lazy"
+                      decoding="async"
+                      width="1200"
+                      height="800"
+                      style={{ objectPosition: img.objectPosition }}
+                    />
+                  </div>
+                )
+              })()}
                 <svg
                   className="home-program-icon"
                   viewBox="0 0 48 48"
@@ -102,6 +121,27 @@ export default function Programs() {
                 <Link to={`/programs/${p.slug}/`} className="home-program-link">
                   Learn more →
                 </Link>
+              {p.slug === 'srhr' && (
+                <div className="home-program-video-wrap">
+                  <video
+                    className="home-program-video"
+                    src={srhrVideo}
+                    poster={encodeURI('/Sexual & Reproductive Health and Rights (SRHR).jpg')}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    aria-label="SRHR awareness session video"
+                  >
+                    Your browser can&apos;t play this video.
+                  </video>
+                  <h4 className="home-program-video-title">SRHR Awareness Session</h4>
+                  <p className="home-program-video-text">
+                    Participants demonstrate what they learned during an SRHR
+                    awareness session, promoting knowledge, dignity, respect, and
+                    informed choices.
+                  </p>
+                </div>
+              )}
               </article>
             ))}
           </div>

@@ -14,8 +14,8 @@ export default function WhoWeAre() {
             <span className="who-stroke who-stroke--4" />
             <img
               className="who-photo"
-              src="/women-hub.png"
-              alt="Women Without Borders Hub community members"
+              src={encodeURI('/Literacy program at Women without hub.jpg')}
+              alt="Girls sitting in a literacy class at Women Without Borders Hub"
               loading="lazy"
             />
           </div>

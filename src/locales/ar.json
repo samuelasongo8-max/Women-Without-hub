@@ -46,6 +46,11 @@
     "viewAll": "عرض الكل",
     "readStory": "اقرأ القصة"
   },
+  "quoteFeature": {
+    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "role": "عضوة في Women Without Borders Hub",
+    "label": "اقتباس مميز"
+  },
   "breadcrumb": {
     "home": "الرئيسية",
     "about": "من نحن",
@@ -174,7 +179,9 @@
     "ourTeam": {
       "title": "فريقنا",
       "intro": "تعرَّف على الأشخاص الذين يقفون خلف Women Without Borders Hub.",
-      "getInvolved": "شارك معنا"
+      "getInvolved": "شارك معنا",
+      "viewProfile": "عرض الملف الشخصي",
+      "profileComingSoon": "سيتم تحديثه قريبًا"
     }
   },
   "ourStory": {
