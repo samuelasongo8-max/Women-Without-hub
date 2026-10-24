@@ -11,7 +11,10 @@
   text-align: center;
   color: #ffffff;
   background-color: #1e8e96;
-  background-image: url("/women-hub-3.jpg");
+  background-image: image-set(
+    url("/images/women-hub-3.webp") type("image/webp"),
+    url("/images/women-hub-3.jpg") type("image/jpeg")
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

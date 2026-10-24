@@ -1,4 +1,8 @@
 {
+  "donate": {
+    "title": "تبرع",
+    "subtitle": "يساهم تبرعك مباشرة في تمويل برامج التعليم والمهارات والكرامة."
+  },
   "brand": {
     "name": "Women Without Borders Hub"
   },
@@ -19,6 +23,7 @@
     "getInvolved": "شارك معنا",
     "resources": "الموارد",
     "contact": "اتصل بنا",
+    "orgName": "Women Without Hub",
     "donate": "تبرَّع",
     "ourStory": "قصتنا",
     "ourTeam": "فريقنا",
@@ -33,6 +38,23 @@
     "current": "اللغة الحالية: {{lang}}",
     "menu": "اختر لغة"
   },
+  "search": {
+    "open": "بحث",
+    "close": "إغلاق البحث",
+    "placeholder": "ابحث في Women Without Hub...",
+    "clear": "مسح البحث",
+    "results": "نتائج البحث",
+    "noResults": "لا توجد نتائج عن '{{query}}'. جرّب كلمات مختلفة.",
+    "getInvolved": "شارك معنا",
+    "contact": "اتصل بنا",
+    "loading": "جارٍ تحميل البحث...",
+    "error": "تعذر تحميل البحث. يُرجى المحاولة مرة أخرى."
+  },
+  "scroll": {
+    "controls": "التمرير في الصفحة",
+    "top": "الانتقال إلى أعلى الصفحة",
+    "bottom": "الانتقال إلى أسفل الصفحة"
+  },
   "common": {
     "learnMore": "اعرف المزيد",
     "readMore": "اقرأ المزيد",
@@ -44,12 +66,31 @@
     "partnerLogosSoon": "شعارات الشركاء قيد التطوير.",
     "partnerLogo": "شعار الشريك",
     "viewAll": "عرض الكل",
-    "readStory": "اقرأ القصة"
+    "readStory": "اقرأ القصة",
+    "whyThisMatters": "لماذا هذا مهم",
+    "roles": {
+      "Chairperson": "Chairperson",
+      "Vice Chairperson": "Vice Chairperson",
+      "Treasurer": "Treasurer",
+      "Secretary": "Secretary",
+      "Member": "Member",
+      "whyIntro": "واجهت النساء والفتيات في معسكر كاكوما للاجئين العديد من التحديات، بما في ذلك الحرمان المالي، والتعليم انقطاع، والوصول المحدود إلى تدريبات المهارات، والعوائق أمام التوظيف والرعاية الصحية. بالنسبة للأمهات المراهقات، يمكن أن تكون هذه التحديات حتى أكبر بينما يتنازلن بين رعاية الأطفال وتعليمهن وتطورهن الشخصي. في Women Without Borders Hub، نؤمن أن كل فتاة تستحق الفرصة لتجاوز هذه العقبات، واكتشاف إمكانياتها، وبناء مستقبل أفضل. من خلال تعزيز التعليم والمهارات العملية والتوعية الصحية والقوة الاقتصادية، نهدف إلى إنشاء فرص للنساء والفتيات للنمو في الثقة، وتقوية استقلاليتهن، والمساهمة في مجتمعاتهن."
+    }
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
     "role": "عضوة في Women Without Borders Hub",
-    "label": "اقتباس مميز"
+    "label": "اقتباس مميز",
+    "name": "Khadijoh Mahamed"
+  },
+  "quoteSection": {
+    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "name": "Khadijoh Mahamed",
+    "role": "عضوة في Women Without Borders Hub",
+    "label": "اقتباس مميز",
+    "quote2": "I founded Women Without Borders Hub because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.",
+    "name2": "MaLua Lugazo",
+    "role2": "Founder of Women Without Borders Hub"
   },
   "breadcrumb": {
     "home": "الرئيسية",
@@ -95,7 +136,7 @@
   },
   "contact": {
     "title": "اتصل بنا",
-    "intro": "أسئلة من المانحين ومنظمات التنمية والمنظمات غير الحكومية والشركاء المجتمعيين والمدارس ومؤسسات التدريب وشركاء الصحة والمتطوعين أو الصحافة — يسعدنا أن نسمع منك.",
+    "intro": "سواء كنت من الجهات المانحة أو منظمة غير حكومية أو مدرسة أو شريكًا صحيًا أو مجموعة مجتمعية أو متطوعًا أو من العاملين في الصحافة، يسعدنا التواصل معك.",
     "name": "الاسم الكامل",
     "namePlaceholder": "اسمك الكامل",
     "email": "البريد الإلكتروني",
@@ -123,7 +164,25 @@
     "formHeading": "أرسل لنا رسالة",
     "addressHeading": "عنواننا",
     "mapText": "تجدنا في كاكوما، مقاطعة توركانا.",
-    "mapLink": "افتح في خرائط Google"
+    "mapLink": "افتح في خرائط Google",
+    "website": "Website",
+    "heroLabel": "فريق ومجتمع Women Without Borders Hub في مخيم كاكوما، كينيا",
+    "partnerHeading": "شركاء Women Without Borders Hub",
+    "partnerText1": "Women Without Borders Hub منظمة مجتمعية مقرها مخيم كاكوما في كينيا. نستقبل الأفراد والمنظمات والمؤسسات والمنحين والشركاء الذين يتشاركون التزامنا بتمكين الفتيات والنساء الشابات في مجتمعات اللاجئين والمجتمعات المضيفة.",
+    "partnerText2": "من خلال التعليم والمحو الأمية والإرشاد وتطوير المهارات الرقمية والعملية والتثقيف الصحي حول الصحة الشهرية والتوعية بالصحة الإنجابية والتمكين الاقتصادي، نساعد الفتيات المعرضات للخطر والأمهات المراهقات والنساء الشابات على بناء الثقة وتطوير المهارات والوصول إلى الفرص من أجل مستقبل أكثر إشراقًا.",
+    "partnerText3": "نستقبل الشراكات التي تقوّي برامجنا وتساعد في إزالة العوائق أمام التعليم والتنمية الشخصية والفرصة الاقتصادية. سواء كان ذلك تمويلًا أو خبرة تقنية أو تدريبًا أو موارد أو مبادرات تعاونية، يمكن لدعمك أن يساعدنا في خلق المزيد من الفرص للمجتمعات التي نخدمها.",
+    "partnerText4": "معًا، يمكننا تعزيز الكرامة والشمول والمرونة والفرص المستدامة، بما يتيح للفتيات والنساء الشابات تشكيل مستقبلهن والإسهام بإيجابية في مجتمعاتهن.",
+    "getInTouchHeading": "تواصل معنا",
+    "getInTouchText": "نستقبل طلبات الشراكة والتعاون في البرامج وفرص العمل معًا.",
+    "emailLabel": "البريد الإلكتروني:",
+    "locationLabel": "العنوان:",
+    "locationValue": "مخيم كاكوما، كينيا",
+    "closingText": "معًا، يمكننا خلق فرص لتتعلم الفتيات والنساء الشابات وتنمو ويكين.",
+    "emailUs": "راسلنا",
+    "emailUsAria": "راسلنا — أرسل طلب شراكة إلى {{email}}",
+    "mapTitle": "خريطة Women Without Borders Hub في كاكوما، مقاطعة توركانا، كينيا",
+    "successSent": "شكرًا لك! تم إرسال رسالتك. سنرد عليك قريبًا.",
+    "brandName": "Women Without Borders Hub"
   },
   "notFound": {
     "title": "الصفحة غير موجودة",
@@ -151,6 +210,18 @@
     "emailUs": "راسلنا بالبريد الإلكتروني",
     "callUs": "اتصل بنا"
   },
+  "post": {
+    "title": "منشورات",
+    "subtitle": "قصص وإعلانات وأبرز محطات عملنا في كاكوما."
+  },
+  "report": {
+    "title": "التقرير",
+    "subtitle": "النتائج ومدى الوصول وكيفية قياس التغيير في برامجنا."
+  },
+  "blogs": {
+    "title": "المدونات",
+    "subtitle": "تأملات من فريقنا ومرشدينا والنساء والفتيات اللواتي نعمل معهن."
+  },
   "impactSectionPages": {
     "post": {
       "intro": "قصص وإعلانات وأبرز الأحداث من عملنا في كاكوما."
@@ -174,6 +245,10 @@
     "title": "الموارد",
     "intro": "تقارير وأدوات وأدلة من عملنا — متاحة مجانًا للتنزيل وإعادة الاستخدام."
   },
+  "team": {
+    "title": "فريقنا",
+    "subtitle": "قادة المجتمع والمعلمون والمرشدون وراء Women Without Borders Hub في كاكوما."
+  },
   "about": {
     "title": "من نحن",
     "ourTeam": {
@@ -182,7 +257,26 @@
       "getInvolved": "شارك معنا",
       "viewProfile": "عرض الملف الشخصي",
       "profileComingSoon": "سيتم تحديثه قريبًا"
-    }
+    },
+    "heading": "About",
+    "paragraph": "Women Without Borders Hub is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women.",
+    "missionTitle": "Our mission",
+    "visionTitle": "Our vision",
+    "whoWeServe": "Who we serve",
+    "coreValues": "Our core values",
+    "whereWeWork": "Where we work",
+    "partnersText": "We partner with schools, training institutions, health providers, NGOs, development organizations, donors and private-sector partners — adapting each programme to local needs while holding consistent standards for quality and safeguarding.",
+    "getToKnowUs": "Get to know us better",
+    "exploreText": "Explore our programs, read our impact or get involved.",
+    "actionsHeading": "Ways to support",
+    "card1Label": "Sponsor a Girl's Education",
+    "card1Desc": "Help fund a girl's education journey",
+    "card2Label": "Support Menstrual Health Education",
+    "card2Desc": "Provide menstrual health resources",
+    "card3Label": "Fund Digital and Practical Skills",
+    "card3Desc": "Support digital skills training",
+    "card4Label": "Partner With Us",
+    "card4Desc": "Collaborate with us to empower more girls"
   },
   "ourStory": {
     "whatWeDo": "ما نقوم به",
@@ -192,5 +286,37 @@
   "safeguarding": {
     "title": "الحماية",
     "intro": "التزامنا بسلامة وكرامة وحماية كل فتاة وامرأة نخدمها."
+  },
+  "homePage": {
+    "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
+  },
+  "getInvolvedCards": {
+    "kicker": "Get Involved",
+    "heading": "Ways to support women and girls",
+    "heroAlt": "Girls and young women supported by Women Without Borders Hub in Kakuma",
+    "cardDonate": {
+      "title": "Donate",
+      "text": "Support our mission",
+      "linkLabel": "Donate now →",
+      "alt": "Donate to Women Without Borders Hub"
+    },
+    "cardPartner": {
+      "title": "Partner with us",
+      "text": "Join our network of partners",
+      "linkLabel": "Become a partner →",
+      "alt": "Become a partner of Women Without Borders Hub"
+    },
+    "cardVolunteer": {
+      "title": "Volunteer",
+      "text": "Give your time and skills",
+      "linkLabel": "Volunteer →",
+      "alt": "Volunteer with Women Without Borders Hub"
+    },
+    "cardSkills": {
+      "title": "Share your skills",
+      "text": "Mentor or teach",
+      "linkLabel": "Contribute skills →",
+      "alt": "Share your skills - icon only"
+    }
   }
 }

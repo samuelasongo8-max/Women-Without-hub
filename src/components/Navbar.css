@@ -25,7 +25,9 @@
 .auvd-brand {
   display: inline-flex;
   align-items: center;
+  gap: 12px;
   flex: none;
+  min-width: 0;
   text-decoration: none;
 }
 
@@ -39,6 +41,23 @@
   padding: 4px;
 }
 
+.auvd-brand-name {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  direction: ltr;
+  text-align: left;
+}
+
+.auvd-brand:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
 /* ---------- Hamburger (desktop hidden) ---------- */
 
 .auvd-nav-toggle {
@@ -49,7 +68,7 @@
   background: none;
   border: 0;
   padding: 0.6rem;
-  margin: 0 0 0 auto;
+  margin-inline-start: auto;
   cursor: pointer;
 }
 
@@ -66,7 +85,7 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 
 .auvd-nav-list {
@@ -82,6 +101,44 @@
   position: relative;
 }
 
+.auvd-search-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  color: #ffffff;
+  background: transparent;
+  border: 0;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.auvd-search-toggle svg {
+  display: block;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.auvd-search-toggle:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.auvd-search-loading {
+  position: absolute;
+  z-index: 55;
+  inset-inline: 0;
+  top: 100%;
+  padding: 1.25rem;
+  color: #25383a;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(18, 48, 50, 0.16);
+}
+
 /* ---------- Links: white, thin white underline ---------- */
 
 .auvd-nav-link {
@@ -95,11 +152,6 @@
   border-bottom: 2px solid transparent;
 }
 
-.auvd-nav-link:hover {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
-}
-
 .auvd-nav-link.is-active {
   color: #ffffff;
   border-bottom-color: #ffffff;
@@ -111,7 +163,7 @@
 }
 
 .auvd-nav-parent-link .auvd-nav-chevron {
-  margin-left: 0.35rem;
+  margin-inline-start: 0.35rem;
   font-size: 0.75em;
   line-height: 1;
 }
@@ -123,12 +175,12 @@
 /* ---------- Dropdown panel ---------- */
 /* Off-white panel with teal text (deliberately NOT the bar's teal/white).
    `.auvd-nav-list > li` is position: relative, so this anchors to the
-   "Impact" item at top: 100%; left: 0, above the page hero. */
+   "Impact" item at top: 100%; inline-start: 0, above the page hero. */
 
 .auvd-nav-sub {
   position: absolute;
   top: 100%;
-  left: 0;
+  inset-inline-start: 0;
   min-width: 180px;
   margin: 0;
   padding: 0;
@@ -154,15 +206,14 @@
   content: '';
   position: absolute;
   top: -8px;
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   height: 8px;
 }
 
 /* Open on hover (desktop), on keyboard focus, or from the JS state
    used by the mobile arrow toggle. focus-within makes the panel
    visible as soon as "Impact" is focused, so Tab can reach the links. */
-.auvd-nav-item--has-sub:hover .auvd-nav-sub,
 .auvd-nav-item--has-sub:focus-within .auvd-nav-sub,
 .auvd-nav-item--has-sub.is-open .auvd-nav-sub {
   opacity: 1;
@@ -174,6 +225,31 @@
     transform 0.15s ease;
 }
 
+@media (hover: hover) {
+  .auvd-nav-link:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+  }
+
+  .auvd-search-toggle:hover {
+    color: #f6b95c;
+  }
+
+  .auvd-nav-item--has-sub:hover .auvd-nav-sub {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+    transition:
+      opacity 0.15s ease,
+      transform 0.15s ease;
+  }
+}
+
+.auvd-header--search-open {
+  z-index: 70;
+}
+
 .auvd-nav-sub-link {
   display: block;
   padding: 12px 18px;
@@ -182,21 +258,28 @@
   font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
-  border-left: 3px solid transparent;
+  border-inline-start: 3px solid transparent;
 }
 
-.auvd-nav-sub-link:hover,
 .auvd-nav-sub-link:focus {
   background: #f2c572;
   color: #2e8c8c; /* text stays dark */
-  border-left-color: #f2865e;
+  border-inline-start-color: #f2865e;
+}
+
+@media (hover: hover) {
+  .auvd-nav-sub-link:hover {
+    background: #f2c572;
+    color: #2e8c8c;
+    border-inline-start-color: #f2865e;
+  }
 }
 
 /* Current sub page (e.g. /impact/news/ while on the News page). */
 .auvd-nav-sub-link.is-active {
   background: #2e8c8c;
   color: #ffffff;
-  border-left-color: #f2c572;
+  border-inline-start-color: #f2c572;
 }
 
 /* ---------- Language switcher (after Contact) ---------- */
@@ -234,7 +317,9 @@
 /* ---------- Donate button ---------- */
 
 .auvd-donate-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex: none;
   background: #f6b95c;
   color: #ffffff;
@@ -245,12 +330,25 @@
   border: 0;
   border-radius: 0;
   padding: 12px 28px;
+  min-height: 44px;
+  min-width: 44px;
 }
 
-.auvd-donate-btn:hover,
 .auvd-donate-btn:focus-visible {
   background: #e9a93f;
   color: #ffffff;
+}
+
+@media (hover: hover) {
+  .auvd-donate-btn:hover {
+    background: #e9a93f;
+    color: #ffffff;
+  }
+}
+
+.auvd-donate-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* ---------- Responsive: hamburger below 1000px ---------- */
@@ -267,34 +365,152 @@
     height: 54px;
   }
 
+  .auvd-brand-name {
+    font-size: 0.95rem;
+  }
+
   .auvd-nav-toggle {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex: none;
+  }
+
+  .auvd-nav-toggle-bar {
+    transition:
+      transform 250ms ease,
+      opacity 250ms ease;
+  }
+
+  .auvd-nav-toggle[aria-expanded='true'] .auvd-nav-toggle-bar:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .auvd-nav-toggle[aria-expanded='true'] .auvd-nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .auvd-nav-toggle[aria-expanded='true'] .auvd-nav-toggle-bar:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .auvd-nav-toggle:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
   }
 
   .auvd-nav {
-    display: none;
+    --menu-overlay-top: 0.65;
+    --menu-overlay-bottom: 0.75;
+    display: flex;
+    position: fixed;
+    z-index: 59;
+    inset-block-start: 70px;
+    inset-inline: 0;
+    box-sizing: border-box;
+    height: calc(100vh - 70px);
+    height: calc(100dvh - 70px);
     flex: 1 1 100%;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    margin-left: 0;
-    padding-bottom: 1.25rem;
+    margin-inline-start: 0;
+    padding-block: 0.75rem max(1.25rem, env(safe-area-inset-bottom));
+    padding-inline: max(20px, env(safe-area-inset-left, 0px))
+      max(20px, env(safe-area-inset-right, 0px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    color: #ffffff;
+    background-color: #123f41;
+    background-image: none;
+    text-align: start;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition:
+      opacity 250ms ease,
+      transform 250ms ease,
+      visibility 0s linear 250ms;
   }
 
   .auvd-nav.is-open {
-    display: flex;
+    --menu-overlay-top: 0.65;
+    --menu-overlay-bottom: 0.75;
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, var(--menu-overlay-top)),
+        rgba(0, 0, 0, var(--menu-overlay-bottom))
+      ),
+      url('/images/mobile-menu-bg.jpg');
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, var(--menu-overlay-top)),
+        rgba(0, 0, 0, var(--menu-overlay-bottom))
+      ),
+      image-set(
+        url('/images/mobile-menu-bg.webp') type('image/webp'),
+        url('/images/mobile-menu-bg.jpg') type('image/jpeg')
+      );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition:
+      opacity 250ms ease,
+      transform 250ms ease,
+      visibility 0s;
+  }
+
+  .auvd-header--search-open .auvd-nav.is-open {
+    z-index: 54;
   }
 
   .auvd-nav-list {
     flex-direction: column;
     align-items: stretch;
-    gap: 16px;
+    gap: 8px;
     padding: 0.5rem 0 1rem;
   }
 
   .auvd-nav-link {
-    display: block;
-    padding: 0.25rem 0;
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding-block: 0.5rem;
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: start;
+    border-block-end: 2px solid transparent;
+  }
+
+  .auvd-nav-link.is-active {
+    border-block-end-color: #f6b95c;
+  }
+
+  .auvd-nav-link:focus-visible,
+  .auvd-nav-sub-toggle:focus-visible,
+  .auvd-search-toggle:focus-visible,
+  .auvd-nav .lang-switch__trigger:focus-visible,
+  .auvd-nav .auvd-donate-btn:focus-visible {
+    outline: 2px solid #f6b95c;
+    outline-offset: 3px;
+  }
+
+  .auvd-search-toggle {
+    width: 48px;
+    height: 48px;
+    color: #ffffff;
+  }
+
+  .auvd-nav-search-item {
+    align-self: flex-start;
   }
 
   .auvd-nav-item--has-sub {
@@ -330,8 +546,9 @@
     position: static;
     flex: 1 1 100%;
     min-width: 0;
-    margin: 0 0 0.25rem 1rem;
-    padding: 0 0 0 0.75rem;
+    margin-block-end: 0.25rem;
+    margin-inline-start: 1rem;
+    padding-inline-start: 0.75rem;
     background: transparent;
     border: 0;
     transform: none;
@@ -358,26 +575,113 @@
   }
 
   .auvd-nav-sub-link {
-    white-space: normal;
-    /* On phones the panel sits transparently over the teal bar, so the
-       links stay light here and drop the desktop's left accent border. */
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding-block: 0.75rem;
     color: #ffffff;
-    border-left-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: normal;
+    border-inline-start-color: transparent;
   }
 
-  .auvd-nav-sub-link:hover,
   .auvd-nav-sub-link:focus,
   .auvd-nav-sub-link.is-active {
-    background: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.18);
     color: #ffffff;
-    border-left-color: #f2c572;
+    border-inline-start-color: #f2c572;
   }
 
-  .auvd-lang {
-    padding: 0.5rem 0;
+  @media (hover: hover) {
+    .auvd-nav-sub-link:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      border-inline-start-color: #f2c572;
+    }
+  }
+
+  .auvd-nav .lang-switch {
+    margin-inline-start: 0;
+    padding-block: 0.5rem;
+  }
+
+  .auvd-nav .lang-switch__trigger {
+    min-height: 48px;
+    color: #ffd54f;
   }
 
   .auvd-donate-btn {
+    align-self: flex-start;
+    width: auto;
     text-align: center;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    min-width: 44px;
+    min-height: 48px;
+    color: #1f2430;
+  }
+
+  @media (hover: hover) {
+    .auvd-nav-link:hover {
+      color: #ffffff;
+      border-block-end-color: #f6b95c;
+    }
+  }
+
+  html:dir(rtl) .auvd-nav {
+    padding-inline: max(20px, env(safe-area-inset-right, 0px))
+      max(20px, env(safe-area-inset-left, 0px));
+  }
+}
+
+@media (max-width: 1000px) and (prefers-reduced-motion: reduce) {
+  .auvd-nav,
+  .auvd-nav-toggle-bar,
+  .auvd-nav-sub {
+    transition: none;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1180px) {
+  .auvd-header-inner {
+    gap: 1rem;
+    padding-inline: 20px;
+  }
+
+  .auvd-nav-list {
+    gap: 16px;
+  }
+
+  .auvd-nav {
+    gap: 1rem;
+  }
+
+  .auvd-brand-name {
+    font-size: 0.9rem;
+  }
+
+  .auvd-donate-btn {
+    padding-inline: 16px;
+  }
+}
+
+@media (max-width: 399px) {
+  .auvd-header-inner {
+    padding-inline: 14px;
+    column-gap: 0.75rem;
+  }
+
+  .auvd-brand {
+    gap: 8px;
+  }
+
+  .auvd-brand-name {
+    font-size: 0.875rem;
+  }
+
+  .auvd-nav-toggle {
+    padding: 0.5rem;
   }
 }

@@ -10,6 +10,13 @@
   background: #f2f2f0;
 }
 
+.ourteam-page,
+.ourteam-page *,
+.ourteam-page *::before,
+.ourteam-page *::after {
+  box-sizing: border-box;
+}
+
 .ourteam-page .page-header {
   background: #ffffff;
   color: #1f2430;
@@ -54,57 +61,207 @@
   margin: 0;
 }
 
-/* ---------- Team grid: 4 per row at 1280px, 2 at tablet, 1 at 360px ---------- */
-
-.ourteam-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 48px 24px 24px;
+.ourteam-page .page-header.impact-image-header {
+  display: flex;
+  align-items: center;
+  min-height: 420px;
+  padding: 64px 24px;
+  color: #ffffff;
+  background-color: var(--brand-dark, #1b5e5e);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  border: 0;
 }
 
-@media (max-width: 1100px) and (min-width: 641px) {
-  .ourteam-grid {
-    grid-template-columns: repeat(2, 1fr);
+.ourteam-page .page-header.team-page-header {
+  --hero-focus: center 25%;
+  --hero-focus-mobile: center 42%;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    url("/images/team-hero.jpg");
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    image-set(
+      url("/images/team-hero.webp") type("image/webp"),
+      url("/images/team-hero.jpg") type("image/jpeg")
+    );
+  background-position: center, var(--hero-focus);
+}
+
+.ourteam-page .page-header.impact-image-header .page-header__overlay {
+  display: none;
+}
+
+.ourteam-page .page-header.impact-image-header .container {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 0;
+  text-align: start;
+}
+
+.ourteam-page .page-header.impact-image-header h1 {
+  max-width: 100%;
+  margin: 0 0 0.75rem;
+  color: #ffffff;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  overflow-wrap: anywhere;
+}
+
+.ourteam-page .page-header.impact-image-header .page-intro {
+  max-width: 40rem;
+  color: #ffffff;
+  font-size: clamp(0.9375rem, 1.6vw, 1.125rem);
+  line-height: 1.7;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+  overflow-wrap: anywhere;
+}
+
+.ourteam-page .page-header.impact-image-header .breadcrumbs a,
+.ourteam-page .page-header.impact-image-header .breadcrumbs [aria-current='page'],
+.ourteam-page .page-header.impact-image-header .breadcrumbs li::after {
+  color: #ffffff;
+}
+
+.ourteam-page .page-header.impact-image-header a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .ourteam-page .page-header.impact-image-header a:hover {
+    color: #f2f2f0;
   }
 }
 
-@media (max-width: 640px) {
+html:dir(rtl) .ourteam-page .page-header.team-page-header {
+  background-image:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    url("/images/team-hero.jpg");
+  background-image:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    image-set(
+      url("/images/team-hero.webp") type("image/webp"),
+      url("/images/team-hero.jpg") type("image/jpeg")
+    );
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ourteam-page .page-header.impact-image-header {
+    min-height: 340px;
+    padding-block: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ourteam-page .page-header.impact-image-header {
+    min-height: 280px;
+    padding: 40px 16px;
+  }
+
+  .ourteam-page .page-header.team-page-header {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("/images/team-hero.jpg");
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      image-set(
+        url("/images/team-hero.webp") type("image/webp"),
+        url("/images/team-hero.jpg") type("image/jpeg")
+      );
+    background-position: center, var(--hero-focus-mobile);
+  }
+}
+
+/* ---------- Team grid ---------- */
+
+.ourteam-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  gap: 32px 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 64px 32px 40px;
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
   .ourteam-grid {
-    grid-template-columns: 1fr;
-    padding: 32px 16px 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ourteam-card:last-child:nth-child(3n + 1) {
+    grid-column-start: 2;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 899px) {
+  .ourteam-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-inline: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ourteam-card:nth-last-child(2):nth-child(4n + 1) {
+    grid-column-start: 2;
+  }
+
+  .ourteam-card:last-child:nth-child(4n + 2) {
+    grid-column-start: 3;
+  }
+}
+
+@media (max-width: 559px) {
+  .ourteam-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 40px 16px;
     gap: 24px;
+  }
+
+  .ourteam-card {
+    width: 100%;
+    max-width: 420px;
+    justify-self: center;
   }
 }
 
 /* ---------- Team card ---------- */
 
 .ourteam-card {
-  background: #ffffff;
-  padding: 40px 36px;
+  background: transparent;
+  min-width: 0;
+  height: 100%;
+  padding: 8px 8px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-/* Fixed-height photo box. The photo fills it completely, so no pale
-   strip can appear under the image (the old min-height + img
-   margin-bottom combination left a gap at the bottom of every photo). */
 .ourteam-photo {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  width: 100%;
-  height: 220px;
+  display: block;
+  flex: 0 0 auto;
+  width: clamp(140px, 14vw, 200px);
+  aspect-ratio: 1 / 1;
   margin-bottom: 24px;
-  background: #F2F2F0;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  background: #f2f2f0;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(31, 36, 48, 0.18);
   position: relative;
   overflow: hidden;
+}
+
+.ourteam-photo picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .ourteam-photo-img {
@@ -112,7 +269,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
   margin: 0;
   transition: opacity 0.3s ease;
 }
@@ -122,20 +279,25 @@
 }
 
 .ourteam-fallback {
-  display: flex;
+  display: none;
+  position: absolute;
+  inset: 0;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 220px;
-  color: #888888;
+  height: 100%;
+  border-radius: 50%;
+  background: #f2f2f0;
+  color: #5b6472;
   font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .ourteam-name {
   margin: 0 0 6px;
   font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
   font-weight: 600;
   line-height: 1.3;
   text-transform: uppercase;
@@ -150,7 +312,9 @@
   font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
   font-size: 1rem;
   font-weight: 500;
+  line-height: 1.5;
   color: #2b2b2b;
+  overflow-wrap: anywhere;
 }
 
 /* ---------- "View the profile" button (Chairperson card only) ----------
@@ -174,13 +338,17 @@
   text-decoration: none;
   border: 2px solid #2e8c8c;
   border-radius: 0;
+  min-height: 44px;
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
+  margin-top: auto;
 }
 
-.ourteam-profile-btn:hover {
-  background: #ffffff;
-  color: #2e8c8c;
+@media (hover: hover) {
+  .ourteam-profile-btn:hover {
+    background: #ffffff;
+    color: #2e8c8c;
+  }
 }
 
 .ourteam-profile-btn:focus-visible {
@@ -190,7 +358,17 @@
   outline-offset: 2px;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 560px) and (max-width: 1199px) {
+  .ourteam-photo {
+    width: 160px;
+  }
+}
+
+@media (max-width: 559px) {
+  .ourteam-photo {
+    width: 140px;
+  }
+
   .ourteam-profile-btn {
     padding: 0.6rem 1rem;
     font-size: 0.95rem;
@@ -235,5 +413,13 @@
 @media (max-width: 640px) {
   .ourteam-cta-wrap {
     padding: 16px 16px 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ourteam-card,
+  .ourteam-photo-img,
+  .ourteam-profile-btn {
+    transition: none;
   }
 }

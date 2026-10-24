@@ -4,43 +4,102 @@
    the shared PageHeader and every other page are unaffected.
    ============================================================ */
 
-/* Specificity (0,2,0) beats .page-header's background shorthand
-   regardless of stylesheet order. Image spaces are URL-encoded.
-
-   Photo: "Impact at Women without border.png" — 1448×1086 (≈4:3),
-   a seated group: heads start ~20% down the frame, faces sit at
-   25–43%, feet near the bottom edge.
-   - min-height gives the 4:3 photo real room, so `cover` trims only
-     the very top/bottom instead of over-zooming into a thin strip.
-   - 40vw ≈ half the photo's height once `cover` scales it to the
-     viewport width, keeping a stable ~53% band (walls + every face
-     down to the laps) visible across desktop widths; clamped so
-     small screens stay compact and ultra-wide screens don't become
-     a full-page hero.
-   - position 30% anchors that band just above the heads.
-   - top-weighted scrim keeps breadcrumb/heading/intro legible over
-     the bright corrugated wall while the photo stays clear below. */
 .page-header.auvd-programs-hero {
+  --hero-scrim-direction: to right;
+  --hero-overlay-start: 0.84;
+  --hero-overlay-end: 0.3;
+  --hero-overlay-mobile: 0.82;
+  --hero-focus: center 36%;
+  --hero-focus-mobile: center 40%;
   position: relative;
   background-image:
     linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.28) 60%,
-      rgba(0, 0, 0, 0.42)
+      var(--hero-scrim-direction),
+      rgba(0, 0, 0, var(--hero-overlay-start)) 0%,
+      rgba(0, 0, 0, var(--hero-overlay-start)) 60%,
+      rgba(0, 0, 0, var(--hero-overlay-end)) 100%
     ),
-    url('/Impact%20at%20Women%20without%20border.png');
+    url('/images/programs-banner-desktop.jpg');
+  background-image:
+    linear-gradient(
+      var(--hero-scrim-direction),
+      rgba(0, 0, 0, var(--hero-overlay-start)) 0%,
+      rgba(0, 0, 0, var(--hero-overlay-start)) 60%,
+      rgba(0, 0, 0, var(--hero-overlay-end)) 100%
+    ),
+    image-set(
+      url('/images/programs-banner-desktop.webp') type('image/webp'),
+      url('/images/programs-banner-desktop.jpg') type('image/jpeg')
+    );
   background-size: cover;
-  background-position: center 30%;
+  background-position: center, var(--hero-focus);
   background-repeat: no-repeat;
-  background-color: #141414; /* neutral fallback while the photo loads */
-  min-height: clamp(300px, 40vw, 560px);
+  background-attachment: scroll;
+  background-color: #141414;
+  min-height: 480px;
 }
 
-/* Narrow screens: `cover` fits the photo almost entirely here (below
-   ~430px wide the full height is visible), so only nudge the focal
-   point down slightly for mid-size phones/tablets. */
-@media (max-width: 640px) {
+.page-header.auvd-programs-hero h1,
+.page-header.auvd-programs-hero .page-intro {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.page-header.auvd-programs-hero .breadcrumbs a,
+.page-header.auvd-programs-hero .breadcrumbs [aria-current='page'],
+.page-header.auvd-programs-hero .breadcrumbs li::after {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.page-header.auvd-programs-hero .breadcrumbs a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .page-header.auvd-programs-hero .breadcrumbs a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 767px) {
   .page-header.auvd-programs-hero {
-    background-position: center 40%;
+    min-height: 300px;
+    background-image:
+      linear-gradient(
+        var(--hero-scrim-direction),
+        rgba(0, 0, 0, var(--hero-overlay-mobile)),
+        rgba(0, 0, 0, var(--hero-overlay-mobile))
+      ),
+      url('/images/programs-banner-mobile.jpg');
+    background-image:
+      linear-gradient(
+        var(--hero-scrim-direction),
+        rgba(0, 0, 0, var(--hero-overlay-mobile)),
+        rgba(0, 0, 0, var(--hero-overlay-mobile))
+      ),
+      image-set(
+        url('/images/programs-banner-mobile.webp') type('image/webp'),
+        url('/images/programs-banner-mobile.jpg') type('image/jpeg')
+      );
+    background-position: center, var(--hero-focus-mobile);
+  }
+}
+
+html:dir(rtl) .page-header.auvd-programs-hero {
+  --hero-scrim-direction: to left;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page-header.auvd-programs-hero {
+    min-height: 360px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .page-header.auvd-programs-hero {
+    min-height: 360px;
   }
 }

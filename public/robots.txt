@@ -1,0 +1,6 @@
+# robots.txt — Women Without Borders Hub
+# Allow all crawlers to index the whole site (including /contact/).
+User-agent: *
+Allow: /
+
+Sitemap: https://women-without-hub.vercel.app/sitemap.xml

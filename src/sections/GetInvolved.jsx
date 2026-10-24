@@ -12,9 +12,12 @@ export default function GetInvolvedSection() {
       <div className="auvd-involved__photo">
         <img
           className="auvd-involved__img"
-          src="/women-hub-training.png"
+          src="/images/women-hub-training.png"
           alt="Women Without Borders Hub training and mentorship session"
           loading="lazy"
+          decoding="async"
+          width="800"
+          height="600"
         />
       </div>
 

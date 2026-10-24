@@ -27,6 +27,58 @@
   align-items: center;
 }
 
+.quote-feature--reverse .quote-feature__figure {
+  grid-template-columns: minmax(0, 1fr) 260px;
+}
+
+.quote-feature--reverse .quote-feature__quote {
+  text-align: right;
+}
+
+.quote-feature--reverse .quote-feature__icon {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.quote-feature--reverse .quote-feature__icon--closing {
+  margin-left: 0;
+  margin-right: 6px;
+}
+
+.quote-feature--reverse .quote-feature__attribution {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Mobile reverse: stack portrait above text, centered */
+@media (max-width: 720px) {
+  .quote-feature--reverse .quote-feature__figure {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+    padding-inline: 0;
+  }
+
+  .quote-feature--reverse .quote-feature__quote {
+    text-align: center;
+  }
+
+  .quote-feature--reverse .quote-feature__icon {
+    margin-right: 8px;
+    margin-left: 0;
+  }
+
+  .quote-feature--reverse .quote-feature__icon--closing {
+    margin-left: 0;
+    margin-right: 6px;
+  }
+
+  .quote-feature--reverse .quote-feature__attribution {
+    align-items: center;
+    text-align: center;
+  }
+}
+
 /* ---------- Portrait ---------- */
 
 .quote-feature__portrait {

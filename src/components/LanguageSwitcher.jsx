@@ -12,7 +12,7 @@ import './LanguageSwitcher.css'
  * (handled by i18next) and applies instantly without a page reload.
  */
 export default function LanguageSwitcher() {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const [open, setOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(-1)
   const rootRef = useRef(null)
@@ -118,12 +118,30 @@ export default function LanguageSwitcher() {
         ref={triggerRef}
         type="button"
         className="lang-switch__trigger"
-        aria-label="Choose language"
+        aria-label={t('lang.label', { defaultValue: 'Choose language' })}
         aria-haspopup="listbox"
         aria-expanded={open}
         onClick={() => (open ? closeMenu(false) : openMenu())}
         onKeyDown={onTriggerKeyDown}
       >
+        <svg
+          className="lang-switch__icon"
+          viewBox="0 0 24 24"
+          width="21"
+          height="21"
+          fill="none"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="M4 5h10M9 3v2c0 4-2 7-5 9m2-6c1 2 3 4 5 5m1 6 4.5-11L21 19m-5.5-4h5"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        <span>Languages</span>
         <span className="lang-switch__current">{currentMeta.short}</span>
         <span className="lang-switch__chevron" aria-hidden="true">
           ▾

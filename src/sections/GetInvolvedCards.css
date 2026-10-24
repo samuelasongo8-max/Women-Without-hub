@@ -1,0 +1,373 @@
+/* ============================================================
+   Section: Get Involved Cards (gi-*)
+   Split hero + cards grid, based on the PartnerPrograms design.
+   Palette: brand teal var(--brand) #2E8C8C, white cards, soft shadows.
+   RTL-safe: uses logical CSS properties; hero mirrors on Arabic.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+.gi-cards {
+  background: #ffffff;
+  position: relative;
+}
+
+.gi-cards--rtl {
+  direction: rtl;
+}
+
+/* ---------- Split hero ---------- */
+
+.gi-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--brand);
+}
+
+/* Left panel — brand accent color, white text. */
+.gi-hero-panel--text {
+  background: var(--brand);
+  color: #ffffff;
+  min-width: 0;
+  min-height: 15rem;
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+
+/* Right panel — hero photo. */
+.gi-hero-panel--image {
+  position: relative;
+  height: 15rem;
+  min-width: 0;
+  background: #2E8C8C;
+}
+
+.gi-hero-panel--image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gi-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 72%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Kicker — small, uppercase, spaced. */
+.gi-kicker {
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.9;
+  margin: 0 0 1rem;
+  display: block;
+}
+
+/* Hero heading — bold, large, fully visible. */
+.gi-heading {
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(1.75rem, 4vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.gi-hero-intro {
+  max-width: 62ch;
+  margin: 1.25rem 0 0;
+  color: #ffffff;
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Cards grid ---------- */
+
+.gi-cards-grid {
+  max-width: 1248px;
+  margin-inline: auto;
+  padding: 2rem 1rem 3rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  gap: 1.25rem;
+}
+
+.gi-card {
+  background: #ffffff;
+  border-radius: var(--radius, 8px);
+  overflow: hidden;
+  box-shadow: var(--shadow, 0 4px 12px rgba(0,0,0,0.1));
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+}
+
+.gi-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.gi-card__image picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.gi-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Icon for skills card (no photo) */
+.gi-card__icon {
+  position: absolute;
+  inset: 0;
+  background: #E8F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gi-card__icon svg {
+  color: var(--brand);
+  width: 72px;
+  height: 72px;
+}
+
+.gi-card__body {
+  padding: clamp(1rem, 1.6vw, 1.5rem);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.gi-card__title {
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: var(--color-ink, #1f2430);
+  margin: 0 0 0.75rem;
+}
+
+.gi-card__text {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-muted, #555555);
+  margin: 0 0 1rem;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+/* Link with accent underline bar and sliding arrow. */
+.gi-card__link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  position: relative;
+  min-height: 44px;
+  max-width: 100%;
+  flex-wrap: wrap;
+  padding-block: 0.5rem;
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.15s ease;
+}
+
+.gi-card__link:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.gi-card__link::after {
+  content: '';
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  width: 0;
+  height: 2px;
+  background: var(--brand);
+  transition: width 0.3s ease;
+}
+
+.gi-card__link:focus-visible::after {
+  width: 100%;
+}
+
+.gi-card__arrow {
+  display: inline-block;
+  margin-inline-start: 6px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.gi-card__link:focus-visible .gi-card__arrow {
+  transform: translateX(6px);
+}
+
+/* ---------- RTL mirroring ---------- */
+
+.gi-cards--rtl .gi-hero-panel--text {
+  text-align: start;
+}
+
+.gi-cards--rtl .gi-card__arrow {
+  margin-inline-start: 0;
+  margin-inline-end: 6px;
+}
+
+.gi-cards--rtl .gi-card__link:focus-visible .gi-card__arrow {
+  transform: translateX(-6px);
+}
+
+@media (hover: hover) {
+  .gi-card {
+    transition: transform 0.2s ease;
+  }
+
+  .gi-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .gi-card__link:hover::after {
+    width: 100%;
+  }
+
+  .gi-card__link:hover {
+    color: var(--color-accent-dark, #1f6f6f);
+  }
+
+  .gi-card__link:hover .gi-card__arrow {
+    transform: translateX(6px);
+  }
+
+  .gi-cards--rtl .gi-card__link:hover .gi-card__arrow {
+    transform: translateX(-6px);
+  }
+}
+
+@media (min-width: 600px) {
+  .gi-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .gi-hero {
+    min-height: 22.5rem;
+  }
+
+  .gi-hero-panel--image {
+    height: 17.5rem;
+  }
+
+  .gi-hero-panel--text {
+    text-align: center;
+  }
+
+  .gi-kicker {
+    margin: 0 auto 1rem;
+  }
+
+  .gi-heading {
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .gi-hero {
+    grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+    min-height: 22.5rem;
+  }
+
+  .gi-hero-panel--text {
+    min-height: 22.5rem;
+    padding: 2.5rem clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .gi-hero-panel--image {
+    height: auto;
+    min-height: 22.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gi-hero,
+  .gi-hero-panel--text,
+  .gi-hero-panel--image {
+    min-height: 26.25rem;
+  }
+
+  .gi-hero-panel--text {
+    padding: 3rem 3.5rem;
+  }
+
+  .gi-cards-grid {
+    padding-block: 3rem 5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .gi-cards-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 599px) {
+  .gi-hero-panel--text {
+    padding: 2rem 1.25rem;
+    text-align: center;
+  }
+
+  .gi-kicker {
+    margin-inline: auto;
+  }
+
+  .gi-heading {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 860px) and (orientation: landscape) {
+  .gi-hero-panel--image {
+    height: 12.5rem;
+  }
+}

@@ -17,6 +17,8 @@ export const LANGUAGES = [
   { code: 'es', native: 'Español', short: 'ES', dir: 'ltr' },
   { code: 'so', native: 'Soomaali', short: 'SO', dir: 'ltr' },
   { code: 'zh', native: '中文', short: 'ZH', dir: 'ltr' },
+  { code: 'ru', native: 'Русский', short: 'RU', dir: 'ltr' },
+  { code: 'pl', native: 'Polski', short: 'PL', dir: 'ltr' },
 ]
 
 export const DEFAULT_LANG = 'en'
@@ -25,6 +27,8 @@ export const FALLBACK_LANG = 'en'
 /** Languages that need a dedicated webfont (to avoid missing glyph boxes). */
 export const EXTRA_FONTS = {
   ar: 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap',
+  ru: 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap',
+  pl: 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap',
   zh: 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap',
 }
 

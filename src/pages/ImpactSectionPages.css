@@ -61,3 +61,233 @@
   color: #555555;
   margin: 0;
 }
+
+.impact-section-page .page-header.impact-image-header {
+  display: flex;
+  align-items: center;
+  min-height: 420px;
+  padding: 64px 24px;
+  color: #ffffff;
+  background-color: var(--brand-dark, #1b5e5e);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  border: 0;
+}
+
+.impact-section-page .page-header.post-page-header {
+  --hero-focus: center 76%;
+  --hero-focus-mobile: center 70%;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.6) 42%, rgba(0, 0, 0, 0.4) 100%),
+    url("/images/post-hero.jpg");
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.6) 42%, rgba(0, 0, 0, 0.4) 100%),
+    image-set(
+      url("/images/post-hero.webp") type("image/webp"),
+      url("/images/post-hero.jpg") type("image/jpeg")
+    );
+  background-position: center, var(--hero-focus);
+}
+
+.impact-section-page .page-header.impact-image-header .page-header__overlay {
+  display: none;
+}
+
+.impact-section-page .page-header.impact-image-header .container {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 0;
+  text-align: start;
+}
+
+.impact-section-page .page-header.impact-image-header h1 {
+  max-width: 100%;
+  margin: 0 0 0.75rem;
+  color: #ffffff;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  overflow-wrap: anywhere;
+}
+
+.impact-section-page .page-header.impact-image-header .page-intro {
+  max-width: 40rem;
+  color: #ffffff;
+  font-size: clamp(0.9375rem, 1.6vw, 1.125rem);
+  line-height: 1.7;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+  overflow-wrap: anywhere;
+}
+
+.impact-section-page .page-header.impact-image-header a {
+  color: #ffffff;
+}
+
+.impact-section-page .page-header.impact-image-header a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .impact-section-page .page-header.impact-image-header a:hover {
+    color: #f2f2f0;
+  }
+}
+
+html:dir(rtl) .impact-section-page .page-header.post-page-header {
+  background-image:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.6) 42%, rgba(0, 0, 0, 0.4) 100%),
+    url("/images/post-hero.jpg");
+  background-image:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.6) 42%, rgba(0, 0, 0, 0.4) 100%),
+    image-set(
+      url("/images/post-hero.webp") type("image/webp"),
+      url("/images/post-hero.jpg") type("image/jpeg")
+    );
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .impact-section-page .page-header.impact-image-header {
+    min-height: 340px;
+    padding-block: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .impact-section-page .page-header.impact-image-header {
+    min-height: 280px;
+    padding: 40px 16px;
+  }
+
+  .impact-section-page .page-header.post-page-header {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("/images/post-hero.jpg");
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      image-set(
+        url("/images/post-hero.webp") type("image/webp"),
+        url("/images/post-hero.jpg") type("image/jpeg")
+      );
+    background-position: center, var(--hero-focus-mobile);
+  }
+
+  html:dir(rtl) .impact-section-page .page-header.post-page-header {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      image-set(
+        url("/images/post-hero.webp") type("image/webp"),
+        url("/images/post-hero.jpg") type("image/jpeg")
+      );
+  }
+
+}
+
+.impact-section-page .page-header.report-page-header {
+  --hero-focus: center 30%;
+  --hero-focus-mobile: center 36%;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    url("/images/report-hero.jpg");
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    image-set(
+      url("/images/report-hero.webp") type("image/webp"),
+      url("/images/report-hero.jpg") type("image/jpeg")
+    );
+  background-position: center, var(--hero-focus);
+}
+
+html:dir(rtl) .impact-section-page .page-header.report-page-header {
+  background-image:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    url("/images/report-hero.jpg");
+  background-image:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    image-set(
+      url("/images/report-hero.webp") type("image/webp"),
+      url("/images/report-hero.jpg") type("image/jpeg")
+    );
+}
+
+.impact-section-page .page-header.blogs-page-header {
+  --hero-focus: center 76%;
+  --hero-focus-mobile: center 50%;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    url("/images/blogs-hero.jpg");
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    image-set(
+      url("/images/blogs-hero.webp") type("image/webp"),
+      url("/images/blogs-hero.jpg") type("image/jpeg")
+    );
+  background-position: center, var(--hero-focus);
+}
+
+html:dir(rtl) .impact-section-page .page-header.blogs-page-header {
+  background-image:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    url("/images/blogs-hero.jpg");
+  background-image:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 44%, rgba(0, 0, 0, 0.38) 100%),
+    image-set(
+      url("/images/blogs-hero.webp") type("image/webp"),
+      url("/images/blogs-hero.jpg") type("image/jpeg")
+    );
+}
+
+@media (max-width: 767px) {
+  .impact-section-page .page-header.report-page-header {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("/images/report-hero.jpg");
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      image-set(
+        url("/images/report-hero.webp") type("image/webp"),
+        url("/images/report-hero.jpg") type("image/jpeg")
+      );
+    background-position: center, var(--hero-focus-mobile);
+  }
+
+  html:dir(rtl) .impact-section-page .page-header.report-page-header {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("/images/report-hero.jpg");
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      image-set(
+        url("/images/report-hero.webp") type("image/webp"),
+        url("/images/report-hero.jpg") type("image/jpeg")
+      );
+  }
+
+  .impact-section-page .page-header.blogs-page-header {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("/images/blogs-hero.jpg");
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      image-set(
+        url("/images/blogs-hero.webp") type("image/webp"),
+        url("/images/blogs-hero.jpg") type("image/jpeg")
+      );
+    background-position: center, var(--hero-focus-mobile);
+  }
+
+  html:dir(rtl) .impact-section-page .page-header.blogs-page-header {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("/images/blogs-hero.jpg");
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      image-set(
+        url("/images/blogs-hero.webp") type("image/webp"),
+        url("/images/blogs-hero.jpg") type("image/jpeg")
+      );
+  }
+
+}

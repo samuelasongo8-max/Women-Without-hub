@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap.xml — Women Without Borders Hub
+  Generated at build time from src/data/site.js (routeMeta).
+  Trailing slashes are kept because the site uses trailing-slash routes.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://women-without-hub.vercel.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://women-without-hub.vercel.app/about/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/about/our-story/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/about/our-team/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/about/our-team/malua-lugazo/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/contact/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/get-involved/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/get-involved/donate/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/get-involved/membership/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/get-involved/mentor/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/get-involved/partner/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/get-involved/volunteer/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/impact/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/impact/blogs/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/impact/news/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/impact/post/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/impact/report/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/programs/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/programs/digital-technical-skills/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/programs/education-literacy/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/programs/health-menstrual-dignity/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/programs/livelihood-economic-empowerment/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/programs/livelihood-economic-empowerment/what-we-do/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/programs/mentorship-life-skills/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/programs/srhr/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/resources/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/safeguarding/</loc></url>
+  <url><loc>https://women-without-hub.vercel.app/updates/</loc></url>
+</urlset>

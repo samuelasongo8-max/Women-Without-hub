@@ -1,8 +1,14 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import PageHeader from '../components/PageHeader.jsx'
-import { SITE } from '../data/seo.js'
+import useHeroImagePreload from '../hooks/useHeroImagePreload.js'
+import {
+  SITE,
+  contactPageSchema,
+  contactOrganizationSchema,
+  breadcrumbListSchema,
+} from '../data/seo.js'
 import emailjs from '@emailjs/browser'
 import './Contact.css'
 
@@ -10,10 +16,19 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export default function Contact() {
   const { t } = useTranslation()
+  useHeroImagePreload({
+    desktop: '/images/contact-banner-desktop.webp',
+    mobile: '/images/contact-banner-mobile.webp',
+  })
   const formRef = useRef(null)
   const [status, setStatus] = useState(null)
   const [isSending, setIsSending] = useState(false)
   const [canResend, setCanResend] = useState(true)
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [pathname])
 
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
@@ -78,7 +93,7 @@ export default function Contact() {
       .then(() => {
         setStatus({
           type: 'success',
-          message: "Thank you! Your message has been sent. We'll reply soon.",
+          message: t('contact.successSent'),
         })
         form.reset()
         setCanResend(false)
@@ -94,42 +109,129 @@ export default function Contact() {
   }
 
   return (
-    <>
-      <section className="contact-hero">
+    <div className="contact-page">
+      <section className="contact-hero" aria-label={t('contact.heroLabel')}>
         <div className="container">
           <div className="contact-hero__inner">
             <div className="contact-hero__breadcrumb">
-              <Link to="/">Home</Link>
+              <Link to="/">{t('breadcrumb.home')}</Link>
               <span aria-hidden="true">›</span>
-              <span aria-current="page">Contact</span>
+              <span aria-current="page">{t('breadcrumb.contact')}</span>
             </div>
-            <h1 className="contact-hero__title">Contact</h1>
-            <p className="contact-hero__intro">
-              Questions from donors, development organizations, NGOs, community partners,
-              schools, training institutions, health partners, volunteers or press — we'd
-              love to hear from you.
-            </p>
+            <h1 className="contact-hero__title">{t('contact.title')}</h1>
+            <p className="contact-hero__intro">{t('contact.intro')}</p>
           </div>
         </div>
       </section>
 
-      <section className="contact-address">
+      {/* Partner With Women Without Borders Hub — inserted directly after the contact intro block. */}
+      <section className="contact-partner" aria-labelledby="partner-heading">
         <div className="container">
-          <div className="contact-address__block">
-            <h2 className="contact-address__heading">Our address</h2>
-            <div className="contact-address__lines">
-              <p className="contact-address__line">Women Without Borders Hub</p>
-              <p className="contact-address__line">Kakuma 3, Zone 2, Block 3</p>
-              <p className="contact-address__line">Turkana County, Kenya</p>
-              <p className="contact-address__line">P.O. Box 01-30501, Kenya</p>
+          <div className="contact-partner__inner">
+            <div className="contact-partner__copy">
+              <h2 id="partner-heading">{t('contact.partnerHeading')}</h2>
+              <p className="contact-partner__text">{t('contact.partnerText1')}</p>
+              <p className="contact-partner__text">{t('contact.partnerText2')}</p>
+              <p className="contact-partner__text">{t('contact.partnerText3')}</p>
+              <p className="contact-partner__text">{t('contact.partnerText4')}</p>
             </div>
+
+            <div className="contact-partner__card">
+              <h3>{t('contact.getInTouchHeading')}</h3>
+              <p>{t('contact.getInTouchText')}</p>
+
+              <address className="contact-partner__address">
+                <p className="contact-partner__contact-item">
+                  <svg
+                    className="contact-partner__icon"
+                    aria-hidden="true"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  <span>
+                    <strong>{t('contact.emailLabel')}</strong>{' '}
+                    <a href="mailto:womenwithoutbordershub@gmail.com">
+                      womenwithoutbordershub@gmail.com
+                    </a>
+                  </span>
+                </p>
+                <p className="contact-partner__contact-item">
+                  <svg
+                    className="contact-partner__icon"
+                    aria-hidden="true"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>
+                    <strong>{t('contact.locationLabel')}</strong>{' '}
+                    {t('contact.locationValue')}
+                  </span>
+                </p>
+              </address>
+
+              <p className="contact-partner__closing">
+                <strong>{t('contact.closingText')}</strong>
+              </p>
+              <p className="contact-partner__closing">
+                <strong>
+                  Together, we can create opportunities for girls and young women
+                  to learn, grow, and thrive.
+                </strong>
+              </p>
+
+              <a
+                href="mailto:womenwithoutbordershub@gmail.com?subject=Partnership%20Enquiry"
+                className="btn btn-lg contact-partner__cta"
+                aria-label={t('contact.emailUsAria', { email: 'womenwithoutbordershub@gmail.com' })}
+              >
+                {t('contact.emailUs')}
+              </a>
+            </div>
+
+            {/* Structured data: ContactPage, Organization (NGO), BreadcrumbList. */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(contactPageSchema()),
+              }}
+            />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(contactOrganizationSchema()),
+              }}
+            />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(breadcrumbListSchema(pathname)),
+              }}
+            />
           </div>
         </div>
       </section>
 
       <section className="contact-form">
 
-        <h2>Send us a message</h2>
+        <h2>{t('contact.formHeading')}</h2>
 
         {status ? (
           <div
@@ -149,7 +251,7 @@ export default function Contact() {
             <div className="contact-form__row--split">
               <div className="contact-form__field">
                 <label htmlFor="name" className="contact-form__label">
-                  Full name
+                  {t('contact.name')}
                 </label>
                 <input
                   id="name"
@@ -163,7 +265,7 @@ export default function Contact() {
 
               <div className="contact-form__field">
                 <label htmlFor="email" className="contact-form__label">
-                  Email
+                  {t('contact.emailLabel')}
                 </label>
                 <input
                   id="email"
@@ -178,7 +280,7 @@ export default function Contact() {
 
             <div className="contact-form__row">
               <label htmlFor="subject" className="contact-form__label">
-                Subject
+                {t('contact.subject')}
               </label>
               <select
                 id="subject"
@@ -186,22 +288,22 @@ export default function Contact() {
                 className="contact-form__select"
                 required
               >
-                <option value="">Choose a subject</option>
-                <option value="Donor">Donor</option>
-                <option value="Development organization">Development organization</option>
-                <option value="NGO">NGO</option>
-                <option value="Community partner">Community partner</option>
-                <option value="School or training institution">School or training institution</option>
-                <option value="Health partner">Health partner</option>
-                <option value="Volunteer">Volunteer</option>
-                <option value="Press">Press</option>
-                <option value="Other">Other</option>
+                <option value="">{t('contact.subjectPlaceholder')}</option>
+                <option value="Donor">{t('contact.subjectDonor')}</option>
+                <option value="Development organization">{t('contact.subjectDevelopmentOrg')}</option>
+                <option value="NGO">{t('contact.subjectNgo')}</option>
+                <option value="Community partner">{t('contact.subjectCommunityPartner')}</option>
+                <option value="School or training institution">{t('contact.subjectSchool')}</option>
+                <option value="Health partner">{t('contact.subjectHealthPartner')}</option>
+                <option value="Volunteer">{t('contact.subjectVolunteer')}</option>
+                <option value="Press">{t('contact.subjectPress')}</option>
+                <option value="Other">{t('contact.subjectOther')}</option>
               </select>
             </div>
 
             <div className="contact-form__row">
               <label htmlFor="message" className="contact-form__label">
-                Message
+                {t('contact.message')}
               </label>
               <textarea
                 id="message"
@@ -210,13 +312,13 @@ export default function Contact() {
                 rows="6"
                 required
                 minLength="10"
-                placeholder="Write your message here..."
+                placeholder={t('contact.messagePlaceholder')}
               />
             </div>
 
             {/* Honeypot — hidden visually; bots often fill it in. */}
             <div className="contact-form__honeypot" aria-hidden="true">
-              <label htmlFor="website">Website</label>
+              <label htmlFor="website">{t('contact.website')}</label>
               <input id="website" name="website" type="text" tabIndex={-1} />
             </div>
 
@@ -225,7 +327,7 @@ export default function Contact() {
               className="contact-form__submit"
               disabled={isSending}
             >
-              {isSending ? 'Sending…' : 'Send message'}
+              {isSending ? t('contact.sending') : t('contact.send')}
             </button>
           </form>
         )}
@@ -233,17 +335,17 @@ export default function Contact() {
 
       <section className="contact-map">
         <div className="container">
-          <p className="contact-map__text">Find us in Kakuma, Turkana County.</p>
+          <p className="contact-map__text">{t('contact.mapText')}</p>
           <a
             href="https://www.google.com/maps/search/?api=1&query=Kakuma+3+Turkana+County+Kenya"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-map__link"
           >
-            Open in Google Maps
+            {t('contact.mapLink')}
           </a>
           <iframe
-            title="Map of Women Without Borders Hub in Kakuma, Turkana County, Kenya"
+            title={t('contact.mapTitle')}
             src="https://www.google.com/maps?q=Kakuma+3,+Turkana+County,+Kenya&z=13&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -252,6 +354,6 @@ export default function Contact() {
           />
         </div>
       </section>
-    </>
+    </div>
   )
 }

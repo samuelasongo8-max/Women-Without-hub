@@ -53,7 +53,7 @@ export const updates = [
   {
     slug: 'building-pathways-for-women-and-girls',
     title: 'Building Pathways for Women and Girls in Kakuma',
-    image: '/women Hub7.png',
+    image: '/images/women-hub7.png',
     alt: 'Women and girls learning together at Women Without Borders Hub in Kakuma',
     to: '/updates/building-pathways-for-women-and-girls',
     // Publish date (kept): drives the live "N days/weeks ago" counting.
@@ -93,7 +93,7 @@ If you care about women's empowerment, refugee livelihoods, and inclusive develo
   {
     slug: 'graduation-celebration-skills',
     title: 'Graduation Day: Young Women Complete Tailoring and Digital Skills Training',
-    image: '/graduation-at-women-without-border.jpg',
+    image: '/images/graduation-at-women-without-border.jpg',
     alt: 'Young women graduates holding their training certificates',
     to: '/updates/graduation-celebration-skills',
     // Publish date (kept): drives the live "N days/weeks ago" counting.
@@ -111,7 +111,7 @@ Congratulations to our graduates!`,
   {
     slug: 'health-advocacy',
     title: 'Advocating for Health: Women Without Borders Hub',
-    image: '/avocating health.jpg',
+    image: '/images/avocating-health.jpg',
     alt: 'Health advocacy for refugee and host communities in Kakuma',
     to: '/updates/health-advocacy',
     fullText: `Health is a human right, not a privilege.

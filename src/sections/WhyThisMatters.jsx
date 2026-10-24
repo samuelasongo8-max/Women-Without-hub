@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import './WhyThisMatters.css'
 
 const reasons = [
@@ -17,29 +18,36 @@ const reasons = [
 ]
 
 export default function WhyThisMatters() {
+  const { t } = useTranslation()
   return (
-    <section className="section why-matters">
+    <section className="section why-matters" id="why-this-matters">
+
       <div className="container">
-        <h2 className="section-title">Why This Matters</h2>
-        <p>
-          AUVD is a refugee-led, community-based nonprofit organization in Kakuma
-          Refugee Camp, Turkana County, Kenya. We empower refugees and vulnerable
-          host communities through creative arts, inclusive education,
-          psychosocial support, skills development, and community-led initiatives
-          that build resilience, dignity, and opportunity.
+        <h2 className="section-title why-matters__title">
+          {t('common.whyThisMatters', { defaultValue: 'Why This Matters' })}
+        </h2>
+        <p className="why-intro">
+          {t('common.whyIntro', {
+            defaultValue:
+              'Women and girls in Kakuma Refugee Camp face many challenges, including financial hardship, interrupted education, limited access to skills training, and barriers to employment and healthcare. For teenage mothers, these challenges can be even greater as they balance childcare with their education and personal development. At Women Without Borders Hub, we believe every girl and young woman deserves the opportunity to overcome these barriers, discover her potential, and build a better future. By promoting education, practical skills, mentorship, health awareness, and economic empowerment, we aim to create opportunities for women and girls to grow in confidence, strengthen their independence, and contribute to their communities.',
+          })}
         </p>
 
         <div className="why-grid">
           {reasons.map((r) => (
             <article key={r.title} className="why-card">
-              <h3>{r.title}</h3>
-              <p>{r.text}</p>
+              <h3>{t(`common.whyTitle.${r.title}`, { defaultValue: r.title })}</h3>
+              <p>{t(`common.whyText.${r.title}`, { defaultValue: r.text })}</p>
             </article>
           ))}
         </div>
 
         <p className="section-cta">
-          <Link to="/impact/">See the difference your support makes →</Link>
+          <Link to="/impact/">
+            {t('common.ctaSeeImpact', {
+              defaultValue: 'See the difference your support makes →',
+            })}
+          </Link>
         </p>
       </div>
     </section>

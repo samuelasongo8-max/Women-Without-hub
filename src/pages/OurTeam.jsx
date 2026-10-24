@@ -1,19 +1,20 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader.jsx'
 import './OurTeam.css'
 
 /** 
- * Our Team — subpage of About at /about/our-term. 
- * Roster of 8 team members of Women Without Borders Hub in Kakuma, Kenya.
- * Photos live in public/ (URL-encoded paths for filenames with spaces).
+ * Our Team — subpage of About.
+ * Roster photos live in the public images directory.
  */
 
 const team = [
   {
     name: 'MaLua Lugazo',
     role: 'Founder & Executive Director',
-    photo: '/Chairperson%20Maluo%20Lugazo.png',
+    photo: '/images/team/malua-lugazo.jpg',
+    photoWebp: '/images/team/malua-lugazo.webp',
     alt: 'MaLua Lugazo, Founder & Executive Director',
     objectPosition: 'center top',
     // Only the Chairperson card links to a profile page.
@@ -22,61 +23,100 @@ const team = [
   {
     name: 'Hawa Musa',
     role: 'Vice Chairperson',
-    photo: '/Hawa%20Musa.jpg',
+    photo: '/images/team/hawa-musa.jpg',
+    photoWebp: '/images/team/hawa-musa.webp',
     alt: 'Hawa Musa, Vice Chairperson',
     objectPosition: 'center top',
   },
   {
     name: 'Rukundo Mercie',
     role: 'Treasurer',
-    photo: '/Rukundo%20Mercie.jpg',
+    photo: '/images/team/rukundo-mercie.jpg',
+    photoWebp: '/images/team/rukundo-mercie.webp',
     alt: 'Rukundo Mercie, Treasurer',
     objectPosition: 'center top',
   },
   {
     name: 'Abir Zakaria',
     role: 'Secretary',
-    photo: '/Abir%20Zakaria.jpg',
+    photo: '/images/team/abir-zakaria.jpg',
+    photoWebp: '/images/team/abir-zakaria.webp',
     alt: 'Abir Zakaria, Secretary',
     objectPosition: 'center top',
   },
   {
     name: 'Kalo Atahir',
     role: 'Member',
-    photo: '/Kalo%20Atahir.jpg',
+    photo: '/images/team/kalo-atahir.jpg',
+    photoWebp: '/images/team/kalo-atahir.webp',
     alt: 'Kalo Atahir, Member',
     objectPosition: 'center top',
   },
   {
     name: 'Khadijoh Mahamed',
     role: 'Member',
-    photo: '/Khadijoh%20Mahamed.jpg',
+    photo: '/images/team/khadijoh-mahamed.jpg',
+    photoWebp: '/images/team/khadijoh-mahamed.webp',
     alt: 'Khadijoh Mahamed, Member',
     objectPosition: 'center top',
   },
   {
     name: 'Fatuma Abdulahi',
     role: 'Member',
-    photo: '/Fatuma%20ABdulahi.jpg',
+    photo: '/images/team/fatuma-abdulahi.jpg',
+    photoWebp: '/images/team/fatuma-abdulahi.webp',
     alt: 'Fatuma Abdulahi, Member',
     objectPosition: 'center top',
   },
   {
     name: 'Mzigwa Murjani',
     role: 'Member',
-    photo: '/Mzigwa_Murjani-removebg.png',
+    photo: '/images/team/mzigwa-murjani.jpg',
+    photoWebp: '/images/team/mzigwa-murjani.webp',
     alt: 'Mzigwa Murjani, Member',
+    objectPosition: 'center 20%',
+  },
+  {
+    name: 'Doctor Ali Kuku',
+    role: 'Member',
+    photo: '/images/team/ali-kuku.jpg',
+    alt: 'Doctor Ali Kuku, Member of Women Without Borders Hub',
     objectPosition: 'center top',
+    photoWebp: '/images/team/ali-kuku.webp',
+  },
+  {
+    name: 'Mchiwa Mwaliko',
+    role: 'Member',
+    photo: '/images/team/mchiwa-mwaliko.jpg',
+    alt: 'Mchiwa Mwaliko, Member of Women Without Borders Hub',
+    objectPosition: 'center top',
+    photoWebp: '/images/team/mchiwa-mwaliko.webp',
   },
 ]
 
 export default function OurTeam() {
   const { t } = useTranslation()
+
+  useEffect(() => {
+    const preload = document.createElement('link')
+    preload.rel = 'preload'
+    preload.as = 'image'
+    preload.href = '/images/team-hero.webp'
+    preload.setAttribute('fetchpriority', 'high')
+    document.head.appendChild(preload)
+
+    return () => {
+      preload.remove()
+    }
+  }, [])
+
   return (
     <div className="ourteam-page">
       <PageHeader
-        title="Our Team"
-        intro="The community leaders, educators and mentors behind Women Without Borders Hub in Kakuma."
+        title={t('team.title')}
+        intro={t('team.subtitle')}
+        className="impact-image-header team-page-header"
+        minHeight={null}
       />
 
       <div className="ourteam-grid">
@@ -87,38 +127,38 @@ export default function OurTeam() {
               style={{ background: '#F2F2F0' }}
               aria-label={`Photo of ${member.name}`}
             >
-              <img
-                className="ourteam-photo-img"
-                src={member.photo}
-                alt={member.alt}
-                loading="lazy"
-                decoding="async"
-                width="400"
-                height="400"
-                style={{ objectPosition: member.objectPosition }}
-                onError={(e) => {
-                  // Hide the broken image and reveal the initials fallback.
-                  e.currentTarget.classList.add('error')
-                  const fallback = e.currentTarget.parentElement?.querySelector(
-                    '.ourteam-fallback',
-                  )
-                  if (fallback) fallback.style.display = 'flex'
-                }}
-              />
-              <div
-                className="ourteam-fallback"
-                style={{
-                  display: 'none',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '100%',
-                  height: '100%',
-                  color: '#888888',
-                  fontFamily: "'Source Sans 3', 'Segoe UI', system-ui, sans-serif",
-                  fontSize: '0.9rem',
-                }}
+              <picture
+                style={{ display: 'block', width: '100%', height: '100%' }}
               >
-                {member.name.split(' ').map((part, i) => (i === 0 ? part[0] : '')).join('')}
+                {member.photoWebp && (
+                  <source srcSet={member.photoWebp} type="image/webp" />
+                )}
+                <img
+                  className="ourteam-photo-img"
+                  src={member.photo}
+                  alt={member.alt}
+                  loading="lazy"
+                  decoding="async"
+                  width={600}
+                  height={600}
+                  style={{ objectPosition: member.objectPosition }}
+                  onError={(e) => {
+                    // Hide the broken image and reveal the initials fallback.
+                    e.currentTarget.classList.add('error')
+                    const fallback = e.currentTarget
+                      .closest('.ourteam-photo')
+                      ?.querySelector('.ourteam-fallback')
+                    if (fallback) fallback.style.display = 'flex'
+                  }}
+                />
+              </picture>
+              <div className="ourteam-fallback" aria-hidden="true">
+                {member.name
+                  .split(/\s+/)
+                  .map((part) => part[0])
+                  .join('')
+                  .slice(0, 2)
+                  .toUpperCase()}
               </div>
             </div>
             <h2 className="ourteam-name">{member.name}</h2>

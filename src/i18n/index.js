@@ -27,6 +27,8 @@ const loaders = {
   es: () => import('../locales/es.json'),
   so: () => import('../locales/so.json'),
   zh: () => import('../locales/zh.json'),
+  ru: () => import('../locales/ru.json'),
+  pl: () => import('../locales/pl.json'),
 }
 
 /** Cache of already-loaded resources so we never import the same file twice. */

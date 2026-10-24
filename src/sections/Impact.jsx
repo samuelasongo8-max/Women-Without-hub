@@ -9,7 +9,7 @@ const stats = [
 
 export default function ImpactSection() {
   return (
-    <section className="auvd-impact">
+    <section className="auvd-impact" id="our-impact">
       <div className="auvd-impact-inner">
         <div className="auvd-impact__photo" aria-hidden="true">
           <span className="auvd-impact__stroke auvd-impact__stroke--1" />

@@ -12,7 +12,7 @@
  *    canonical/OG/absolute breadcrumb URLs activate automatically.
  */
 
-import { socialLinks } from './site.js'
+import { breadcrumbsFor, normalizePath, socialLinks } from './site.js'
 
 /**
  * Normalize the configured site URL into a canonical absolute origin.
@@ -72,6 +72,10 @@ export const SITE = {
 
   // Official logo file — add when provided (used in Organization schema).
   logo: null,
+
+  // Default Open Graph / Twitter share image. Replace with a 1200×630
+  // image when one is available (manual step — see notes after deploy).
+  ogImage: '/images/women-hub-logo.png',
 
   // 3. Website descriptions.
   description:
@@ -136,11 +140,7 @@ const pageSeo = {
     title: 'Our Team',
     description:
       'Meet the team behind Women Without Borders Hub — the community leaders, educators and mentors supporting girls, teenage mothers and young women in Kakuma, Turkana County, Kenya.',
-  },
-  '/about/our-team/': {
-    title: 'Our Team',
-    description:
-      'Meet the team behind Women Without Borders Hub — the community leaders, educators and mentors supporting girls, teenage mothers and young women in Kakuma, Turkana County, Kenya.',
+    ogImage: '/images/team-hero-og.jpg',
   },
   '/programs/': {
     title: 'Programs',
@@ -172,21 +172,25 @@ const pageSeo = {
     title: 'Blogs',
     description:
       'Blogs and reflections from Women Without Borders Hub — voices from our team, mentors and the women and girls we work with in Kakuma.',
+    ogImage: '/images/blogs-hero-og.jpg',
   },
   '/impact/report/': {
     title: 'Report',
     description:
       'Reports from Women Without Borders Hub — outcomes, reach and how we measure change across our programmes in Kakuma, Kenya.',
+    ogImage: '/images/report-hero-og.jpg',
   },
   '/impact/post/': {
     title: 'Post',
     description:
       'Posts and updates from Women Without Borders Hub — stories, announcements and highlights from our work in Kakuma, Kenya.',
+    ogImage: '/images/post-hero-og.jpg',
   },
   '/get-involved/': {
     title: 'Get Involved',
     description:
       'Support vulnerable girls, teenage mothers and young women in Kakuma — donate, volunteer, become a member, mentor or partner with Women Without Borders Hub.',
+    ogImage: '/images/get-involved-hero.jpg',
   },
   '/resources/': {
     title: 'Resources',
@@ -199,9 +203,9 @@ const pageSeo = {
       'Our safeguarding and child protection commitments for girls, teenage mothers and young women in our programmes in Kakuma, Kenya.',
   },
   '/contact/': {
-    title: 'Contact',
+    title: 'Contact & Partner With Us',
     description:
-      'Contact Women Without Borders Hub in Kakuma 3, Turkana County, Kenya. We welcome enquiries from donors, development organizations, NGOs, schools, training institutions, health partners and volunteers.',
+      'Partner with Women Without Borders Hub in Kakuma Refugee Camp, Kenya. Support girls’ education, mentorship, digital skills, menstrual health and economic empowerment.',
   },
 }
 
@@ -211,6 +215,7 @@ const involvementSeo = {
     title: 'Donate',
     description:
       'Donate to Women Without Borders Hub and fund education, literacy, skills, mentorship, health and economic empowerment for girls and young women in Kakuma, Kenya.',
+    ogImage: '/images/donate-hero-og.jpg',
   },
   volunteer: {
     title: 'Volunteer',
@@ -272,10 +277,19 @@ const programSeo = {
   },
   'livelihood-economic-empowerment': {
     title: 'Livelihood & Economic Empowerment',
+    fullTitle:
+      'Livelihood & Economic Empowerment | Women Without Hub, Kakuma, Kenya',
     seoTopic: 'Livelihoods & Women’s Economic Empowerment',
     seoDescription:
-      'Women’s livelihoods and economic empowerment in Kakuma: entrepreneurship, business mentorship, agriculture, apprenticeships, market linkages and employment referrals.',
+      'Women and young people can develop practical skills, explore income opportunities, strengthen confidence, and work toward greater financial independence.',
   },
+}
+
+const livelihoodWhatWeDoSeo = {
+  title:
+    'What We Do | Livelihood & Economic Empowerment | Women Without Borders Hub',
+  description:
+    'Livelihood & Economic Empowerment is one of our core programme areas. We work alongside women and girls to identify barriers and expand access to opportunities.',
 }
 
 /**
@@ -321,6 +335,7 @@ export function seoFor(pathname) {
         `${pageSeo[path].title} | ${SITE.name}`,
       description: pageSeo[path].description,
       noindex: false,
+      ogImage: pageSeo[path].ogImage || null,
     }
   }
 
@@ -345,12 +360,25 @@ export function seoFor(pathname) {
   }
 
   // Dynamic program pages: "/programs/<slug>/".
+  if (
+    path ===
+    '/programs/livelihood-economic-empowerment/what-we-do/'
+  ) {
+    return {
+      ...livelihoodWhatWeDoSeo,
+      noindex: false,
+      ogImage: '/images/program-livelihood-banner-desktop.jpg',
+    }
+  }
+
   const programMatch = path.match(/^\/programs\/([^/]+)\/$/)
   if (programMatch) {
     const program = programSeo[programMatch[1]]
     if (program) {
       return {
-        title: `${program.title} | ${SITE.name} — ${program.seoTopic}`,
+        title:
+          program.fullTitle ||
+          `${program.title} | ${SITE.name} — ${program.seoTopic}`,
         description: program.seoDescription,
         noindex: false,
       }
@@ -468,4 +496,84 @@ export function organizationSchema() {
   return schema
 }
 
+/**
+ * Contact page structured data.
+ *
+ * ContactPage for the page itself, plus an Organization (typed as NGO) for
+ * the organisation and a BreadcrumbList (Home > Contact). Values that are
+ * not officially configured (domain, logo, email) fall back to real,
+ * existing site assets rather than inventing data.
+ */
+export function contactOrganizationSchema() {
+  const contactUrl = SITE.url
+    ? new URL('/contact/', SITE.url).toString()
+    : '/contact/';
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    additionalType: 'NGO',
+    name: SITE.name,
+    description:
+      'Women Without Borders Hub is a community-based organization in Kakuma Refugee Camp, Kenya. We empower girls and young women in refugee and host communities through education, literacy, mentorship, digital and practical skills, menstrual health education, sexual and reproductive health awareness, and economic empowerment.',
+    email: 'womenwithoutbordershub@gmail.com',
+    logo: '/women-hub-logo.png',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: SITE.address.streetAddress,
+      addressLocality: 'Kakuma',
+      addressRegion: SITE.address.addressRegion,
+      addressCountry: 'KE',
+    },
+    areaServed: 'Kakuma Refugee Camp, Kenya',
+    knowsAbout: [
+      "girls' education",
+      'literacy',
+      'mentorship',
+      'digital skills',
+      'menstrual health education',
+      'sexual and reproductive health',
+      'economic empowerment',
+    ],
+  };
+
+  if (SITE.url) schema.url = contactUrl;
+
+  return schema
+}
+
+export function contactPageSchema() {
+  const contactUrl = SITE.url
+    ? new URL('/contact/', SITE.url).toString()
+    : '/contact/';
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    url: contactUrl,
+    name: 'Contact & Partner With Us | Women Without Borders Hub',
+    description:
+      'Partner with Women Without Borders Hub in Kakuma Refugee Camp, Kenya. Support girls’ education, mentorship, digital skills, menstrual health and economic empowerment.',
+    mainEntity: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: contactUrl,
+    },
+  };
+}
+
+export function breadcrumbListSchema(pathname) {
+  const path = normalizePath(pathname);
+  const trail = breadcrumbsFor(path)
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: trail.map((crumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: crumb.label,
+      item: SITE.url ? new URL(crumb.to, SITE.url).toString() : crumb.to,
+    })),
+  };
+}

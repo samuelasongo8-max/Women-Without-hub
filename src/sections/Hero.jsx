@@ -87,8 +87,12 @@ export default function Hero() {
             <span className="hero-brush hero-brush-c" aria-hidden="true" />
             <img
               className="hero-photo"
-              src="/graduation-at-women-without-border.jpg"
+              src="/images/graduation-at-women-without-border.jpg"
               alt="Women proudly holding their graduation certificates"
+              width="800"
+              height="600"
+              loading="eager"
+              decoding="async"
             />
             <p className="hero-script">
               Real People.
