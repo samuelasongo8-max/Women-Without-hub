@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
 import Seo from './Seo.jsx'
+import ScrollArrows from './ScrollArrows.jsx'
+import ChatAssistantLauncher from './ChatAssistantLauncher.jsx'
 
 export default function Layout() {
   const { t } = useTranslation()
@@ -17,7 +19,8 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <ScrollArrows />
+      <ChatAssistantLauncher />
     </div>
   )
 }
-

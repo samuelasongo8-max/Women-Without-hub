@@ -1,4 +1,8 @@
 {
+  "donate": {
+    "title": "Changia",
+    "subtitle": "Mchango wako unafadhili moja kwa moja programu za elimu, ujuzi na utu."
+  },
   "brand": {
     "name": "Women Without Borders Hub"
   },
@@ -19,6 +23,7 @@
     "getInvolved": "Shiriki",
     "resources": "Rasilimali",
     "contact": "Mawasiliano",
+    "orgName": "Women Without Hub",
     "donate": "Changia",
     "ourStory": "Hadithi Yetu",
     "ourTeam": "Timu Yetu",
@@ -33,6 +38,23 @@
     "current": "Lugha ya sasa: {{lang}}",
     "menu": "Chagua lugha"
   },
+  "search": {
+    "open": "Tafuta",
+    "close": "Funga utafutaji",
+    "placeholder": "Tafuta kwenye Women Without Hub...",
+    "clear": "Futa utafutaji",
+    "results": "Matokeo ya utafutaji",
+    "noResults": "Hakuna matokeo ya '{{query}}'. Jaribu maneno tofauti.",
+    "getInvolved": "Shiriki",
+    "contact": "Mawasiliano",
+    "loading": "Utafutaji unapakia...",
+    "error": "Utafutaji haukuweza kupakiwa. Tafadhali jaribu tena."
+  },
+  "scroll": {
+    "controls": "Kusogeza ukurasa",
+    "top": "Nenda juu ya ukurasa",
+    "bottom": "Nenda chini ya ukurasa"
+  },
   "common": {
     "learnMore": "Jifunze zaidi",
     "readMore": "Soma zaidi",
@@ -44,12 +66,31 @@
     "partnerLogosSoon": "Nembo za washiriki zinatengenezwa.",
     "partnerLogo": "Nembo ya mshiriki",
     "viewAll": "Ona zote",
-    "readStory": "Soma hadithi"
+    "readStory": "Soma hadithi",
+    "whyThisMatters": "Kwa nini hili ni muhimu",
+    "roles": {
+      "Chairperson": "Chairperson",
+      "Vice Chairperson": "Vice Chairperson",
+      "Treasurer": "Treasurer",
+      "Secretary": "Secretary",
+      "Member": "Member",
+      "whyIntro": "Wanana na waleshi katika kampuni wa refugees ya Kakuma zinatumainikisha mahitaji kadhalini, kulingana na wakati unapoishi mahiri ya kujifau, usimamiifu wa elimu, ukweli wa kuongea kwenye uhuru wa kufikia uhuru wa kazi, na hitilafu za usalama wa afya. kwa wazazi wa vijana, mahitaji haya yatangulia kugawanya kulingana na usalama wa watoto na ukuaji wa elimu. kwa Baba wa Borders ya Wanane wa Kijamii, tunajua kuwa binti binti na bintwana walipopoteza hali zinazoweza kuondoa hatari hizi, kuwafanya kufuata hali yao, kuwapa uwepo wetu, kuweka uhuru wowote, na kucontribute kwa jamii zao."
+    }
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
     "role": "Mwanachama wa Women Without Borders Hub",
-    "label": "Nukuu yenye sifa"
+    "label": "Nukuu yenye sifa",
+    "name": "Khadijoh Mahamed"
+  },
+  "quoteSection": {
+    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "name": "Khadijoh Mahamed",
+    "role": "Member of Women Without Borders Hub",
+    "label": "Nukuu yenye sifa",
+    "quote2": "I founded Women Without Borders Hub because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.",
+    "name2": "MaLua Lugazo",
+    "role2": "Founder of Women Without Borders Hub"
   },
   "breadcrumb": {
     "home": "Mwanzo",
@@ -95,7 +136,7 @@
   },
   "contact": {
     "title": "Mawasiliano",
-    "intro": "Maswali kutoka kwa wafadhili, mashirika ya maendeleo, NGO, washirika wa jamii, shule, taasisi za mafunzo, washirika wa afya, wajitoleaji au vyombo vya habari — tungefurahi kusikia kutoka kwako.",
+    "intro": "Iwe wewe ni mfadhili, NGO, shule, mshirika wa afya, kikundi cha jamii, mtu wa kujitolea au mwandishi wa habari, tutafurahi kusikia kutoka kwako.",
     "name": "Jina kamili",
     "namePlaceholder": "Jina lako kamili",
     "email": "Barua pepe",
@@ -123,7 +164,25 @@
     "formHeading": "Tutumie ujumbe",
     "addressHeading": "Anwani yetu",
     "mapText": "Tupate Kakuma, Kaunti ya Turkana.",
-    "mapLink": "Fungua kwenye Google Maps"
+    "mapLink": "Fungua kwenye Google Maps",
+    "website": "Website",
+    "heroLabel": "Timu na jamii ya Women Without Borders Hub katika kambi ya Kakuma, Kenya",
+    "partnerHeading": "Washirika wa Women Without Borders Hub",
+    "partnerText1": "Women Without Borders Hub ni shirika la jamii lilinajengwa kambi ya Kakuma, Kenya. Tunakaribisha watu, mashirika, taasisi, wafadhili na washirika wanaopatikana katika commitment yetu ya kuwa na maisha bora ya wasichana na vijana wa kike katika jamii za wakimbiaji na wakimbiaji.",
+    "partnerText2": "Kupitia elimu na uandishi, ushauri, uendelezaji wa ujuzi wa kidijitali na wa vitendo, elimu ya afya ya hedhi, uelewa wa afya ya kingono na uzazi na uwezeshaji kiuchumi, tunamsaidia wasichana wanaokabiliwa na hatari, mama vijana na vijana wa kike kuwa na ujasiri, kuendeleza ujuzi na kupata fursa za mustaqbali mwema.",
+    "partnerText3": "Tunakaribisha ushirikishaji unaimarisha programu zetu na unausa kuondoa vikwazo vya elimu, maendeleo ya mtu na fursa za kiuchumi. Iwe ni fedha, utaalamu wa kiutekniki, mafunzo, rasilimali au mipango ya ushirikishaji, msaada wako unaweza kutusaidia kuunda fursa zaidi kwa jamii tunazozihudumia.",
+    "partnerText4": "Pamoja, tunaweza kukuza heshima, ushirikishaji, uimara na fursa endelevu, tukiwaruhusu wasichana na vijana wa kike kubuni mustaqbali wao na kuchangia kwa manufaa kwenye jamii zao.",
+    "getInTouchHeading": "Wasiliana nasi",
+    "getInTouchText": "Tunakaribisha maombi ya ushirikishaji, ushirikishaji katika programu na fursa za kazi pamoja.",
+    "emailLabel": "Barua pepe:",
+    "locationLabel": "Eneo:",
+    "locationValue": "Kambi ya Kakuma, Kenya",
+    "closingText": "Pamoja, tunaweza kuunda fursa kwa wasichana na vijana wa kike kujifunza, kukua na kustawi.",
+    "emailUs": "Tuandikie",
+    "emailUsAria": "Tuandikie — tuma ombi la ushirikishaji kwa {{email}}",
+    "mapTitle": "Ramani ya Women Without Borders Hub katika Kakuma, Kaunti ya Turkana, Kenya",
+    "successSent": "Asante! Ujumbe wako umetumwa. Tutajibu haraka.",
+    "brandName": "Women Without Borders Hub"
   },
   "notFound": {
     "title": "Ukurasa haujapatikana",
@@ -151,6 +210,18 @@
     "emailUs": "Tutumie barua pepe",
     "callUs": "Tupigie simu"
   },
+  "post": {
+    "title": "Machapisho",
+    "subtitle": "Hadithi, matangazo na mambo muhimu kuhusu kazi yetu Kakuma."
+  },
+  "report": {
+    "title": "Ripoti",
+    "subtitle": "Matokeo, wigo wa kazi yetu na jinsi tunavyopima mabadiliko katika programu zetu."
+  },
+  "blogs": {
+    "title": "Blogu",
+    "subtitle": "Tafakari kutoka kwa timu yetu, washauri wetu, na wanawake na wasichana tunaofanya nao kazi."
+  },
   "impactSectionPages": {
     "post": {
       "intro": "Hadithi, matangazo na mambo ya kuvutia kutoka kazi yetu katika Kakuma."
@@ -174,6 +245,10 @@
     "title": "Rasilimali",
     "intro": "Ripoti, zana na miongozo kutoka kazi yetu — bure kupakua na kutumia tena."
   },
+  "team": {
+    "title": "Timu yetu",
+    "subtitle": "Viongozi wa jamii, waelimishaji na washauri wa Women Without Borders Hub huko Kakuma."
+  },
   "about": {
     "title": "Kutuhusu",
     "ourTeam": {
@@ -182,7 +257,26 @@
       "getInvolved": "Shiriki",
       "viewProfile": "Onaona wasifu",
       "profileComingSoon": "Itasajiliwa haraka"
-    }
+    },
+    "heading": "About",
+    "paragraph": "Women Without Borders Hub is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women.",
+    "missionTitle": "Our mission",
+    "visionTitle": "Our vision",
+    "whoWeServe": "Who we serve",
+    "coreValues": "Our core values",
+    "whereWeWork": "Where we work",
+    "partnersText": "We partner with schools, training institutions, health providers, NGOs, development organizations, donors and private-sector partners — adapting each programme to local needs while holding consistent standards for quality and safeguarding.",
+    "getToKnowUs": "Get to know us better",
+    "exploreText": "Explore our programs, read our impact or get involved.",
+    "actionsHeading": "Ways to support",
+    "card1Label": "Sponsor a Girl's Education",
+    "card1Desc": "Help fund a girl's education journey",
+    "card2Label": "Support Menstrual Health Education",
+    "card2Desc": "Provide menstrual health resources",
+    "card3Label": "Fund Digital and Practical Skills",
+    "card3Desc": "Support digital skills training",
+    "card4Label": "Partner With Us",
+    "card4Desc": "Collaborate with us to empower more girls"
   },
   "ourStory": {
     "whatWeDo": "Tunachofanya",
@@ -192,5 +286,37 @@
   "safeguarding": {
     "title": "Ulinzi",
     "intro": "Kujitolea kwetu kwa usalama, heshima na ulinzi wa kila msichana na mwanamke tunayehudumia."
+  },
+  "homePage": {
+    "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
+  },
+  "getInvolvedCards": {
+    "kicker": "Get Involved",
+    "heading": "Ways to support women and girls",
+    "heroAlt": "Girls and young women supported by Women Without Borders Hub in Kakuma",
+    "cardDonate": {
+      "title": "Donate",
+      "text": "Support our mission",
+      "linkLabel": "Donate now →",
+      "alt": "Donate to Women Without Borders Hub"
+    },
+    "cardPartner": {
+      "title": "Partner with us",
+      "text": "Join our network of partners",
+      "linkLabel": "Become a partner →",
+      "alt": "Become a partner of Women Without Borders Hub"
+    },
+    "cardVolunteer": {
+      "title": "Volunteer",
+      "text": "Give your time and skills",
+      "linkLabel": "Volunteer →",
+      "alt": "Volunteer with Women Without Borders Hub"
+    },
+    "cardSkills": {
+      "title": "Share your skills",
+      "text": "Mentor or teach",
+      "linkLabel": "Contribute skills →",
+      "alt": "Share your skills - icon only"
+    }
   }
 }

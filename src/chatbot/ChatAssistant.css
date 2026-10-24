@@ -1,0 +1,422 @@
+.chat-assistant-backdrop {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  pointer-events: none;
+}
+
+.chat-assistant-dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(360px, calc(100vw - 2rem));
+  height: min(520px, calc(100dvh - 2rem));
+  overflow: hidden;
+  background: #ffffff;
+  color: #202a2a;
+  border: 1px solid #cbd4d4;
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 40px rgba(16, 43, 45, 0.28);
+  pointer-events: auto;
+  animation: chat-assistant-open 180ms ease-out;
+}
+
+.chat-assistant-header {
+  display: flex;
+  min-height: 4.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #2e8c8c;
+  color: #ffffff;
+}
+
+.chat-assistant-avatar,
+.chat-assistant-avatar-fallback {
+  flex: none;
+  aspect-ratio: 1;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.chat-assistant-avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.chat-assistant-avatar--contact {
+  width: 72px;
+  height: 72px;
+}
+
+.chat-assistant-avatar-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #2e8c8c;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.chat-assistant-header__copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.chat-assistant-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.chat-assistant-header p {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.chat-assistant-icon-button {
+  display: inline-flex;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #ffffff;
+  font: inherit;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.chat-assistant-icon-button:focus-visible,
+.chat-assistant-dialog button:focus-visible,
+.chat-assistant-dialog a:focus-visible {
+  outline: 3px solid #f2c572;
+  outline-offset: 2px;
+}
+
+.chat-assistant-body {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.chat-assistant-messages {
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1rem;
+}
+
+.chat-assistant-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-block-end: 1rem;
+}
+
+.chat-assistant-message--visitor {
+  align-items: flex-end;
+}
+
+.chat-assistant-bubble {
+  max-width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.8rem;
+  background: #f2f2f0;
+  color: #202a2a;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.chat-assistant-message--visitor .chat-assistant-bubble {
+  background: #2e8c8c;
+  color: #ffffff;
+}
+
+.chat-assistant-bubble a,
+.chat-assistant-contact-card a {
+  color: #155f62;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.chat-assistant-message--visitor .chat-assistant-bubble a {
+  color: #ffffff;
+}
+
+.chat-assistant-answer-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-block-start: 0.35rem;
+  color: #155f62;
+  font-weight: 700;
+  text-underline-offset: 0.15em;
+}
+
+.chat-assistant-quick-replies,
+.chat-assistant-programme-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-block-start: 0.65rem;
+}
+
+.chat-assistant-quick-replies button,
+.chat-assistant-programme-chips button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #2e8c8c;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  color: #155f62;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: start;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.chat-assistant-typing {
+  width: fit-content;
+  margin-block-end: 0.75rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.8rem;
+  background: #f2f2f0;
+  color: #333333;
+  font-size: 0.9rem;
+}
+
+.chat-assistant-composer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-block-start: 1px solid #d9dfdf;
+  background: #ffffff;
+}
+
+.chat-assistant-composer input,
+.chat-assistant-form input:not([type='checkbox']),
+.chat-assistant-form textarea {
+  min-width: 0;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #788686;
+  border-radius: 0.35rem;
+  background: #ffffff;
+  color: #202a2a;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.chat-assistant-composer button,
+.chat-assistant-send {
+  display: inline-flex;
+  min-width: 3.5rem;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.8rem;
+  border: 0;
+  border-radius: 0.35rem;
+  background: #2e8c8c;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.chat-assistant-composer button:disabled,
+.chat-assistant-send:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.chat-assistant-form {
+  max-height: 68%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.75rem 1rem 1rem;
+  border-block-start: 1px solid #d9dfdf;
+}
+
+.chat-assistant-contact-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block-end: 0.75rem;
+  padding: 0.65rem;
+  background: #f2f2f0;
+  border-radius: 0.5rem;
+}
+
+.chat-assistant-contact-card div {
+  display: grid;
+  min-width: 0;
+  gap: 0.15rem;
+}
+
+.chat-assistant-contact-card a {
+  font-size: 0.88rem;
+}
+
+.chat-assistant-form h3 {
+  margin: 0 0 0.65rem;
+  color: #155f62;
+  font-size: 1rem;
+}
+
+.chat-assistant-form > label:not(.chat-assistant-consent, .chat-assistant-honeypot) {
+  display: grid;
+  gap: 0.25rem;
+  margin-block-end: 0.55rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.chat-assistant-form textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+.chat-assistant-consent {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+}
+
+.chat-assistant-consent input {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.chat-assistant-honeypot {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.chat-assistant-privacy-note,
+.chat-assistant-form-status {
+  margin: 0.45rem 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.chat-assistant-form-status {
+  color: #7a271a;
+  font-weight: 600;
+}
+
+.chat-assistant-footer {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  border-block-start: 1px solid #d9dfdf;
+  color: #344444;
+  font-size: 0.76rem;
+}
+
+.chat-assistant-footer button {
+  flex: none;
+  min-height: 36px;
+  padding: 0.35rem 0.55rem;
+  border: 0;
+  background: transparent;
+  color: #155f62;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@keyframes chat-assistant-open {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (hover: hover) {
+  .chat-assistant-launcher:hover,
+  .chat-assistant-composer button:hover,
+  .chat-assistant-send:hover {
+    background: #155f62;
+  }
+
+  .chat-assistant-quick-replies button:hover,
+  .chat-assistant-programme-chips button:hover {
+    background: #eaf4f3;
+  }
+}
+
+@media (max-width: 600px) {
+  .chat-assistant-backdrop {
+    z-index: 100;
+    display: block;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .chat-assistant-dialog {
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    border: 0;
+    border-radius: 0;
+    padding-block-start: env(safe-area-inset-top, 0px);
+    padding-block-end: env(safe-area-inset-bottom, 0px);
+  }
+
+  .chat-assistant-form {
+    max-height: 72%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-assistant-dialog {
+    animation: none;
+  }
+}

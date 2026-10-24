@@ -19,6 +19,7 @@
     "getInvolved": "参与",
     "resources": "资源",
     "contact": "联系",
+    "orgName": "Women Without Hub",
     "donate": "捐赠",
     "ourStory": "我们的故事",
     "ourTeam": "我们的团队",
@@ -33,6 +34,23 @@
     "current": "当前语言：{{lang}}",
     "menu": "选择一种语言"
   },
+  "search": {
+    "open": "搜索",
+    "close": "关闭搜索",
+    "placeholder": "搜索 Women Without Hub...",
+    "clear": "清除搜索",
+    "results": "搜索结果",
+    "noResults": "没有找到 '{{query}}' 的结果。请尝试其他词语。",
+    "getInvolved": "参与其中",
+    "contact": "联系",
+    "loading": "正在加载搜索...",
+    "error": "无法加载搜索。请重试。"
+  },
+  "scroll": {
+    "controls": "页面滚动",
+    "top": "回到顶部",
+    "bottom": "前往底部"
+  },
   "common": {
     "learnMore": "了解更多",
     "readMore": "阅读更多",
@@ -44,12 +62,31 @@
     "partnerLogosSoon": "合作伙伴标志正在开发中。",
     "partnerLogo": "合作伙伴标志",
     "viewAll": "查看全部",
-    "readStory": "阅读故事"
+    "readStory": "阅读故事",
+    "whyThisMatters": "为什么这很重要",
+    "roles": {
+      "Chairperson": "Chairperson",
+      "Vice Chairperson": "Vice Chairperson",
+      "Treasurer": "Treasurer",
+      "Secretary": "Secretary",
+      "Member": "Member",
+  "whyIntro": "卡库马难民营的妇女和女孩面临许多挑战，包括经济困难、教育中断、获得职业培训的有限途径以及就业和医疗保健的障碍。对于青春期母亲，这些挑战可能更大，因为她们需要平衡带孩子与教育和个人发展。在Women Without Borders Hub，我们相信每个女孩和年轻女性都值得克服这些障碍，发现她的潜力，并建设更美好的未来。通过促进教育、实用技能、指导、健康意识和经济赋权，我们旨在创造机会，让妇女和女孩能够增强自信，加强独立性，并为其社区做出贡献。"
+    }
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
     "role": "Women Without Borders Hub 会员",
-    "label": "精选语录"
+    "label": "精选语录",
+    "name": "Khadijoh Mahamed"
+  },
+  "quoteSection": {
+    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "name": "Khadijoh Mahamed",
+    "role": "Member of Women Without Borders Hub",
+    "label": "精选语录",
+    "quote2": "I founded Women Without Borders Hub because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.",
+    "name2": "MaLua Lugazo",
+    "role2": "Founder of Women Without Borders Hub"
   },
   "breadcrumb": {
     "home": "首页",
@@ -95,7 +132,7 @@
   },
   "contact": {
     "title": "联系",
-    "intro": "来自捐赠者、发展组织、非政府组织、社区伙伴、学校、培训机构、健康伙伴、志愿者或媒体的问题——我们很乐意听到您的声音。",
+    "intro": "无论您是捐赠者、非政府组织或学校成员、医疗合作伙伴、社区团体成员、志愿者还是媒体工作者，我们都很乐意与您交流。",
     "name": "全名",
     "namePlaceholder": "您的全名",
     "email": "电子邮箱",
@@ -123,7 +160,25 @@
     "formHeading": "给我们留言",
     "addressHeading": "我们的地址",
     "mapText": "在卡库马、图尔卡纳县找到我们。",
-    "mapLink": "在 Google 地图中打开"
+    "mapLink": "在 Google 地图中打开",
+    "website": "Website",
+    "heroLabel": "Women Without Borders Hub 团队与社群，位于肯尼亚卡库马难民营",
+    "partnerHeading": "Women Without Borders Hub 合作伙伴",
+    "partnerText1": "Women Without Borders Hub 是一家扎根于肯尼亚卡库马难民营的社区组织。我们欢迎与我们一道致力于为难民营和收容社区中的女孩和年轻女性赋权的个人、机构、基金会、捐赠者和合作伙伴。",
+    "partnerText2": "通过教育与识字、导师辅导、数字与实用技能培养、月经健康教育、性健康与生殖健康倡导以及经济赋能，我们帮助处于弱势地位的女孩、少年母亲和年轻女性建立信心、发展技能，并获得更加光明未来的机遇。",
+    "partnerText3": "我们欢迎能够加强我们项目、推动扫除教育、个人成长和经济机遇障碍的合作。无论是资金支持、专长、培训、资源还是联合行动，您的支持都将帮助我们为所服务的社区创造更多机遇。",
+    "partnerText4": "携手合作，我们可以促进尊严、包容、韧性和可持续的机遇，让女孩和年轻女性塑造自己的未来，并积极回馈所在社区。",
+    "getInTouchHeading": "联系我们",
+    "getInTouchText": "我们欢迎合作伙伴申请、项目合作以及共同工作的机会。",
+    "emailLabel": "电子邮箱：",
+    "locationLabel": "地址：",
+    "locationValue": "肯尼亚卡库马难民营",
+    "closingText": "携手合作，我们可以为女孩和年轻女性创造学习、成长和绽放的机会。",
+    "emailUs": "给我们发邮件",
+    "emailUsAria": "给我们发邮件 — 向 {{email}} 发送合作申请",
+    "mapTitle": "Women Without Borders Hub 位于肯尼亚图尔卡纳县卡库马的地图",
+    "successSent": "谢谢！您的留言已发送，我们将很快回复您。",
+    "brandName": "Women Without Borders Hub"
   },
   "notFound": {
     "title": "页面未找到",
@@ -151,6 +206,18 @@
     "emailUs": "发邮件给我们",
     "callUs": "致电我们"
   },
+  "post": {
+    "title": "帖子",
+    "subtitle": "我们在卡库马工作的故事、公告和重要进展。"
+  },
+  "report": {
+    "title": "报告",
+    "subtitle": "我们的项目成果、覆盖范围，以及衡量项目变化的方法。"
+  },
+  "blogs": {
+    "title": "博客",
+    "subtitle": "来自我们团队、导师以及与我们合作的女性和女孩的感悟。"
+  },
   "impactSectionPages": {
     "post": {
       "intro": "来自我们在卡库马工作的故事、公告和亮点。"
@@ -174,6 +241,10 @@
     "title": "资源",
     "intro": "来自我们工作的报告、工具包和指南——可免费下载和复用。"
   },
+  "team": {
+    "title": "我们的团队",
+    "subtitle": "Women Without Borders Hub 在卡库马的社区领袖、教育工作者和导师。"
+  },
   "about": {
     "title": "关于",
     "ourTeam": {
@@ -182,7 +253,26 @@
       "getInvolved": "参与",
       "viewProfile": "查看个人资料",
       "profileComingSoon": "即将更新"
-    }
+    },
+    "heading": "About",
+    "paragraph": "Women Without Borders Hub is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women.",
+    "missionTitle": "Our mission",
+    "visionTitle": "Our vision",
+    "whoWeServe": "Who we serve",
+    "coreValues": "Our core values",
+    "whereWeWork": "Where we work",
+    "partnersText": "We partner with schools, training institutions, health providers, NGOs, development organizations, donors and private-sector partners — adapting each programme to local needs while holding consistent standards for quality and safeguarding.",
+    "getToKnowUs": "Get to know us better",
+    "exploreText": "Explore our programs, read our impact or get involved.",
+    "actionsHeading": "Ways to support",
+    "card1Label": "Sponsor a Girl's Education",
+    "card1Desc": "Help fund a girl's education journey",
+    "card2Label": "Support Menstrual Health Education",
+    "card2Desc": "Provide menstrual health resources",
+    "card3Label": "Fund Digital and Practical Skills",
+    "card3Desc": "Support digital skills training",
+    "card4Label": "Partner With Us",
+    "card4Desc": "Collaborate with us to empower more girls"
   },
   "ourStory": {
     "whatWeDo": "我们做什么",
@@ -192,5 +282,37 @@
   "safeguarding": {
     "title": "保护",
     "intro": "我们对所服务的每一位女童和女性的安全、尊严和保护的承诺。"
+  },
+  "homePage": {
+    "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
+  },
+  "getInvolvedCards": {
+    "kicker": "Get Involved",
+    "heading": "Ways to support women and girls",
+    "heroAlt": "Hero image description",
+    "cardDonate": {
+      "title": "Donate",
+      "text": "Support our mission",
+      "linkLabel": "Donate now",
+      "alt": "Donate illustration"
+    },
+    "cardPartner": {
+      "title": "Partner with us",
+      "text": "Join our network of partners",
+      "linkLabel": "Become a partner",
+      "alt": "Partner illustration"
+    },
+    "cardVolunteer": {
+      "title": "Volunteer",
+      "text": "Give your time and skills",
+      "linkLabel": "Volunteer",
+      "alt": "Volunteer illustration"
+    },
+    "cardSkills": {
+      "title": "Share your skills",
+      "text": "Mentor or teach",
+      "linkLabel": "Contribute skills",
+      "alt": "Skills illustration"
+    }
   }
 }

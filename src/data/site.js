@@ -145,6 +145,11 @@ programs.forEach((p) => {
   }
 })
 
+routeMeta['/programs/livelihood-economic-empowerment/what-we-do/'] = {
+  label: 'What We Do',
+  parent: '/programs/livelihood-economic-empowerment/',
+}
+
 involvement.forEach((i) => {
   routeMeta[`/get-involved/${i.slug}/`] = {
     label: i.title,

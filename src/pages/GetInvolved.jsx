@@ -1,76 +1,55 @@
-import { Link } from 'react-router-dom'
+
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import PageHeader from '../components/PageHeader.jsx'
-import { involvement } from '../data/site.js'
+import GetInvolvedCards from '../sections/GetInvolvedCards.jsx'
+import useHeroImagePreload from '../hooks/useHeroImagePreload.js'
 import './GetInvolved.css'
 
 export default function GetInvolved() {
+  const { pathname } = useLocation()
+  useHeroImagePreload({
+    desktop: '/images/get-involved-banner-desktop.webp',
+    mobile: '/images/get-involved-banner-mobile.webp',
+  })
+
+  // Scroll to top when navigating to this page
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <div className="getinvolved-page">
       <PageHeader
         title="Get Involved"
-        intro="There are many ways to stand with women and girls — give, volunteer, mentor, join or partner."
+        introContent={
+          <div className="page-intro page-header__get-involved-intro">
+            <p>
+              we believe that lasting impact begins when people come together to
+              support, empower, and uplift one another.
+            </p>
+            <p>
+              There are many ways to get involved, whether by donating to support
+              our programmes, volunteering your time, mentoring young women,
+              sharing your skills, or partnering with us to create new
+              opportunities. Every contribution, big or small, can help open
+              doors, strengthen confidence, and make a meaningful difference in
+              the lives of women and girls in Kakuma Refugee Camp, Kenya.
+            </p>
+            <p>
+              <strong>
+                Join us in creating a future where every girl and young woman
+                has the opportunity to thrive.
+              </strong>
+            </p>
+          </div>
+        }
+        className="page-header--get-involved"
+        minHeight={null}
       />
 
-      <div className="getinvolved-split-list">
-        {involvement.map((item, index) =>
-          index === 0 ? (
-            <article key={item.slug} className="getinvolved-split-row">
-              <div className="getinvolved-split-media">
-                <img
-                  className="getinvolved-split-img"
-                  src="/avocating%20health.jpg"
-                  alt={`${item.title} — Women Without Borders Hub`}
-                  loading="lazy"
-                />
-                <span className="getinvolved-split-fade" aria-hidden="true" />
-              </div>
-
-              <div className="getinvolved-split-panel">
-                <div className="getinvolved-split-content">
-                  <h2 className="getinvolved-split-heading">{item.title}</h2>
-                  <span
-                    className="getinvolved-split-divider"
-                    aria-hidden="true"
-                  />
-                  <p className="getinvolved-split-body">{item.summary}</p>
-                  <Link
-                    to={`/get-involved/${item.slug}/`}
-                    className="getinvolved-split-btn"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ) : null,
-        )}
-
-        <div className="getinvolved-split-grid">
-          {involvement.slice(1).map((item) => (
-            <article
-              key={item.slug}
-              className="getinvolved-split-row getinvolved-split-row--card"
-            >
-              <div className="getinvolved-split-panel">
-                <div className="getinvolved-split-content">
-                  <h2 className="getinvolved-split-heading">{item.title}</h2>
-                  <span
-                    className="getinvolved-split-divider"
-                    aria-hidden="true"
-                  />
-                  <p className="getinvolved-split-body">{item.summary}</p>
-                  <Link
-                    to={`/get-involved/${item.slug}/`}
-                    className="getinvolved-split-btn"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
+      {/* Split hero and support cards follow the page title without overlap. */}
+      <GetInvolvedCards />
     </div>
   )
 }

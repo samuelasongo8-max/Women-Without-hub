@@ -1,4 +1,8 @@
 {
+  "donate": {
+    "title": "Deeq bixi",
+    "subtitle": "Deeqdaadu waxay si toos ah u maalgelisaa barnaamijyada waxbarashada, xirfadaha iyo sharafta."
+  },
   "brand": {
     "name": "Women Without Borders Hub"
   },
@@ -19,6 +23,7 @@
     "getInvolved": "Ku soo biir",
     "resources": "Kheyraadka",
     "contact": "Xiriir",
+    "orgName": "Women Without Hub",
     "donate": "Deeq",
     "ourStory": "Sheekadeenna",
     "ourTeam": "Kooxdayada",
@@ -33,6 +38,23 @@
     "current": "Luuqadda hadda: {{lang}}",
     "menu": "Dooro luuqad"
   },
+  "search": {
+    "open": "Raadi",
+    "close": "Xir raadinta",
+    "placeholder": "Ka raadi Women Without Hub...",
+    "clear": "Nadiifi raadinta",
+    "results": "Natiijooyinka raadinta",
+    "noResults": "Natiijo looma helin '{{query}}'. Isku day erayo kale.",
+    "getInvolved": "Ka qayb qaado",
+    "contact": "Xiriir",
+    "loading": "Raadinta waa la soo rarayaa...",
+    "error": "Raadinta lama soo rari karin. Fadlan mar kale isku day."
+  },
+  "scroll": {
+    "controls": "Dulmaridda bogga",
+    "top": "U gudub dusha bogga",
+    "bottom": "U gudub hoose ee bogga"
+  },
   "common": {
     "learnMore": "Wax badan baro",
     "readMore": "Akhri dheeraad",
@@ -44,12 +66,31 @@
     "partnerLogosSoon": "Logooyinka lammaanayaasha waa horumar ku socda.",
     "partnerLogo": "Logo lammaane",
     "viewAll": "Arag dhammaan",
-    "readStory": "Akhri sheekada"
+    "readStory": "Akhri sheekada",
+    "whyThisMatters": "Sababta ay tani muhiim u tahay",
+    "roles": {
+      "Chairperson": "Chairperson",
+      "Vice Chairperson": "Vice Chairperson",
+      "Treasurer": "Treasurer",
+      "Secretary": "Secretary",
+      "Member": "Member",
+      "whyIntro": "Women and girls in Kakuma Refugee Camp face many challenges, including financial hardship, interrupted education, limited access to skills training, and barriers to employment and healthcare. For teenage mothers, these challenges can be even greater as they balance childcare with their education and personal development. At Women Without Borders Hub, we believe every girl and young woman deserves the opportunity to overcome these barriers, discover her potential, and build a better future. By promoting education, practical skills, mentorship, health awareness, and economic empowerment, we aim to create opportunities for women and girls to grow in confidence, strengthen their independence, and contribute to their communities."
+    }
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
     "role": "Xubin ka Women Without Borders Hub",
-    "label": "Xaad ka la mid"
+    "label": "Xaad ka la mid",
+    "name": "Khadijoh Mahamed"
+  },
+  "quoteSection": {
+    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "name": "Khadijoh Mahamed",
+    "role": "Member of Women Without Borders Hub",
+    "label": "Xaad ka la mid",
+    "quote2": "I founded Women Without Borders Hub because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.",
+    "name2": "MaLua Lugazo",
+    "role2": "Founder of Women Without Borders Hub"
   },
   "breadcrumb": {
     "home": "Bogga Hore",
@@ -95,7 +136,7 @@
   },
   "contact": {
     "title": "Xiriir",
-    "intro": "Su'aalo ka yimaada deeqda bixiyayaal, ururada horumarinta, NGO-oyinka, la-hawlgalayaasha bulshada, dugsiga, hay'adaha tababarka, la-hawlgalayaasha caafimaadka, tababarayaal, ama warbaahinta — waxaan jeclaan lahayn inaan ka maqallo.",
+    "intro": "Haddii aad tahay deeq-bixiye, NGO, dugsi, la-hawlgale caafimaad, koox bulsho, mutadawac ama xubin ka tirsan saxaafadda, waan ku farxi lahayn inaan kaa maqalno.",
     "name": "Magaca oo buuxan",
     "namePlaceholder": "Magacaaga buuxa",
     "email": "Email",
@@ -123,7 +164,25 @@
     "formHeading": "Noo soo dir fariin",
     "addressHeading": "Cinwaankayaga",
     "mapText": "Naga na soo hel Kakuma, Degmada Turkana.",
-    "mapLink": "Ku fur Google Maps"
+    "mapLink": "Ku fur Google Maps",
+    "website": "Website",
+    "heroLabel": "Kooxda iyo bulshada ee Women Without Borders Hub xiga kuwa Kakuma, Kenya",
+    "partnerHeading": "Saaxiibada Women Without Borders Hub",
+    "partnerText1": "Women Without Borders Hub waa urur xaafidi ah oo ku shaqeeya kambiida Kakuma, Kenya. Wana ku soo dhaweeyaan dad, urur, foundation, maaliyade iyo saaxiibada la wadaagayo waxay ka qeexaan commit-ment yn uu xoojinay haweena iyo da'qadaha ka jira haystaha noloshumaanka iyo meelaha lagu qaado.",
+    "partnerText2": "Iyadoo aan barasho iyo xarfidda, talo-barasho, horumarka xirfadaha dhijitali ah iyo kuwa practical, barashada caafimaadta nadiifka, caawinta caafimaadka jinsiyada iyo isu-ubka iyo xoojinta dhaqaalaha ahaa, waxaan ka caawisaa gabayaha sida badan, hooyoyinka da'da iyo da'qadaha jiray sida ku habboon inay kalsoonaan, horumaraan xirfadaha iyo helaan fursado mustaqbalkii.",
+    "partnerText3": "Waxaan ku soo dhaweeyaan shaqooyin taas oo xoojinaya barnaamijyadeena oo ka caawisa inay tirsanayaan caqabadaha waxbarashada, horumarka shakhsiga iyo fursada dhaqaalaha ahaa. Haddii ay tahay deyn, khibrad arrimo, tababar, khad, ama tallaabooyin wada shaqo, taageeradaadu waxay ka caawin karnaa inaan abuurno fursado badan oo bulshadaha aan u shaqeyno.",
+    "partnerText4": "Isku darka, waxaan karnaa inaan kor u qaado sharaf, ku wanaajin, adag iyo fursado joogto ah, taasoo u ogolaan in gabayaha iyo da'qadaha jiray ay mustaqbalkooda u qaabeeyaan waxayna si togan ugu qayb qaadaan bulshadahooda.",
+    "getInTouchHeading": "Nala soo xiri",
+    "getInTouchText": "Waxaan ku soo dhaweeyaan codsiyada shaqooyinka, wada shaqaynta barnaamijyada iyo fursada inaan isku shaqeeyno.",
+    "emailLabel": "Imiil:",
+    "locationLabel": "Goobta:",
+    "locationValue": "Kambi Kakuma, Kenya",
+    "closingText": "Isku darka, waxaan karnaa inaan abuurno fursado oo gabayaha iyo da'qadaha jiray ay wax u bartaan, kora na ay kulmaan.",
+    "emailUs": "Qor noo",
+    "emailUsAria": "Qor noo — dir codsi shaqo ku {{email}}",
+    "mapTitle": "Khariidaddii Women Without Borders Hub Kakuma, Degmada Turkana, Kenya",
+    "successSent": "Mahadsanid! Fariintaada waa la diray. Waan ka jawaan doonaa dhaqso.",
+    "brandName": "Women Without Borders Hub"
   },
   "notFound": {
     "title": "Bogga lama helin",
@@ -151,6 +210,18 @@
     "emailUs": "Nagu soo email",
     "callUs": "Nagu soo wac"
   },
+  "post": {
+    "title": "Qoraallo",
+    "subtitle": "Sheekooyin, ogeysiisyo iyo waxyaabaha muhiimka ah ee shaqadeenna Kakuma."
+  },
+  "report": {
+    "title": "Warbixin",
+    "subtitle": "Natiijooyinka, baaxadda shaqadeenna iyo sida aan u cabbirno isbeddelka barnaamijyadeenna."
+  },
+  "blogs": {
+    "title": "Qoraallo",
+    "subtitle": "Milicsiga kooxdayada, hagayaashayada, iyo haweenka iyo gabdhaha aan la shaqayno."
+  },
   "impactSectionPages": {
     "post": {
       "intro": "Sheekooyin, ogeysiisyo iyo muhiimad shaqadeena Kakuma."
@@ -174,6 +245,10 @@
     "title": "Kheyraadka",
     "intro": "Warbixiyo, agabyo iyo hagidda shaqadeena — lacag la'aan ayaad ku soo dejisan kartaa aadna ku celin kartaa."
   },
+  "team": {
+    "title": "Kooxdayada",
+    "subtitle": "Hoggaamiyeyaasha bulshada, barayaasha iyo hagayaasha Women Without Borders Hub ee Kakuma."
+  },
   "about": {
     "title": "Nagu saabsan",
     "ourTeam": {
@@ -182,7 +257,26 @@
       "getInvolved": "Ku soo biir",
       "viewProfile": "Eeg eegis",
       "profileComingSoon": "Waxaa loo cusboonaysii doonaa"
-    }
+    },
+    "heading": "About",
+    "paragraph": "Women Without Borders Hub is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women.",
+    "missionTitle": "Our mission",
+    "visionTitle": "Our vision",
+    "whoWeServe": "Who we serve",
+    "coreValues": "Our core values",
+    "whereWeWork": "Where we work",
+    "partnersText": "We partner with schools, training institutions, health providers, NGOs, development organizations, donors and private-sector partners — adapting each programme to local needs while holding consistent standards for quality and safeguarding.",
+    "getToKnowUs": "Get to know us better",
+    "exploreText": "Explore our programs, read our impact or get involved.",
+    "actionsHeading": "Ways to support",
+    "card1Label": "Sponsor a Girl's Education",
+    "card1Desc": "Help fund a girl's education journey",
+    "card2Label": "Support Menstrual Health Education",
+    "card2Desc": "Provide menstrual health resources",
+    "card3Label": "Fund Digital and Practical Skills",
+    "card3Desc": "Support digital skills training",
+    "card4Label": "Partner With Us",
+    "card4Desc": "Collaborate with us to empower more girls"
   },
   "ourStory": {
     "whatWeDo": "Waxaan Sameyno",
@@ -192,5 +286,37 @@
   "safeguarding": {
     "title": "Ilaalinta",
     "intro": "Ballanqaadkeenna amniga, sharafta iyo ilaalinta gabar kasta iyo haweeneyba aan adeegno."
+  },
+  "homePage": {
+    "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
+  },
+  "getInvolvedCards": {
+    "kicker": "Get Involved",
+    "heading": "Ways to support women and girls",
+    "heroAlt": "Girls and young women supported by Women Without Borders Hub in Kakuma",
+    "cardDonate": {
+      "title": "Donate",
+      "text": "Support our mission",
+      "linkLabel": "Donate now →",
+      "alt": "Donate to Women Without Borders Hub"
+    },
+    "cardPartner": {
+      "title": "Partner with us",
+      "text": "Join our network of partners",
+      "linkLabel": "Become a partner →",
+      "alt": "Become a partner of Women Without Borders Hub"
+    },
+    "cardVolunteer": {
+      "title": "Volunteer",
+      "text": "Give your time and skills",
+      "linkLabel": "Volunteer →",
+      "alt": "Volunteer with Women Without Borders Hub"
+    },
+    "cardSkills": {
+      "title": "Share your skills",
+      "text": "Mentor or teach",
+      "linkLabel": "Contribute skills →",
+      "alt": "Share your skills - icon only"
+    }
   }
 }

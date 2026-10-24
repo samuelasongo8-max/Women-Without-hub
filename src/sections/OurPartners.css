@@ -38,30 +38,60 @@
   margin: 8px 0 40px;
 }
 
-/* Logo strip: six equal slots in one row on desktop. */
+/* Center logos without stretching a single partner across the row. */
 .ourpartners__grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
-  align-items: stretch;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
 
-/* A clear "logo goes here" slot. */
+.ourpartners__arrow {
+  display: grid;
+  flex: 0 0 44px;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: #ffffff;
+  background: #2e8c8c;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ourpartners__arrow svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ourpartners__arrow:focus-visible {
+  outline: 3px solid #f6b95a;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .ourpartners__arrow:hover {
+    background: #1b5e5e;
+  }
+}
+
 .ourpartners__slot {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 0;
-  height: 80px;
-  padding: 8px;
+  width: min(240px, 100%);
+  aspect-ratio: 1;
+  padding: 24px;
   box-sizing: border-box;
-  background: #F2F2F0;
-  border: 2px dashed rgba(46, 140, 140, 0.5);
-  border-radius: 0;
-  color: #6b7777;
-  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
-  font-size: 0.85rem;
-  text-align: center;
+  background: #fff;
+  border: 1px solid rgba(46, 140, 140, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(31, 36, 48, 0.08);
 }
 
 .ourpartners__link {
@@ -70,14 +100,19 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+  border-radius: inherit;
   text-decoration: none;
 }
 
 /* When a real logo image is provided, it fills the slot. */
 .ourpartners__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
   max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 .ourpartners__note {
@@ -90,25 +125,17 @@
 
 /* ---------- Responsive ---------- */
 
-/* Tablet: 3 columns × 2 rows. */
-@media (max-width: 1023px) {
-  .ourpartners__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Phone: 2 columns × 3 rows, tighter gap and shorter boxes. */
 @media (max-width: 599px) {
   .ourpartners {
     padding: 56px 20px;
   }
 
   .ourpartners__grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 
   .ourpartners__slot {
-    height: 70px;
+    width: min(150px, 100%);
+    padding: 16px;
   }
 }

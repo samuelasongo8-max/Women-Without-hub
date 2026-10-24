@@ -10,7 +10,10 @@
   min-height: 700px;
   overflow: hidden;
   background-color: #1e8e96;
-  background-image: url('/women-hub-training.png');
+  background-image: image-set(
+    url('/images/women-hub-training.webp') type("image/webp"),
+    url('/images/women-hub-training.png') type("image/png")
+  );
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

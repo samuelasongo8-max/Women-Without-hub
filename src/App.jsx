@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
@@ -21,6 +22,8 @@ import Safeguarding from './pages/Safeguarding.jsx'
 import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
 
+const LivelihoodWhatWeDo = lazy(() => import('./pages/LivelihoodWhatWeDo.jsx'))
+
 export default function App() {
   return (
     <Routes>
@@ -33,6 +36,14 @@ export default function App() {
           element={<MaluaLugazoProfile />}
         />
         <Route path="/programs/" element={<Programs />} />
+        <Route
+          path="/programs/livelihood-economic-empowerment/what-we-do/"
+          element={
+            <Suspense fallback={null}>
+              <LivelihoodWhatWeDo />
+            </Suspense>
+          }
+        />
         <Route path="/programs/:slug/" element={<ProgramDetail />} />
         <Route path="/impact/" element={<Impact />} />
         <Route path="/impact/news/" element={<News />} />

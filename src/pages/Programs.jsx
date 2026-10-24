@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { programImages } from '../data/programImages.js'
 import srhrVideo from '../sections/video/Sexual & Reproductive Health and Rights video(SRHR).mp4'
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
+import useHeroImagePreload from '../hooks/useHeroImagePreload.js'
 import { programs } from '../data/site.js'
 // Reuse the exact stylesheet of the home "Our Programs" section (after
 // Community Updates) so the page shares its design language 1:1.
@@ -66,6 +67,11 @@ const icons = {
 }
 
 export default function Programs() {
+  useHeroImagePreload({
+    desktop: '/images/programs-banner-desktop.webp',
+    mobile: '/images/programs-banner-mobile.webp',
+  })
+
   return (
     <>
       {/* Top header — identical markup/classes to PageHeader (same layout,
@@ -126,7 +132,7 @@ export default function Programs() {
                   <video
                     className="home-program-video"
                     src={srhrVideo}
-                    poster={encodeURI('/Sexual & Reproductive Health and Rights (SRHR).jpg')}
+                    poster="/images/srhr.jpg"
                     controls
                     playsInline
                     preload="metadata"

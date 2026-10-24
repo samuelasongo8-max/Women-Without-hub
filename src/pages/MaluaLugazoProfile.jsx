@@ -9,12 +9,10 @@ import './MaluaLugazoProfile.css'
  * Rendered at /about/our-team/malua-lugazo/ inside the shared Layout,
  * so the normal nav bar and footer are shown.
  *
- * The photo is the same one used on her card on /about/our-team/:
- * public/Malua director.png (488x511, transparent PNG shown
- * on a solid #F2F2F0 backing).
+ * The photo is the same optimized portrait used on her team card.
  */
 
-const PHOTO = '/Malua%20director.png'
+const PHOTO = '/images/team/malua-lugazo.jpg'
 
 const HERO_INTRO =
   'MaLua Lugazo is the Founder and Executive Director of Women Without Borders Hub, a community-led initiative based in Kakuma Refugee Camp, Kenya. The Hub works to create opportunities for refugee and marginalized women and girls to learn, build skills and shape their own futures.'
@@ -110,8 +108,8 @@ export default function MaluaLugazoProfile() {
               alt="MaLua Lugazo, Founder and Executive Director of Women Without Borders Hub"
               loading="eager"
               decoding="async"
-              width="488"
-              height="511"
+              width="280"
+              height="375"
               onError={() => setPhotoFailed(true)}
             />
           )}

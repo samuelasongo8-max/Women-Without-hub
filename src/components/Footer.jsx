@@ -112,7 +112,7 @@ export default function Footer() {
           >
             <img
               className="footer-subscribe__logo"
-              src="/women-hub-logo.png"
+              src="/images/women-hub-logo.png"
               alt="Women Without Borders Hub"
             />
           </Link>

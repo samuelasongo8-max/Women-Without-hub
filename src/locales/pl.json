@@ -1,0 +1,322 @@
+{
+  "donate": {
+    "title": "Przekaż darowiznę",
+    "subtitle": "Twoja darowizna bezpośrednio finansuje programy edukacyjne, rozwój umiejętności i działania na rzecz godności."
+  },
+  "team": {
+    "title": "Nasz zespół",
+    "subtitle": "Liderzy społeczności, edukatorzy i mentorzy Women Without Borders Hub w Kakumie."
+  },
+  "about": {
+    "heading": "O nas",
+    "paragraph": "Women Without Borders Hub to organizacja oparta na społeczności w Kakuma, w powiecie Turkana, Kenia, która tworzy możliwości dla narażonych dziewcząt, młodzieżowych maczeń i młodych kobiet.",
+    "card1Label": "Sponsoruj edukację dziewczęcia",
+    "card1Desc": "Pomóz finansowi edukacji dziewczęcia",
+    "card2Label": "Support Menstrual Health Education",
+    "card2Desc": "Provide menstrual health resources",
+    "card3Label": "Wesprzyj cyfrowe i praktyczne umiejętności",
+    "card3Desc": "Wspieraj naukę umiejętności cyfrowych",
+    "card4Label": "Współpracuj z nami",
+    "card4Desc": "Współpracuj ze sobą, aby pomóc więcej dziewcząt",
+    "title": "About",
+    "missionTitle": "Our mission",
+    "visionTitle": "Our vision",
+    "whoWeServe": "Who we serve",
+    "coreValues": "Our core values",
+    "whereWeWork": "Where we work",
+    "partnersText": "We partner with schools, training institutions, health providers, NGOs, development organizations, donors and private-sector partners — adapting each programme to local needs while holding consistent standards for quality and safeguarding.",
+    "getToKnowUs": "Get to know us better",
+    "exploreText": "Explore our programs, read our impact or get involved.",
+    "actionsHeading": "Ways to support",
+    "ourTeam": {
+      "title": "Our Team",
+      "intro": "Meet the people behind Women Without Borders Hub.",
+      "getInvolved": "Get Involved",
+      "viewProfile": "View the profile",
+      "profileComingSoon": "Will be updated soon"
+    }
+  },
+  "brand": {
+    "name": "Women Without Borders Hub"
+  },
+  "a11y": {
+    "skipToMain": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primaryNav": "Primary",
+    "footerNav": "Footer",
+    "logoLink": "Women Without Borders Hub, home",
+    "routesTrailingSlash": "Note: routes are matched with trailing slashes (e.g."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "impact": "Impact",
+    "getInvolved": "Get Involved",
+    "resources": "Resources",
+    "contact": "Contact",
+    "orgName": "Women Without Hub",
+    "donate": "Donate",
+    "ourStory": "Our Story",
+    "ourTeam": "Our Team",
+    "news": "News",
+    "blogs": "Blogs",
+    "report": "Report",
+    "expandSub": "Expand {{label}} sub-menu",
+    "collapseSub": "Collapse {{label}} sub-menu"
+  },
+  "lang": {
+    "label": "Choose language",
+    "current": "Current language: {{lang}}",
+    "menu": "Select a language"
+  },
+  "search": {
+    "open": "Szukaj",
+    "close": "Zamknij wyszukiwanie",
+    "placeholder": "Szukaj w Women Without Hub...",
+    "clear": "Wyczyść wyszukiwanie",
+    "results": "Wyniki wyszukiwania",
+    "noResults": "Brak wyników dla '{{query}}'. Spróbuj innych słów.",
+    "getInvolved": "Zaangażuj się",
+    "contact": "Kontakt",
+    "loading": "Wczytywanie wyszukiwania...",
+    "error": "Nie można wczytać wyszukiwania. Spróbuj ponownie."
+  },
+  "scroll": {
+    "controls": "Przewijanie strony",
+    "top": "Przewiń na górę",
+    "bottom": "Przewiń na dół"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "allStoriesAndNews": "All stories & news",
+    "storiesAndNews": "Stories & News",
+    "willBeUpdatedSoon": "Will be updated soon",
+    "photoComingSoon": "Photo coming soon",
+    "underDevelopment": "Under development",
+    "partnerLogosSoon": "Partner logos are under development.",
+    "partnerLogo": "Partner logo",
+    "viewAll": "View all",
+    "readStory": "Read story",
+    "whyThisMatters": "Dlaczego to jest ważne",
+    "roles": {
+      "Chairperson": "Chairperson",
+      "Vice Chairperson": "Vice Chairperson",
+      "Treasurer": "Treasurer",
+      "Secretary": "Secretary",
+      "Member": "Member",
+      "whyIntro": "Kobiety i dziewczyny w obozie dla uchodźców w Kakuma stają przed wieloma wyzwaniami, w tym trudnościami finansowymi, przerwaną edukację, ograniczony dostęp do szkolenia zawodowego i bariery w dostępie do pracy i opieki zdrowotnej. Dla młodzieżowych matek te wyzwania mogą być jeszcze większe, ponieważ equilibrwana jest między opieką nad dziećmi a edukacją i rozwojem osobistym. W Women Without Borders Hub wierzymy, że każda dziewczyna i młoda kobieta zasługuje na szansę przezwyciężenia tych barier, odkrycie swojego potencjału i zbudowanie lepszego przyszłości. Promując edukację, praktyczne umiejętności, mentorowanie, świadomość zdrowotna i empowering ekonomiczny, staramy się tworzyć możliwości, aby kobiety i dziewczyny rosły w pewności siebie, umacniały swoją niezależność i przyczyniały się do swoich społeczności."
+    }
+  },
+  "quoteFeature": {
+    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "role": "Member of Women Without Borders Hub",
+    "label": "Featured quote",
+    "name": "Khadijoh Mahamed"
+  },
+  "quoteSection": {
+    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "name": "Khadijoh Mahamed",
+    "role": "Member of Women Without Borders Hub",
+    "label": "Featured quote",
+    "quote2": "I founded Women Without Borders Hub because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.",
+    "name2": "MaLua Lugazo",
+    "role2": "Founder of Women Without Borders Hub"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "about": "About",
+    "ourTeam": "Our Team",
+    "ourStory": "Our Story",
+    "programs": "Programs",
+    "impact": "Impact",
+    "getInvolved": "Get Involved",
+    "resources": "Resources",
+    "safeguarding": "Safeguarding",
+    "contact": "Contact",
+    "communityUpdates": "Community Updates & Stories",
+    "news": "News",
+    "blogs": "Blogs",
+    "report": "Report",
+    "post": "Post"
+  },
+  "footer": {
+    "stayInTouch": "Stay in touch",
+    "emailAddress": "Email Address",
+    "firstName": "First Name",
+    "required": "required",
+    "subscribe": "Subscribe",
+    "subscribing": "Subscribing…",
+    "thankYou": "Thank you! You're subscribed.",
+    "errorGeneric": "Sorry, something went wrong. Please try again.",
+    "errFirstName": "Please enter your first name.",
+    "errEmail": "Please enter your email address.",
+    "errEmailInvalid": "Please enter a valid email address.",
+    "about": "A community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women through education, skills, mentorship, health and economic empowerment.",
+    "explore": "Explore",
+    "getInvolved": "Get Involved",
+    "trustLegal": "Trust & Legal",
+    "volunteer": "Volunteer",
+    "membership": "Membership",
+    "mentor": "Mentor",
+    "partner": "Partner",
+    "safeguarding": "Safeguarding",
+    "resources": "Resources",
+    "contact": "Contact",
+    "rightsReserved": "All rights reserved."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "intro": "Jeśli jesteś darczyńcą, działasz w NGO, szkole, placówce zdrowia lub grupie społecznej, jesteś wolontariuszem albo pracujesz w prasie, chętnie się z Tobą skontaktujemy.",
+    "name": "Imię i nazwisko",
+    "namePlaceholder": "Twoje imię i nazwisko",
+    "email": "E-mail",
+    "subject": "Temat",
+    "subjectPlaceholder": "Wybierz temat",
+    "subjectDonor": "Darczyńca",
+    "subjectDevelopmentOrg": "Organizacja rozwojowa",
+    "subjectNgo": "Organizacja pozarządowa",
+    "subjectCommunityPartner": "Partner społeczny",
+    "subjectSchool": "Szkoła lub instytucja szkoleniowa",
+    "subjectHealthPartner": "Partner w zakresie zdrowia",
+    "subjectVolunteer": "Wolontariusz",
+    "subjectPress": "Prasa",
+    "subjectOther": "Inne",
+    "message": "Wiadomość",
+    "messagePlaceholder": "Napisz tutaj swoją wiadomość...",
+    "send": "Wyślij wiadomość",
+    "sending": "Wysyłanie…",
+    "errName": "Proszę podać swoje imię.",
+    "errEmail": "Proszę podać prawidłowy adres e-mail.",
+    "errSubject": "Proszę wybrać temat.",
+    "errMessage": "Wiadomość musi mieć co najmniej 10 znaków.",
+    "successContact": "Dziękujemy za kontakt z Women Without Borders Hub! Twoja wiadomość została wysłana. Nasz zespół przeanalizuje zapytanie i odpowie w ciągu 24–48 godzin. W sprawach pilnych prosimy o bezpośredni kontakt telefoniczny: +254 784 062 882.",
+    "errorSend": "Przepraszamy, nie udało się wysłać wiadomości. Spróbuj ponownie lub wyślij nam e-mail bezpośrednio.",
+    "formHeading": "Napisz do nas",
+    "addressHeading": "Nasz adres",
+    "mapText": "Znajdź nas w Kakumie, hrabstwo Turkana.",
+    "mapLink": "Otwórz w Mapach Google",
+    "website": "Website",
+    "heroLabel": "Zespół i społeczność Women Without Borders Hub w obozie Kakuma w Kenii",
+    "partnerHeading": "Partnerzy Women Without Borders Hub",
+    "partnerText1": "Women Without Borders Hub to organizacja społeczna z siedzibą w obozie Kakuma w Kenii. Przyjmujemy osoby, organizacje, fundacje, darczyńców i partnerów, którzy podzielają nasze zaangażowanie we wzmacnianie dziewcząt i młodych kobiet w społecznościach uchodźczych i przyjmujących.",
+    "partnerText2": "Poprzez edukację i alfabetyzację, mentoring, rozwój umiejętności cyfrowych i praktycznych, edukację w zakresie zdrowia menstruacyjnego, świadomość zdrowia seksualnego i reprodukcyjnego oraz wzmocnienie ekonomiczne pomagamy dziewczętom w niebezpieczeństwie, nastoletnim matkom i młodym kobietom zbudować pewność siebie, rozwinąć umiejętności i uzyskać szanse na lepszą przyszłość.",
+    "partnerText3": "Przyjmujemy partnerstwa wzmacniające nasze programy i pomagające usuwać bariery w edukacji, rozwoju osobistym i szansach ekonomicznych. Niezależnie od tego, czy chodzi o finansowanie, ekspertyzę techniczną, szkolenia, zasoby czy wspólne inicjatywy — Twoje wsparcie pomoże nam stworzyć więcej możliwości dla społeczności, którym służymy.",
+    "partnerText4": "Razem możemy promować godność, włączenie, odporność i zrównoważone szanse, umożliwiając dziewczętom i młodym kobietom kształtowanie swojej przyszłości i pozytywny wkład w życie swoich społeczności.",
+    "getInTouchHeading": "Skontaktuj się z nami",
+    "getInTouchText": "Przyjmujemy propozycje współpracy, zapytania o partnerstwa i możliwości wspólnej pracy.",
+    "emailLabel": "E-mail:",
+    "locationLabel": "Lokalizacja:",
+    "locationValue": "Obóz Kakuma, Kenia",
+    "closingText": "Razem możemy stworzyć szanse, aby dziewczęta i młode kobiety mogły się uczyć, rosną i rozkwitać.",
+    "emailUs": "Napisz do nas",
+    "emailUsAria": "Napisz do nas — wyślij zapytanie o partnerstwo na {{email}}",
+    "mapTitle": "Mapa Women Without Borders Hub w Kakumie, hrabstwo Turkana, Kenia",
+    "successSent": "Dziękujemy! Twoja wiadomość została wysłana. Odpowiemy wkrótce.",
+    "brandName": "Women Without Borders Hub"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "message": "Sorry, the page you are looking for doesn't exist or has moved.",
+    "backHome": "Back to Home"
+  },
+  "programs": {
+    "title": "Programs",
+    "intro": "Explore the programmes that walk with vulnerable girls, teenage mothers and young women in Kakuma.",
+    "howItWorks": "How it works",
+    "readyTitle": "Ready to take the next step?",
+    "thankYouInterest": "Thank you for your interest in {{title}}. Our team would love to connect with you and share how you can take the next step.",
+    "reachUs": "If you have any questions, feel free to reach us at:",
+    "emailUs": "Email us",
+    "callUs": "Call us",
+    "donate": "Donate"
+  },
+  "getInvolved": {
+    "title": "Get Involved",
+    "intro": "There are many ways to stand with women and girls — give, volunteer, mentor, join or partner.",
+    "howItWorks": "How it works",
+    "readyTitle": "Ready to take the next step?",
+    "thankYouInterest": "Thank you for your interest in {{title}}. Our team would love to connect with you and share how you can take the next step.",
+    "reachUs": "If you have any questions, feel free to reach us at:",
+    "emailUs": "Email us",
+    "callUs": "Call us"
+  },
+  "post": {
+    "title": "Wpisy",
+    "subtitle": "Historie, ogłoszenia i najważniejsze informacje o naszej pracy w Kakumie."
+  },
+  "report": {
+    "title": "Raport",
+    "subtitle": "Wyniki, zasięg działań i sposób, w jaki mierzymy zmiany w naszych programach."
+  },
+  "blogs": {
+    "title": "Blogi",
+    "subtitle": "Refleksje naszego zespołu, mentorów oraz kobiet i dziewcząt, z którymi współpracujemy."
+  },
+  "impactSectionPages": {
+    "post": {
+      "intro": "Stories, announcements and highlights from our work in Kakuma."
+    },
+    "blogs": {
+      "intro": "Reflections from our team, mentors and the women and girls we work with."
+    },
+    "report": {
+      "intro": "Outcomes, reach and how we measure change across our programmes."
+    }
+  },
+  "updates": {
+    "title": "Community Updates & Stories",
+    "intro": "Stories, announcements and highlights from our work with the community in Kakuma."
+  },
+  "news": {
+    "title": "News",
+    "intro": "The latest news and announcements from Women Without Borders Hub."
+  },
+  "resources": {
+    "title": "Resources",
+    "intro": "Reports, toolkits and guides from our work — free to download and reuse."
+  },
+  "ourStory": {
+    "whatWeDo": "What We Do",
+    "donate": "Donate",
+    "contactUs": "Contact Us"
+  },
+  "safeguarding": {
+    "title": "Safeguarding",
+    "intro": "Our commitment to the safety, dignity and protection of every girl and woman we serve."
+  },
+  "homePage": {
+    "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
+  },
+  "getInvolvedCards": {
+    "kicker": "Get Involved",
+    "heading": "Ways to support women and girls",
+    "heroAlt": "Girls and young women supported by Women Without Borders Hub in Kakuma",
+    "cardDonate": {
+      "title": "Donate",
+      "text": "Support our mission",
+      "linkLabel": "Donate now →",
+      "alt": "Donate to Women Without Borders Hub"
+    },
+    "cardPartner": {
+      "title": "Partner with us",
+      "text": "Join our network of partners",
+      "linkLabel": "Become a partner →",
+      "alt": "Become a partner of Women Without Borders Hub"
+    },
+    "cardVolunteer": {
+      "title": "Volunteer",
+      "text": "Give your time and skills",
+      "linkLabel": "Volunteer →",
+      "alt": "Volunteer with Women Without Borders Hub"
+    },
+    "cardSkills": {
+      "title": "Share your skills",
+      "text": "Mentor or teach",
+      "linkLabel": "Contribute skills →",
+      "alt": "Share your skills - icon only"
+    }
+  }
+}

@@ -43,6 +43,35 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Landscape orientation on phones */
+@media (min-width: 600px) and (max-width: 860px) and (orientation: landscape) {
+  .gi-hero-panel--image {
+    height: 200px;
+  }
+  .gi-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+img {
+  max-width: 100%;
 }
 
 a {
@@ -612,24 +641,32 @@ h1, h2, h3 {
   }
 }
 
-/* ---------- About top banner (auvd-about-*) ----------
-   Scoped to About.jsx only. Uses women Hub7.png from public/.
-   File has a space + capital H, so URL is encoded. */
+/* ---------- About top banner (auvd-about-*) ---------- */
 .auvd-about-banner {
+  --hero-scrim-direction: to right;
+  --hero-focus: center 50%;
+  --hero-focus-mobile: center 50%;
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: 70vh;
+  min-height: 480px;
   display: flex;
   align-items: center;
   padding: 4rem 2rem;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.65)),
-    url("/women%20Hub7.png");
+    linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.62), transparent 76%),
+    url("/images/about-banner-desktop.jpg");
+  background-image:
+    linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.62), transparent 76%),
+    image-set(
+      url("/images/about-banner-desktop.webp") type("image/webp"),
+      url("/images/about-banner-desktop.jpg") type("image/jpeg")
+    );
   background-size: cover;
-  background-position: center;
+  background-position: var(--hero-focus);
   background-repeat: no-repeat;
   background-color: #1f2430;
+  background-attachment: scroll;
 }
 
 .auvd-about-overlay {
@@ -637,7 +674,7 @@ h1, h2, h3 {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35));
+  background: none;
 }
 
 .auvd-about-content {
@@ -676,11 +713,25 @@ h1, h2, h3 {
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   .auvd-about-banner {
-    min-height: 500px;
+    min-height: 300px;
     padding: 2.5rem 1.25rem;
     align-items: flex-end;
+    background-image:
+      linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.65), transparent 90%),
+      url("/images/about-banner-mobile.jpg");
+    background-image:
+      linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.65), transparent 90%),
+      image-set(
+        url("/images/about-banner-mobile.webp") type("image/webp"),
+        url("/images/about-banner-mobile.jpg") type("image/jpeg")
+      );
+    background-position: var(--hero-focus-mobile);
+  }
+
+  html:dir(rtl) .auvd-about-banner {
+    --hero-scrim-direction: to left;
   }
 
   .auvd-about-title {
@@ -690,6 +741,13 @@ h1, h2, h3 {
   .auvd-about-text {
     font-size: 1.05rem;
     line-height: 1.65;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .auvd-about-banner {
+    min-height: 360px;
+    background-position: var(--hero-focus);
   }
 }
 
@@ -853,5 +911,3 @@ h1, h2, h3 {
     grid-template-columns: 1fr;
   }
 }
-
-

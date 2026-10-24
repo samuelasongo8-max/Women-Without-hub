@@ -1,17 +1,41 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader.jsx'
 import { involvement } from '../data/site.js'
 import './GetInvolved.css'
 
 export default function InvolvementDetail() {
   const { slug } = useParams()
+  const { t } = useTranslation()
   const item = involvement.find((i) => i.slug === slug)
+
+  useEffect(() => {
+    if (slug !== 'donate') return undefined
+
+    const preload = document.createElement('link')
+    preload.rel = 'preload'
+    preload.as = 'image'
+    preload.href = '/images/donate-hero.webp'
+    preload.type = 'image/webp'
+    preload.fetchPriority = 'high'
+    document.head.appendChild(preload)
+
+    return () => preload.remove()
+  }, [slug])
 
   if (!item) return <Navigate to="/get-involved/" replace />
 
+  const isDonatePage = slug === 'donate'
+
   return (
-    <div className="getinvolved-page">
-      <PageHeader title={item.title} intro={item.summary} />
+    <div className={`getinvolved-page${isDonatePage ? ' getinvolved-page--donate' : ''}`}>
+      <PageHeader
+        title={isDonatePage ? t('donate.title') : item.title}
+        intro={isDonatePage ? t('donate.subtitle') : item.summary}
+        className={isDonatePage ? 'page-header--donate' : ''}
+        minHeight={isDonatePage ? null : '420px'}
+      />
 
       <div className="getinvolved-split-list">
         <section className="getinvolved-split-row getinvolved-detail-card">

@@ -10,14 +10,7 @@ import './OurStory.css'
 export default function OurStory() {
   return (
     <article className="story-page">
-      <header
-        className="story-banner auvd-story-hero"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7)), url('/Kakuma.jpg')",
-        }}
-      >
-        <div className="auvd-story-overlay" aria-hidden="true" />
+      <header className="story-banner auvd-story-hero">
         <div className="container auvd-story-content">
           <h1 className="story-title">
             MaLua Lugazo: Building Hope for Girls in Kakuma
@@ -35,13 +28,22 @@ export default function OurStory() {
           <div className="auvd-founder__left">
             <div className="auvd-founder__media">
               <div className="auvd-person">
-                <div className="auvd-person__shape" aria-hidden="true" />
-                <img
-                  className="auvd-person__img"
-                  src="/Malua%20director.png"
-                  alt="MaLua Lugazo, Director of Women Without Borders Hub"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    srcSet="/images/malua-lugazo.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    className="auvd-person__img"
+                    src="/images/malua-lugazo.jpg"
+                    alt="MaLua Lugazo, Founder of Women Without Borders Hub"
+                    loading="eager"
+                    fetchPriority="high"
+                    width="280"
+                    height="375"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <div className="auvd-founder__bubble">
                 <div className="auvd-founder__bubble-inner">
@@ -141,9 +143,10 @@ export default function OurStory() {
             {/* Decorative photo — desktop only (hidden on tablet/phone via CSS). */}
             <img
               className="auvd-founder__aside-img"
-              src="/women Hub7.png"
+              src="/images/women-hub7.png"
               alt="Women of Women Without Borders Hub in Kakuma"
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

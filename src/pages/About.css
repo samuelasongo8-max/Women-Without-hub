@@ -115,3 +115,67 @@
     padding: 40px 0;
   }
 }
+
+/* ---------- About page: ways-to-support action cards ----------
+   Reuses site tokens (--color-primary, --color-border, --shadow, --radius).
+   Scoped to About.jsx only. */
+.about-actions {
+  padding: 3rem 0;
+}
+
+.about-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  background: #fff;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(31, 36, 48, 0.14);
+}
+
+.about-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.about-card__icon svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.about-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: var(--color-primary);
+}
+
+.about-card p {
+  margin: 0 0 0.75rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.about-card__link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about-card__link:hover,
+.about-card__link:focus {
+  color: var(--color-primary-dark);
+}

@@ -1,0 +1,98 @@
+.scroll-arrows {
+  position: fixed;
+  z-index: 45;
+  inset-block-end: max(20px, env(safe-area-inset-bottom));
+  inset-inline-end: max(20px, env(safe-area-inset-right, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.scroll-arrows:dir(rtl) {
+  inset-inline-end: max(20px, env(safe-area-inset-left, 0px));
+}
+
+.scroll-arrows__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  color: #ffffff;
+  background: var(--brand, #2e8c8c);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 3px 12px rgba(23, 53, 55, 0.24);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease,
+    visibility 0s linear 200ms,
+    background-color 150ms ease;
+}
+
+.scroll-arrows__button.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease,
+    visibility 0s,
+    background-color 150ms ease;
+}
+
+.scroll-arrows__button svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scroll-arrows__button:focus-visible {
+  outline: 3px solid #f6b95c;
+  outline-offset: 3px;
+}
+
+.scroll-arrows__button:active {
+  background: #155f62;
+  transform: scale(0.94);
+}
+
+@media (hover: hover) {
+  .scroll-arrows__button:hover {
+    background: #155f62;
+  }
+}
+
+@media (max-width: 600px) {
+  .scroll-arrows {
+    inset-block-end: max(16px, env(safe-area-inset-bottom));
+    inset-inline-end: max(16px, env(safe-area-inset-right, 0px));
+  }
+
+  .scroll-arrows:dir(rtl) {
+    inset-inline-end: max(16px, env(safe-area-inset-left, 0px));
+  }
+
+  .scroll-arrows__button {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-arrows__button {
+    transition: none;
+  }
+}

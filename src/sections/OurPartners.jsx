@@ -1,36 +1,25 @@
 import './OurPartners.css'
 
-/**
- * Our Partners — a strip of logo slots shown directly below Get Involved.
- *
- * HOW TO ADD A REAL LOGO LATER:
- *   1. Drop the logo image into the `public/` folder, e.g. `public/partner-acme.png`.
- *   2. Set that partner's `logo` to the public URL, e.g. `logo: '/partner-acme.png'`.
- *      (If the file name contains spaces, URL-encode them, e.g. `/partner%20acme.png`.)
- *   3. Optionally set `url` to the partner's website; the box becomes a link
- *      that opens in a new tab (target="_blank", rel="noopener noreferrer").
- * When `logo` is null, the box shows the dashed "Partner logo" placeholder.
- */
+/** Our Partners — a centered strip of partner logos below Get Involved. */
 const PARTNERS = [
-  { name: 'Partner 1', logo: null, url: null },
-  { name: 'Partner 2', logo: null, url: null },
-  { name: 'Partner 3', logo: null, url: null },
-  { name: 'Partner 4', logo: null, url: null },
-  { name: 'Partner 5', logo: null, url: null },
-  { name: 'Partner 6', logo: null, url: null },
+  {
+    name: 'Teach for Community',
+    logo: '/images/partners/teach-for-community.jpg',
+    alt: 'Teach for Community logo',
+  },
 ]
 
-/** A single logo slot: real image when provided, otherwise a placeholder. */
 function PartnerSlot({ partner }) {
-  const inner = partner.logo ? (
+  const inner = (
     <img
       className="ourpartners__img"
       src={partner.logo}
-      alt={partner.name}
+      alt={partner.alt}
+      width="300"
+      height="300"
       loading="lazy"
+      decoding="async"
     />
-  ) : (
-    <span>Partner logo</span>
   )
 
   return (
@@ -58,7 +47,7 @@ export default function OurPartners() {
         <h2 className="ourpartners__heading" id="ourpartners-heading">
           Our Partners
         </h2>
-        <p className="ourpartners__subtitle">Trusted by Global Partners and Funders</p>
+        <p className="ourpartners__subtitle">Teach for Community</p>
 
         <div className="ourpartners__grid">
           {PARTNERS.map((partner) => (
@@ -66,7 +55,6 @@ export default function OurPartners() {
           ))}
         </div>
 
-        <p className="ourpartners__note">Partner logos are under development.</p>
       </div>
     </section>
   )
