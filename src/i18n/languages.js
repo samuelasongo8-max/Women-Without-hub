@@ -29,7 +29,6 @@ export const EXTRA_FONTS = {
   ar: 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap',
   ru: 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap',
   pl: 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap',
-  zh: 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap',
 }
 
 export function isSupported(code) {

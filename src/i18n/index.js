@@ -26,7 +26,6 @@ const loaders = {
   it: () => import('../locales/it.json'),
   es: () => import('../locales/es.json'),
   so: () => import('../locales/so.json'),
-  zh: () => import('../locales/zh.json'),
   ru: () => import('../locales/ru.json'),
   pl: () => import('../locales/pl.json'),
 }
