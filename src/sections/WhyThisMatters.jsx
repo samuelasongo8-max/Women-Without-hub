@@ -1,19 +1,20 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import BlobPhotoCard from '../components/BlobPhotoCard'
 import './WhyThisMatters.css'
 
-const reasons = [
+const photos = [
   {
-    title: 'Girls miss out on education',
-    text: 'Conflict, displacement and poverty interrupt schooling — and a pregnancy can end it completely. Remedial and second-chance education put learning back within reach.',
+    image: '/images/why-matters-girls.webp',
+    altKey: 'schoolgirlsAlt',
   },
   {
-    title: 'Teenage mothers are left behind',
-    text: 'Young mothers are often excluded from classrooms and training. Pathways back to learning, mentorship and skills restore their options.',
+    image: '/images/why-matters-education.webp',
+    altKey: 'educationAlt',
   },
   {
-    title: 'Skills without opportunity lead nowhere',
-    text: 'Digital and vocational skills only change lives when they connect to apprenticeships, market linkages and employment referrals.',
+    image: '/images/why-matters-skills.webp',
+    altKey: 'skillsAlt',
   },
 ]
 
@@ -28,12 +29,13 @@ export default function WhyThisMatters() {
         </h2>
         <p className="why-intro">{t('common.whyIntro')}</p>
 
-        <div className="why-grid">
-          {reasons.map((r) => (
-            <article key={r.title} className="why-card">
-              <h3>{t(`common.whyTitle.${r.title}`, { defaultValue: r.title })}</h3>
-              <p>{t(`common.whyText.${r.title}`, { defaultValue: r.text })}</p>
-            </article>
+        <div className="why-matters-blob-wrapper">
+          {photos.map((photo) => (
+            <BlobPhotoCard
+              key={photo.image}
+              image={photo.image}
+              alt={t(`whyThisMatters.${photo.altKey}`)}
+            />
           ))}
         </div>
 

@@ -55,6 +55,11 @@
     "top": "Zum Seitenanfang",
     "bottom": "Zum Seitenende"
   },
+  "whyThisMatters": {
+    "schoolgirlsAlt": "Zwei Schülerinnen gehen zusammen",
+    "educationAlt": "Eine Frau liest bei einer Lernaktivität",
+    "skillsAlt": "Eine Frau lernt nähen"
+  },
   "common": {
     "learnMore": "Mehr erfahren",
     "readMore": "Weiterlesen",

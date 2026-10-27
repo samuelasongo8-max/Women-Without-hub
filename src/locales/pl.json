@@ -88,6 +88,11 @@
     "top": "Przewiń na górę",
     "bottom": "Przewiń na dół"
   },
+  "whyThisMatters": {
+    "schoolgirlsAlt": "Dwie uczennice idą razem",
+    "educationAlt": "Kobieta czyta podczas zajęć edukacyjnych",
+    "skillsAlt": "Kobieta uczy się szyć"
+  },
   "common": {
     "learnMore": "Learn more",
     "readMore": "Read more",

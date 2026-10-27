@@ -55,6 +55,11 @@
     "top": "U gudub dusha bogga",
     "bottom": "U gudub hoose ee bogga"
   },
+  "whyThisMatters": {
+    "schoolgirlsAlt": "Laba gabdhood oo arday ah oo wada socda",
+    "educationAlt": "Haweeney wax akhrinaysa inta lagu jiro hawl waxbarasho",
+    "skillsAlt": "Haweeney baranaysa tolidda"
+  },
   "common": {
     "learnMore": "Wax badan baro",
     "readMore": "Akhri dheeraad",
