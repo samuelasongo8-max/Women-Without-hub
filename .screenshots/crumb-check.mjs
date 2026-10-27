@@ -23,7 +23,7 @@ const expr = `JSON.stringify({
   h1: document.querySelector('h1')?.textContent.trim().slice(0,100) ?? null,
   eyebrow: document.querySelector('.mlp-eyebrow')?.textContent.trim() ?? null,
   introHasFullName: document.querySelector('.mlp-intro')?.textContent.includes('Women Without Borders Hub') ?? null,
-  bodyHasShortName: document.body.innerText.includes('Women Without Hub') ?? null,
+  bodyHasShortName: document.body.innerText.includes('Women Without Borders Hub') ?? null,
 })`
 const r = await send('Runtime.evaluate', { expression: expr, returnByValue: true })
 console.log(JSON.stringify(JSON.parse(r.result.value), null, 2))

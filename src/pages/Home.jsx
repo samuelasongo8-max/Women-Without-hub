@@ -1,6 +1,7 @@
 import { organizationSchema } from '../data/seo.js'
+import { ORG_NAME } from '../config/site.js'
 import { useTranslation } from 'react-i18next'
-import Hero from '../sections/Hero.jsx'
+import HeroRotator from '../sections/HeroRotator.jsx'
 import WhoWeAre from '../sections/WhoWeAre.jsx'
 import CommunityUpdates from '../sections/CommunityUpdates.jsx'
 import Programs from '../sections/Programs.jsx'
@@ -45,29 +46,29 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
       />
 
-      <Hero />
+      <HeroRotator />
       <WhoWeAre />
       <CommunityUpdates />
       {/* Slim decorative image band — sits directly between
           "Community Updates & Stories" and "Our Programs".
           The message is overlaid on the photo; the band keeps its
           original height. */}
-      <ImageBand image={IMAGE_BAND_IMAGE} overlayText={t('homePage.intro', { defaultValue: 'Women Without Borders Hub — empowering girls and young women in Kakuma Refugee Camp, Kenya.' })} />
+      <ImageBand image={IMAGE_BAND_IMAGE} overlayText={t('homePage.intro', { defaultValue: `${ORG_NAME} — empowering girls and young women in Kakuma Refugee Camp, Kenya.` })} />
       <Programs />
       <WhyThisMatters />
       <QuoteFeature
         quote={t('quoteFeature.quote', { defaultValue: "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community." })}
         name={t('quoteFeature.name', { defaultValue: "Khadijoh Mahamed" })}
-        role={t('quoteFeature.role', { defaultValue: "Member of Women Without Borders Hub" })}
+        role={t('quoteFeature.role', { defaultValue: `Member of ${ORG_NAME}` })}
         image="/Khadijoh%20Mahamed.jpg"
         alt="Khadijoh Mahamed"
       />
       <QuoteFeature
-        quote={t('quoteSection.quote2', { defaultValue: "I founded Women Without Borders Hub because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence." })}
-        name="Maluo Lugazo - founder of Women Without Hub"
-        role="Founder of Women Without Hub"
+        quote={t('quoteSection.quote2', { defaultValue: `I founded ${ORG_NAME} because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.` })}
+        name={`Maluo Lugazo - founder of ${ORG_NAME}`}
+        role={`Founder of ${ORG_NAME}`}
         image="/images/malua-lugazo.jpg"
-        alt="MaLua Lugazo, Founder of Women Without Borders Hub"
+        alt={`MaLua Lugazo, Founder of ${ORG_NAME}`}
       />
       <Impact />
       <GetInvolved />

@@ -36,6 +36,26 @@
   background-position: var(--hero-pos);
 }
 
+.program-hero--livelihood {
+  --hero-focus: center 25%;
+  --hero-focus-mobile: 70% center;
+  --hero-pos: var(--hero-focus);
+  --hero-pos-mobile: var(--hero-focus-mobile);
+}
+
+.program-hero--second-chance.program-hero--has-image {
+  background-color: #242424;
+}
+
+.program-hero--second-chance.program-hero--has-image::after {
+  background: linear-gradient(
+    var(--hero-scrim-direction),
+    rgba(0, 0, 0, 0.42) 0%,
+    rgba(0, 0, 0, 0.24) 58%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+}
+
 @supports (background-image: image-set(url('/image.webp') type('image/webp'))) {
   .program-hero--has-image {
     background-image: var(--program-hero-desktop-image);
@@ -50,6 +70,15 @@
   inset: 0;
   background: linear-gradient(var(--hero-scrim-direction), rgba(14, 50, 50, 0.68), transparent 78%);
   pointer-events: none;
+}
+
+.program-hero--livelihood.program-hero--has-image::after {
+  background: linear-gradient(
+    var(--hero-scrim-direction),
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.55) 91%,
+    transparent 100%
+  );
 }
 
 /* No photo: a plain teal gradient keeps the same look and sizing. */
@@ -138,6 +167,10 @@ html:dir(rtl) .program-hero--livelihood-what-we-do .program-hero__crumb li:not(:
     padding: 44px 24px;
   }
 
+  .program-hero--livelihood.program-hero--has-image::after {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
   .program-hero:not(.program-hero--has-image) {
     min-height: 0;
   }
@@ -156,6 +189,10 @@ html:dir(rtl) .program-hero--livelihood-what-we-do .program-hero__crumb li:not(:
   .program-hero--has-image::after {
     background: linear-gradient(var(--hero-scrim-direction), rgba(14, 50, 50, 0.68), transparent 92%);
   }
+
+  .program-hero--second-chance.program-hero--has-image::after {
+    background: rgba(0, 0, 0, 0.32);
+  }
 }
 
 html:dir(rtl) .program-hero {
@@ -167,6 +204,37 @@ html:dir(rtl) .program-hero {
     .program-hero--has-image {
       background-image: var(--program-hero-mobile-image);
     }
+  }
+}
+
+.program-hero--livelihood-what-we-do.program-hero--has-image {
+  min-height: 0;
+  padding-block: 2rem;
+  background-color: #111111;
+}
+
+.program-hero--livelihood-what-we-do.program-hero--has-image::after {
+  background: rgba(0, 0, 0, 0.64);
+}
+
+.program-hero--livelihood-what-we-do .program-hero__crumb ol {
+  margin-block-end: 0.75rem;
+}
+
+.program-hero--livelihood-what-we-do .program-hero__title {
+  margin-block-end: 0.5rem;
+}
+
+@media (max-width: 899px) {
+  .program-hero--livelihood-what-we-do.program-hero--has-image {
+    min-height: 0;
+    padding: 1.75rem 24px;
+  }
+}
+
+@media (max-width: 479px) {
+  .program-hero--livelihood-what-we-do.program-hero--has-image {
+    padding: 1.5rem 20px;
   }
 }
 

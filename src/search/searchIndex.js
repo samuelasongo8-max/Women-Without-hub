@@ -1,5 +1,6 @@
 import { involvement, programs } from '../data/site.js'
 import { SITE } from '../data/seo.js'
+import { ORG_NAME } from '../config/site.js'
 import { updates } from '../sections/CommunityUpdates.jsx'
 
 export function buildSearchIndex(t) {
@@ -19,7 +20,7 @@ export function buildSearchIndex(t) {
   add(
     'home-intro',
     homeTitle,
-    t('homePage.title', { defaultValue: 'Women Without Borders Hub' }),
+    t('homePage.title', { defaultValue: ORG_NAME }),
     t('homePage.intro', { defaultValue: '' }),
     '/',
   )
@@ -67,7 +68,7 @@ export function buildSearchIndex(t) {
     t('quoteSection.name', { defaultValue: 'Our Founder' }),
     t('quoteSection.quote2', {
       defaultValue:
-        'I founded Women Without Borders Hub because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.',
+        `I founded ${ORG_NAME} because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.`,
     }),
     '/',
   )
@@ -111,7 +112,7 @@ export function buildSearchIndex(t) {
     'our-story',
     t('nav.ourStory', { defaultValue: 'Our Story' }),
     'MaLua Lugazo: Building Hope for Girls in Kakuma',
-    'MaLua Lugazo is a Somali refugee living in Kakuma Refugee Camp who founded Women Without Borders Hub so that every girl and young woman has a chance to learn, grow and lead. MaLua Lugazo knows Kakuma from the inside. As a Somali refugee growing up in the camp, she watched bright girls disappear from classrooms - early marriage, pregnancy, household labour and school costs closing doors one by one. She also saw what a single opportunity could do: a scholarship, a mentor, a safe room to study in. That contrast - between what girls in Kakuma are denied and what they become when someone believes in them - is where Women Without Borders Hub began.',
+    `MaLua Lugazo is a Somali refugee living in Kakuma Refugee Camp who founded ${ORG_NAME} so that every girl and young woman has a chance to learn, grow and lead. MaLua Lugazo knows Kakuma from the inside. As a Somali refugee growing up in the camp, she watched bright girls disappear from classrooms - early marriage, pregnancy, household labour and school costs closing doors one by one. She also saw what a single opportunity could do: a scholarship, a mentor, a safe room to study in. That contrast - between what girls in Kakuma are denied and what they become when someone believes in them - is where ${ORG_NAME} began.`,
     '/about/our-story/',
   )
   add(
@@ -123,10 +124,16 @@ export function buildSearchIndex(t) {
   )
 
   programs.forEach((program) => {
+    const title =
+      program.slug === 'second-chance-education'
+        ? t('programs.secondChanceTitle', {
+            defaultValue: program.title,
+          })
+        : program.title
     add(
       `program-${program.slug}`,
       programsTitle,
-      program.title,
+      title,
       program.summary,
       `/programs/${program.slug}/`,
     )
@@ -152,6 +159,20 @@ export function buildSearchIndex(t) {
     t('programs.livelihood.whatWeDo.title', { defaultValue: 'What We Do' }),
     livelihoodWhatWeDoText,
     '/programs/livelihood-economic-empowerment/what-we-do/',
+  )
+  const livelihoodApproach = t('programs.livelihood.ourApproach', {
+    returnObjects: true,
+    defaultValue: {},
+  })
+  const livelihoodApproachItems = Array.isArray(livelihoodApproach.items)
+    ? livelihoodApproach.items.flatMap((item) => [item.title, item.text])
+    : []
+  add(
+    'program-livelihood-our-approach',
+    programsTitle,
+    livelihoodApproach.title || 'Our Approach',
+    [livelihoodApproach.intro, ...livelihoodApproachItems].filter(Boolean).join(' '),
+    '/programs/livelihood-economic-empowerment/our-approach/',
   )
 
   add(
@@ -179,6 +200,18 @@ export function buildSearchIndex(t) {
       '/get-involved/',
     )
   })
+
+  add(
+    'volunteer-application',
+    involvedTitle,
+    t('volunteer.heroTitle', { defaultValue: 'Volunteer With Us' }),
+    [
+      t('volunteer.heroSentence', { defaultValue: '' }),
+      t('volunteer.intro', { defaultValue: '' }),
+      t('volunteer.form.sections.about', { defaultValue: '' }),
+    ].join(' '),
+    '/get-involved/volunteer/',
+  )
 
   add(
     'impact-overview',
@@ -209,7 +242,7 @@ export function buildSearchIndex(t) {
   add(
     'contact-partnership',
     contactTitle,
-    t('contact.partnerHeading', { defaultValue: 'Partner With Women Without Borders Hub' }),
+    t('contact.partnerHeading', { defaultValue: `Partner With ${ORG_NAME}` }),
     t('contact.partnerText1', { defaultValue: '' }),
     '/contact/',
   )

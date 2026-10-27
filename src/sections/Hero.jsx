@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { donateCta, socialLinks } from '../data/site.js'
-import { SITE } from '../data/seo.js'
+import { ORG_NAME } from '../config/site.js'
 import './Hero.css'
 
 export default function Hero() {
+  const { t } = useTranslation()
+
   return (
     <section className="hero">
       <div className="hero-area">
@@ -29,24 +32,21 @@ export default function Hero() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <h1 className="hero-title">
-              Empowering
+              {t('homeHero.titlePrefix')}
               <br />
-              <span className="hero-h1-yellow">girls</span> &amp;{' '}
-              <span className="hero-h1-coral">young women</span>
+              <span className="hero-h1-yellow">{t('homeHero.girls')}</span>{' '}
+              {t('homeHero.connector')}{' '}
+              <span className="hero-h1-coral">{t('homeHero.youngWomen')}</span>
               <br />
-              in Kakuma
+              {t('homeHero.location')}
             </h1>
-            <p className="hero-lead">
-              Creating opportunities for vulnerable girls, teenage mothers and
-              young women through education, skills, mentorship, health and
-              economic empowerment in Kakuma, Kenya.
-            </p>
+            <p className="hero-lead">{t('homeHero.lead')}</p>
             <div className="hero-actions">
               <Link to={donateCta.to} className="hero-btn hero-btn-fill">
-                {donateCta.label} <span aria-hidden="true">→</span>
+                {t('nav.donate')} <span aria-hidden="true">→</span>
               </Link>
               <Link to="/programs/" className="hero-btn hero-btn-outline">
-                Our Programs
+                {t('homeHero.programs')}
               </Link>
             </div>
 
@@ -59,7 +59,7 @@ export default function Hero() {
                 href={socialLinks.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Women Without Borders Hub on Facebook"
+                aria-label={t('homeHero.facebook', { name: ORG_NAME })}
               >
                 <svg width="20" height="20" viewBox="0 0 320 512" fill="#fff" aria-hidden="true" focusable="false">
                   <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06H297.6V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
@@ -72,7 +72,7 @@ export default function Hero() {
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Women Without Borders Hub on LinkedIn"
+                aria-label={t('homeHero.linkedin', { name: ORG_NAME })}
               >
                 <svg width="20" height="20" viewBox="0 0 448 512" fill="#fff" aria-hidden="true" focusable="false">
                   <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 149.1V448z"/>
@@ -88,16 +88,16 @@ export default function Hero() {
             <img
               className="hero-photo"
               src="/images/graduation-at-women-without-border.jpg"
-              alt="Women proudly holding their graduation certificates"
+              alt={t('homeHero.photoAlt')}
               width="800"
               height="600"
               loading="eager"
               decoding="async"
             />
             <p className="hero-script">
-              Real People.
+              {t('homeHero.realPeople')}
               <br />
-              Real Change.
+              {t('homeHero.realChange')}
             </p>
           </div>
         </div>

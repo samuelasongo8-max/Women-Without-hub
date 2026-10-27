@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import './Programs.css'
 import srhrVideo from './video/Sexual & Reproductive Health and Rights video(SRHR).mp4'
 import { programImages } from '../data/programImages.js'
@@ -12,36 +13,19 @@ const C = '#ef6f52'
 // Relative routes only — never a full http://localhost URL.
 const programs = [
   {
-    slug: 'education-literacy',
-    title: 'Education & Literacy',
-    to: '/programs/education-literacy/',
-    text: 'Scholarships, literacy circles, remedial and second-chance education that keep girls in school and open educational opportunities for vulnerable girls in Kakuma.',
+    slug: 'second-chance-education',
+    to: '/programs/second-chance-education/',
     icon: (
       <>
         <path d="M4 10c9-3 15-1 20 4v26c-5-5-11-7-20-4z" fill={T} />
         <path d="M44 10c-9-3-15-1-20 4v26c5-5 11-7 20-4z" fill={C} />
       </>
     ),
-    img: programImages['education-literacy'],
-  },
-  {
-    slug: 'digital-technical-skills',
-    title: 'Digital & Technical Skills',
-    to: '/programs/digital-technical-skills/',
-    text: 'Computer literacy and digital skills bootcamps alongside vocational training in tailoring, fashion, beauty and hairdressing for young women.',
-    icon: (
-      <>
-        <rect x="8" y="9" width="32" height="23" rx="3" fill={T} />
-        <path d="M3 36h42l-3 5H6z" fill={Y} />
-      </>
-    ),
-    img: programImages['digital-technical-skills'],
+    img: programImages['second-chance-education'],
   },
   {
     slug: 'mentorship-life-skills',
-    title: 'Mentorship & Life Skills',
     to: '/programs/mentorship-life-skills/',
-    text: 'Mentorship, life skills, leadership, career guidance, goal setting and financial literacy that build confidence and self-reliance.',
     icon: (
       <>
         <circle cx="17" cy="13" r="7" fill={T} />
@@ -54,9 +38,7 @@ const programs = [
   },
   {
     slug: 'health-menstrual-dignity',
-    title: 'Health & Menstrual Dignity',
     to: '/programs/health-menstrual-dignity/',
-    text: 'Menstrual health education, menstrual products, health awareness and health referrals so no one misses school or work.',
     icon: (
       <path
         d="M24 4C14 18 10 24 10 31a14 14 0 0 0 28 0c0-7-4-13-14-27z"
@@ -67,9 +49,7 @@ const programs = [
   },
   {
     slug: 'srhr',
-    title: 'Sexual & Reproductive Health and Rights (SRHR)',
     to: '/programs/srhr/',
-    text: 'Age-appropriate, culturally sensitive SRHR education, peer education and community awareness built on respect and choice.',
     icon: (
       <>
         <path
@@ -83,9 +63,7 @@ const programs = [
   },
   {
     slug: 'livelihood-economic-empowerment',
-    title: 'Livelihood & Economic Empowerment',
     to: '/programs/livelihood-economic-empowerment/',
-    text: 'Entrepreneurship, business mentorship, apprenticeships, market linkages and employment referrals for women’s economic empowerment.',
     icon: (
       <>
         <path d="M24 4c7 5 7 14 0 19-7-5-7-14 0-19z" fill={C} />
@@ -102,23 +80,24 @@ const programs = [
 ]
 
 export default function Programs() {
+  const { t } = useTranslation()
+
   return (
-    <section className="home-programs">
+    <section className="home-programs home-programs--home">
       <div className="container">
-        <h2>Our Programs</h2>
+        <h2>{t('programs.homeTitle')}</h2>
         <p className="section-intro">
-          Six programme areas addressing the barriers facing girls and young
-          women in Kakuma from the classroom to the marketplace.
+          {t('programs.homeIntro')}
         </p>
 
         <div className="home-programs-grid">
-          {programs.map(({ slug, title, to, text, icon, img }) => (
+          {programs.map(({ slug, to, icon, img }) => (
             <article key={to} className="home-program">
               <div className="home-program-image-wrap">
                 <img
                   className="home-program-image"
                   src={encodeURI(img.image)}
-                  alt={img.alt}
+                  alt={t(img.altKey)}
                   loading="lazy"
                   decoding="async"
                   width="1200"
@@ -134,11 +113,15 @@ export default function Programs() {
                 {icon}
               </svg>
               <h3>
-                <Link to={to}>{title}</Link>
+                <Link to={to}>
+                  {slug === 'second-chance-education'
+                    ? t('programs.secondChanceTitle')
+                    : t(`programs.cards.${slug}.title`)}
+                </Link>
               </h3>
-              <p>{text}</p>
+              <p>{t(`programs.cards.${slug}.summary`)}</p>
               <Link to={to} className="home-program-link">
-                Learn more →
+                {t('common.learnMore')} →
               </Link>
 
               {slug === 'srhr' && (
@@ -150,19 +133,43 @@ export default function Programs() {
                     controls
                     playsInline
                     preload="metadata"
-                    aria-label="SRHR awareness session video">
-                    Your browser can&apos;t play this video.
+                    aria-label={t('programs.videoAria')}
+                  >
+                    {t('programs.videoFallback')}
                   </video>
-                  <h4 className="home-program-video-title">SRHR Awareness Session</h4>
+                  <h4 className="home-program-video-title">
+                    {t('programs.videoTitle')}
+                  </h4>
                   <p className="home-program-video-text">
-                    Participants demonstrate what they learned during an SRHR
-                    awareness session, promoting knowledge, dignity, respect, and
-                    informed choices.
+                    {t('programs.videoDescription')}
                   </p>
                 </div>
               )}
             </article>
           ))}
+          <div className="home-program-fill">
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="/images/programs-fill.webp"
+                media="(min-width: 1024px)"
+              />
+              <source
+                type="image/jpeg"
+                srcSet="/images/programs-fill.jpg"
+                media="(min-width: 1024px)"
+              />
+              <img
+                className="home-program-fill-image"
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                alt={t('programs.fillImageAlt')}
+                width="900"
+                height="1350"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 # Livelihood & Economic Empowerment
 
-### Building Skills, Creating Opportunities, and Supporting Financial Independence
+### Building Skills
 Economic empowerment is an important step toward helping women and girls build secure, independent, and dignified lives. Through our Livelihood & Economic Empowerment programme, Women Without Hub aims to support women and young people in developing practical skills, exploring income-generating opportunities, strengthening their confidence, and working toward greater financial independence.
 
 We recognize that many women and girls face barriers that limit their ability to access education, employment, business opportunities, and the resources needed to support themselves and their families. These challenges can include limited access to vocational training, financial resources, business knowledge, professional networks, and employment opportunities.
@@ -18,21 +18,6 @@ For women and girls living in challenging circumstances, including displacement 
 
 At Women Without Hub, we believe that investing in women's skills, ideas, and potential is an important part of building stronger and more inclusive communities.
 
-## Our Approach
-We aim to develop livelihood initiatives that are practical, inclusive, community-informed, and responsive to the experiences of the people we serve.
-
-**Community-led design:** We value the experiences, priorities, and ideas of women and girls. Listening to community members helps identify relevant needs and shape activities that are better suited to their circumstances.
-
-**Safe and inclusive participation:** We aim to promote respectful learning environments where participants are treated with dignity, have opportunities to contribute, and can participate without discrimination. Safeguarding and appropriate support should remain central to programme activities.
-
-**Practical and relevant learning:** We recognize the importance of skills that participants can apply in everyday life, business activities, training, or employment pathways. Activities should respond to participants' interests and available opportunities.
-
-**Mentorship and collaboration:** We value cooperation with community groups, local businesses, training providers, employers, educators, and other organizations that can contribute knowledge, resources, or relevant opportunities.
-
-**Access to opportunities:** Where possible, we aim to connect participants with information about training, business development, markets, apprenticeships, and employment pathways.
-
-**Learning and accountability:** We seek to learn from programme activities, listen to participant feedback, and communicate progress transparently. Where activities are implemented, monitoring can help us understand participation, identify challenges, and improve future support.
-
 ## Who We Aim to Support
 Our Livelihood & Economic Empowerment programme is intended to support women and girls who want to develop their skills, explore economic opportunities, and work toward greater independence.
 
@@ -43,7 +28,7 @@ We therefore value approaches that respect individual circumstances and help par
 ## Working Together to Create Opportunities
 Sustainable economic empowerment requires collaboration. Community organizations, local businesses, employers, training institutions, mentors, donors, and development partners can all play a role in expanding access to knowledge, skills, resources, and opportunities.
 
-Women Without Hub welcomes engagement with partners who share our commitment to supporting women and girls through livelihood development and economic participation.
+Women Without Borders Hub welcomes engagement with partners who share our commitment to supporting women and girls through livelihood development and economic participation.
 
 Potential areas of collaboration include vocational and entrepreneurship training, mentorship, business development support, apprenticeship opportunities, market connections, employment referrals, and resources for community-based livelihood initiatives.
 

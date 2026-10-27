@@ -26,6 +26,7 @@
   padding: 0 var(--upd-pad);
 }
 
+.updates h1,
 .updates h2 {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-weight: 500;
@@ -34,6 +35,7 @@
   margin: 0;
 }
 
+.updates h1 em,
 .updates h2 em {
   display: block;
   font-style: italic;

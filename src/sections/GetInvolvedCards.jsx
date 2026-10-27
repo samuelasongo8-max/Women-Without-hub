@@ -4,12 +4,6 @@ import { useTranslation } from 'react-i18next'
 import './GetInvolvedCards.css'
 
 /**
- * Single constant for the link destination used by all four cards.
- * Change this one value if a different page is added later.
- */
-const GI_DONATE_URL = '/contact'
-
-/**
  * Hero configuration — edit here to change kicker, heading or hero image.
  */
 const GI_CONFIG = {  
@@ -30,7 +24,7 @@ const GI_CARDS = [
     titleKey: 'getInvolvedCards.cardDonate.title',
     textKey: 'getInvolvedCards.cardDonate.text',
     linkLabelKey: 'getInvolvedCards.cardDonate.linkLabel',
-    href: GI_DONATE_URL,
+    href: '/get-involved/donate/',
     img: '/images/get-involved-donate.jpg',
     altKey: 'getInvolvedCards.cardDonate.alt',
   },
@@ -48,7 +42,7 @@ const GI_CARDS = [
     titleKey: 'getInvolvedCards.cardVolunteer.title',
     textKey: 'getInvolvedCards.cardVolunteer.text',
     linkLabelKey: 'getInvolvedCards.cardVolunteer.linkLabel',
-    href: '/contact',
+    href: '/get-involved/volunteer/',
     img: '/images/get-involved-volunteer.jpg',
     altKey: 'getInvolvedCards.cardVolunteer.alt',
   },
@@ -57,7 +51,7 @@ const GI_CARDS = [
     titleKey: 'getInvolvedCards.cardSkills.title',
     textKey: 'getInvolvedCards.cardSkills.text',
     linkLabelKey: 'getInvolvedCards.cardSkills.linkLabel',
-    href: '/contact',
+    href: '/get-involved/volunteer/',
     img: null,
     icon: <FaGraduationCap aria-hidden="true" />,
     altKey: 'getInvolvedCards.cardSkills.alt',
@@ -77,12 +71,7 @@ export default function GetInvolvedCards() {
           <h2 id="gi-heading" className="gi-heading">
             {t(GI_CONFIG.headingKey)}
           </h2>
-          <p className="gi-hero-intro">
-            {t('getInvolvedCards.intro', {
-              defaultValue:
-                'There are many ways you can support our mission, from volunteering your time and sharing your skills to providing financial support, mentoring young women, or partnering with us. Every contribution matters and can help expand access to education, skills development, health awareness, and economic opportunities for women and girls in Kakuma Refugee Camp. Together, we can break barriers, build confidence, and create a future where every girl and young woman has the opportunity to thrive.',
-            })}
-          </p>
+          <p className="gi-hero-intro">{t('getInvolvedCards.intro')}</p>
         </div>
         <div className="gi-hero-panel gi-hero-panel--image">
           <picture>
@@ -133,13 +122,13 @@ export default function GetInvolvedCards() {
             <div className="gi-card__body">
               <h3 className="gi-card__title">{t(card.titleKey)}</h3>
               <p className="gi-card__text">{t(card.textKey)}</p>
-              <a
-                href={card.href}
+              <Link
+                to={card.href}
                 className="gi-card__link"
               >
                 {t(card.linkLabelKey)}
                 <span className="gi-card__arrow">→</span>
-              </a>
+              </Link>
             </div>
           </article>
         ))}

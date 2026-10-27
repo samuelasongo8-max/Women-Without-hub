@@ -23,7 +23,7 @@
     "getInvolved": "Ku soo biir",
     "resources": "Kheyraadka",
     "contact": "Xiriir",
-    "orgName": "Women Without Hub",
+    "orgName": "Women Without Borders Hub",
     "donate": "Deeq",
     "ourStory": "Sheekadeenna",
     "ourTeam": "Kooxdayada",
@@ -41,7 +41,7 @@
   "search": {
     "open": "Raadi",
     "close": "Xir raadinta",
-    "placeholder": "Ka raadi Women Without Hub...",
+    "placeholder": "Ka raadi Women Without Borders Hub...",
     "clear": "Nadiifi raadinta",
     "results": "Natiijooyinka raadinta",
     "noResults": "Natiijo looma helin '{{query}}'. Isku day erayo kale.",
@@ -73,9 +73,10 @@
       "Vice Chairperson": "Vice Chairperson",
       "Treasurer": "Treasurer",
       "Secretary": "Secretary",
-      "Member": "Member",
-      "whyIntro": "Women and girls in Kakuma Refugee Camp face many challenges, including financial hardship, interrupted education, limited access to skills training, and barriers to employment and healthcare. For teenage mothers, these challenges can be even greater as they balance childcare with their education and personal development. At Women Without Borders Hub, we believe every girl and young woman deserves the opportunity to overcome these barriers, discover her potential, and build a better future. By promoting education, practical skills, mentorship, health awareness, and economic empowerment, we aim to create opportunities for women and girls to grow in confidence, strengthen their independence, and contribute to their communities."
-    }
+      "Member": "Member"
+    },
+    "whyIntro": "Haweenka iyo gabdhaha ku nool Kakuma Refugee Camp waxay la kulmaan caqabado badan, sida dhaqaale yari, waxbarasho hakad gasha, fursado kooban oo tababar xirfadeed ah, iyo caqabado ku wajahan shaqo helidda iyo daryeelka caafimaadka. Hooyooyinka da’da yar waxaa intaas u dheer inay isku dheelli tiraan daryeelka carruurta, waxbarashada iyo horumarkooda. Women Without Borders Hub waxay aaminsan tahay in gabar kasta iyo haweeney kasta oo da’ yar ay mudan tahay fursad ay caqabadaha uga gudubto, awooddeeda ku ogaato, mustaqbal wanaagsanna ku dhisato. Annagoo dhiirrigelinayna waxbarashada, xirfadaha wax-ku-oolka ah, hagidda, wacyiga caafimaadka iyo awood-siinta dhaqaale, waxaan doonaynaa in haweenka iyo gabdhuhu kalsooni yeeshaan, madaxbannaanidooda xoojiyaan, bulshadoodana wax ku biiriyaan.",
+    "ctaSeeImpact": "Eeg isbeddelka uu taageeradaadu keento →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -127,10 +128,7 @@
     "trustLegal": "Kalsooni & Sharci",
     "volunteer": "Kaalmeyn",
     "membership": "Xubinimo",
-    "mentor": "Hagid",
-    "partner": "Lammaane",
     "safeguarding": "Ilaalinta",
-    "resources": "Kheyraadka",
     "contact": "Xiriir",
     "rightsReserved": "Dhammaan xuquuqaha way xafidan yihiin."
   },
@@ -191,14 +189,174 @@
   },
   "programs": {
     "title": "Barnaamijyada",
+    "secondChanceTitle": "Waxbarasho Fursad Labaad",
+    "homeTitle": "Barnaamijyadeenna",
+    "homeIntro": "Barnaamijyadeennu waxay wax ka qabtaan caqabadaha gabdhaha iyo haweenka da'da yar ee Kakuma, laga bilaabo fasalka ilaa suuqa shaqada.",
+    "indexIntro": "Lix qaybood oo barnaamij ah, hal yool: isbeddel waxtar leh oo waara oo loogu talagalay haweenka iyo gabdhaha.",
+    "videoTitle": "Kulanka Wacyigelinta Caafimaadka Galmada iyo Taranka",
+    "videoDescription": "Ka qaybgalayaashu waxay muujiyaan waxa ay ka barteen kulanka wacyigelinta caafimaadka galmada iyo taranka, kaas oo dhiirrigeliya aqoonta, karaamada, ixtiraamka iyo doorasho xog ogaal ah.",
+    "videoAria": "Muuqaalka kulanka wacyigelinta caafimaadka galmada iyo taranka",
+    "videoFallback": "Barowsarkaagu ma ciyaari karo muuqaalkan.",
+    "secondChanceDetail": {
+      "intro": "Waxaan taageernaa gabdhaha iyo haweenka ku nool Xerada Qaxootiga Kakuma ee Kenya ee doonaya inay waxbarashadooda sii wataan, ka gudbaan caqabadaha waxbarashada, una dhistaan mustaqbal wanaagsan. Waxaan aaminsanahay in waxbarashadu tahay xaq, gabadh iyo haweeney kastana ay mudan tahay fursad ay wax ku barato, ku korto oo ay ku gaarto awooddeeda buuxda.",
+      "whatTitle": "Waxa aan qabanno",
+      "whatImageAlt": "Haweeney wax baranaysa inta lagu jiro cashar",
+      "whatParagraphs": [
+        "Barnaamijkeenna Waxbarashada Fursadda Labaad wuxuu taageeraa gabdhaha iyo haweenka waxbarashadoodu hakad gashay ama aan helin fursad ay waxbarashadooda ku dhammaystaan. Dhibaatooyinka dhaqaale, waajibaadka qoyska, barakaca iyo caqabadaha kale ee noloshu waxay adkayn karaan sii wadista waxbarashada. Barnaamijkan waxaan ku dhiirrigelinnaa ku noqoshada waxbarashada, waxaanan gabdhaha iyo haweenka ku taageernaa inay yoolalkooda waxbarasho u raacaan kalsooni iyo go'aan adag.",
+        "Waxaan aaminsanahay in helitaanka waxbarashadu ka caawin karo haweenka iyo gabdhaha inay aqoon helaan, madaxbannaanidooda xoojiyaan, bulshooyinkooda si firfircoon uga qayb qaataan, una abuuraan fursado wanaagsan naftooda iyo qoysaskooda."
+      ],
+      "approachTitle": "Habka aan u shaqeyno",
+      "approachPoints": [
+        { "title": "Kobcinta helitaanka waxbarashada", "text": "Ku dhiirrigelinta gabdhaha iyo haweenka inay ka faa'iidaystaan fursadaha waxbarasho oo ay sii wataan safarkooda waxbarashada." },
+        { "title": "Dhisidda kalsoonida", "text": "Ku dhiirrigelinta ardayda inay awooddooda rumaystaan oo ay gartaan qiimaha waxbarashada ee noloshooda." },
+        { "title": "Kordhinta wacyiga bulshada", "text": "Kobcinta fahamka muhiimadda waxbarashada iyo dhiirrigelinta taageerada gabdhaha iyo haweenka doonaya inay waxbarashada ku noqdaan." },
+        { "title": "Dhiirrigelinta waxbarashada nolosha oo dhan", "text": "Ka caawinta in la yeesho aragti wanaagsan oo ku saabsan waxbarashada, koboca qofka iyo fursadaha mustaqbalka." }
+      ],
+      "getInvolvedTitle": "Ka qayb qaado",
+      "getInvolvedLead": "Waxaad taageeri kartaa barnaamijkeenna Waxbarashada Fursadda Labaad adigoo",
+      "donate": "deeq bixinaya",
+      "volunteer": "tabarucaya",
+      "or": "ama",
+      "partner": "nala wada shaqaynaya",
+      "getInvolvedClosing": "Taageeradaadu waxay naga caawin kartaa inaan kobcinno fursadaha waxbarasho ee gabdhaha iyo haweenka ku jira Xerada Qaxootiga Kakuma, isla markaana aan ku dhiirrigelinno kuwa waxbarashadoodu hakad gashay inay yoolalkooda sii raacaan.",
+      "getInvolvedFinal": "Wadajir, waxaan abuuri karnaa bulsho ku dhiirrigelisa gabdhaha iyo haweenka inay wax bartaan, awooddooda kobciyaan, una shaqeeyaan mustaqbal rajo iyo madax-bannaani badan leh."
+    },
+    "cards": {
+      "second-chance-education": {
+        "title": "Waxbarasho Fursad Labaad",
+        "summary": "Deeqo waxbarasho, kooxo akhris iyo qoraal, taageero waxbarasho iyo waxbarasho fursad labaad oo gabdhaha ka caawiya inay dugsiga sii wataan kana helaan fursado waxbarasho Kakuma.",
+        "imageAlt": "Gabdho wax ku baranaya akhriska iyo qoraalka fasal ku yaal Kakuma"
+      },
+      "digital-technical-skills": {
+        "title": "Xirfadaha Dijitaalka iyo Farsamada",
+        "summary": "Aqoonta kombiyuutarka iyo tababarro xirfadaha dijitaalka ah oo ay weheliso tababar xirfadeed oo ku saabsan tolidda, moodada, qurxinta iyo timo-habaynta haweenka da'da yar.",
+        "imageAlt": "Haween da'yar oo baranaya xirfadaha dijitaalka iyo farsamada Kakuma"
+      },
+      "mentorship-life-skills": {
+        "title": "Hagid iyo Xirfadaha Nolosha",
+        "summary": "Hagid, xirfadaha nolosha, hoggaamin, hagidda shaqada, dejinta yoolalka iyo aqoonta maaliyadeed oo dhisa kalsooni iyo isku-filnaansho.",
+        "imageAlt": "Haween da'yar oo ku jira kulan tababar iyo hagid ah Kakuma"
+      },
+      "health-menstrual-dignity": {
+        "title": "Caafimaadka iyo Karaamada Caadada",
+        "summary": "Waxbarashada caafimaadka caadada, agabka caadada, wacyigelinta caafimaadka iyo gudbinta adeegyada caafimaadka si qofna uga maqnaan dugsiga ama shaqada.",
+        "imageAlt": "Wacyigelinta caafimaadka iyo karaamada caadada Kakuma"
+      },
+      "srhr": {
+        "title": "Caafimaadka iyo Xuquuqda Galmada iyo Taranka (SRHR)",
+        "summary": "Waxbarashada SRHR ee ku habboon da'da iyo dhaqanka, waxbarashada asxaabta iyo wacyigelinta bulshada ee ku dhisan ixtiraam iyo doorasho.",
+        "imageAlt": "Haween da'yar oo ka qayb qaadanaya waxbarashada SRHR iyo taageerada asxaabta Kakuma"
+      },
+      "livelihood-economic-empowerment": {
+        "title": "Nolol-maalmeedka iyo Awood-siinta Dhaqaale",
+        "summary": "Ganacsi-abuur, hagidda ganacsiga, tababar shaqo, isku xirka suuqyada iyo gudbinta fursadaha shaqo si haweenka loo xoojiyo dhaqaale ahaan.",
+        "imageAlt": "Haween ka qalin-jabinaya barnaamijka nolol-maalmeedka iyo awood-siinta dhaqaale Kakuma"
+      }
+    },
     "intro": "Sahami barnaamijyada ku socda gabdho nugul, hooyooyin dhalinyaro ah iyo haweenka dhallinyarada ah ee Kakuma.",
+    "srhrPanelImageAlt": "Gabdho iyo haween da'yar oo ka qayb qaadanaya kulan wacyigelin caafimaad oo Kakuma ka dhacaya",
+    "srhrDetail": {
+      "title": "Kobcinta Aqoonta, Karaamada iyo Doorashooyinka Xog-ogaalka ah",
+      "intro": [
+        "Women Without Borders Hub, waxaan aaminsanahay in gabadh iyo haweeney kasta oo da'yar ay xaq u leedahay inay hesho macluumaad lagu kalsoon yahay oo ku saabsan caafimaadka galmada iyo taranka, iyadoo ku sugan deegaan ammaan ah, ixtiraam leh oo taageero bixiya.",
+        "Xerada Qaxootiga Kakuma, ceebaynta, caqabadaha dhaqanka, wacyiga oo kooban iyo helitaanka oo ku adag macluumaad caafimaad oo sax ah waxay ku adkayn karaan dhalinyarada qaarkood inay si furan uga hadlaan caafimaadka galmada iyo taranka. Barnaamijkeenna SRHR wuxuu dhiirrigeliyaa waxbarasho da'da ku habboon, waxbarashada asxaabta iyo wacyigelinta bulshada si wax looga qabto caqabadahan."
+      ],
+      "howTitle": "Sida Barnaamijkeennu u Shaqeeyo",
+      "howIntro": "Waxaan gabdhaha iyo haweenka da'da yar u abuurnaa fursado ay wax ku bartaan, su'aalo ku weydiiyaan, aqoon ku wadaagaan, kalsoonina ku dhistaan si ay go'aanno xog-ogaal ah uga gaaraan caafimaadkooda iyo fayo-qabkooda.",
+      "approaches": [
+        {
+          "title": "Waxbarashada SRHR",
+          "text": "Wadaagista macluumaad sax ah oo da'da ku habboon oo ku saabsan caafimaadka galmada iyo taranka."
+        },
+        {
+          "title": "Waxbarashada Asxaabta",
+          "text": "Dhiirrigelinta ka-qaybgalayaasha inay wax ka bartaan asxaabtooda oo ay la wadaagaan macluumaad lagu kalsoon yahay."
+        },
+        {
+          "title": "Wacyigelinta Bulshada",
+          "text": "Dhiirrigelinta wada-hadallo ixtiraam leh oo ka hor yimaada ceebaynta iyo fikradaha khaldan."
+        },
+        {
+          "title": "Karaamo iyo Ixtiraam",
+          "text": "Abuurista jawi waxbarasho oo taageero leh, kana qadariya asturnaanta, xuduudaha qofka iyo doorashooyinka gaarka ah."
+        },
+        {
+          "title": "Macluumaadka Caafimaadka iyo Gudbinta",
+          "text": "Marka ay habboon tahay, ka-qaybgalayaasha ka caawinta inay helaan macluumaad caafimaad oo lagu kalsoon yahay iyo adeegyo xirfadeed oo la heli karo."
+        }
+      ]
+    },
+    "genericDetail": {
+      "whatTitle": "Waxa aan qabanno",
+      "coreIntro": "{{programTitle}} waa mid ka mid ah qaybaha muhiimka ah ee barnaamijyadeenna. Waxaan la shaqeynaa haweenka iyo gabdhaha, bulshada, barayaasha iyo la-hawlgalayaasha deegaanka si aan u yarayno caqabadaha una dhisno xirfado, kalsooni iyo fursado waara.",
+      "approachTitle": "Habkayaga",
+      "approachPoints": [
+        "Qorshe ay bulshadu hoggaamiso oo ka jawaabaya baahiyaha dhabta ah",
+        "Goobo ammaan ah oo loo dhan yahay, ilaalintuna udub-dhexaad u tahay",
+        "Natiijooyin la cabbiri karo oo si hufan loo soo bandhigo",
+        "Iskaashi lala yeesho dugsiyada, xarumaha caafimaadka, loo-shaqeeyayaasha iyo kooxaha bulshada"
+      ],
+      "getInvolvedTitle": "Nala qayb qaado",
+      "getInvolvedIntro": "Waxaad shaqadan ku taageeri kartaa",
+      "actions": {
+        "donate": "inaad deeq bixiso",
+        "volunteer": "inaad iskaa wax u qabso",
+        "joiner": "ama",
+        "partner": "inaad nala shuraakoowdo"
+      }
+    },
+    "livelihood": {
+      "heroIntro": "Dhisidda Xirfadaha",
+      "whyImageAlt": "Haween ka qayb qaadanaya hawl hab-nololeed oo Kakuma ka socota",
+      "supportImageAlt": "Haween iyo gabdho ka qayb qaadanaya barnaamij hab-nololeed oo Kakuma ka socda",
+      "workingImageAlt": "Xubnaha bulshada iyo la-hawlgalayaashu oo ka wada shaqaynaya Kakuma",
+      "organizationName": "Women Without Borders Hub",
+      "exploreMore": "Sahami wax badan",
+      "exploreMoreLabel": "Sahami wax badan: {{title}}",
+      "sectionRevealed": "Qaybta waa la muujiyey: {{title}}",
+      "ourApproach": {
+        "programTitle": "Hab-nololeedka iyo Awood-siinta Dhaqaale",
+        "title": "Habkayaga",
+        "imageAlt": "Hawl ganacsi oo hab-nololeed Kakuma ka socota",
+        "intro": "Waxaan hiigsaneynaa inaan horumarino hindisayaal hab-nololeed oo wax ku ool ah, loo dhan yahay, bulshada ka tarjumaya, kana jawaabaya waayo-aragnimada dadka aan u adeegno.",
+        "items": [
+          {
+            "title": "Naqshad ay bulshadu hoggaamiso",
+            "text": "Waxaan qiimeynaa waayo-aragnimada, mudnaanta iyo fikradaha haweenka iyo gabdhaha. Dhageysiga xubnaha bulshada wuxuu naga caawiyaa inaan aqoonsanno baahiyaha khuseeya oo aan qaabeyno hawlo ku habboon duruufahooda."
+          },
+          {
+            "title": "Ka-qaybgal ammaan ah oo loo dhan yahay",
+            "text": "Waxaan hiigsaneynaa inaan dhiirrigelino jawi waxbarasho oo ixtiraam leh, halkaas oo ka-qaybgalayaasha si sharaf leh loola dhaqmo, ay wax ku biirin karaan, kana qayb qaadan karaan takoor la'aan. Ilaalinta iyo taageerada ku habboon waa inay udub dhexaad u ahaadaan hawlaha barnaamijka."
+          },
+          {
+            "title": "Barasho wax ku ool ah oo khusaysa",
+            "text": "Waxaan aqoonsannahay muhiimadda xirfadaha ay ka-qaybgalayaashu u adeegsan karaan nolol maalmeedka, ganacsiga, tababarka ama waddooyinka shaqada. Hawluhu waa inay ka jawaabaan danaha ka-qaybgalayaasha iyo fursadaha jira."
+          },
+          {
+            "title": "Hagid iyo iskaashi",
+            "text": "Waxaan qiimeynaa iskaashiga kooxaha bulshada, ganacsiyada maxalliga ah, bixiyeyaasha tababarka, loo-shaqeeyayaasha, barayaasha iyo ururrada kale ee ku biirin kara aqoon, agab ama fursado khuseeya."
+          },
+          {
+            "title": "Helitaanka fursadaha",
+            "text": "Marka ay suurtagal tahay, waxaan hiigsaneynaa inaan ka-qaybgalayaasha ku xirno macluumaad ku saabsan tababar, horumarinta ganacsiga, suuqyada, shaqo-barashada iyo waddooyinka shaqada."
+          },
+          {
+            "title": "Barasho iyo isla xisaabtan",
+            "text": "Waxaan dooneynaa inaan wax ka baranno hawlaha barnaamijka, dhageysanno jawaab-celinta ka-qaybgalayaasha, oo aan si hufan uga warbixinno horumarka. Marka hawlo la fuliyo, dabagalka wuxuu naga caawin karaa inaan fahanno ka-qaybgalka, aqoonsanno caqabadaha, oo aan horumarino taageerada mustaqbalka."
+          }
+        ],
+        "backToProgram": "Ku noqo Hab-nololeedka iyo Awood-siinta Dhaqaale",
+        "partner": "Nala shaqee"
+      }
+    },
     "howItWorks": "Sida ay u shaqeyso",
     "readyTitle": "Diyaar ma u tahay inaad qaadato tallaabada xigta?",
     "thankYouInterest": "Mahadsanid xiisahaaga {{title}}. Kooxdayada waxay jeclaan lahayd inay kula xiriirto ayna kaa wadaagto sida aad qaadi karto tallaabada xigta.",
     "reachUs": "Haddii aad su'aalo qabto, nala soo xiriir:",
     "emailUs": "Nagu soo email",
     "callUs": "Nagu soo wac",
-    "donate": "Deeq"
+    "donate": "Deeq",
+    "fillImageAlt": "Haweeney khudaar cusub ku iibinaysa suuqa Kakuma"
   },
   "getInvolved": {
     "title": "Ku soo biir",
@@ -287,6 +445,34 @@
     "title": "Ilaalinta",
     "intro": "Ballanqaadkeenna amniga, sharafta iyo ilaalinta gabar kasta iyo haweeneyba aan adeegno."
   },
+  "homeHero": {
+    "titlePrefix": "Awoodsiinta",
+    "girls": "gabdhaha",
+    "connector": "iyo",
+    "youngWomen": "haweenka da'da yar",
+    "location": "ee Kakuma",
+    "lead": "Waxaan abuurnaa fursado ay gabdhaha nugul, hooyooyinka da'da yar iyo haweenka da'da yar ku helaan waxbarasho, xirfado, hagid, taageero caafimaad iyo awood dhaqaale gudaha Kakuma, Kenya.",
+    "programs": "Barnaamijyadeenna",
+    "realPeople": "Dad Dhab ah.",
+    "realChange": "Isbeddel Dhab ah.",
+    "photoAlt": "Haween ku faraxsan oo haya shahaadooyinkooda qalin-jabinta",
+    "facebook": "{{name}} oo ku jira Facebook",
+    "linkedin": "{{name}} oo ku jira LinkedIn",
+    "featuredMessage": "Fariin la soo bandhigay",
+    "pauseRotation": "Hakiso wareegga sawirrada",
+    "playRotation": "Dib u bilow wareegga sawirrada",
+    "slideOneLabel": "1 ka mid ah 2",
+    "slideTwoLabel": "2 ka mid ah 2",
+    "showSlideOne": "Muuji sawirka 1 ka mid ah 2",
+    "showSlideTwo": "Muuji sawirka 2 ka mid ah 2",
+    "slideTwoPhotoAlt": "Haween si wadajir ah wax ugu baranaya Kakuma",
+    "slideTwoLineOne": "Baro. Koboc.",
+    "slideTwoLineTwo": "Hoggaami. Dhis",
+    "slideTwoLineThree": "mustaqbal wanaagsan.",
+    "slideTwoLead": "MaLua Lugazo ayaa aasaastay Women Without Borders Hub sannadkii 2024. Xaruntu waxay haweenka iyo gabdhaha Kakuma ku taageertaa waxbarasho, xirfado iyo hagid.",
+    "slideTwoStory": "Sheekadeenna",
+    "slideTwoSupport": "Taageer Shaqadeenna"
+  },
   "homePage": {
     "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
   },
@@ -317,6 +503,155 @@
       "text": "Mentor or teach",
       "linkLabel": "Contribute skills →",
       "alt": "Share your skills - icon only"
+    },
+    "intro": "Waxaa jira siyaabo badan oo aad ku taageeri karto himiladeenna: waqtigaaga iskaa wax u qabso ugu bixi, xirfadahaaga la wadaag, taageero dhaqaale bixi, haweenka da’da yar hag, ama nala samee iskaashi. Wax ku biirin kastaa waa muhiim, waxayna ballaarin kartaa fursadaha waxbarasho, xirfad-barasho, wacyiga caafimaadka iyo dhaqaalaha ee haweenka iyo gabdhaha ku nool Kakuma Refugee Camp. Wadajir, waxaan u gudbi karnaa caqabadaha, dhisi karnaa kalsooni, abuuri karnaa mustaqbal ay gabar iyo haweeney kasta oo da’ yar ku kobci karto."
+  },
+  "volunteer": {
+    "displayOptions": {
+      "title": "Ikhtiyaarrada muuqaalka",
+      "helper": "Dooro midabada kuugu fudud akhriska.",
+      "themeLegend": "Muuqaalka midabka",
+      "themes": {
+        "default": "Caadi",
+        "soft-light": "Iftiin deggan",
+        "high-contrast-light": "Iftiin kala-duwanaansho sare leh",
+        "high-contrast-dark": "Madow kala-duwanaansho sare leh",
+        "yellow-on-black": "Jaalle madow korkiisa",
+        "blue-on-cream": "Buluug kareem korkiisa",
+        "dark-gray": "Cawl madow"
+      },
+      "textSizeLegend": "Cabbirka qoraalka",
+      "scales": {
+        "1": "Caadi",
+        "1.25": "Weyn (125%)",
+        "1.5": "Aad u weyn (150%)"
+      },
+      "reset": "Ku celi caadiga",
+      "announcement": "Muuqaalka {{theme}} ayaa la doortay",
+      "resetAnnouncement": "Ikhtiyaarrada muuqaalka waa la celiyey.",
+      "errorPrefix": "Khalad"
+    },
+    "breadcrumb": "Tabaruc",
+    "introLabel": "Ku saabsan tabarucaadda",
+    "heroTitle": "Nala tabaruc",
+    "heroSentence": "Waqtigaaga iyo xirfadahaaga ku caawi gabdhaha iyo haweenka da'da yar ee Kakuma inay bartaan, koraan oo horumaraan.",
+    "heroCta": "Buuxi foomka tabarucaadda",
+    "intro": "Tabaruceyaasheennu waxay naga caawiyaan barnaamijyada waxbarashada, xirfadaha, la-talinta, caafimaadka iyo awood-siinta dhaqaale. Noo sheeg sida aad jeclaan lahayd inaad u caawiso, kooxdayaduna waxay kula soo xiriiri doontaa laba maalmood oo shaqo gudahood.",
+    "form": {
+      "title": "Codsiga tabarucaadda",
+      "required": "waa qasab",
+      "requiredNote": "Meelaha lagu calaamadeeyay * waa qasab.",
+      "confirmed": "Haa, waxaan xaqiijinayaa inaan jiro 18 sano ama ka weyn",
+      "honeypot": "Meeshan bannaan ka tag",
+      "sections": {
+        "about": "Adiga kugu saabsan",
+        "programmes": "Xaggee ayaad jeclaan lahayd inaad ka caawiso?",
+        "contributions": "Sidee ayaad jeclaan lahayd inaad wax ugu biiriso?",
+        "availability": "Waqtiga aad heli karto",
+        "motivation": "Sababta",
+        "consent": "Oggolaanshaha"
+      },
+      "fields": {
+        "fullName": "Magaca oo buuxa",
+        "email": "Iimayl",
+        "phone": "Telefoon ama WhatsApp",
+        "location": "Dalka iyo magaalada ama deegaanka",
+        "adult": "Waxaan xaqiijinayaa inaan jiro 18 sano ama ka weyn",
+        "otherContribution": "Fadlan wax badan nooga sheeg",
+        "experience": "Nooga warran xirfadahaaga iyo waayo-aragnimadaada",
+        "languages": "Luqadaha aad ku hadasho (ikhtiyaari)",
+        "mode": "Sidee ayaad u jeclaan lahayd inaad u tabarucdo?",
+        "days": "Maalmaha aad heli karto",
+        "commitment": "Waqti intee le'eg ayaad bixin kartaa?",
+        "startWhen": "Goorma ayaad bilaabi kartaa?",
+        "startDate": "Dooro taariikhda bilowga",
+        "motivation": "Maxaad u jeclaan lahayd inaad ula tabarucdo Women Without Borders Hub?",
+        "consent": "Waxaan oggolahay in Women Without Borders Hub ay ila soo xiriirto tabarucaadda oo ay xogtayda u kaydiso ujeeddadan."
+      },
+      "helpers": {
+        "fullName": "Geli magacaaga koowaad iyo magaca qoyska.",
+        "email": "Cinwaankan ayaan u adeegsan doonnaa inaan kula soo xiriirno codsigaaga.",
+        "phone": "Ku dar lambarka dalka, tusaale ahaan +254.",
+        "location": "Geli dalkaaga iyo magaalada ama deegaanka aad ku nooshahay.",
+        "chooseMany": "Dooro hal ama dhowr ikhtiyaar.",
+        "otherContribution": "Sharax qaab kale oo aad jeclaan lahayd inaad wax ugu biiriso.",
+        "experience": "Qor 20 ilaa 1000 xaraf.",
+        "languages": "Sheeg luqadaha aad ku wada xiriiri karto.",
+        "optional": "Macluumaadkani waa ikhtiyaari.",
+        "days": "Hawlahayagu waxay dhacaan Isniinta ilaa Jimcaha, 4 galabnimo ilaa 6 galabnimo.",
+        "startWhen": "Dooro taariikh ama dooro Sida ugu dhakhsaha badan.",
+        "motivation": "Ikhtiyaari, ugu badnaan 600 xaraf.",
+        "sensitive": "Fadlan ha ku wadaagin foomkan xog shakhsiyeed oo xasaasi ah sida lambarada aqoonsiga, xogta caafimaadka ama bangiga.",
+        "safeguarding": "Tabaruceyaasha la shaqeeya gabdhaha iyo haweenka da'da yar waxaa laga codsan doonaa inay raacaan xeerarka ilaalintayada."
+      },
+      "options": {
+        "select": "Dooro ikhtiyaar",
+        "asap": "Sida ugu dhakhsaha badan",
+        "chooseDate": "Waxaan maskaxda ku hayaa taariikh",
+        "programmes": {
+          "education": "Waxbarasho Fursad Labaad",
+          "digital": "Xirfadaha dijitaalka iyo farsamada",
+          "mentorship": "La-talinta iyo xirfadaha nolosha",
+          "health": "Caafimaadka iyo karaamada caadada",
+          "srhr": "Caafimaadka iyo xuquuqda galmada iyo taranka (SRHR)",
+          "livelihood": "Nolol-maalmeedka iyo awood-siinta dhaqaale",
+          "anywhere": "Meel kasta oo la iga baahdo"
+        },
+        "contributions": {
+          "teaching": "Waxbarid ama casharro gaar ah",
+          "mentoring": "La-talin ama tababar",
+          "digital": "Xirfadaha dijitaalka ama kombiyuutarka",
+          "vocational": "Tababar tolidda, moodada, qurxinta ama timo-jarista",
+          "health": "Waxbarashada ama wacyigelinta caafimaadka",
+          "business": "Ganacsi, hal-abuur ganacsi ama xirfadaha maaliyadda",
+          "community": "Taageerada munaasabadaha ama bulshada",
+          "translation": "Turjumaad ama taageero luqadeed",
+          "other": "Kale"
+        },
+        "modes": {
+          "inPerson": "Kakuma gudaheeda",
+          "remote": "Internetka ama meel fog",
+          "either": "Labadoodaba"
+        },
+        "days": {
+          "monday": "Isniin",
+          "tuesday": "Talaado",
+          "wednesday": "Arbaco",
+          "thursday": "Khamiis",
+          "friday": "Jimco",
+          "weekends": "Dhammaadka usbuuca"
+        },
+        "commitments": {
+          "monthly": "Dhowr saacadood bishii",
+          "weekly": "Toddobaad kasta",
+          "severalDays": "Maalmo dhowr ah toddobaadkii",
+          "fullTime": "Waqti buuxa"
+        }
+      },
+      "characterCount": "{{count}} xaraf",
+      "errors": {
+        "required": "Meeshan waa qasab.",
+        "nameLength": "Isticmaal ugu badnaan 120 xaraf.",
+        "email": "Geli cinwaan iimayl oo sax ah.",
+        "phoneLength": "Isticmaal ugu badnaan 50 xaraf.",
+        "locationLength": "Isticmaal ugu badnaan 160 xaraf.",
+        "adult": "Fadlan xaqiiji inaad jirto 18 sano ama ka weyn.",
+        "chooseOne": "Dooro ugu yaraan hal ikhtiyaar.",
+        "shortTextLength": "Isticmaal ugu badnaan 160 xaraf.",
+        "experienceMin": "Fadlan wax badan nooga sheeg adigoo isticmaalaya ugu yaraan 20 xaraf.",
+        "experienceMax": "Isticmaal ugu badnaan 1000 xaraf.",
+        "motivationMax": "Isticmaal ugu badnaan 600 xaraf.",
+        "consent": "Fadlan oggolow ka hor intaadan dirin codsigaaga.",
+        "tooFast": "Waqti yar u qaado inaad dib u eegto codsigaaga ka hor dirista.",
+        "rateLimit": "Sug 30 ilbiriqsi ka hor intaadan isku dayin inaad dirto codsi kale."
+      },
+      "successTitle": "Mahadsanid",
+      "success": "Waad ku mahadsan tahay inaad bixisay waqtigaaga iyo xirfadahaaga. Kooxdayadu waxay kula soo xiriiri doontaa laba maalmood oo shaqo gudahood.",
+      "failure": "Ma diri karno codsigaaga. Fadlan iimayl noogu soo dir marwalugazo@gmail.com.",
+      "backToInvolved": "Ku noqo Ka qaybqaado",
+      "exploreProgrammes": "Baadh barnaamijyadayada",
+      "sending": "Waa la dirayaa...",
+      "submit": "Dir codsigayga"
     }
   }
 }

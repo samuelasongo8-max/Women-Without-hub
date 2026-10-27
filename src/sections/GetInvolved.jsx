@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { ORG_NAME } from '../config/site.js'
 import './GetInvolved.css'
 
 /**
@@ -13,7 +14,7 @@ export default function GetInvolvedSection() {
         <img
           className="auvd-involved__img"
           src="/images/women-hub-training.png"
-          alt="Women Without Borders Hub training and mentorship session"
+          alt={`${ORG_NAME} training and mentorship session`}
           loading="lazy"
           decoding="async"
           width="800"

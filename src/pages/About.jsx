@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
+import { ORG_NAME } from '../config/site.js'
 import { SITE } from '../data/seo.js'
 import useHeroImagePreload from '../hooks/useHeroImagePreload.js'
 import './About.css'
@@ -30,7 +31,7 @@ export default function About() {
           <p className="auvd-about-text">
             {t('about.paragraph', {
               defaultValue:
-                'Women Without Borders Hub is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women.',
+                `${ORG_NAME} is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women.`,
             })}
           </p>
         </div>

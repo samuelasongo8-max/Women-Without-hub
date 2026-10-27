@@ -1,9 +1,11 @@
 // Add approved FAQ entries here. Keep answers factual and add localized
 // wording and keywords to the matching chatbot keys in each locale file.
+import { ORG_NAME } from '../config/site.js'
+
 export const CHAT_CONTACT = {
   name: 'Fatuma Abdulahi',
   photo: '/images/fatuma-abdulahi.jpg',
-  alt: 'Fatuma Abdulahi, Women Without Borders Hub team',
+  alt: `Fatuma Abdulahi, ${ORG_NAME} team`,
   initials: 'FA',
 }
 
@@ -13,29 +15,29 @@ export const knowledge = [
     keywords: ['hello', 'hi', 'welcome', 'good morning', 'good afternoon'],
     question: 'Welcome',
     answer:
-      'Welcome to Women Without Hub. I’m an automated assistant. Ask me about our programmes, how to join, donate, volunteer or partner with us.',
+      `Welcome to ${ORG_NAME}. I’m an automated assistant. Ask me about our programmes, how to join, donate, volunteer or partner with us.`,
   },
   {
     id: 'about',
     keywords: ['about us', 'what do you do', 'who are you', 'organization', 'organisation'],
-    question: 'About Women Without Hub',
+    question: `About ${ORG_NAME}`,
     answer:
-      'Women Without Hub is a community-based organization in Kakuma Refugee Camp, Kenya. It was founded in 2024 by MaLua Lugazo to create opportunities for vulnerable girls, teenage mothers and young women.',
+      `${ORG_NAME} is a community-based organization in Kakuma Refugee Camp, Kenya. It was founded in 2024 by MaLua Lugazo to create opportunities for vulnerable girls, teenage mothers and young women.`,
     link: '/about/',
   },
   {
     id: 'founder',
     keywords: ['founder', 'who founded', 'who started', 'malua', 'leadership'],
-    question: 'Who founded Women Without Hub?',
+    question: `Who founded ${ORG_NAME}?`,
     answer:
-      'Women Without Hub was founded in 2024 by MaLua Lugazo.',
+      `${ORG_NAME} was founded in 2024 by MaLua Lugazo.`,
     link: '/about/our-team/malua-lugazo/',
   },
   {
     id: 'location',
     keywords: ['where are you', 'location', 'where is the hub', 'kakuma', 'address'],
-    question: 'Where is Women Without Hub?',
-    answer: 'Women Without Hub is in Kakuma Refugee Camp, Kenya.',
+    question: `Where is ${ORG_NAME}?`,
+    answer: `${ORG_NAME} is in Kakuma Refugee Camp, Kenya.`,
     link: '/contact/',
   },
   {
@@ -46,11 +48,20 @@ export const knowledge = [
   },
   {
     id: 'education',
-    keywords: ['education', 'school', 'literacy', 'scholarship', 'reading', 'second chance', 'remedial'],
-    question: 'Education & Literacy',
+    keywords: [
+      'education',
+      'school',
+      'literacy',
+      'scholarship',
+      'reading',
+      'second chance',
+      'remedial',
+      'Education & Literacy',
+    ],
+    question: 'Second Chance Education',
     answer:
       'Scholarships, literacy circles, remedial and second-chance education that keep girls in school and open educational opportunities for vulnerable girls in Kakuma.',
-    link: '/programs/education-literacy/',
+    link: '/programs/second-chance-education/',
   },
   {
     id: 'digital',
@@ -121,7 +132,7 @@ export const knowledge = [
     keywords: ['volunteer', 'volunteering', 'help out', 'give time'],
     question: 'How can I volunteer?',
     answer:
-      'To volunteer, please contact us through our website. Our team will guide you through the steps to take.',
+      'To volunteer or share your skills, complete our volunteer application form. Our team will contact you within 2 business days.',
     link: '/get-involved/volunteer/',
   },
   {
@@ -178,7 +189,7 @@ export const knowledge = [
     id: 'goodbye',
     keywords: ['goodbye', 'bye', 'see you', 'take care'],
     question: 'Goodbye',
-    answer: 'Thank you for visiting Women Without Hub. Take care.',
+    answer: `Thank you for visiting ${ORG_NAME}. Take care.`,
   },
 ]
 

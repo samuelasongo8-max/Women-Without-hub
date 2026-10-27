@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import useHeroImagePreload from '../hooks/useHeroImagePreload.js'
 import './ProgramHero.css'
 
@@ -30,6 +31,7 @@ export default function ProgramHero({
   breadcrumbTrail,
   className = '',
 }) {
+  const { t } = useTranslation()
   const hasImage = Boolean(image)
   useHeroImagePreload(
     hasImage
@@ -60,8 +62,8 @@ export default function ProgramHero({
         <nav className="program-hero__crumb" aria-label="Breadcrumb">
           <ol>
             {(breadcrumbTrail || [
-              { label: 'Home', to: '/' },
-              { label: 'Programs', to: '/programs/' },
+              { label: t('breadcrumb.home'), to: '/' },
+              { label: t('breadcrumb.programs'), to: '/programs/' },
               { label: title },
             ]).map((crumb, index, trail) => (
               <li key={crumb.to || crumb.label}>

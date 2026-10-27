@@ -23,7 +23,7 @@
     "getInvolved": "S'impliquer",
     "resources": "Ressources",
     "contact": "Contact",
-    "orgName": "Women Without Hub",
+    "orgName": "Women Without Borders Hub",
     "donate": "Faire un don",
     "ourStory": "Notre histoire",
     "ourTeam": "Notre équipe",
@@ -41,7 +41,7 @@
   "search": {
     "open": "Rechercher",
     "close": "Fermer la recherche",
-    "placeholder": "Rechercher sur Women Without Hub...",
+    "placeholder": "Rechercher sur Women Without Borders Hub...",
     "clear": "Effacer la recherche",
     "results": "Résultats de recherche",
     "noResults": "Aucun résultat pour « {{query}} ». Essayez d'autres mots.",
@@ -73,9 +73,10 @@
       "Vice Chairperson": "Vice-Chairperson",
       "Treasurer": "Trésorière",
       "Secretary": "Secrétaire",
-      "Member": "Membre",
-      "whyIntro": "Femmes et filles dans le camp de réfugiés de Kakuma font face à de nombreux défis, notamment la difficulté financière, l'éducation interrompue, un accès limité à la formation professionnelle, et des barrières à l'emploi et aux soins de santé. Pour les mères adolescentes, ces défis peuvent être encore plus grands alors qu'elles équilibrent la garde d'enfants avec leur éducation et leur développement personnel. À Women Without Borders Hub, nous croyons que chaque fille et jeune femme mérite la possibilité de surmonter ces barrières, de découvrir son potentiel et de construire un avenir meilleur. En promouvant l'éducation, les compétences pratiques, le mentorat, la sensibilisation à la santé et l'empowerment économique, nous visons à créer des opportunités pour que les femmes et les filles grandissent en confiance, renforcent leur indépendance et contribuent à leurs communautés."
-    }
+      "Member": "Membre"
+    },
+    "whyIntro": "Les femmes et les filles de Kakuma Refugee Camp font face à de nombreux défis, notamment les difficultés financières, les interruptions de scolarité, le manque d’accès à la formation professionnelle et les obstacles à l’emploi et aux soins de santé. Pour les mères adolescentes, ces difficultés peuvent être encore plus grandes lorsqu’elles doivent concilier la garde des enfants, les études et leur développement personnel. À Women Without Borders Hub, nous croyons que chaque fille et chaque jeune femme mérite de pouvoir surmonter ces obstacles, découvrir son potentiel et construire un avenir meilleur. En favorisant l’éducation, les compétences pratiques, le mentorat, la sensibilisation à la santé et l’autonomie économique, nous voulons aider les femmes et les filles à gagner en confiance, à renforcer leur indépendance et à contribuer à leur communauté.",
+    "ctaSeeImpact": "Voyez ce que votre soutien peut changer →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -127,10 +128,7 @@
     "trustLegal": "Confiance et légal",
     "volunteer": "Bénévolat",
     "membership": "Adhésion",
-    "mentor": "Mentorat",
-    "partner": "Partenariat",
     "safeguarding": "Sauvegarde",
-    "resources": "Ressources",
     "contact": "Contact",
     "rightsReserved": "Tous droits réservés."
   },
@@ -191,14 +189,174 @@
   },
   "programs": {
     "title": "Programmes",
+    "secondChanceTitle": "Éducation de la seconde chance",
+    "homeTitle": "Nos programmes",
+    "homeIntro": "Nos programmes répondent aux obstacles rencontrés par les filles et les jeunes femmes de Kakuma, de la salle de classe au marché du travail.",
+    "indexIntro": "Six domaines d’action, un objectif : un changement concret et durable pour les femmes et les filles.",
+    "videoTitle": "Séance de sensibilisation à la santé sexuelle et reproductive",
+    "videoDescription": "Les participantes montrent ce qu’elles ont appris lors d’une séance de sensibilisation à la santé sexuelle et reproductive, qui encourage les connaissances, la dignité, le respect et des choix éclairés.",
+    "videoAria": "Vidéo d’une séance de sensibilisation à la santé sexuelle et reproductive",
+    "videoFallback": "Votre navigateur ne peut pas lire cette vidéo.",
+    "secondChanceDetail": {
+      "intro": "Nous accompagnons les filles et les femmes du camp de réfugiés de Kakuma, au Kenya, qui souhaitent poursuivre leur éducation, surmonter les obstacles à l’apprentissage et construire un avenir meilleur. Nous croyons que l’éducation est un droit et que chaque fille et chaque femme mérite la possibilité d’apprendre, de s’épanouir et de réaliser tout son potentiel.",
+      "whatTitle": "Ce que nous faisons",
+      "whatImageAlt": "Une femme qui étudie pendant une séance d’apprentissage",
+      "whatParagraphs": [
+        "Notre programme d’éducation de la seconde chance accompagne les filles et les femmes dont la scolarité a été interrompue ou qui n’ont pas pu terminer leurs études. Les difficultés financières, les responsabilités familiales, les déplacements et d’autres défis de la vie peuvent rendre la poursuite des études difficile. Par ce programme, nous soulignons l’importance de reprendre ses études et encourageons les filles et les femmes à poursuivre leurs objectifs d’apprentissage avec confiance et détermination.",
+        "Nous croyons que l’accès à l’éducation peut aider les femmes et les filles à acquérir des connaissances, à renforcer leur autonomie, à participer davantage à leur communauté et à créer de meilleures possibilités pour elles-mêmes et leurs familles."
+      ],
+      "approachTitle": "Notre approche",
+      "approachPoints": [
+        { "title": "Favoriser l’accès à l’éducation", "text": "Encourager les filles et les femmes à saisir les possibilités d’apprentissage et à poursuivre leur parcours éducatif." },
+        { "title": "Renforcer la confiance", "text": "Aider les apprenantes à croire en leurs capacités et à reconnaître la valeur de l’éducation dans leur vie." },
+        { "title": "Sensibiliser la communauté", "text": "Faire mieux comprendre l’importance de l’éducation et encourager le soutien aux filles et aux femmes qui souhaitent reprendre leurs études." },
+        { "title": "Encourager l’apprentissage tout au long de la vie", "text": "Contribuer à une attitude positive envers l’éducation, le développement personnel et les possibilités futures." }
+      ],
+      "getInvolvedTitle": "S’impliquer",
+      "getInvolvedLead": "Vous pouvez soutenir notre programme d’éducation de la seconde chance en",
+      "donate": "faisant un don",
+      "volunteer": "devenant bénévole",
+      "or": "ou en",
+      "partner": "devenant partenaire",
+      "getInvolvedClosing": "Votre soutien peut nous aider à promouvoir les possibilités d’éducation pour les filles et les femmes du camp de réfugiés de Kakuma et à encourager celles dont les études ont été interrompues à poursuivre leurs objectifs.",
+      "getInvolvedFinal": "Ensemble, nous pouvons créer une communauté où les filles et les femmes sont encouragées à apprendre, à développer leur potentiel et à construire un avenir plus prometteur et autonome."
+    },
+    "cards": {
+      "second-chance-education": {
+        "title": "Éducation de la seconde chance",
+        "summary": "Bourses, cercles d’alphabétisation, soutien scolaire et éducation de la seconde chance pour aider les filles à rester à l’école et ouvrir des possibilités d’apprentissage aux filles vulnérables de Kakuma.",
+        "imageAlt": "Des filles apprennent à lire et à écrire dans une classe à Kakuma"
+      },
+      "digital-technical-skills": {
+        "title": "Compétences numériques et techniques",
+        "summary": "Initiation à l’informatique et camps intensifs de compétences numériques, associés à une formation professionnelle en couture, mode, beauté et coiffure pour les jeunes femmes.",
+        "imageAlt": "De jeunes femmes apprennent des compétences numériques et techniques à Kakuma"
+      },
+      "mentorship-life-skills": {
+        "title": "Mentorat et compétences de vie",
+        "summary": "Mentorat, compétences de vie, leadership, orientation professionnelle, définition d’objectifs et éducation financière pour renforcer la confiance et l’autonomie.",
+        "imageAlt": "De jeunes femmes lors d’une séance de formation et de mentorat à Kakuma"
+      },
+      "health-menstrual-dignity": {
+        "title": "Santé et dignité menstruelle",
+        "summary": "Éducation à la santé menstruelle, produits menstruels, sensibilisation à la santé et orientation vers des services afin que personne ne manque l’école ou le travail.",
+        "imageAlt": "Sensibilisation à la santé et à la dignité menstruelle à Kakuma"
+      },
+      "srhr": {
+        "title": "Santé et droits sexuels et reproductifs (SRHR)",
+        "summary": "Éducation SRHR adaptée à l’âge et aux cultures, éducation par les pairs et sensibilisation communautaire fondées sur le respect et le choix.",
+        "imageAlt": "De jeunes femmes participent à une séance d’éducation SRHR et de soutien par les pairs à Kakuma"
+      },
+      "livelihood-economic-empowerment": {
+        "title": "Moyens de subsistance et autonomisation économique",
+        "summary": "Entrepreneuriat, mentorat d’affaires, apprentissages, liens avec les marchés et orientation professionnelle pour l’autonomisation économique des femmes.",
+        "imageAlt": "Des femmes diplômées d’un programme de moyens de subsistance et d’autonomisation économique à Kakuma"
+      }
+    },
     "intro": "Découvrez les programmes qui accompagnent les filles vulnérables, les mères adolescentes et les jeunes femmes de Kakuma.",
+    "srhrPanelImageAlt": "Des filles et des jeunes femmes participant à une séance de sensibilisation à la santé à Kakuma",
+    "srhrDetail": {
+      "title": "Promouvoir les connaissances, la dignité et des choix éclairés",
+      "intro": [
+        "À Women Without Borders Hub, nous pensons que chaque fille et chaque jeune femme doit pouvoir accéder à des informations fiables sur sa santé sexuelle et reproductive, dans un environnement sûr, respectueux et bienveillant.",
+        "Dans le camp de réfugiés de Kakuma, la stigmatisation, les obstacles culturels, le manque de sensibilisation et les difficultés d’accès à des informations fiables peuvent empêcher certains jeunes d’aborder ouvertement la santé sexuelle et reproductive. Notre programme SRHR favorise une éducation adaptée à l’âge, l’apprentissage entre pairs et la sensibilisation communautaire pour répondre à ces difficultés."
+      ],
+      "howTitle": "Comment fonctionne notre programme",
+      "howIntro": "Nous créons des occasions pour les filles et les jeunes femmes d’apprendre, de poser des questions, de partager leurs connaissances et de renforcer leur confiance afin de prendre des décisions éclairées concernant leur santé et leur bien-être.",
+      "approaches": [
+        {
+          "title": "Éducation SRHR",
+          "text": "Partager des informations fiables et adaptées à l’âge sur la santé sexuelle et reproductive."
+        },
+        {
+          "title": "Éducation par les pairs",
+          "text": "Encourager les participantes à apprendre les unes des autres et à partager des informations fiables avec leurs pairs."
+        },
+        {
+          "title": "Sensibilisation communautaire",
+          "text": "Favoriser des échanges respectueux qui remettent en question la stigmatisation et les idées fausses."
+        },
+        {
+          "title": "Dignité et respect",
+          "text": "Créer un environnement d’apprentissage bienveillant qui respecte la vie privée, les limites personnelles et les choix de chacune."
+        },
+        {
+          "title": "Informations et orientations en santé",
+          "text": "Lorsque cela est approprié, aider les participantes à trouver des informations de santé fiables et des services professionnels disponibles."
+        }
+      ]
+    },
+    "genericDetail": {
+      "whatTitle": "Notre action",
+      "coreIntro": "{{programTitle}} est l’un de nos domaines d’action essentiels. Nous travaillons avec les femmes et les filles, les communautés, les éducateurs et les partenaires locaux pour lever les obstacles et développer durablement les compétences, la confiance et les possibilités.",
+      "approachTitle": "Notre approche",
+      "approachPoints": [
+        "Une conception menée par la communauté et adaptée aux besoins réels",
+        "Des espaces sûrs et inclusifs où la protection est prioritaire",
+        "Des résultats mesurables présentés en toute transparence",
+        "Des partenariats avec les écoles, les centres de santé, les employeurs et les groupes communautaires"
+      ],
+      "getInvolvedTitle": "Agir avec nous",
+      "getInvolvedIntro": "Vous pouvez soutenir cette action en",
+      "actions": {
+        "donate": "faisant un don",
+        "volunteer": "devenant bénévole",
+        "joiner": "ou en",
+        "partner": "devenant partenaire"
+      }
+    },
+    "livelihood": {
+      "heroIntro": "Développer les compétences",
+      "whyImageAlt": "Des femmes participant à une activité de subsistance à Kakuma",
+      "supportImageAlt": "Des femmes et des filles participant à un programme de subsistance à Kakuma",
+      "workingImageAlt": "Membres de la communauté et partenaires collaborant à Kakuma",
+      "organizationName": "Women Without Borders Hub",
+      "exploreMore": "Explorer davantage",
+      "exploreMoreLabel": "Explorer davantage : {{title}}",
+      "sectionRevealed": "Section affichée : {{title}}",
+      "ourApproach": {
+        "programTitle": "Moyens de subsistance et autonomisation économique",
+        "title": "Notre approche",
+        "imageAlt": "Activité commerciale liée aux moyens de subsistance à Kakuma",
+        "intro": "Nous cherchons à développer des initiatives de subsistance pratiques, inclusives, conçues avec la communauté et adaptées aux expériences des personnes que nous accompagnons.",
+        "items": [
+          {
+            "title": "Conception menée par la communauté",
+            "text": "Nous valorisons les expériences, les priorités et les idées des femmes et des filles. L’écoute des membres de la communauté aide à cerner les besoins pertinents et à façonner des activités mieux adaptées à leur situation."
+          },
+          {
+            "title": "Participation sûre et inclusive",
+            "text": "Nous cherchons à promouvoir des environnements d’apprentissage respectueux où les participantes sont traitées avec dignité, peuvent contribuer et participer sans discrimination. La protection et un soutien approprié doivent rester au cœur des activités du programme."
+          },
+          {
+            "title": "Apprentissage pratique et pertinent",
+            "text": "Nous reconnaissons l’importance des compétences que les participantes peuvent appliquer dans la vie quotidienne, les activités commerciales, la formation ou les parcours professionnels. Les activités doivent répondre à leurs intérêts et aux possibilités disponibles."
+          },
+          {
+            "title": "Mentorat et collaboration",
+            "text": "Nous valorisons la coopération avec les groupes communautaires, les entreprises locales, les organismes de formation, les employeurs, les éducateurs et les autres organisations qui peuvent apporter des connaissances, des ressources ou des possibilités pertinentes."
+          },
+          {
+            "title": "Accès aux possibilités",
+            "text": "Dans la mesure du possible, nous cherchons à mettre les participantes en relation avec des informations sur la formation, le développement des entreprises, les marchés, les apprentissages et les parcours professionnels."
+          },
+          {
+            "title": "Apprentissage et responsabilité",
+            "text": "Nous cherchons à tirer des enseignements des activités du programme, à écouter les retours des participantes et à communiquer les progrès de manière transparente. Lorsque des activités sont mises en œuvre, le suivi peut nous aider à comprendre la participation, à repérer les difficultés et à améliorer le soutien futur."
+          }
+        ],
+        "backToProgram": "Retour aux moyens de subsistance et à l’autonomisation économique",
+        "partner": "Devenir partenaire"
+      }
+    },
     "howItWorks": "Comment ça marche",
     "readyTitle": "Prêt à passer à l'étape suivante ?",
     "thankYouInterest": "Merci de l'intérêt que vous portez à {{title}}. Notre équipe aimerait vous contacter et vous expliquer comment passer à l'étape suivante.",
     "reachUs": "Si vous avez des questions, n'hésitez pas à nous contacter :",
     "emailUs": "Écrivez-nous",
     "callUs": "Appelez-nous",
-    "donate": "Faire un don"
+    "donate": "Faire un don",
+    "fillImageAlt": "Une femme vend des produits frais sur un marché à Kakuma"
   },
   "getInvolved": {
     "title": "S'impliquer",
@@ -287,6 +445,34 @@
     "title": "Sauvegarde",
     "intro": "Notre engagement pour la sécurité, la dignité et la protection de chaque fille et femme que nous servons."
   },
+  "homeHero": {
+    "titlePrefix": "Renforcer le pouvoir d'agir des",
+    "girls": "filles",
+    "connector": "et des",
+    "youngWomen": "jeunes femmes",
+    "location": "à Kakuma",
+    "lead": "Créer des opportunités pour les filles vulnérables, les mères adolescentes et les jeunes femmes grâce à l'éducation, aux compétences, au mentorat, à la santé et à l'autonomisation économique à Kakuma, au Kenya.",
+    "programs": "Nos programmes",
+    "realPeople": "Des personnes réelles.",
+    "realChange": "Un vrai changement.",
+    "photoAlt": "Des femmes fières tenant leurs certificats de formation",
+    "facebook": "{{name}} sur Facebook",
+    "linkedin": "{{name}} sur LinkedIn",
+    "featuredMessage": "Message à la une",
+    "pauseRotation": "Mettre le carrousel en pause",
+    "playRotation": "Relancer le carrousel",
+    "slideOneLabel": "1 sur 2",
+    "slideTwoLabel": "2 sur 2",
+    "showSlideOne": "Afficher la diapositive 1 sur 2",
+    "showSlideTwo": "Afficher la diapositive 2 sur 2",
+    "slideTwoPhotoAlt": "Des femmes apprennent ensemble à Kakuma",
+    "slideTwoLineOne": "Apprendre. Grandir.",
+    "slideTwoLineTwo": "Diriger. Bâtir un",
+    "slideTwoLineThree": "meilleur avenir.",
+    "slideTwoLead": "Fondé en 2024 par MaLua Lugazo, Women Without Borders Hub accompagne les femmes et les filles de Kakuma grâce à l'éducation, aux compétences et au mentorat.",
+    "slideTwoStory": "Notre histoire",
+    "slideTwoSupport": "Soutenir notre action"
+  },
   "homePage": {
     "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
   },
@@ -317,6 +503,155 @@
       "text": "Mentor or teach",
       "linkLabel": "Contribute skills →",
       "alt": "Share your skills - icon only"
+    },
+    "intro": "Vous pouvez soutenir notre mission de nombreuses façons : donner de votre temps, partager vos compétences, apporter un soutien financier, accompagner de jeunes femmes ou établir un partenariat avec nous. Chaque contribution compte et peut faciliter l’accès à l’éducation, aux compétences, à l’information sur la santé et aux possibilités économiques pour les femmes et les filles de Kakuma Refugee Camp. Ensemble, nous pouvons lever des obstacles, renforcer la confiance et créer un avenir où chaque fille et chaque jeune femme peut s’épanouir."
+  },
+  "volunteer": {
+    "displayOptions": {
+      "title": "Options d’affichage",
+      "helper": "Choisissez les couleurs les plus faciles à lire.",
+      "themeLegend": "Thème de couleur",
+      "themes": {
+        "default": "Par défaut",
+        "soft-light": "Clair doux",
+        "high-contrast-light": "Clair à contraste élevé",
+        "high-contrast-dark": "Sombre à contraste élevé",
+        "yellow-on-black": "Jaune sur noir",
+        "blue-on-cream": "Bleu sur crème",
+        "dark-gray": "Gris foncé"
+      },
+      "textSizeLegend": "Taille du texte",
+      "scales": {
+        "1": "Normale",
+        "1.25": "Grande (125 %)",
+        "1.5": "Très grande (150 %)"
+      },
+      "reset": "Rétablir les valeurs par défaut",
+      "announcement": "Thème {{theme}} sélectionné",
+      "resetAnnouncement": "Options d’affichage réinitialisées.",
+      "errorPrefix": "Erreur"
+    },
+    "breadcrumb": "Bénévolat",
+    "introLabel": "À propos du bénévolat",
+    "heroTitle": "Devenez bénévole",
+    "heroSentence": "Offrez votre temps et vos compétences pour aider les filles et les jeunes femmes de Kakuma à apprendre, à grandir et à s'épanouir.",
+    "heroCta": "Remplir le formulaire de bénévolat",
+    "intro": "Nos bénévoles contribuent à nos programmes d'éducation, de compétences, de mentorat, de santé et d'autonomisation économique. Dites-nous comment vous souhaitez aider et notre équipe vous contactera sous deux jours ouvrables.",
+    "form": {
+      "title": "Candidature bénévole",
+      "required": "obligatoire",
+      "requiredNote": "Les champs marqués d'un * sont obligatoires.",
+      "confirmed": "Oui, je confirme avoir 18 ans ou plus",
+      "honeypot": "Laissez ce champ vide",
+      "sections": {
+        "about": "À propos de vous",
+        "programmes": "Où souhaitez-vous aider ?",
+        "contributions": "Comment souhaitez-vous contribuer ?",
+        "availability": "Disponibilités",
+        "motivation": "Motivation",
+        "consent": "Consentement"
+      },
+      "fields": {
+        "fullName": "Nom complet",
+        "email": "Adresse e-mail",
+        "phone": "Téléphone ou WhatsApp",
+        "location": "Pays et ville ou localité",
+        "adult": "Je confirme avoir 18 ans ou plus",
+        "otherContribution": "Veuillez nous en dire plus",
+        "experience": "Parlez-nous de vos compétences et de votre expérience",
+        "languages": "Langues parlées (facultatif)",
+        "mode": "Comment souhaitez-vous faire du bénévolat ?",
+        "days": "Jours disponibles",
+        "commitment": "Combien de temps pouvez-vous consacrer ?",
+        "startWhen": "Quand pouvez-vous commencer ?",
+        "startDate": "Choisir une date de début",
+        "motivation": "Pourquoi souhaitez-vous être bénévole avec Women Without Borders Hub ?",
+        "consent": "J'accepte que Women Without Borders Hub me contacte au sujet du bénévolat et conserve mes coordonnées à cette fin."
+      },
+      "helpers": {
+        "fullName": "Indiquez votre prénom et votre nom.",
+        "email": "Nous utiliserons cette adresse pour vous contacter au sujet de votre candidature.",
+        "phone": "Indiquez l'indicatif de votre pays, par exemple +254.",
+        "location": "Indiquez votre pays ainsi que votre ville ou localité.",
+        "chooseMany": "Choisissez une ou plusieurs options.",
+        "otherContribution": "Décrivez une autre façon dont vous souhaitez contribuer.",
+        "experience": "Veuillez écrire entre 20 et 1 000 caractères.",
+        "languages": "Indiquez les langues que vous utilisez pour communiquer.",
+        "optional": "Cette information est facultative.",
+        "days": "Nos activités ont lieu du lundi au vendredi, de 16 h à 18 h.",
+        "startWhen": "Choisissez une date ou sélectionnez Dès que possible.",
+        "motivation": "Facultatif, 600 caractères maximum.",
+        "sensitive": "Ne partagez pas d'informations personnelles sensibles, telles que des numéros d'identité, des informations de santé ou des coordonnées bancaires.",
+        "safeguarding": "Les bénévoles qui travaillent avec des filles et des jeunes femmes devront respecter nos règles de protection."
+      },
+      "options": {
+        "select": "Choisir une option",
+        "asap": "Dès que possible",
+        "chooseDate": "J'ai une date en tête",
+        "programmes": {
+          "education": "Éducation de la seconde chance",
+          "digital": "Compétences numériques et techniques",
+          "mentorship": "Mentorat et compétences de vie",
+          "health": "Santé et dignité menstruelle",
+          "srhr": "Santé et droits sexuels et reproductifs (SRHR)",
+          "livelihood": "Moyens de subsistance et autonomisation économique",
+          "anywhere": "Partout où l'on a besoin de moi"
+        },
+        "contributions": {
+          "teaching": "Enseignement ou soutien scolaire",
+          "mentoring": "Mentorat ou accompagnement",
+          "digital": "Compétences numériques ou informatiques",
+          "vocational": "Formation en couture, mode, beauté ou coiffure",
+          "health": "Éducation ou sensibilisation à la santé",
+          "business": "Compétences en affaires, entrepreneuriat ou finances",
+          "community": "Soutien aux événements ou à la communauté",
+          "translation": "Traduction ou soutien linguistique",
+          "other": "Autre"
+        },
+        "modes": {
+          "inPerson": "En personne à Kakuma",
+          "remote": "En ligne ou à distance",
+          "either": "Les deux me conviennent"
+        },
+        "days": {
+          "monday": "Lundi",
+          "tuesday": "Mardi",
+          "wednesday": "Mercredi",
+          "thursday": "Jeudi",
+          "friday": "Vendredi",
+          "weekends": "Week-ends"
+        },
+        "commitments": {
+          "monthly": "Quelques heures par mois",
+          "weekly": "Chaque semaine",
+          "severalDays": "Plusieurs jours par semaine",
+          "fullTime": "À temps plein"
+        }
+      },
+      "characterCount": "{{count}} caractères",
+      "errors": {
+        "required": "Ce champ est obligatoire.",
+        "nameLength": "Veuillez ne pas dépasser 120 caractères.",
+        "email": "Saisissez une adresse e-mail valide.",
+        "phoneLength": "Veuillez ne pas dépasser 50 caractères.",
+        "locationLength": "Veuillez ne pas dépasser 160 caractères.",
+        "adult": "Veuillez confirmer que vous avez 18 ans ou plus.",
+        "chooseOne": "Choisissez au moins une option.",
+        "shortTextLength": "Veuillez ne pas dépasser 160 caractères.",
+        "experienceMin": "Ajoutez quelques détails, avec au moins 20 caractères.",
+        "experienceMax": "Veuillez ne pas dépasser 1 000 caractères.",
+        "motivationMax": "Veuillez ne pas dépasser 600 caractères.",
+        "consent": "Veuillez donner votre accord avant d'envoyer votre candidature.",
+        "tooFast": "Prenez un instant pour relire votre candidature avant de l'envoyer.",
+        "rateLimit": "Veuillez attendre 30 secondes avant d'envoyer une autre candidature."
+      },
+      "successTitle": "Merci",
+      "success": "Merci de proposer votre temps et vos compétences. Notre équipe vous répondra sous deux jours ouvrables.",
+      "failure": "Nous n'avons pas pu envoyer votre candidature. Écrivez-nous à marwalugazo@gmail.com.",
+      "backToInvolved": "Retour à la page Participer",
+      "exploreProgrammes": "Découvrir nos programmes",
+      "sending": "Envoi en cours...",
+      "submit": "Envoyer ma candidature"
     }
   }
 }

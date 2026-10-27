@@ -2,15 +2,20 @@ import { useLayoutEffect } from 'react'
 
 export default function useHeroImagePreload(images) {
   const desktop = images?.desktop
+  const tablet = images?.tablet
   const mobile = images?.mobile
 
   useLayoutEffect(() => {
     if (!desktop || !mobile) return undefined
 
-    const links = [
-      { href: desktop, media: '(min-width: 768px)' },
+    const sources = [
+      { href: desktop, media: images.desktopMedia || '(min-width: 768px)' },
+      ...(tablet
+        ? [{ href: tablet, media: images.tabletMedia || '(min-width: 768px) and (max-width: 1023px)' }]
+        : []),
       { href: mobile, media: '(max-width: 767px)' },
-    ].map(({ href, media }) => {
+    ]
+    const links = sources.map(({ href, media }) => {
       const link = document.createElement('link')
       link.rel = 'preload'
       link.as = 'image'
@@ -23,5 +28,5 @@ export default function useHeroImagePreload(images) {
     })
 
     return () => links.forEach((link) => link.remove())
-  }, [desktop, mobile])
+  }, [desktop, tablet, mobile, images?.desktopMedia, images?.tabletMedia])
 }

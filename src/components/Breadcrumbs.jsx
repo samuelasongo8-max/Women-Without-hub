@@ -10,6 +10,9 @@ const CRUMB_KEY = {
   '/about/our-team/': 'breadcrumb.ourTeam',
   '/about/our-story/': 'breadcrumb.ourStory',
   '/programs/': 'breadcrumb.programs',
+  '/programs/second-chance-education/': 'programs.secondChanceTitle',
+  '/programs/livelihood-economic-empowerment/our-approach/':
+    'programs.livelihood.ourApproach.title',
   '/impact/': 'breadcrumb.impact',
   '/updates/': 'breadcrumb.communityUpdates',
   '/impact/news/': 'breadcrumb.news',
@@ -17,6 +20,7 @@ const CRUMB_KEY = {
   '/impact/report/': 'breadcrumb.report',
   '/impact/post/': 'breadcrumb.post',
   '/get-involved/': 'breadcrumb.getInvolved',
+  '/get-involved/volunteer/': 'volunteer.breadcrumb',
   '/resources/': 'breadcrumb.resources',
   '/safeguarding/': 'breadcrumb.safeguarding',
   '/contact/': 'breadcrumb.contact',

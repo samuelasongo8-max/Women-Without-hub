@@ -141,7 +141,7 @@ export default function LanguageSwitcher() {
             strokeLinejoin="round"
           />
         </svg>
-        <span>Languages</span>
+        <span>{t('lang.menu')}</span>
         <span className="lang-switch__current">{currentMeta.short}</span>
         <span className="lang-switch__chevron" aria-hidden="true">
           ▾

@@ -1,0 +1,27 @@
+.livelihood-approach-page .livelihood-approach-grid {
+  margin-block-start: 0;
+}
+
+.livelihood-approach-page .livelihood-approach-card {
+  height: 100%;
+}
+
+.livelihood-approach-page .livelihood-approach-card p {
+  min-width: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.livelihood-approach-page .livelihood-partner-link {
+  background: #f6b95c;
+  border-color: #f6b95c;
+  color: var(--color-primary-dark, #1b5e5e);
+}
+
+@media (hover: hover) {
+  .livelihood-approach-page .livelihood-partner-link:hover {
+    background: #eaa839;
+    border-color: #eaa839;
+    color: var(--color-primary-dark, #1b5e5e);
+  }
+}

@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import { donateCta } from '../data/site.js'
+import { ORG_NAME } from '../config/site.js'
 import './OurStory.css'
 
 /**
- * Our Story - the founder story of Women Without Borders Hub.
+ * Our Story - the founder story of the organization.
  * Sub-page of About at /about/our-story/.
  * Layout: teal banner -> solid pink founder section (auvd-founder).
  */
@@ -16,9 +17,7 @@ export default function OurStory() {
             MaLua Lugazo: Building Hope for Girls in Kakuma
           </h1>
           <p className="story-lead">
-            MaLua Lugazo is a Somali refugee living in Kakuma Refugee Camp
-            who founded Women Without Borders Hub so that every girl and
-            young woman has a chance to learn, grow and lead.
+            {`MaLua Lugazo is a Somali refugee living in Kakuma Refugee Camp who founded ${ORG_NAME} so that every girl and young woman has a chance to learn, grow and lead.`}
           </p>
         </div>
       </header>
@@ -36,7 +35,7 @@ export default function OurStory() {
                   <img
                     className="auvd-person__img"
                     src="/images/malua-lugazo.jpg"
-                    alt="MaLua Lugazo, Founder of Women Without Borders Hub"
+                    alt={`MaLua Lugazo, Founder of ${ORG_NAME}`}
                     loading="eager"
                     fetchPriority="high"
                     width="280"
@@ -69,14 +68,14 @@ export default function OurStory() {
                   scholarship, a mentor, a safe room to study in. That
                   contrast - between what girls in Kakuma are denied and
                   what they become when someone believes in them - is where
-                  Women Without Borders Hub began.
+                  {ORG_NAME} began.
                 </p>
               </div>
 
               <div className="auvd-founder__block">
-                <h2>Why Women Without Borders Hub</h2>
+                <h2>Why {ORG_NAME}</h2>
                 <p>
-                  MaLua founded Women Without Borders Hub so that no girl in
+                  MaLua founded {ORG_NAME} so that no girl in
                   Kakuma would have to fight for an education alone. The Hub
                   brings refugee and host-community girls together in one
                   movement: education and literacy, digital and vocational
@@ -144,7 +143,7 @@ export default function OurStory() {
             <img
               className="auvd-founder__aside-img"
               src="/images/women-hub7.png"
-              alt="Women of Women Without Borders Hub in Kakuma"
+              alt={`Women of ${ORG_NAME} in Kakuma`}
               loading="lazy"
               decoding="async"
             />

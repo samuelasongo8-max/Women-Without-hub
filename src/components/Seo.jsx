@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { seoFor, SITE } from '../data/seo.js'
 
 /** Get (or create) a <meta> tag by name and set its content. */
@@ -24,6 +25,14 @@ function setLink(rel, href) {
   tag.setAttribute('href', href)
 }
 
+function removeMeta(name, attr = 'name') {
+  document.head.querySelector(`meta[${attr}="${name}"]`)?.remove()
+}
+
+function removeLink(rel) {
+  document.head.querySelector(`link[rel="${rel}"]`)?.remove()
+}
+
 /**
  * Applies per-page SEO metadata on every route change:
  *  - <title> and meta description
@@ -33,9 +42,23 @@ function setLink(rel, href) {
  */
 export default function Seo() {
   const { pathname } = useLocation()
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
-    const { title, description, noindex, siteName, ogImage: pageOgImage } = seoFor(pathname)
+    const {
+      title: seoTitle,
+      description,
+      noindex,
+      siteName,
+      ogImage: pageOgImage,
+    } = seoFor(pathname)
+    const isSecondChanceProgram =
+      pathname === '/programs/second-chance-education/'
+    const title = isSecondChanceProgram
+      ? `${t('programs.secondChanceTitle')}${seoTitle.slice(
+          'Second Chance Education'.length,
+        )}`
+      : seoTitle
 
     document.title = title
     setMeta('description', description)
@@ -46,7 +69,21 @@ export default function Seo() {
     setMeta('og:title', title, 'property')
     setMeta('og:description', description, 'property')
     setMeta('og:type', 'website', 'property')
-    setMeta('og:locale', 'en_US', 'property')
+    const language = i18n.resolvedLanguage?.split('-')[0] || 'en'
+    const localeByLanguage = {
+      en: 'en_US',
+      fr: 'fr_FR',
+      ar: 'ar_AR',
+      sw: 'sw_KE',
+      so: 'so_SO',
+      es: 'es_ES',
+      de: 'de_DE',
+      pt: 'pt_PT',
+      ru: 'ru_RU',
+      it: 'it_IT',
+      pl: 'pl_PL',
+    }
+    setMeta('og:locale', localeByLanguage[language] || 'en_US', 'property')
 
     // Twitter
     setMeta('twitter:card', 'summary_large_image')
@@ -65,58 +102,19 @@ export default function Seo() {
       setMeta('twitter:image', ogImage)
     }
 
-    // Canonical — only when the official domain exists.
+    // Remove route-specific metadata left behind by a previous SPA route.
     if (SITE.url && !noindex) {
-      const url = new URL(pathname, SITE.url).toString()
+      const canonicalPath =
+        pathname === '/' || pathname.endsWith('/') ? pathname : `${pathname}/`
+      const url = new URL(canonicalPath, SITE.url).toString()
       setLink('canonical', url)
       setMeta('og:url', url, 'property')
+    } else {
+      removeLink('canonical')
+      removeMeta('og:url', 'property')
     }
 
-    // Hreflang — add alternate language links
-    const supportedLangs = ['en', 'fr', 'ar', 'sw', 'so', 'es', 'de', 'pt', 'ru', 'it', 'pl']
-    const langLabels = {
-      en: 'en', fr: 'fr', ar: 'ar', sw: 'sw', so: 'so',
-      es: 'es', de: 'de', pt: 'pt', ru: 'ru', it: 'it', pl: 'pl',
-    }
-
-    // Remove any existing hreflang links first
-    const existing = document.querySelectorAll('link[rel="alternate"][hreflang]')
-    existing.forEach((tag) => tag.remove())
-
-    // Get the current language code from the pathname prefix
-    const pathPrefix = pathname.replace(/\/$/, '').split('/')[1] || 'en'
-    const currentLang = supportedLangs.includes(pathPrefix) ? pathPrefix : 'en'
-    // Build the base URL (without language prefix for en, or with prefix for others)
-    const base = SITE.url ? new URL(SITE.url).origin : window.location.origin
-    // Add hreflang links for all supported languages
-    supportedLangs.forEach((lang) => {
-      const langPath = lang === 'en' ? '/' : `/${lang}/`
-      // Construct the URL for this language version
-      let href
-      if (SITE.url) {
-        // When using a custom domain, construct full URL with language prefix
-        if (lang === 'en') {
-          // For English, use the current pathname if it's already /en/, otherwise add /en/ prefix
-          href = pathname.startsWith('/en/') ? base + pathname : base + '/en' + pathname.replace('/' + currentLang + '/', '/en/')
-        } else {
-          href = base + '/' + lang + pathname.replace('/' + currentLang + '/', '/' + lang + '/')
-        }
-      } else {
-        // Without custom domain, use current origin
-        if (lang === 'en') {
-          href = window.location.origin + langPath + pathname.replace('/' + currentLang + '/', '/')
-        } else {
-          href = window.location.origin + langPath + pathname.replace('/' + currentLang + '/', '/' + lang + '/')
-        }
-      }
-      const link = document.createElement('link')
-      link.rel = 'alternate'
-      link.href = href
-      link.hreflang = langLabels[lang] || lang
-      document.head.appendChild(link)
-    })
-  }, [pathname, SITE.url])
+  }, [pathname, SITE.url, i18n.resolvedLanguage, t])
 
   return null
 }
-

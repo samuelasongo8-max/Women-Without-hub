@@ -23,7 +23,7 @@
     "getInvolved": "Shiriki",
     "resources": "Rasilimali",
     "contact": "Mawasiliano",
-    "orgName": "Women Without Hub",
+    "orgName": "Women Without Borders Hub",
     "donate": "Changia",
     "ourStory": "Hadithi Yetu",
     "ourTeam": "Timu Yetu",
@@ -41,7 +41,7 @@
   "search": {
     "open": "Tafuta",
     "close": "Funga utafutaji",
-    "placeholder": "Tafuta kwenye Women Without Hub...",
+    "placeholder": "Tafuta kwenye Women Without Borders Hub...",
     "clear": "Futa utafutaji",
     "results": "Matokeo ya utafutaji",
     "noResults": "Hakuna matokeo ya '{{query}}'. Jaribu maneno tofauti.",
@@ -73,9 +73,10 @@
       "Vice Chairperson": "Vice Chairperson",
       "Treasurer": "Treasurer",
       "Secretary": "Secretary",
-      "Member": "Member",
-      "whyIntro": "Wanana na waleshi katika kampuni wa refugees ya Kakuma zinatumainikisha mahitaji kadhalini, kulingana na wakati unapoishi mahiri ya kujifau, usimamiifu wa elimu, ukweli wa kuongea kwenye uhuru wa kufikia uhuru wa kazi, na hitilafu za usalama wa afya. kwa wazazi wa vijana, mahitaji haya yatangulia kugawanya kulingana na usalama wa watoto na ukuaji wa elimu. kwa Baba wa Borders ya Wanane wa Kijamii, tunajua kuwa binti binti na bintwana walipopoteza hali zinazoweza kuondoa hatari hizi, kuwafanya kufuata hali yao, kuwapa uwepo wetu, kuweka uhuru wowote, na kucontribute kwa jamii zao."
-    }
+      "Member": "Member"
+    },
+    "whyIntro": "Wanawake na wasichana katika Kakuma Refugee Camp wanakabiliwa na changamoto nyingi, zikiwemo hali ngumu ya kifedha, kukatizwa kwa masomo, fursa chache za mafunzo ya ujuzi, na vikwazo vya kupata kazi na huduma za afya. Kwa akina mama vijana, changamoto hizi zinaweza kuwa kubwa zaidi wanapojitahidi kusawazisha malezi ya watoto, masomo na maendeleo yao binafsi. Katika Women Without Borders Hub, tunaamini kila msichana na mwanamke kijana anastahili nafasi ya kushinda vikwazo hivi, kugundua uwezo wake na kujenga maisha bora ya baadaye. Kwa kuendeleza elimu, ujuzi wa vitendo, ushauri, uelewa wa afya na uwezeshaji wa kiuchumi, tunalenga kuwasaidia wanawake na wasichana kujiamini, kujitegemea zaidi na kuchangia katika jamii zao.",
+    "ctaSeeImpact": "Ona mabadiliko yanayoletwa na msaada wako →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -127,10 +128,7 @@
     "trustLegal": "Uaminifu na Kisheria",
     "volunteer": "Kujitolea",
     "membership": "Uanachama",
-    "mentor": "Ushauri",
-    "partner": "Ushirikiano",
     "safeguarding": "Ulinzi",
-    "resources": "Rasilimali",
     "contact": "Mawasiliano",
     "rightsReserved": "Haki zote zimehifadhiwa."
   },
@@ -191,14 +189,174 @@
   },
   "programs": {
     "title": "Programu",
+    "secondChanceTitle": "Elimu ya Nafasi ya Pili",
+    "homeTitle": "Programu Zetu",
+    "homeIntro": "Programu zetu hushughulikia vikwazo vinavyokabili wasichana na wanawake vijana wa Kakuma, kuanzia darasani hadi sokoni.",
+    "indexIntro": "Maeneo sita ya programu, lengo moja: mabadiliko ya vitendo na ya kudumu kwa wanawake na wasichana.",
+    "videoTitle": "Kikao cha Uhamasishaji kuhusu Afya ya Uzazi",
+    "videoDescription": "Washiriki wanaonyesha walichojifunza katika kikao cha uhamasishaji kuhusu afya ya uzazi, kinachokuza maarifa, heshima, utu na kufanya maamuzi kwa ufahamu.",
+    "videoAria": "Video ya kikao cha uhamasishaji kuhusu afya ya uzazi",
+    "videoFallback": "Kivinjari chako hakiwezi kucheza video hii.",
+    "secondChanceDetail": {
+      "intro": "Tunawaunga mkono wasichana na wanawake katika Kambi ya Wakimbizi ya Kakuma, Kenya, wanaotaka kuendelea na elimu, kushinda vikwazo vya kujifunza na kujenga maisha bora ya baadaye. Tunaamini elimu ni haki na kila msichana na mwanamke anastahili nafasi ya kujifunza, kukua na kufikia uwezo wake kamili.",
+      "whatTitle": "Tunachofanya",
+      "whatImageAlt": "Mwanamke akisoma wakati wa kipindi cha kujifunza",
+      "whatParagraphs": [
+        "Mpango wetu wa Elimu ya Nafasi ya Pili unawaunga mkono wasichana na wanawake ambao masomo yao yalikatizwa au hawakupata nafasi ya kuyakamilisha. Changamoto za kifedha, majukumu ya kifamilia, kuhama kwa lazima na changamoto nyingine za maisha zinaweza kufanya iwe vigumu kuendelea kujifunza. Kupitia mpango huu, tunaeleza umuhimu wa kurejea kwenye elimu na kuwahimiza wasichana na wanawake kufuata malengo yao ya kujifunza kwa kujiamini na dhamira.",
+        "Tunaamini upatikanaji wa elimu unaweza kuwasaidia wanawake na wasichana kupata maarifa, kuimarisha kujitegemea, kushiriki zaidi katika jamii zao na kujitengenezea fursa bora wao wenyewe na familia zao."
+      ],
+      "approachTitle": "Mtazamo Wetu",
+      "approachPoints": [
+        { "title": "Kukuza upatikanaji wa elimu", "text": "Kuwahimiza wasichana na wanawake kutumia fursa za kujifunza na kuendelea na safari yao ya elimu." },
+        { "title": "Kujenga kujiamini", "text": "Kuwatia moyo wanafunzi kuamini uwezo wao na kutambua thamani ya elimu katika maisha yao." },
+        { "title": "Kuongeza uelewa wa jamii", "text": "Kukuza uelewa wa umuhimu wa elimu na kuhimiza msaada kwa wasichana na wanawake wanaotaka kurejea masomoni." },
+        { "title": "Kuhimiza kujifunza maisha yote", "text": "Kusaidia kujenga mtazamo chanya kuhusu elimu, ukuaji binafsi na fursa za baadaye." }
+      ],
+      "getInvolvedTitle": "Shiriki",
+      "getInvolvedLead": "Unaweza kuunga mkono mpango wetu wa Elimu ya Nafasi ya Pili kwa",
+      "donate": "kutoa mchango",
+      "volunteer": "kujitolea",
+      "or": "au",
+      "partner": "kushirikiana nasi",
+      "getInvolvedClosing": "Msaada wako unaweza kutusaidia kukuza fursa za elimu kwa wasichana na wanawake katika Kambi ya Wakimbizi ya Kakuma na kuwahimiza wale ambao masomo yao yalikatizwa kuendelea kufuata malengo yao.",
+      "getInvolvedFinal": "Pamoja, tunaweza kujenga jamii inayowahimiza wasichana na wanawake kujifunza, kukuza uwezo wao na kujitahidi kuwa na mustakabali wenye matumaini na kujitegemea zaidi."
+    },
+    "cards": {
+      "second-chance-education": {
+        "title": "Elimu ya Nafasi ya Pili",
+        "summary": "Ufadhili wa masomo, vikundi vya kusoma na kuandika, masomo ya ziada na elimu ya nafasi ya pili inayowasaidia wasichana kuendelea na shule na kupata fursa za elimu Kakuma.",
+        "imageAlt": "Wasichana wakijifunza kusoma na kuandika darasani Kakuma"
+      },
+      "digital-technical-skills": {
+        "title": "Ujuzi wa Kidijitali na Kiufundi",
+        "summary": "Mafunzo ya kompyuta na ujuzi wa kidijitali pamoja na mafunzo ya ufundi wa ushonaji, mitindo, urembo na saluni kwa wanawake vijana.",
+        "imageAlt": "Wanawake vijana wakijifunza ujuzi wa kidijitali na kiufundi Kakuma"
+      },
+      "mentorship-life-skills": {
+        "title": "Ushauri na Ujuzi wa Maisha",
+        "summary": "Ushauri, ujuzi wa maisha, uongozi, mwongozo wa kazi, kuweka malengo na elimu ya fedha vinavyojenga kujiamini na kujitegemea.",
+        "imageAlt": "Wanawake vijana katika kikao cha mafunzo na ushauri Kakuma"
+      },
+      "health-menstrual-dignity": {
+        "title": "Afya na Heshima ya Hedhi",
+        "summary": "Elimu ya afya ya hedhi, bidhaa za hedhi, uhamasishaji wa afya na rufaa za huduma za afya ili mtu yeyote asikose shule au kazi.",
+        "imageAlt": "Uhamasishaji wa afya na heshima ya hedhi Kakuma"
+      },
+      "srhr": {
+        "title": "Afya na Haki za Kijinsia na Uzazi (SRHR)",
+        "summary": "Elimu ya SRHR inayofaa umri na inayoheshimu tamaduni, elimu rika na uhamasishaji wa jamii unaozingatia heshima na uchaguzi.",
+        "imageAlt": "Wanawake vijana katika kikao cha elimu ya SRHR na msaada wa rika Kakuma"
+      },
+      "livelihood-economic-empowerment": {
+        "title": "Kujikimu na Uwezeshaji wa Kiuchumi",
+        "summary": "Ujasiriamali, ushauri wa biashara, mafunzo kazini, miunganisho ya masoko na rufaa za ajira kwa uwezeshaji wa kiuchumi wa wanawake.",
+        "imageAlt": "Wanawake wakihitimu kutoka programu ya kujikimu na uwezeshaji wa kiuchumi Kakuma"
+      }
+    },
     "intro": "Gundua programu zinazotembea na wasichana wenye uhatarishi, mama vijana na wanawake vijana katika Kakuma.",
+    "srhrPanelImageAlt": "Wasichana na wanawake vijana wakishiriki katika kikao cha uhamasishaji wa afya huko Kakuma",
+    "srhrDetail": {
+      "title": "Kukuza Maarifa, Heshima na Maamuzi Yenye Taarifa",
+      "intro": [
+        "Katika Women Without Borders Hub, tunaamini kuwa kila msichana na mwanamke kijana anastahili kupata taarifa za kuaminika kuhusu afya yake ya uzazi na ngono katika mazingira salama, yenye heshima na msaada.",
+        "Katika Kambi ya Wakimbizi ya Kakuma, unyanyapaa, vikwazo vya kitamaduni, uelewa mdogo na ugumu wa kupata taarifa sahihi za afya vinaweza kufanya iwe vigumu kwa baadhi ya vijana kuzungumzia afya ya uzazi na ngono kwa uwazi. Mpango wetu wa SRHR unaendeleza elimu inayolingana na umri, kujifunza kati ya rika na uhamasishaji wa jamii ili kukabiliana na changamoto hizi."
+      ],
+      "howTitle": "Jinsi Mpango Wetu Unavyofanya Kazi",
+      "howIntro": "Tunaunda nafasi kwa wasichana na wanawake vijana kujifunza, kuuliza maswali, kushiriki maarifa na kujenga ujasiri wa kufanya maamuzi yenye taarifa kuhusu afya na ustawi wao.",
+      "approaches": [
+        {
+          "title": "Elimu ya SRHR",
+          "text": "Kushiriki taarifa sahihi na zinazolingana na umri kuhusu afya ya uzazi na ngono."
+        },
+        {
+          "title": "Elimu ya Rika",
+          "text": "Kuwahimiza washiriki kujifunza kutoka kwa wenzao na kushiriki nao taarifa za kuaminika."
+        },
+        {
+          "title": "Uhamasishaji wa Jamii",
+          "text": "Kuhimiza mazungumzo yenye heshima yanayopinga unyanyapaa na dhana potofu."
+        },
+        {
+          "title": "Heshima na Hadhi",
+          "text": "Kuunda mazingira ya kujifunza yenye msaada yanayothamini faragha, mipaka binafsi na chaguo za kila mtu."
+        },
+        {
+          "title": "Taarifa za Afya na Rufaa",
+          "text": "Inapofaa, kuwasaidia washiriki kupata taarifa za afya zinazoaminika na huduma za kitaalamu zinazopatikana."
+        }
+      ]
+    },
+    "genericDetail": {
+      "whatTitle": "Tunachofanya",
+      "coreIntro": "{{programTitle}} ni mojawapo ya maeneo yetu muhimu ya programu. Tunafanya kazi na wanawake na wasichana, jamii, waelimishaji na washirika wa eneo husika ili kuondoa vikwazo na kujenga ujuzi, kujiamini na fursa za kudumu.",
+      "approachTitle": "Mbinu yetu",
+      "approachPoints": [
+        "Mipango inayoongozwa na jamii na inayojibu mahitaji halisi",
+        "Nafasi salama na jumuishi zinazoweka ulinzi mbele",
+        "Matokeo yanayopimika yanayoripotiwa kwa uwazi",
+        "Ushirikiano na shule, kliniki, waajiri na vikundi vya jamii"
+      ],
+      "getInvolvedTitle": "Shiriki nasi",
+      "getInvolvedIntro": "Unaweza kuunga mkono kazi hii kwa",
+      "actions": {
+        "donate": "kutoa mchango",
+        "volunteer": "kujitolea",
+        "joiner": "au",
+        "partner": "kushirikiana nasi"
+      }
+    },
+    "livelihood": {
+      "heroIntro": "Kujenga Ujuzi",
+      "whyImageAlt": "Wanawake wanaoshiriki katika shughuli ya kujikimu huko Kakuma",
+      "supportImageAlt": "Wanawake na wasichana wanaoshiriki katika programu ya kujikimu huko Kakuma",
+      "workingImageAlt": "Wanajamii na washirika wakishirikiana huko Kakuma",
+      "organizationName": "Women Without Borders Hub",
+      "exploreMore": "Gundua zaidi",
+      "exploreMoreLabel": "Gundua zaidi: {{title}}",
+      "sectionRevealed": "Sehemu imeonyeshwa: {{title}}",
+      "ourApproach": {
+        "programTitle": "Kujikimu na Uwezeshaji wa Kiuchumi",
+        "title": "Mtazamo Wetu",
+        "imageAlt": "Shughuli ya biashara ya kujikimu huko Kakuma",
+        "intro": "Tunajitahidi kuendeleza mipango ya kujikimu iliyo ya vitendo, jumuishi, inayozingatia jamii na inayojibu uzoefu wa watu tunaowahudumia.",
+        "items": [
+          {
+            "title": "Ubunifu unaoongozwa na jamii",
+            "text": "Tunathamini uzoefu, vipaumbele na mawazo ya wanawake na wasichana. Kuwasikiliza wanajamii husaidia kutambua mahitaji muhimu na kuunda shughuli zinazofaa zaidi hali zao."
+          },
+          {
+            "title": "Ushiriki salama na jumuishi",
+            "text": "Tunajitahidi kukuza mazingira ya kujifunza yenye heshima ambapo washiriki wanatendewa kwa utu, wanapata nafasi ya kuchangia na wanaweza kushiriki bila ubaguzi. Ulinzi na msaada unaofaa vinapaswa kubaki katikati ya shughuli za programu."
+          },
+          {
+            "title": "Mafunzo ya vitendo na yanayofaa",
+            "text": "Tunatambua umuhimu wa ujuzi ambao washiriki wanaweza kutumia katika maisha ya kila siku, shughuli za biashara, mafunzo au njia za ajira. Shughuli zinapaswa kuzingatia maslahi ya washiriki na fursa zilizopo."
+          },
+          {
+            "title": "Ushauri na ushirikiano",
+            "text": "Tunathamini ushirikiano na vikundi vya jamii, biashara za eneo hili, watoa mafunzo, waajiri, waelimishaji na mashirika mengine yanayoweza kuchangia maarifa, rasilimali au fursa zinazofaa."
+          },
+          {
+            "title": "Upatikanaji wa fursa",
+            "text": "Inapowezekana, tunajitahidi kuwaunganisha washiriki na taarifa kuhusu mafunzo, maendeleo ya biashara, masoko, mafunzo ya kazi na njia za ajira."
+          },
+          {
+            "title": "Kujifunza na uwajibikaji",
+            "text": "Tunajitahidi kujifunza kutokana na shughuli za programu, kusikiliza maoni ya washiriki na kuwasilisha maendeleo kwa uwazi. Shughuli zinapotekelezwa, ufuatiliaji unaweza kutusaidia kuelewa ushiriki, kutambua changamoto na kuboresha msaada wa baadaye."
+          }
+        ],
+        "backToProgram": "Rudi kwenye Kujikimu na Uwezeshaji wa Kiuchumi",
+        "partner": "Shirikiana nasi"
+      }
+    },
     "howItWorks": "Jinsi inavyofanya kazi",
     "readyTitle": "Uko tayari kuchukua hatua inayofuata?",
     "thankYouInterest": "Asante kwa nia yako katika {{title}}. Timu yetu ingependa kuwasiliana nawe na kushirikiana jinsi unavyoweza kuchukua hatua inayofuata.",
     "reachUs": "Kama una maswali yoyote, jisikie huru kuwasiliana nasi:",
     "emailUs": "Tutumie barua pepe",
     "callUs": "Tupigie simu",
-    "donate": "Changia"
+    "donate": "Changia",
+    "fillImageAlt": "Mwanamke akiuza mazao mabichi sokoni Kakuma"
   },
   "getInvolved": {
     "title": "Shiriki",
@@ -287,6 +445,34 @@
     "title": "Ulinzi",
     "intro": "Kujitolea kwetu kwa usalama, heshima na ulinzi wa kila msichana na mwanamke tunayehudumia."
   },
+  "homeHero": {
+    "titlePrefix": "Kuwawezesha",
+    "girls": "wasichana",
+    "connector": "na",
+    "youngWomen": "wanawake vijana",
+    "location": "huko Kakuma",
+    "lead": "Tunaunda fursa kwa wasichana walio katika mazingira hatarishi, akina mama vijana na wanawake vijana kupitia elimu, ujuzi, ushauri, afya na uwezeshaji wa kiuchumi huko Kakuma, Kenya.",
+    "programs": "Programu Zetu",
+    "realPeople": "Watu Halisi.",
+    "realChange": "Mabadiliko Halisi.",
+    "photoAlt": "Wanawake wakishikilia vyeti vyao vya kuhitimu kwa fahari",
+    "facebook": "{{name}} kwenye Facebook",
+    "linkedin": "{{name}} kwenye LinkedIn",
+    "featuredMessage": "Ujumbe maalum",
+    "pauseRotation": "Sitisha mzunguko wa slaidi",
+    "playRotation": "Endeleza mzunguko wa slaidi",
+    "slideOneLabel": "1 kati ya 2",
+    "slideTwoLabel": "2 kati ya 2",
+    "showSlideOne": "Onyesha slaidi ya 1 kati ya 2",
+    "showSlideTwo": "Onyesha slaidi ya 2 kati ya 2",
+    "slideTwoPhotoAlt": "Wanawake wakijifunza pamoja huko Kakuma",
+    "slideTwoLineOne": "Jifunze. Kua.",
+    "slideTwoLineTwo": "Ongoza. Jenga",
+    "slideTwoLineThree": "mustakabali bora.",
+    "slideTwoLead": "Ilianzishwa mwaka 2024 na MaLua Lugazo, Women Without Borders Hub inasaidia wanawake na wasichana huko Kakuma kupitia elimu, ujuzi na ushauri.",
+    "slideTwoStory": "Hadithi Yetu",
+    "slideTwoSupport": "Saidia Kazi Yetu"
+  },
   "homePage": {
     "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
   },
@@ -317,6 +503,155 @@
       "text": "Mentor or teach",
       "linkLabel": "Contribute skills →",
       "alt": "Share your skills - icon only"
+    },
+    "intro": "Kuna njia nyingi za kuunga mkono dhamira yetu. Unaweza kujitolea kwa muda wako, kushiriki ujuzi wako, kutoa msaada wa kifedha, kuwa mshauri wa wanawake vijana au kushirikiana nasi. Kila mchango ni muhimu na unaweza kuongeza fursa za elimu, ujuzi, maarifa ya afya na kujipatia kipato kwa wanawake na wasichana katika Kakuma Refugee Camp. Kwa pamoja, tunaweza kuondoa vikwazo, kujenga kujiamini na kuunda mustakabali wenye nafasi ya kustawi kwa kila msichana na mwanamke kijana."
+  },
+  "volunteer": {
+    "displayOptions": {
+      "title": "Chaguo za mwonekano",
+      "helper": "Chagua rangi ambazo ni rahisi zaidi kwako kusoma.",
+      "themeLegend": "Mandhari ya rangi",
+      "themes": {
+        "default": "Chaguo-msingi",
+        "soft-light": "Mwanga laini",
+        "high-contrast-light": "Mwanga wenye utofauti mkubwa",
+        "high-contrast-dark": "Giza lenye utofauti mkubwa",
+        "yellow-on-black": "Njano juu ya nyeusi",
+        "blue-on-cream": "Bluu juu ya krimu",
+        "dark-gray": "Kijivu kilichokolea"
+      },
+      "textSizeLegend": "Ukubwa wa maandishi",
+      "scales": {
+        "1": "Kawaida",
+        "1.25": "Kubwa (125%)",
+        "1.5": "Kubwa zaidi (150%)"
+      },
+      "reset": "Rejesha chaguo-msingi",
+      "announcement": "Mandhari ya {{theme}} imechaguliwa",
+      "resetAnnouncement": "Chaguo za mwonekano zimerejeshwa.",
+      "errorPrefix": "Hitilafu"
+    },
+    "breadcrumb": "Kujitolea",
+    "introLabel": "Kuhusu kujitolea",
+    "heroTitle": "Jitolee pamoja nasi",
+    "heroSentence": "Toa muda na ujuzi wako ili kuwasaidia wasichana na wanawake vijana wa Kakuma kujifunza, kukua na kustawi.",
+    "heroCta": "Jaza fomu ya kujitolea",
+    "intro": "Watu wanaojitolea hutusaidia kuendesha programu za elimu, ujuzi, ushauri, afya na uwezeshaji wa kiuchumi. Tuambie ungependa kusaidia vipi, nasi tutawasiliana nawe ndani ya siku mbili za kazi.",
+    "form": {
+      "title": "Maombi ya kujitolea",
+      "required": "inahitajika",
+      "requiredNote": "Sehemu zilizo na alama ya * zinahitajika.",
+      "confirmed": "Ndiyo, ninathibitisha kuwa nina umri wa miaka 18 au zaidi",
+      "honeypot": "Acha sehemu hii wazi",
+      "sections": {
+        "about": "Kuhusu wewe",
+        "programmes": "Ungependa kusaidia wapi?",
+        "contributions": "Ungependa kuchangia kwa njia gani?",
+        "availability": "Upatikanaji",
+        "motivation": "Sababu",
+        "consent": "Idhini"
+      },
+      "fields": {
+        "fullName": "Jina kamili",
+        "email": "Barua pepe",
+        "phone": "Simu au WhatsApp",
+        "location": "Nchi na jiji au mji",
+        "adult": "Ninathibitisha kuwa nina umri wa miaka 18 au zaidi",
+        "otherContribution": "Tafadhali tuambie zaidi",
+        "experience": "Tuambie kuhusu ujuzi na uzoefu wako",
+        "languages": "Lugha unazozungumza (si lazima)",
+        "mode": "Ungependa kujitolea kwa njia gani?",
+        "days": "Siku unazopatikana",
+        "commitment": "Unaweza kutoa muda kiasi gani?",
+        "startWhen": "Unaweza kuanza lini?",
+        "startDate": "Chagua tarehe ya kuanza",
+        "motivation": "Kwa nini ungependa kujitolea pamoja na Women Without Borders Hub?",
+        "consent": "Ninakubali Women Without Borders Hub iwasiliane nami kuhusu kujitolea na kuhifadhi taarifa zangu kwa madhumuni haya."
+      },
+      "helpers": {
+        "fullName": "Weka jina lako la kwanza na la ukoo.",
+        "email": "Tutatumia anwani hii kuwasiliana nawe kuhusu ombi lako.",
+        "phone": "Weka msimbo wa nchi, kwa mfano +254.",
+        "location": "Weka nchi yako na jiji au mji unakoishi.",
+        "chooseMany": "Chagua chaguo moja au zaidi.",
+        "otherContribution": "Eleza njia nyingine unayotaka kuchangia.",
+        "experience": "Andika herufi 20 hadi 1000.",
+        "languages": "Orodhesha lugha unazoweza kutumia kuwasiliana.",
+        "optional": "Taarifa hii si lazima.",
+        "days": "Shughuli zetu hufanyika Jumatatu hadi Ijumaa, saa 10 jioni hadi saa 12 jioni.",
+        "startWhen": "Chagua tarehe au uchague Haraka iwezekanavyo.",
+        "motivation": "Si lazima, herufi zisizozidi 600.",
+        "sensitive": "Tafadhali usishiriki taarifa nyeti za kibinafsi kama nambari za kitambulisho, maelezo ya afya au ya benki.",
+        "safeguarding": "Watu wanaojitolea na kufanya kazi na wasichana na wanawake vijana wataombwa kufuata kanuni zetu za ulinzi."
+      },
+      "options": {
+        "select": "Chagua chaguo",
+        "asap": "Haraka iwezekanavyo",
+        "chooseDate": "Nina tarehe ninayofikiria",
+        "programmes": {
+          "education": "Elimu ya Nafasi ya Pili",
+          "digital": "Ujuzi wa kidijitali na kiufundi",
+          "mentorship": "Ushauri na ujuzi wa maisha",
+          "health": "Afya na heshima ya hedhi",
+          "srhr": "Afya na haki za uzazi na ngono (SRHR)",
+          "livelihood": "Maisha na uwezeshaji wa kiuchumi",
+          "anywhere": "Popote ninapohitajika"
+        },
+        "contributions": {
+          "teaching": "Kufundisha au kusaidia masomo",
+          "mentoring": "Ushauri au mafunzo",
+          "digital": "Ujuzi wa kidijitali au kompyuta",
+          "vocational": "Mafunzo ya ushonaji, mitindo, urembo au unyoaji",
+          "health": "Elimu au uhamasishaji wa afya",
+          "business": "Biashara, ujasiriamali au ujuzi wa fedha",
+          "community": "Usaidizi wa matukio au jamii",
+          "translation": "Tafsiri au usaidizi wa lugha",
+          "other": "Nyingine"
+        },
+        "modes": {
+          "inPerson": "Ana kwa ana Kakuma",
+          "remote": "Mtandaoni au kwa mbali",
+          "either": "Yoyote kati ya hizo"
+        },
+        "days": {
+          "monday": "Jumatatu",
+          "tuesday": "Jumanne",
+          "wednesday": "Jumatano",
+          "thursday": "Alhamisi",
+          "friday": "Ijumaa",
+          "weekends": "Mwishoni mwa wiki"
+        },
+        "commitments": {
+          "monthly": "Saa chache kwa mwezi",
+          "weekly": "Kila wiki",
+          "severalDays": "Siku kadhaa kwa wiki",
+          "fullTime": "Muda wote"
+        }
+      },
+      "characterCount": "herufi {{count}}",
+      "errors": {
+        "required": "Sehemu hii inahitajika.",
+        "nameLength": "Tumia herufi zisizozidi 120.",
+        "email": "Weka anwani sahihi ya barua pepe.",
+        "phoneLength": "Tumia herufi zisizozidi 50.",
+        "locationLength": "Tumia herufi zisizozidi 160.",
+        "adult": "Tafadhali thibitisha kuwa una umri wa miaka 18 au zaidi.",
+        "chooseOne": "Chagua angalau chaguo moja.",
+        "shortTextLength": "Tumia herufi zisizozidi 160.",
+        "experienceMin": "Tafadhali eleza zaidi kwa kutumia angalau herufi 20.",
+        "experienceMax": "Tumia herufi zisizozidi 1000.",
+        "motivationMax": "Tumia herufi zisizozidi 600.",
+        "consent": "Tafadhali toa idhini kabla ya kutuma ombi lako.",
+        "tooFast": "Chukua muda mfupi kukagua ombi lako kabla ya kulituma.",
+        "rateLimit": "Subiri sekunde 30 kabla ya kujaribu kutuma ombi jingine."
+      },
+      "successTitle": "Asante",
+      "success": "Asante kwa kutoa muda na ujuzi wako. Timu yetu itawasiliana nawe ndani ya siku mbili za kazi.",
+      "failure": "Hatukuweza kutuma ombi lako. Tafadhali tutumie barua pepe marwalugazo@gmail.com.",
+      "backToInvolved": "Rudi kwenye Shiriki",
+      "exploreProgrammes": "Tazama programu zetu",
+      "sending": "Inatuma...",
+      "submit": "Tuma ombi langu"
     }
   }
 }

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { ORG_NAME } from '../config/site.js'
 import { SITE } from '../data/seo.js'
 import './WhoWeAre.css'
 
@@ -15,7 +16,7 @@ export default function WhoWeAre() {
             <img
               className="who-photo"
               src="/images/literacy-program-at-women-without-hub.jpg"
-              alt="Girls sitting in a literacy class at Women Without Borders Hub"
+              alt={`Girls sitting in a literacy class at ${ORG_NAME}`}
               loading="lazy"
             />
           </div>
