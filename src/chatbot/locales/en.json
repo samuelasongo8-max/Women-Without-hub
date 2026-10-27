@@ -43,16 +43,16 @@
     "rateLimit": "Please wait 30 seconds before sending another message."
   },
   "answers": {
-    "welcome": "Welcome to Women Without Hub. I’m an automated assistant. Ask me about our programmes, how to join, donate, volunteer or partner with us.",
-    "about": "Women Without Hub is a community-based organization in Kakuma Refugee Camp, Kenya. It was founded in 2024 by MaLua Lugazo to create opportunities for vulnerable girls, teenage mothers and young women.",
-    "founder": "Women Without Hub was founded in 2024 by MaLua Lugazo.",
-    "location": "Women Without Hub is in Kakuma Refugee Camp, Kenya.",
+    "welcome": "Welcome to Women Without Borders Hub. I’m an automated assistant. Ask me about our programmes, how to join, donate, volunteer or partner with us.",
+    "about": "Women Without Borders Hub is a community-based organization in Kakuma Refugee Camp, Kenya. It was founded in 2024 by MaLua Lugazo to create opportunities for vulnerable girls, teenage mothers and young women.",
+    "founder": "Women Without Borders Hub was founded in 2024 by MaLua Lugazo.",
+    "location": "Women Without Borders Hub is in Kakuma Refugee Camp, Kenya.",
     "programmes": "Our programmes include:",
     "activities": "Our activities take place Monday to Friday, from 4pm to 6pm, at the Women Without Borders Center in Kakuma 3.",
     "join": "To join one of our programmes, please contact our team and they will guide you through the next steps. You can email us at marwalugazo@gmail.com or use our Contact page.",
     "joinDetails": "Please contact our team and they will guide you.",
     "donate": "You can donate through M-Pesa. We don’t have a bank account at this time. To get the M-Pesa details, please email marwalugazo@gmail.com.",
-    "volunteer": "To volunteer, please contact us through our website. Our team will guide you through the steps to take.",
+    "volunteer": "To volunteer or share your skills, complete our volunteer application form. Our team will contact you within 2 business days.",
     "partner": "We welcome partnerships with donors, NGOs, foundations, schools, training institutions, health partners and businesses. Partners can support us through funding, technical expertise, training, mentorship, resources or joint programmes. Please send your enquiry through our Contact page or email marwalugazo@gmail.com, and our team will reply within 2 business days.",
     "skills": "Yes, you can offer mentorship, training or professional skills. Please contact our team and they will discuss how you can help. You can email us at marwalugazo@gmail.com.",
     "contact": "You can reach our team at marwalugazo@gmail.com. We usually reply within 2 business days.",
@@ -60,7 +60,7 @@
     "donations": "Donations go to our programmes.",
     "emergency": "I’m sorry you are going through this. If you or someone else is in danger, please call +254113947398 now.",
     "thanks": "You’re welcome. Is there anything else I can help you with?",
-    "goodbye": "Thank you for visiting Women Without Hub. Take care.",
+    "goodbye": "Thank you for visiting Women Without Borders Hub. Take care.",
     "privacyRefusal": "I can’t share personal information about our participants or staff. If you have a question, please contact our team at marwalugazo@gmail.com.",
     "adviceRefusal": "I’m an automated assistant, so I can’t give medical, legal or counselling advice. Please speak with a qualified professional. If you need help from our team, you can email marwalugazo@gmail.com.",
     "fallback": "Thank you for your message. I don’t have that information yet. Our team will get back to you within 2 business days. You can leave a message below or email marwalugazo@gmail.com.",
@@ -68,7 +68,7 @@
   },
   "programmes": {
     "education": {
-      "title": "Education & Literacy",
+      "title": "Second Chance Education",
       "answer": "Scholarships, literacy circles, remedial and second-chance education that keep girls in school and open educational opportunities for vulnerable girls in Kakuma."
     },
     "digital": {
@@ -99,7 +99,7 @@
     "founder": ["founder", "who founded", "who started", "malua", "leadership"],
     "location": ["where are you", "location", "where is the hub", "kakuma", "address"],
     "programmes": ["programmes", "programs", "what programmes", "what programs", "services"],
-    "education": ["education", "school", "literacy", "scholarship", "reading", "second chance", "remedial"],
+    "education": ["education", "school", "literacy", "scholarship", "reading", "second chance", "remedial", "Education & Literacy"],
     "digital": ["digital", "computer", "skills", "tailoring", "fashion", "beauty", "hairdressing", "vocational", "training"],
     "mentorship": ["mentor", "mentorship", "life skills", "leadership", "career", "goals", "confidence"],
     "health": ["health", "menstrual", "period", "pads", "products", "referral"],

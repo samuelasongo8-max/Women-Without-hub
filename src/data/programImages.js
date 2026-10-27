@@ -13,40 +13,40 @@
  * ────────────────────────────────────────────────────────────────────────
  */
 export const programImages = {
-  'education-literacy': {
-    slug: 'education-literacy',
-    image: '/images/literacy-education.jpg',
-    alt: 'Girls learning literacy in a classroom in Kakuma',
+  'second-chance-education': {
+    slug: 'second-chance-education',
+    image: '/images/second-chance-education-study.jpg',
+    altKey: 'programs.cards.second-chance-education.imageAlt',
     objectPosition: 'center',
   },
   'digital-technical-skills': {
     slug: 'digital-technical-skills',
     image: '/images/digital-technical-skills.jpg',
-    alt: 'Young women learning digital and technical skills in Kakuma',
+    altKey: 'programs.cards.digital-technical-skills.imageAlt',
     objectPosition: 'center',
   },
   'mentorship-life-skills': {
     slug: 'mentorship-life-skills',
     image: '/images/women-hub-training.png',
-    alt: 'Young women in a training and mentorship session in Kakuma',
+    altKey: 'programs.cards.mentorship-life-skills.imageAlt',
     objectPosition: 'center',
   },
   'health-menstrual-dignity': {
     slug: 'health-menstrual-dignity',
     image: '/images/avocating-health.jpg',
-    alt: 'Health and menstrual dignity advocacy in Kakuma',
+    altKey: 'programs.cards.health-menstrual-dignity.imageAlt',
     objectPosition: 'center',
   },
   srhr: {
     slug: 'srhr',
     image: '/images/srhr.jpg',
-    alt: 'Young women in an SRHR education and peer support session in Kakuma',
+    altKey: 'programs.cards.srhr.imageAlt',
     objectPosition: 'center',
   },
   'livelihood-economic-empowerment': {
     slug: 'livelihood-economic-empowerment',
     image: '/images/graduation-at-women-without-border.jpg',
-    alt: 'Women graduating from a livelihood and economic empowerment programme in Kakuma',
+    altKey: 'programs.cards.livelihood-economic-empowerment.imageAlt',
     objectPosition: 'center',
   },
 }

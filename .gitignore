@@ -11,3 +11,7 @@ dist/
 nul
 .vercel
 .env*
+!.env.example
+
+# gstack (global install)
+.amazonq/rules/gstack.md

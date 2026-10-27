@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { maluaLugazoPersonSchema } from '../data/seo.js'
+import { ORG_NAME } from '../config/site.js'
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
 import './MaluaLugazoProfile.css'
 
@@ -15,7 +16,7 @@ import './MaluaLugazoProfile.css'
 const PHOTO = '/images/team/malua-lugazo.jpg'
 
 const HERO_INTRO =
-  'MaLua Lugazo is the Founder and Executive Director of Women Without Borders Hub, a community-led initiative based in Kakuma Refugee Camp, Kenya. The Hub works to create opportunities for refugee and marginalized women and girls to learn, build skills and shape their own futures.'
+  `MaLua Lugazo is the Founder and Executive Director of ${ORG_NAME}, a community-led initiative based in Kakuma Refugee Camp, Kenya. The Hub works to create opportunities for refugee and marginalized women and girls to learn, build skills and shape their own futures.`
 
 const FEATURE_PARAGRAPHS = [
   'MaLua brings more than nine years of experience in humanitarian and community development. She served for five years as a Project Coordinator with Wings to Fly Initiative – CBO, and for four years as a Facilitator with the Norwegian Refugee Council, where she implemented the Accelerated Education Programme and served as a Better Learning Programme Champion.',
@@ -85,9 +86,9 @@ export default function MaluaLugazoProfile() {
       {/* ---------- 1. HERO ---------- */}
       <section className="mlp-hero">
         <Breadcrumbs />
-        <p className="mlp-eyebrow">Women Without Borders Hub Leadership</p>
+        <p className="mlp-eyebrow">{ORG_NAME} Leadership</p>
         <h1 className="mlp-title">
-          MaLua Lugazo - Founder & Executive Director of Women Without Borders Hub
+          MaLua Lugazo - Founder & Executive Director of {ORG_NAME}
         </h1>
         <p className="mlp-intro">{HERO_INTRO}</p>
       </section>
@@ -105,7 +106,7 @@ export default function MaluaLugazoProfile() {
             <img
               className="mlp-photo"
               src={PHOTO}
-              alt="MaLua Lugazo, Founder and Executive Director of Women Without Borders Hub"
+              alt={`MaLua Lugazo, Founder and Executive Director of ${ORG_NAME}`}
               loading="eager"
               decoding="async"
               width="280"
@@ -144,7 +145,7 @@ export default function MaluaLugazoProfile() {
       <section className="mlp-section">
         <h2 className="mlp-h2">What motivated her to start the Hub</h2>
         <p className="mlp-p">
-          MaLua started Women Without Borders Hub after years of working alongside refugee
+          MaLua started {ORG_NAME} after years of working alongside refugee
           and marginalized women and girls in Kakuma. She repeatedly saw the same
           pattern: women and girls were willing and ready to learn, to lead and to
           build a life for themselves, but they were held back by barriers that
@@ -188,7 +189,7 @@ export default function MaluaLugazoProfile() {
           untapped.
         </p>
         <p className="mlp-p">
-          Women Without Borders Hub responds to this gap with a community-led approach
+          {ORG_NAME} responds to this gap with a community-led approach
           that strengthens practical skills, restores access to learning, and
           positions women and girls as leaders of their own solutions.
         </p>
@@ -213,7 +214,7 @@ export default function MaluaLugazoProfile() {
 
       {/* ---------- 7. MISSION ---------- */}
       <section className="mlp-section mlp-section--mission">
-        <h2 className="mlp-h2">The mission of Women Without Borders Hub</h2>
+        <h2 className="mlp-h2">The mission of {ORG_NAME}</h2>
         <p className="mlp-mission">
           To empower refugee and marginalized women and girls in Kakuma by
           strengthening education, skills, confidence and leadership, so that
@@ -263,7 +264,7 @@ export default function MaluaLugazoProfile() {
       <section className="mlp-section">
         <h2 className="mlp-h2">The long-term vision</h2>
         <p className="mlp-p">
-          MaLua envisions Women Without Borders Hub growing into a strong, self-sustaining
+          MaLua envisions {ORG_NAME} growing into a strong, self-sustaining
           community organization that is led by the women and girls it serves.
           The long-term goal is for the Hub to become a model of community-led
           change in Kakuma and beyond, proving that local leadership is the most

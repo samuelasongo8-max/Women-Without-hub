@@ -1,3 +1,46 @@
+.second-chance-what {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.5fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-block: 1.25rem 2.5rem;
+}
+
+.second-chance-what__image {
+  display: block;
+  width: min(100%, 300px);
+  aspect-ratio: 2 / 3;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.second-chance-what__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.second-chance-what__copy {
+  min-width: 0;
+}
+
+.second-chance-what__copy p:last-child {
+  margin-block-end: 0;
+}
+
+@media (max-width: 767px) {
+  .second-chance-what {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .second-chance-what__image {
+    width: min(72vw, 280px);
+  }
+}
+
 .livelihood-content {
   width: min(calc(100% - 2rem), 75rem);
   padding-block: clamp(2.5rem, 6vw, 5rem);
@@ -8,6 +51,13 @@
   margin: 0 auto;
 }
 
+.livelihood-program-page {
+  --btn-bg: #1b5e5e;
+  /* --btn-bg: #b45f06; */
+  --btn-text: #ffffff;
+  --btn-bg-hover: #154848;
+}
+
 .livelihood-content p {
   margin: 0 0 1.25rem;
   font-size: 1rem;
@@ -15,56 +65,87 @@
   overflow-wrap: anywhere;
 }
 
-.livelihood-toc {
-  margin: clamp(2rem, 5vw, 3.5rem) 0;
-  padding: 1.25rem;
-  background: var(--color-bg-alt, #f2f2f0);
-  border-inline-start: 4px solid var(--color-primary, #2e8c8c);
-}
-
-.livelihood-toc ul {
+.livelihood-why-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  align-items: center;
+  gap: 16px;
+  margin-block-start: 24px;
 }
 
-.livelihood-toc__label {
-  margin: 0 0 0.5rem;
-  font-weight: 700;
-}
-
-.livelihood-toc a {
+.livelihood-program-page .livelihood-program-button {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  color: var(--color-primary-dark, #1b5e5e);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+  justify-content: center;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms ease;
 }
 
-.livelihood-toc__page-link span {
-  display: inline-block;
-}
-
-html:dir(rtl) .livelihood-toc__page-link span {
-  transform: scaleX(-1);
-}
-
-.livelihood-toc a:focus-visible,
-.livelihood-partner-link:focus-visible {
-  outline: 3px solid #f2c572;
-  outline-offset: 3px;
+.livelihood-program-page .livelihood-program-button:focus-visible {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 2px;
 }
 
 .livelihood-section {
   margin-block-start: clamp(3rem, 7vw, 5rem);
   scroll-margin-top: 7rem;
+}
+
+.livelihood-section--with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.livelihood-section__text {
+  min-width: 0;
+}
+
+.livelihood-section__image {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: clamp(360px, 40vw, 560px);
+  box-shadow: var(--shadow, 0 2px 8px rgba(0, 0, 0, 0.16));
+}
+
+.livelihood-section__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 0;
+}
+
+.livelihood-section--support-image .livelihood-section__image {
+  height: clamp(340px, 36vw, 520px);
+}
+
+.livelihood-section--support-image .livelihood-section__image img {
+  border-radius: 8px;
+}
+
+.livelihood-section--working-image .livelihood-section__image {
+  height: clamp(340px, 36vw, 520px);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.livelihood-section--working-image .livelihood-section__image img {
+  border-radius: inherit;
 }
 
 .livelihood-what-we-do__hero-intro p {
@@ -74,8 +155,75 @@ html:dir(rtl) .livelihood-toc__page-link span {
   line-height: inherit;
 }
 
-.livelihood-what-we-do__hero-intro p:last-child {
+.livelihood-what-we-do__hero-intro p:last-of-type {
   margin-block-end: 0;
+}
+
+.livelihood-what-we-do-page {
+  --explore-bg: #f2865e;
+  --explore-text: #ffffff;
+  --explore-bg-hover: #e0724a;
+  /* Alternative with stronger text contrast: --explore-bg: #b8501f; --explore-bg-hover: #9c4219; */
+}
+
+.livelihood-what-we-do-page .livelihood-what-we-do__explore-wrap {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 2rem;
+}
+
+.livelihood-what-we-do-page .livelihood-what-we-do__explore {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 6px;
+  background: var(--explore-bg);
+  color: var(--explore-text);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+
+@media (hover: hover) {
+  .livelihood-what-we-do-page .livelihood-what-we-do__explore:hover {
+    background: var(--explore-bg-hover);
+  }
+}
+
+.livelihood-what-we-do-page .livelihood-what-we-do__explore:focus-visible {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+.livelihood-what-we-do-page .livelihood-focus-area[hidden] {
+  display: none;
+}
+
+.livelihood-what-we-do-page .livelihood-focus-area--revealing {
+  animation: livelihood-area-reveal 300ms ease both;
+}
+
+.livelihood-what-we-do__announcement {
+  margin: 0;
+}
+
+@keyframes livelihood-area-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .livelihood-what-we-do__back {
@@ -134,6 +282,11 @@ html:dir(rtl) .livelihood-what-we-do__back-arrow {
   overflow-wrap: anywhere;
 }
 
+.livelihood-program-page .livelihood-section h2,
+.livelihood-program-page .livelihood-section a:not(.livelihood-program-button) {
+  color: #000000;
+}
+
 .livelihood-section > p {
   max-width: 70ch;
 }
@@ -168,7 +321,7 @@ html:dir(rtl) .livelihood-what-we-do__back-arrow {
   font-weight: 700;
 }
 
-.livelihood-approach-card h3 {
+.livelihood-approach-card h2 {
   margin: 0 0 0.9rem;
   font-size: clamp(1.125rem, 1.6vw, 1.35rem);
   line-height: 1.35;
@@ -195,13 +348,19 @@ html:dir(rtl) .livelihood-what-we-do__back-arrow {
 }
 
 @media (hover: hover) {
-  .livelihood-toc a:hover {
-    color: var(--color-primary, #2e8c8c);
+  .livelihood-program-page .livelihood-program-button:hover {
+    background: var(--btn-bg-hover);
+  }
+}
+
+@media (max-width: 479px) {
+  .livelihood-why-actions {
+    gap: 12px;
   }
 
-  .livelihood-partner-link:hover {
-    background: transparent;
-    color: var(--color-primary-dark, #1b5e5e);
+  .livelihood-why-actions .livelihood-program-button {
+    flex-basis: 100%;
+    width: 100%;
   }
 }
 
@@ -209,6 +368,7 @@ html:dir(rtl) .livelihood-what-we-do__back-arrow {
   .livelihood-approach-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
 }
 
 @media (max-width: 599px) {
@@ -225,10 +385,50 @@ html:dir(rtl) .livelihood-what-we-do__back-arrow {
     padding: 1.25rem;
   }
 
+  .livelihood-what-we-do-page .livelihood-what-we-do__explore {
+    width: min(100%, 20rem);
+  }
+}
+
+@media (max-width: 1023px) {
+  .livelihood-section--with-image {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .livelihood-section__image {
+    height: 340px;
+  }
+
+  .livelihood-section--working-image .livelihood-section__image {
+    height: 340px;
+  }
+}
+
+@media (max-width: 599px) {
+  .livelihood-section__image {
+    height: 260px;
+  }
+
+  .livelihood-section--working-image .livelihood-section__image {
+    height: 260px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .livelihood-content * {
     scroll-behavior: auto;
+  }
+
+  .livelihood-program-page .livelihood-program-button {
+    transition: none;
+  }
+
+  .livelihood-what-we-do-page .livelihood-what-we-do__explore {
+    transition: none;
+  }
+
+  .livelihood-what-we-do-page .livelihood-focus-area--revealing {
+    animation: none;
   }
 }

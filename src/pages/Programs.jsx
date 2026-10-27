@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { programImages } from '../data/programImages.js'
 import srhrVideo from '../sections/video/Sexual & Reproductive Health and Rights video(SRHR).mp4'
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
@@ -18,7 +19,7 @@ const C = '#ef6f52'
 
 // Coloured icons keyed by program slug — same artwork as the section.
 const icons = {
-  'education-literacy': (
+  'second-chance-education': (
     <>
       <path d="M4 10c9-3 15-1 20 4v26c-5-5-11-7-20-4z" fill={T} />
       <path d="M44 10c-9-3-15-1-20 4v26c5-5 11-7 20-4z" fill={C} />
@@ -67,6 +68,8 @@ const icons = {
 }
 
 export default function Programs() {
+  const { t } = useTranslation()
+
   useHeroImagePreload({
     desktop: '/images/programs-banner-desktop.webp',
     mobile: '/images/programs-banner-mobile.webp',
@@ -81,10 +84,9 @@ export default function Programs() {
       <section className="page-header auvd-programs-hero">
         <Breadcrumbs />
         <div className="container">
-          <h1>Programs</h1>
+          <h1>{t('programs.title')}</h1>
           <p className="page-intro">
-            Six programme areas, one goal: practical, lasting change for women
-            and girls.
+            {t('programs.indexIntro')}
           </p>
         </div>
       </section>
@@ -103,7 +105,7 @@ export default function Programs() {
                     <img
                       className="home-program-image"
                       src={encodeURI(img.image)}
-                      alt={img.alt}
+                      alt={t(img.altKey)}
                       loading="lazy"
                       decoding="async"
                       width="1200"
@@ -121,11 +123,15 @@ export default function Programs() {
                   {icons[p.slug]}
                 </svg>
                 <h3>
-                  <Link to={`/programs/${p.slug}/`}>{p.title}</Link>
+                  <Link to={`/programs/${p.slug}/`}>
+                    {p.slug === 'second-chance-education'
+                      ? t('programs.secondChanceTitle')
+                      : t(`programs.cards.${p.slug}.title`)}
+                  </Link>
                 </h3>
-                <p>{p.summary}</p>
+                <p>{t(`programs.cards.${p.slug}.summary`)}</p>
                 <Link to={`/programs/${p.slug}/`} className="home-program-link">
-                  Learn more →
+                  {t('common.learnMore')} →
                 </Link>
               {p.slug === 'srhr' && (
                 <div className="home-program-video-wrap">
@@ -136,15 +142,15 @@ export default function Programs() {
                     controls
                     playsInline
                     preload="metadata"
-                    aria-label="SRHR awareness session video"
+                    aria-label={t('programs.videoAria')}
                   >
-                    Your browser can&apos;t play this video.
+                    {t('programs.videoFallback')}
                   </video>
-                  <h4 className="home-program-video-title">SRHR Awareness Session</h4>
+                  <h4 className="home-program-video-title">
+                    {t('programs.videoTitle')}
+                  </h4>
                   <p className="home-program-video-text">
-                    Participants demonstrate what they learned during an SRHR
-                    awareness session, promoting knowledge, dignity, respect, and
-                    informed choices.
+                    {t('programs.videoDescription')}
                   </p>
                 </div>
               )}

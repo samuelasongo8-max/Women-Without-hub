@@ -2,6 +2,7 @@ import { Suspense, lazy, useCallback, useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { mainNav, donateCta } from '../data/site.js'
+import { ORG_NAME } from '../config/site.js'
 import LanguageSwitcher from './LanguageSwitcher.jsx'
 import './Navbar.css'
 
@@ -34,7 +35,7 @@ export default function Navbar() {
   const menuImageRef = useRef(null)
   const searchButtonRef = useRef(null)
   const { pathname } = useLocation()
-  const orgName = t('nav.orgName', { defaultValue: 'Women Without Hub' })
+  const orgName = t('nav.orgName', { defaultValue: ORG_NAME })
   const orgNameWords = orgName.split(/\s+(?=[^ ]+$)/)
 
   // Translate a nav item's label; fall back to the data label if unmapped.

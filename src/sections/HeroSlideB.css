@@ -1,0 +1,245 @@
+.hero-slide-b {
+  --hero2-focus: center 27%;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 5rem);
+  background-color: #6b4528;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  color: #ffffff;
+  font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+.hero-slide-b--image-ready {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.45) 45%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    url('/images/hero-women-learning.jpg');
+  background-position: center, var(--hero2-focus);
+  background-repeat: no-repeat;
+  background-size: cover, cover;
+}
+
+@supports (background-image: image-set(url('/image.webp') type('image/webp'))) {
+  .hero-slide-b--image-ready {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0.45) 45%,
+        rgba(0, 0, 0, 0.15) 100%
+      ),
+      image-set(
+        url('/images/hero-women-learning.webp') type('image/webp'),
+        url('/images/hero-women-learning.jpg') type('image/jpeg')
+      );
+  }
+}
+
+.hero-slide-b__photo {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+}
+
+.hero-slide-b__copy {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 520px);
+  text-align: start;
+}
+
+.hero-slide-b__title {
+  margin: 0 0 1.25rem;
+  color: #ffffff;
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+  overflow-wrap: anywhere;
+}
+
+.hero-slide-b__title span {
+  display: block;
+}
+
+.hero-slide-b__title .hero-slide-b__title-accent {
+  color: #f2a37f;
+}
+
+.hero-slide-b__lead {
+  max-width: 480px;
+  margin: 0 0 1.75rem;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.7;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+  overflow-wrap: anywhere;
+}
+
+.hero-slide-b__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-slide-b__button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.4rem;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.hero-slide-b__button--story {
+  border-color: #f2865e;
+  background: #f2865e;
+  color: #ffffff;
+}
+
+.hero-slide-b__button--support {
+  background: transparent;
+  color: #ffffff;
+}
+
+.hero-slide-b__button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+html:dir(rtl) .hero-slide-b {
+  justify-content: flex-end;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+
+html:dir(rtl) .hero-slide-b--image-ready {
+  background-image:
+    linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.45) 45%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    url('/images/hero-women-learning.jpg');
+}
+
+@supports (background-image: image-set(url('/image.webp') type('image/webp'))) {
+  html:dir(rtl) .hero-slide-b--image-ready {
+    background-image:
+      linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0.45) 45%,
+        rgba(0, 0, 0, 0.15) 100%
+      ),
+      image-set(
+        url('/images/hero-women-learning.webp') type('image/webp'),
+        url('/images/hero-women-learning.jpg') type('image/jpeg')
+      );
+  }
+}
+
+@media (hover: hover) {
+  .hero-slide-b__button--story:hover {
+    border-color: #e0724a;
+    background: #e0724a;
+  }
+
+  .hero-slide-b__button--support:hover {
+    background: #ffffff;
+    color: #1a1a1a;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-slide-b {
+    --hero2-focus: center 35%;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2rem 20px clamp(2rem, 7vh, 4rem);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+  }
+
+  html:dir(rtl) .hero-slide-b {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+  }
+
+  .hero-slide-b--image-ready,
+  html:dir(rtl) .hero-slide-b--image-ready {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+      url('/images/hero-women-learning.jpg');
+  }
+
+  .hero-slide-b__copy {
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+  }
+
+  .hero-slide-b__title {
+    font-size: clamp(34px, 7vw, 58px);
+  }
+
+  .hero-slide-b__lead {
+    margin-inline: auto;
+  }
+
+  .hero-slide-b__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-slide-b__button {
+    width: min(100%, 32rem);
+  }
+}
+
+@supports (background-image: image-set(url('/image.webp') type('image/webp'))) {
+  @media (max-width: 900px) {
+    .hero-slide-b--image-ready,
+    html:dir(rtl) .hero-slide-b--image-ready {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        image-set(
+          url('/images/hero-women-learning.webp') type('image/webp'),
+          url('/images/hero-women-learning.jpg') type('image/jpeg')
+        );
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide-b__button {
+    transition: none;
+  }
+}

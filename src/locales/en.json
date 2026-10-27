@@ -23,7 +23,7 @@
     "getInvolved": "Get Involved",
     "resources": "Resources",
     "contact": "Contact",
-    "orgName": "Women Without Hub",
+    "orgName": "Women Without Borders Hub",
     "donate": "Donate",
     "ourStory": "Our Story",
     "ourTeam": "Our Team",
@@ -41,7 +41,7 @@
   "search": {
     "open": "Search",
     "close": "Close search",
-    "placeholder": "Search Women Without Hub...",
+    "placeholder": "Search Women Without Borders Hub...",
     "clear": "Clear search",
     "results": "Search results",
     "noResults": "No results for '{{query}}'. Try different words.",
@@ -93,6 +93,34 @@
     "name2": "MaLua Lugazo",
     "role2": "Founder of Women Without Borders Hub"
   },
+  "homeHero": {
+    "titlePrefix": "Empowering",
+    "girls": "girls",
+    "connector": "&",
+    "youngWomen": "young women",
+    "location": "in Kakuma",
+    "lead": "Creating opportunities for vulnerable girls, teenage mothers and young women through education, skills, mentorship, health and economic empowerment in Kakuma, Kenya.",
+    "programs": "Our Programs",
+    "realPeople": "Real People.",
+    "realChange": "Real Change.",
+    "photoAlt": "Women proudly holding their graduation certificates",
+    "facebook": "{{name}} on Facebook",
+    "linkedin": "{{name}} on LinkedIn",
+    "featuredMessage": "Featured message",
+    "pauseRotation": "Pause hero rotation",
+    "playRotation": "Play hero rotation",
+    "slideOneLabel": "1 of 2",
+    "slideTwoLabel": "2 of 2",
+    "showSlideOne": "Show slide 1 of 2",
+    "showSlideTwo": "Show slide 2 of 2",
+    "slideTwoPhotoAlt": "Women learning together in Kakuma",
+    "slideTwoLineOne": "Learn. Grow.",
+    "slideTwoLineTwo": "Lead. Build a",
+    "slideTwoLineThree": "better future.",
+    "slideTwoLead": "Founded in 2024 by MaLua Lugazo, Women Without Borders Hub supports women and girls in Kakuma through education, skills and mentorship.",
+    "slideTwoStory": "Our Story",
+    "slideTwoSupport": "Support Our Work"
+  },
   "homePage": {
     "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
   },
@@ -131,10 +159,7 @@
     "trustLegal": "Trust & Legal",
     "volunteer": "Volunteer",
     "membership": "Membership",
-    "mentor": "Mentor",
-    "partner": "Partner",
     "safeguarding": "Safeguarding",
-    "resources": "Resources",
     "contact": "Contact",
     "rightsReserved": "All rights reserved."
   },
@@ -195,8 +220,143 @@
   },
   "programs": {
     "title": "Programs",
+    "secondChanceTitle": "Second Chance Education",
+    "homeTitle": "Our Programs",
+    "homeIntro": "Our programme areas address the barriers facing girls and young women in Kakuma from the classroom to the marketplace.",
+    "indexIntro": "Six programme areas, one goal: practical, lasting change for women and girls.",
+    "videoTitle": "SRHR Awareness Session",
+    "videoDescription": "Participants demonstrate what they learned during an SRHR awareness session, promoting knowledge, dignity, respect, and informed choices.",
+    "videoAria": "SRHR awareness session video",
+    "videoFallback": "Your browser cannot play this video.",
+    "secondChanceDetail": {
+      "intro": "We support girls and women in Kakuma Refugee Camp, Kenya, who wish to continue their education, overcome barriers to learning, and build a better future. We believe that education is a right and that every girl and woman deserves the opportunity to learn, grow, and reach her full potential.",
+      "whatTitle": "What We Do",
+      "whatImageAlt": "A woman studying during a learning session",
+      "whatParagraphs": [
+        "Our Second Chance Education programme focuses on supporting girls and women whose education has been interrupted or who have not had the opportunity to complete their studies. We recognize that financial difficulties, family responsibilities, displacement, and other life challenges can make it difficult to continue learning. Through this programme, we promote the importance of returning to education and encourage girls and women to pursue their learning goals with confidence and determination.",
+        "We believe that access to education can help women and girls gain knowledge, strengthen their independence, participate more actively in their communities, and create better opportunities for themselves and their families."
+      ],
+      "approachTitle": "Our Approach",
+      "approachPoints": [
+        {
+          "title": "Promoting access to education",
+          "text": "Encouraging girls and women to pursue learning opportunities and continue their educational journeys."
+        },
+        {
+          "title": "Building confidence",
+          "text": "Inspiring learners to believe in their abilities and recognize the value of education in their lives."
+        },
+        {
+          "title": "Raising community awareness",
+          "text": "Promoting understanding of the importance of education and encouraging support for girls and women who wish to return to learning."
+        },
+        {
+          "title": "Encouraging lifelong learning",
+          "text": "Helping create a positive attitude toward education, personal growth, and future opportunities."
+        }
+      ],
+      "getInvolvedTitle": "Get Involved",
+      "getInvolvedLead": "You can support our Second Chance Education programme by",
+      "donate": "donating",
+      "volunteer": "volunteering",
+      "or": "or",
+      "partner": "partnering with us",
+      "getInvolvedClosing": "Your support can help us promote educational opportunities for girls and women in Kakuma Refugee Camp and encourage those who have experienced interruptions in their education to continue pursuing their goals.",
+      "getInvolvedFinal": "Together, we can help create a community where girls and women are encouraged to learn, develop their potential, and work toward a more hopeful and independent future."
+    },
+    "cards": {
+      "second-chance-education": {
+        "title": "Second Chance Education",
+        "summary": "Scholarships, literacy circles, remedial and second-chance education that keep girls in school and open educational opportunities for vulnerable girls in Kakuma.",
+        "imageAlt": "Girls learning literacy in a classroom in Kakuma"
+      },
+      "digital-technical-skills": {
+        "title": "Digital & Technical Skills",
+        "summary": "Computer literacy and digital skills bootcamps alongside vocational training in tailoring, fashion, beauty and hairdressing for young women.",
+        "imageAlt": "Young women learning digital and technical skills in Kakuma"
+      },
+      "mentorship-life-skills": {
+        "title": "Mentorship & Life Skills",
+        "summary": "Mentorship, life skills, leadership, career guidance, goal setting and financial literacy that build confidence and self-reliance.",
+        "imageAlt": "Young women in a training and mentorship session in Kakuma"
+      },
+      "health-menstrual-dignity": {
+        "title": "Health & Menstrual Dignity",
+        "summary": "Menstrual health education, menstrual products, health awareness and health referrals so no one misses school or work.",
+        "imageAlt": "Health and menstrual dignity advocacy in Kakuma"
+      },
+      "srhr": {
+        "title": "Sexual & Reproductive Health and Rights (SRHR)",
+        "summary": "Age-appropriate, culturally sensitive SRHR education, peer education and community awareness built on respect and choice.",
+        "imageAlt": "Young women in an SRHR education and peer support session in Kakuma"
+      },
+      "livelihood-economic-empowerment": {
+        "title": "Livelihood & Economic Empowerment",
+        "summary": "Entrepreneurship, business mentorship, apprenticeships, market linkages and employment referrals for women’s economic empowerment.",
+        "imageAlt": "Women graduating from a livelihood and economic empowerment programme in Kakuma"
+      }
+    },
     "intro": "Explore the programmes that walk with vulnerable girls, teenage mothers and young women in Kakuma.",
+    "srhrPanelImageAlt": "Girls and young women taking part in a health awareness session in Kakuma",
+    "srhrDetail": {
+      "title": "Promoting Knowledge, Dignity, and Informed Choices",
+      "intro": [
+        "At Women Without Borders Hub, we believe that every girl and young woman deserves access to reliable information about her sexual and reproductive health in a safe, respectful, and supportive environment.",
+        "In Kakuma Refugee Camp, stigma, cultural barriers, limited awareness, and difficulty accessing accurate health information can make it hard for some young people to discuss sexual and reproductive health openly. Our SRHR programme promotes age-appropriate education, peer learning, and community awareness to help address these challenges."
+      ],
+      "howTitle": "How Our Programme Works",
+      "howIntro": "We create opportunities for girls and young women to learn, ask questions, share knowledge, and build confidence to make informed decisions about their health and well-being.",
+      "approaches": [
+        {
+          "title": "SRHR Education",
+          "text": "Sharing accurate, age-appropriate information about sexual and reproductive health."
+        },
+        {
+          "title": "Peer Education",
+          "text": "Encouraging participants to learn from one another and share reliable information with their peers."
+        },
+        {
+          "title": "Community Awareness",
+          "text": "Promoting respectful conversations that challenge stigma and misconceptions."
+        },
+        {
+          "title": "Dignity and Respect",
+          "text": "Creating a supportive learning environment that values privacy, personal boundaries, and individual choices."
+        },
+        {
+          "title": "Health Information and Referrals",
+          "text": "Where appropriate, helping participants identify reliable health information and available professional services."
+        }
+      ]
+    },
+    "genericDetail": {
+      "whatTitle": "What we do",
+      "coreIntro": "{{programTitle}} is one of our core programme areas. We work with women and girls, communities, educators, and local partners to address barriers and build lasting skills, confidence, and opportunities.",
+      "approachTitle": "Our approach",
+      "approachPoints": [
+        "Community-led design that responds to real needs",
+        "Safe, inclusive spaces with safeguarding at the centre",
+        "Measurable outcomes shared transparently",
+        "Partnerships with schools, clinics, employers, and community groups"
+      ],
+      "getInvolvedTitle": "Get involved",
+      "getInvolvedIntro": "You can support this work by",
+      "actions": {
+        "donate": "donating",
+        "volunteer": "volunteering",
+        "joiner": "or",
+        "partner": "partnering"
+      }
+    },
     "livelihood": {
+      "heroIntro": "Building Skills",
+      "whyImageAlt": "Women taking part in a livelihood activity in Kakuma",
+      "supportImageAlt": "Women and girls taking part in a livelihood programme in Kakuma",
+      "workingImageAlt": "Community members and partners working together in Kakuma",
+      "organizationName": "Women Without Borders Hub",
+      "exploreMore": "Explore more",
+      "exploreMoreLabel": "Explore more: {{title}}",
+      "sectionRevealed": "Section revealed: {{title}}",
       "whatWeDo": {
         "title": "What We Do",
         "intro": [
@@ -279,6 +439,40 @@
         ],
         "backToProgram": "Back to Livelihood & Economic Empowerment",
         "partner": "Partner with us"
+      },
+      "ourApproach": {
+        "programTitle": "Livelihood & Economic Empowerment",
+        "title": "Our Approach",
+        "imageAlt": "Livelihood business activity in Kakuma",
+        "intro": "We aim to develop livelihood initiatives that are practical, inclusive, community-informed, and responsive to the experiences of the people we serve.",
+        "items": [
+          {
+            "title": "Community-led design",
+            "text": "We value the experiences, priorities, and ideas of women and girls. Listening to community members helps identify relevant needs and shape activities that are better suited to their circumstances."
+          },
+          {
+            "title": "Safe and inclusive participation",
+            "text": "We aim to promote respectful learning environments where participants are treated with dignity, have opportunities to contribute, and can participate without discrimination. Safeguarding and appropriate support should remain central to programme activities."
+          },
+          {
+            "title": "Practical and relevant learning",
+            "text": "We recognize the importance of skills that participants can apply in everyday life, business activities, training, or employment pathways. Activities should respond to participants' interests and available opportunities."
+          },
+          {
+            "title": "Mentorship and collaboration",
+            "text": "We value cooperation with community groups, local businesses, training providers, employers, educators, and other organizations that can contribute knowledge, resources, or relevant opportunities."
+          },
+          {
+            "title": "Access to opportunities",
+            "text": "Where possible, we aim to connect participants with information about training, business development, markets, apprenticeships, and employment pathways."
+          },
+          {
+            "title": "Learning and accountability",
+            "text": "We seek to learn from programme activities, listen to participant feedback, and communicate progress transparently. Where activities are implemented, monitoring can help us understand participation, identify challenges, and improve future support."
+          }
+        ],
+        "backToProgram": "Back to Livelihood & Economic Empowerment",
+        "partner": "Partner with us"
       }
     },
     "howItWorks": "How it works",
@@ -287,7 +481,8 @@
     "reachUs": "If you have any questions, feel free to reach us at:",
     "emailUs": "Email us",
     "callUs": "Call us",
-    "donate": "Donate"
+    "donate": "Donate",
+    "fillImageAlt": "A woman selling fresh produce at a market in Kakuma"
   },
   "getInvolved": {
     "title": "Get Involved",
@@ -404,6 +599,154 @@
       "text": "Mentor or teach",
       "linkLabel": "Contribute skills →",
       "alt": "Share your skills - icon only"
+    }
+  },
+  "volunteer": {
+    "displayOptions": {
+      "title": "Display options",
+      "helper": "Choose the colors that are easiest for you to read.",
+      "themeLegend": "Color theme",
+      "themes": {
+        "default": "Default",
+        "soft-light": "Soft light",
+        "high-contrast-light": "High contrast light",
+        "high-contrast-dark": "High contrast dark",
+        "yellow-on-black": "Yellow on black",
+        "blue-on-cream": "Blue on cream",
+        "dark-gray": "Dark gray"
+      },
+      "textSizeLegend": "Text size",
+      "scales": {
+        "1": "Normal",
+        "1.25": "Large (125%)",
+        "1.5": "Extra large (150%)"
+      },
+      "reset": "Reset to default",
+      "announcement": "{{theme}} theme selected",
+      "resetAnnouncement": "Display options reset to default.",
+      "errorPrefix": "Error"
+    },
+    "breadcrumb": "Volunteer",
+    "introLabel": "About volunteering",
+    "heroTitle": "Volunteer With Us",
+    "heroSentence": "Give your time and skills to help girls and young women in Kakuma learn, grow and thrive.",
+    "heroCta": "Fill in the volunteer form",
+    "intro": "Our volunteers help us run programmes in education, skills, mentorship, health and economic empowerment. Tell us how you would like to help, and our team will contact you within 2 business days.",
+    "form": {
+      "title": "Volunteer application",
+      "required": "required",
+      "requiredNote": "Fields marked with * are required.",
+      "confirmed": "Yes, I confirm I am 18 years or older",
+      "honeypot": "Leave this field empty",
+      "sections": {
+        "about": "About you",
+        "programmes": "Where would you like to help?",
+        "contributions": "How would you like to contribute?",
+        "availability": "Availability",
+        "motivation": "Motivation",
+        "consent": "Consent"
+      },
+      "fields": {
+        "fullName": "Full name",
+        "email": "Email",
+        "phone": "Phone or WhatsApp",
+        "location": "Country and city or town",
+        "adult": "I confirm that I am 18 years or older",
+        "otherContribution": "Please tell us more",
+        "experience": "Tell us about your skills and experience",
+        "languages": "Languages you speak (optional)",
+        "mode": "How do you want to volunteer?",
+        "days": "Days available",
+        "commitment": "How much time can you give?",
+        "startWhen": "When can you start?",
+        "startDate": "Choose a start date",
+        "motivation": "Why would you like to volunteer with Women Without Borders Hub?",
+        "consent": "I agree that Women Without Borders Hub may contact me about volunteering and store my details for this purpose."
+      },
+      "helpers": {
+        "fullName": "Enter your first and last name.",
+        "email": "We will use this address to contact you about your application.",
+        "phone": "Include your country code, for example +254.",
+        "location": "Enter your country and the city or town where you live.",
+        "chooseMany": "Choose one or more options.",
+        "otherContribution": "Describe the other way you would like to contribute.",
+        "experience": "Please write 20 to 1000 characters.",
+        "languages": "List the languages you can use to communicate.",
+        "optional": "This information is optional.",
+        "days": "Our activities run Monday to Friday, 4pm to 6pm.",
+        "startWhen": "Choose a date or select As soon as possible.",
+        "motivation": "Optional, up to 600 characters.",
+        "sensitive": "Please do not share sensitive personal information such as ID numbers, health details or bank details in this form.",
+        "safeguarding": "Volunteers who work with girls and young women will be asked to follow our safeguarding rules."
+      },
+      "options": {
+        "select": "Select an option",
+        "asap": "As soon as possible",
+        "chooseDate": "I have a date in mind",
+        "programmes": {
+          "education": "Second Chance Education",
+          "digital": "Digital & Technical Skills",
+          "mentorship": "Mentorship & Life Skills",
+          "health": "Health & Menstrual Dignity",
+          "srhr": "Sexual & Reproductive Health and Rights (SRHR)",
+          "livelihood": "Livelihood & Economic Empowerment",
+          "anywhere": "Anywhere I am needed"
+        },
+        "contributions": {
+          "teaching": "Teaching or tutoring",
+          "mentoring": "Mentoring or coaching",
+          "digital": "Digital or computer skills",
+          "vocational": "Tailoring, fashion, beauty or hairdressing training",
+          "health": "Health education or awareness",
+          "business": "Business, entrepreneurship or financial skills",
+          "community": "Event or community support",
+          "translation": "Translation or language support",
+          "other": "Other"
+        },
+        "modes": {
+          "inPerson": "In person in Kakuma",
+          "remote": "Online or remote",
+          "either": "Either"
+        },
+        "days": {
+          "monday": "Monday",
+          "tuesday": "Tuesday",
+          "wednesday": "Wednesday",
+          "thursday": "Thursday",
+          "friday": "Friday",
+          "weekends": "Weekends"
+        },
+        "commitments": {
+          "monthly": "A few hours a month",
+          "weekly": "Weekly",
+          "severalDays": "Several days a week",
+          "fullTime": "Full time"
+        }
+      },
+      "characterCount": "{{count}} characters",
+      "errors": {
+        "required": "This field is required.",
+        "nameLength": "Please use no more than 120 characters.",
+        "email": "Enter a valid email address.",
+        "phoneLength": "Please use no more than 50 characters.",
+        "locationLength": "Please use no more than 160 characters.",
+        "adult": "Please confirm that you are 18 years or older.",
+        "chooseOne": "Choose at least one option.",
+        "shortTextLength": "Please use no more than 160 characters.",
+        "experienceMin": "Please tell us a little more, using at least 20 characters.",
+        "experienceMax": "Please use no more than 1000 characters.",
+        "motivationMax": "Please use no more than 600 characters.",
+        "consent": "Please agree before sending your application.",
+        "tooFast": "Please take a moment to review your application before sending it.",
+        "rateLimit": "Please wait 30 seconds before trying to send another application."
+      },
+      "successTitle": "Thank you",
+      "success": "Thank you for offering your time and skills. Our team will get back to you within 2 business days.",
+      "failure": "We could not send your application. Please email us at marwalugazo@gmail.com.",
+      "backToInvolved": "Back to Get Involved",
+      "exploreProgrammes": "Explore our programmes",
+      "sending": "Sending...",
+      "submit": "Send my application"
     }
   }
 }

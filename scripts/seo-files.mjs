@@ -4,12 +4,9 @@
  * Generates `robots.txt` and `sitemap.xml` from a single source of truth:
  * the route table in `src/data/site.js` and the configured site origin.
  *
- * The origin comes from the `VITE_SITE_URL` environment variable (see
- * `normalizeSiteUrl` in src/data/seo.js). When it is not configured we
- * MUST NOT invent a domain, so:
- *  - `robots.txt` is published WITHOUT a `Sitemap:` line (a sitemap
- *    pointing at a placeholder domain is worse than no sitemap at all),
- *  - `sitemap.xml` is NOT published.
+ * The origin comes from `VITE_SITE_URL`, with the confirmed production
+ * Vercel URL as a fallback. A configured custom domain always takes
+ * precedence.
  *
  * Both files are written into the build output directory (`dist/`) after
  * the bundle is written, and are also served in `npm run dev`.
@@ -19,6 +16,7 @@ import { writeFile, rm } from 'node:fs/promises'
 import path from 'node:path'
 import { loadEnv } from 'vite'
 import { routeMeta } from '../src/data/site.js'
+import { DEFAULT_SITE_URL } from '../src/config/site.js'
 
 /**
  * The pages that belong in the sitemap, in priority order.
@@ -75,8 +73,8 @@ ${sitemapLine}
 }
 
 /**
- * Resolve the configured site origin, or null when none is configured.
- * Mirrors `normalizeSiteUrl` in src/data/seo.js.
+ * Resolve the configured site origin, falling back to the confirmed
+ * production Vercel URL. Mirrors `normalizeSiteUrl` in src/data/seo.js.
  *
  * The value is read from Vite's loaded env (which includes the `.env`
  * files) — NOT from `process.env` directly, because Vite only exposes
@@ -84,7 +82,7 @@ ${sitemapLine}
  * `process.env` here would silently miss a domain configured in `.env`.
  */
 function resolveOrigin(env) {
-  const raw = env?.VITE_SITE_URL
+  const raw = env?.VITE_SITE_URL || DEFAULT_SITE_URL
   if (!raw || !raw.trim()) return null
 
   let value = raw.trim()

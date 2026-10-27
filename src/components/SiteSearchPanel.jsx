@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { ORG_NAME } from '../config/site.js'
 import './SiteSearchPanel.css'
 
 function highlightedSnippet(result) {
@@ -169,7 +170,7 @@ export default function SiteSearchPanel({ onClose }) {
               }
               autoComplete="off"
               placeholder={t('search.placeholder', {
-                defaultValue: 'Search Women Without Hub...',
+                defaultValue: `Search ${ORG_NAME}...`,
               })}
               value={query}
               onChange={(event) => setQuery(event.target.value)}

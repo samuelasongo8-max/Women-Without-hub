@@ -5,8 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build && node scripts/prerender-seo.mjs && node scripts/validate-prerender.mjs",
+    "build:seo": "npm run build",
+    "preview": "vite preview",
+    "prerender": "node scripts/prerender-seo.mjs",
+    "validate:prerender": "node scripts/validate-prerender.mjs",
+    "check:i18n": "node scripts/check-i18n.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^5.0.2",
@@ -17,10 +21,12 @@
     "react-dom": "^18.3.1",
     "react-i18next": "^17.0.16",
     "react-icons": "^5.7.0",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.4.8"
+    "@sparticuz/chromium": "^153.0.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "puppeteer-core": "^25.16.0",
+    "vite": "^8.3.5"
   }
 }

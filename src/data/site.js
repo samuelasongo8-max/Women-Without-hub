@@ -1,7 +1,7 @@
 /**
  * Single source of truth for site navigation, breadcrumbs and page metadata.
  * URL structure mirrors the sitemap:
- *   /about/, /programs/, /programs/education-literacy/, /get-involved/donate/, ...
+ *   /about/, /programs/, /programs/second-chance-education/, /get-involved/donate/, ...
  */
 
 /**
@@ -48,8 +48,8 @@ export const donateCta = { label: 'DONATE', to: '/get-involved/donate/' }
 // Summaries reflect the eight main SEO topics (see src/data/seo.js).
 export const programs = [
   {
-    slug: 'education-literacy',
-    title: 'Education & Literacy',
+    slug: 'second-chance-education',
+    title: 'Second Chance Education',
     summary:
       'Scholarships, literacy circles, remedial and second-chance education that keep girls in school and open educational opportunities for vulnerable girls in Kakuma.',
   },
@@ -82,6 +82,10 @@ export const programs = [
     title: 'Livelihood & Economic Empowerment',
     summary:
       'Entrepreneurship, business mentorship, apprenticeships, market linkages and employment referrals for women’s economic empowerment.',
+    whyImage: '/images/livelihood-why-it-matters',
+    supportImage: '/images/livelihood-who-we-support',
+    supportImageAlt: 'programs.livelihood.supportImageAlt',
+    workingImage: '/images/livelihood-working-together',
   },
 ]
 
@@ -128,7 +132,18 @@ export const routeMeta = {
   '/impact/': { label: 'Impact', parent: '/' },
   '/about/our-story/': { label: 'Our Story', parent: '/about/' },
   '/updates/': { label: 'Community Updates & Stories', parent: '/' },
-  '/impact/news/': { label: 'News', parent: '/impact/' },
+  '/updates/building-pathways-for-women-and-girls/': {
+    label: 'Building Pathways for Women and Girls in Kakuma',
+    parent: '/updates/',
+  },
+  '/updates/graduation-celebration-skills/': {
+    label: 'Young Women Graduate from Tailoring and Digital Skills Training',
+    parent: '/updates/',
+  },
+  '/updates/health-advocacy/': {
+    label: 'Health Advocacy in Kakuma',
+    parent: '/updates/',
+  },
   '/impact/blogs/': { label: 'Blogs', parent: '/impact/' },
   '/impact/report/': { label: 'Report', parent: '/impact/' },
   '/impact/post/': { label: 'Post', parent: '/impact/' },
@@ -147,6 +162,10 @@ programs.forEach((p) => {
 
 routeMeta['/programs/livelihood-economic-empowerment/what-we-do/'] = {
   label: 'What We Do',
+  parent: '/programs/livelihood-economic-empowerment/',
+}
+routeMeta['/programs/livelihood-economic-empowerment/our-approach/'] = {
+  label: 'Our Approach',
   parent: '/programs/livelihood-economic-empowerment/',
 }
 

@@ -1,5 +1,8 @@
 import { useParams, Link, Navigate, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import ProgramHero from '../components/ProgramHero.jsx'
+import SplitPanelList from '../components/SplitPanelList.jsx'
+import { FaBookOpen } from 'react-icons/fa'
 import { programImages } from '../data/programImages.js'
 import { programs } from '../data/site.js'
 import { breadcrumbListSchema } from '../data/seo.js'
@@ -11,7 +14,7 @@ const LIVELIHOOD_SLUG = 'livelihood-economic-empowerment'
 // Optional optimized desktop/mobile hero photos per programme slug.
 // Programmes without an entry use a plain teal gradient banner.
 const PROGRAM_HERO_IMAGES = {
-  'education-literacy': {
+  'second-chance-education': {
     desktop: '/images/program-education-banner-desktop',
     mobile: '/images/program-education-banner-mobile',
   },
@@ -32,8 +35,8 @@ const PROGRAM_HERO_IMAGES = {
     mobile: '/images/program-srhr-banner-mobile',
   },
   [LIVELIHOOD_SLUG]: {
-    desktop: '/images/program-livelihood-banner-desktop',
-    mobile: '/images/program-livelihood-banner-mobile',
+    desktop: '/images/livelihood-hero-12',
+    mobile: '/images/livelihood-hero-12',
   },
 }
 
@@ -53,14 +56,7 @@ function parseLivelihoodContent(markdown) {
 
     const paragraph = paragraphLines.join(' ').trim()
     paragraphLines = []
-    const approachItem = paragraph.match(/^\*\*(.+?):\*\*\s*(.+)$/)
-
-    if (approachItem && section?.title === 'Our Approach') {
-      section.items.push({
-        title: approachItem[1],
-        paragraphs: [approachItem[2].trim()],
-      })
-    } else if (!section) {
+    if (!section) {
       document.intro.push(paragraph)
     } else {
       section.paragraphs.push(paragraph)
@@ -78,7 +74,6 @@ function parseLivelihoodContent(markdown) {
       section = {
         title: line.replace(/^##\s+/, '').trim(),
         paragraphs: [],
-        items: [],
       }
       document.sections.push(section)
       continue
@@ -94,12 +89,18 @@ function parseLivelihoodContent(markdown) {
 const LIVELIHOOD_CONTENT = parseLivelihoodContent(livelihoodMarkdown)
 const LIVELIHOOD_SECTION_IDS = [
   'why-it-matters',
-  'our-approach',
   'who-we-support',
   'working-together',
 ]
 
-function LivelihoodContent({ pathname }) {
+function LivelihoodContent({
+  pathname,
+  whyImage,
+  supportImage,
+  supportImageAlt,
+  workingImage,
+}) {
+  const { t } = useTranslation()
   const sections = LIVELIHOOD_CONTENT.sections
 
   return (
@@ -116,54 +117,116 @@ function LivelihoodContent({ pathname }) {
         ))}
       </div>
 
-      <nav className="livelihood-toc" aria-label="On this page">
-        <p className="livelihood-toc__label">On this page</p>
-        <ul>
-          <li>
-            <Link
-              className="livelihood-toc__page-link"
-              to="/programs/livelihood-economic-empowerment/what-we-do/"
-            >
-              What We Do <span aria-hidden="true">↗</span>
-            </Link>
-          </li>
-          {sections.map((section, index) => (
-            <li key={section.title}>
-              <a href={`#${LIVELIHOOD_SECTION_IDS[index]}`}>{section.title}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      {sections.map((section, index) => (
-        <section
-          className="livelihood-section"
-          id={LIVELIHOOD_SECTION_IDS[index]}
-          key={section.title}
-        >
-          <h2>{section.title}</h2>
-          {section.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-
-          {section.title === 'Our Approach' && (
-            <div className="livelihood-approach-grid">
-              {section.items.map((approachItem) => (
-                <article className="livelihood-approach-card" key={approachItem.title}>
-                  <h3>{approachItem.title}</h3>
-                  <p>{approachItem.paragraphs[0]}</p>
-                </article>
-              ))}
+      {sections.map((section, index) => {
+        const sectionImage =
+          index === 0
+            ? whyImage
+            : index === 1
+              ? supportImage
+              : index === 2
+                ? workingImage
+                : null
+        const imageAltKey =
+          index === 0
+            ? 'programs.livelihood.whyImageAlt'
+            : index === 1
+              ? supportImageAlt
+              : 'programs.livelihood.workingImageAlt'
+        const hasImage = Boolean(sectionImage)
+        const imageDimensions =
+          index === 0
+            ? { width: 1000, height: 1250 }
+            : { width: 800, height: 800 }
+        const isWorkingTogether =
+          section.title === 'Working Together to Create Opportunities'
+        const partnerLink = isWorkingTogether ? (
+          <Link
+            className="livelihood-partner-link livelihood-program-button"
+            to="/contact/"
+          >
+            Partner with us
+          </Link>
+        ) : null
+        const whyActions =
+          index === 0 ? (
+            <div className="livelihood-why-actions">
+              <Link
+                className="livelihood-program-button"
+                to="/programs/livelihood-economic-empowerment/what-we-do/"
+              >
+                {t('programs.livelihood.exploreMore', {
+                  defaultValue: 'Explore more',
+                })}
+              </Link>
+              <Link
+                className="livelihood-program-button"
+                to="/programs/livelihood-economic-empowerment/our-approach/"
+              >
+                {t('programs.livelihood.ourApproach.title', {
+                  defaultValue: 'Our Approach',
+                })}
+              </Link>
             </div>
-          )}
+          ) : null
+        const textContent = (
+          <>
+            <h2>{section.title}</h2>
+            {section.paragraphs.map((paragraph, paragraphIndex) => (
+              <p key={paragraph}>
+                {paragraphIndex === 1 && isWorkingTogether
+                  ? paragraph.replace(
+                      'Women Without Borders Hub',
+                      t('programs.livelihood.organizationName', {
+                        defaultValue: 'Women Without Borders Hub',
+                      }),
+                    )
+                  : paragraph}
+              </p>
+            ))}
+          </>
+        )
 
-          {section.title === 'Working Together to Create Opportunities' && (
-            <Link className="livelihood-partner-link" to="/contact/">
-              Partner with us
-            </Link>
-          )}
-        </section>
-      ))}
+        return (
+          <section
+            className={`livelihood-section${hasImage ? ` livelihood-section--with-image${index === 1 ? ' livelihood-section--support-image' : ''}${index === 2 ? ' livelihood-section--working-image' : ''}` : ''}`}
+            id={LIVELIHOOD_SECTION_IDS[index]}
+            key={section.title}
+          >
+            {hasImage ? (
+              <>
+                <div className="livelihood-section__text">
+                  {textContent}
+                  {whyActions}
+                  {partnerLink}
+                </div>
+                <picture className="livelihood-section__image">
+                  <source
+                    srcSet={`${sectionImage}.webp`}
+                    type="image/webp"
+                  />
+                  <img
+                    src={`${sectionImage}.jpg`}
+                    alt={t(imageAltKey, {
+                      defaultValue:
+                        'Women and girls taking part in a livelihood programme in Kakuma',
+                    })}
+                    width={imageDimensions.width}
+                    height={imageDimensions.height}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </>
+            ) : (
+              <>
+                {textContent}
+                {whyActions}
+                {partnerLink}
+              </>
+            )}
+          </section>
+        )
+      })}
     </>
   )
 }
@@ -171,6 +234,7 @@ function LivelihoodContent({ pathname }) {
 export default function ProgramDetail() {
   const { slug } = useParams()
   const location = useLocation()
+  const { t } = useTranslation()
   const { pathname } = location
   const program = programs.find((p) => p.slug === slug)
 
@@ -178,6 +242,23 @@ export default function ProgramDetail() {
   if (!program) return <Navigate to="/programs/" replace />
 
   const isLivelihood = slug === LIVELIHOOD_SLUG
+  const srhrDetail = t('programs.srhrDetail', { returnObjects: true })
+  const genericDetail = t('programs.genericDetail', { returnObjects: true })
+  const secondChanceDetail = t('programs.secondChanceDetail', { returnObjects: true })
+  const isSecondChance = slug === 'second-chance-education'
+  const programTitle =
+    slug === 'second-chance-education'
+      ? t('programs.secondChanceTitle')
+      : t(`programs.cards.${slug}.title`)
+  const programSummary = t(`programs.cards.${slug}.summary`)
+  if (isLivelihood && location.hash === '#our-approach') {
+    return (
+      <Navigate
+        to={`/programs/${LIVELIHOOD_SLUG}/our-approach/`}
+        replace
+      />
+    )
+  }
   if (isLivelihood && location.hash === '#what-we-do') {
     return (
       <Navigate
@@ -191,119 +272,165 @@ export default function ProgramDetail() {
   const programContent = {
     srhr: () => (
       <>
-        <h2>Promoting Knowledge, Dignity, and Informed Choices</h2>
-        <p>
-          At Women Without Borders Hub, we believe that every girl and young woman
-          deserves access to reliable information about her sexual and
-          reproductive health in a safe, respectful, and supportive environment.
-        </p>
-        <p>
-          In Kakuma Refugee Camp, access to accurate health information, stigma,
-          cultural barriers, and limited awareness can make it difficult for some
-          young people to discuss sexual and reproductive health openly. Our SRHR
-          programme promotes age-appropriate education, peer learning, and community
-          awareness to help address these challenges.
-        </p>
+        <SplitPanelList
+          className="split-panel-list--plain split-panel-list--srhr"
+          image="/images/srhr-first-section.jpg"
+          imageAlt={t('programs.srhrPanelImageAlt')}
+          FallbackIcon={FaBookOpen}
+          imageWidth={800}
+          imageHeight={357}
+        >
+          <h2>{srhrDetail.title}</h2>
+          {srhrDetail.intro.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </SplitPanelList>
 
-        <h2>How Our Programme Works</h2>
-        <p>
-          We create opportunities for girls and young women to learn, ask
-          questions, share knowledge, and develop the confidence to make informed
-          decisions about their health and well-being.
-        </p>
-        <ul>
-          <li>
-            <strong>SRHR Education:</strong> Sharing accurate, age-appropriate
-            information about sexual and reproductive health.
-          </li>
-          <li>
-            <strong>Peer Education:</strong> Encouraging participants to learn
-            from one another and share reliable information with their peers.
-          </li>
-          <li>
-            <strong>Community Awareness:</strong> Promoting respectful conversations
-            that challenge stigma and misconceptions.
-          </li>
-          <li>
-            <strong>Dignity and Respect:</strong> Creating a supportive learning
-            environment that values privacy, personal boundaries, and individual
-            choices.
-          </li>
-          <li>
-            <strong>Health Information and Referrals:</strong> Where appropriate,
-            helping participants identify reliable health information and available
-            professional services.
-          </li>
-        </ul>
+        <div className="srhr-how-works">
+          <div className="srhr-how-works__text">
+            <h2>{srhrDetail.howTitle}</h2>
+            <p>{srhrDetail.howIntro}</p>
+            <ul>
+              {srhrDetail.approaches.map((item) => (
+                <li key={item.title}>
+                  <strong>{item.title}: </strong>
+                  {item.text}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <picture className="srhr-how-works__image">
+            <source
+              srcSet="/images/srhr-how-programme-works.webp"
+              type="image/webp"
+            />
+            <img
+              src="/images/srhr-how-programme-works.jpg"
+              alt={t('programs.srhrPanelImageAlt')}
+              width={571}
+              height={1280}
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+        </div>
 
-        <h2>Our Approach</h2>
-        <p>
-          We recognise the cultural diversity and lived experiences of refugee and
-          host communities in Kakuma. Our approach is respectful, culturally
-          sensitive, inclusive, and appropriate to participants&apos; ages. We encourage
-          open dialogue without discrimination, shame, or judgment.
-        </p>
-
-        <h2>Our Goal</h2>
-        <p>
-          Our goal is to empower girls and young women with the knowledge and
-          confidence to protect their well-being, understand their rights, seek
-          reliable health information, and make informed decisions about their
-          future.
-        </p>
-        <p>
-          <em>
-            Knowledge builds confidence. Respect protects dignity. Informed choices
-            support healthier futures.
-          </em>
-        </p>
       </>
     ),
   }
 
   return (
     <>
+      {!isLivelihood && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              breadcrumbListSchema(pathname, [
+                t('breadcrumb.home', { defaultValue: 'Home' }),
+                t('breadcrumb.programs', { defaultValue: 'Programs' }),
+                programTitle,
+              ]),
+            ),
+          }}
+        />
+      )}
       <ProgramHero
-        title={isLivelihood ? LIVELIHOOD_CONTENT.title : program.title}
-        intro={isLivelihood ? LIVELIHOOD_CONTENT.subtitle : program.summary}
+        title={programTitle}
+        intro={
+          isLivelihood
+            ? t('programs.livelihood.heroIntro')
+            : isSecondChance
+              ? secondChanceDetail.intro
+              : programSummary
+        }
         image={PROGRAM_HERO_IMAGES[program.slug]}
+        className={
+          isLivelihood
+            ? 'program-hero--livelihood'
+            : isSecondChance
+              ? 'program-hero--second-chance'
+              : ''
+        }
       />
 
       {isLivelihood ? (
-        <article className="section container livelihood-content">
-          <LivelihoodContent pathname={pathname} />
+        <article className="section container livelihood-content livelihood-program-page">
+          <LivelihoodContent
+            pathname={pathname}
+            whyImage={program.whyImage}
+            supportImage={program.supportImage}
+            supportImageAlt={program.supportImageAlt}
+            workingImage={program.workingImage}
+          />
         </article>
       ) : (
-        <section className="section container prose">
+        <section
+          className={`section container prose${program.slug === 'srhr' ? ' srhr-programme-content' : ''}`}
+        >
           {programContent[program.slug] ? (
             programContent[program.slug]()
+          ) : isSecondChance ? (
+            <>
+              <div className="second-chance-what">
+                <picture className="second-chance-what__image">
+                  <source
+                    srcSet="/images/second-chance-education-study.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/second-chance-education-study.jpg"
+                    alt={secondChanceDetail.whatImageAlt}
+                    width="800"
+                    height="800"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <div className="second-chance-what__copy">
+                  {secondChanceDetail.whatParagraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+
+              <h2>{secondChanceDetail.approachTitle}</h2>
+              <ul>
+                {secondChanceDetail.approachPoints.map((point) => (
+                  <li key={point.title}>
+                    <strong>{point.title}: </strong>
+                    {point.text}
+                  </li>
+                ))}
+              </ul>
+
+            </>
           ) : (
             <>
-              <h2>What we do</h2>
-              <p>
-                {program.title} is one of our core programme areas. We work alongside
-                women and girls, communities, educators and local partners to remove
-                the barriers that hold people back — and to build skills, confidence
-                and opportunity that last a lifetime.
-              </p>
+              <h2>{genericDetail.whatTitle}</h2>
+              <p>{t('programs.genericDetail.coreIntro', { programTitle })}</p>
 
-              <h2>Our approach</h2>
+              <h2>{genericDetail.approachTitle}</h2>
               <ul>
-                <li>Community-led design, so solutions fit real lives</li>
-                <li>Safe, inclusive spaces with safeguarding at the centre</li>
-                <li>Measurable outcomes, reported transparently</li>
-                <li>Partnerships with schools, clinics, employers and local groups</li>
+                {genericDetail.approachPoints.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
               </ul>
             </>
           )}
 
-          <h2>Get involved</h2>
-          <p>
-            You can support this work by{' '}
-            <Link to="/get-involved/donate/">donating</Link>,{' '}
-            <Link to="/get-involved/volunteer/">volunteering</Link> or{' '}
-            <Link to="/get-involved/partner/">partnering</Link> with us.
-          </p>
+          {program.slug !== 'srhr' && !isSecondChance && (
+            <>
+              <h2>{genericDetail.getInvolvedTitle}</h2>
+              <p>
+                {genericDetail.getInvolvedIntro}{' '}
+                <Link to="/get-involved/donate/">{genericDetail.actions.donate}</Link>,{' '}
+                <Link to="/get-involved/volunteer/">{genericDetail.actions.volunteer}</Link>{' '}
+                {genericDetail.actions.joiner}{' '}
+                <Link to="/get-involved/partner/">{genericDetail.actions.partner}</Link>.
+              </p>
+            </>
+          )}
         </section>
       )}
     </>

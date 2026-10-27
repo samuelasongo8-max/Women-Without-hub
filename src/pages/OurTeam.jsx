@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { ORG_NAME } from '../config/site.js'
 import PageHeader from '../components/PageHeader.jsx'
 import './OurTeam.css'
 
@@ -80,7 +81,7 @@ const team = [
     name: 'Doctor Ali Kuku',
     role: 'Member',
     photo: '/images/team/ali-kuku.jpg',
-    alt: 'Doctor Ali Kuku, Member of Women Without Borders Hub',
+    alt: `Doctor Ali Kuku, Member of ${ORG_NAME}`,
     objectPosition: 'center top',
     photoWebp: '/images/team/ali-kuku.webp',
   },
@@ -88,7 +89,7 @@ const team = [
     name: 'Mchiwa Mwaliko',
     role: 'Member',
     photo: '/images/team/mchiwa-mwaliko.jpg',
-    alt: 'Mchiwa Mwaliko, Member of Women Without Borders Hub',
+    alt: `Mchiwa Mwaliko, Member of ${ORG_NAME}`,
     objectPosition: 'center top',
     photoWebp: '/images/team/mchiwa-mwaliko.webp',
   },

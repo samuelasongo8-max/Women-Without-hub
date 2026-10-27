@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ORG_NAME } from '../config/site.js'
 import './CommunityUpdates.css'
 
 const MONTH_ABBR = [
@@ -54,17 +55,17 @@ export const updates = [
     slug: 'building-pathways-for-women-and-girls',
     title: 'Building Pathways for Women and Girls in Kakuma',
     image: '/images/women-hub7.png',
-    alt: 'Women and girls learning together at Women Without Borders Hub in Kakuma',
+    alt: `Women and girls learning together at ${ORG_NAME} in Kakuma`,
     to: '/updates/building-pathways-for-women-and-girls',
     // Publish date (kept): drives the live "N days/weeks ago" counting.
     date: '2026-05-30',
     fullText: `What happens when women in Kakuma gain access to education, skills, and opportunity?
 
-Women Without Borders Hub is building pathways for women and girls in Kakuma to learn, earn, and lead.
+${ORG_NAME} is building pathways for women and girls in Kakuma to learn, earn, and lead.
 
 Because when women gain access, communities gain resilience.
 
-Women Without Borders Hub, Kakuma, is a community-led initiative empowering women and girls in Kakuma refugee camp through:
+${ORG_NAME}, Kakuma, is a community-led initiative empowering women and girls in Kakuma refugee camp through:
 
 - Education,
 - Health advocacy,
@@ -86,7 +87,7 @@ It is a platform for dignity, resilience, and economic inclusion.
 
 We believe women in refugee communities should not be defined by displacement but by their circumstances, potential, leadership, and power to shape the future.
 
-Women Without Borders Hub exists to turn access into opportunity, and opportunity into long-term transformation.
+${ORG_NAME} exists to turn access into opportunity, and opportunity into long-term transformation.
 
 If you care about women's empowerment, refugee livelihoods, and inclusive development, we'd love to connect.`,
   },
@@ -98,7 +99,7 @@ If you care about women's empowerment, refugee livelihoods, and inclusive develo
     to: '/updates/graduation-celebration-skills',
     // Publish date (kept): drives the live "N days/weeks ago" counting.
     date: '2026-06-18',
-    fullText: `For the women of Women Without Borders Hub, this graduation was more than certificates; it was a celebration of resilience, courage, growth, and new possibilities.
+    fullText: `For the women of ${ORG_NAME}, this graduation was more than certificates; it was a celebration of resilience, courage, growth, and new possibilities.
 
 Behind every certificate is a woman who chose to learn, build new skills, find her voice, and create a better future for herself, her family, and her community.
 
@@ -110,7 +111,7 @@ Congratulations to our graduates!`,
   },
   {
     slug: 'health-advocacy',
-    title: 'Advocating for Health: Women Without Borders Hub',
+    title: `Advocating for Health: ${ORG_NAME}`,
     image: '/images/avocating-health.jpg',
     alt: 'Health advocacy for refugee and host communities in Kakuma',
     to: '/updates/health-advocacy',
@@ -118,7 +119,7 @@ Congratulations to our graduates!`,
 
 Yet many women, children, and displaced families still struggle to access basic healthcare, information, and support.
 
-Today at Women Without Borders Hub, we are learning, engaging, and advocating for stronger health awareness and community well-being.
+Today at ${ORG_NAME}, we are learning, engaging, and advocating for stronger health awareness and community well-being.
 
 Through health advocacy, we believe communities become stronger, safer, and more empowered to make informed decisions about their lives and futures.
 
@@ -202,9 +203,15 @@ export default function CommunityUpdatesSection({ isPage, variant }) {
   return (
     <section className="updates">
       <div className="updates-head">
-        <h2>
-          Community<em>Updates &amp; Stories:</em>
-        </h2>
+        {page ? (
+          <h1>
+            Community<em>Updates &amp; Stories:</em>
+          </h1>
+        ) : (
+          <h2>
+            Community<em>Updates &amp; Stories:</em>
+          </h2>
+        )}
         {!page && (
           <Link to="/updates/" className="updates-viewall">
             View All

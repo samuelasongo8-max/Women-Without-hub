@@ -1,0 +1,150 @@
+.hero-rotator {
+  position: relative;
+  display: grid;
+  isolation: isolate;
+  width: 100%;
+}
+
+.hero-rotator__slide {
+  grid-area: 1 / 1;
+  min-width: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 600ms ease, visibility 0s linear 600ms;
+}
+
+.hero-rotator__slide--one {
+  position: relative;
+  z-index: 0;
+}
+
+.hero-rotator__slide--two {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-rotator__slide.is-active {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 600ms ease, visibility 0s;
+}
+
+.hero-rotator__slide.is-inactive {
+  pointer-events: none;
+}
+
+.hero-rotator__slide--two > .hero-slide-b {
+  height: 100%;
+}
+
+.hero-rotator__arrows {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-rotator__arrow {
+  position: absolute;
+  inset-block-start: 50%;
+  display: inline-flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: rgba(26, 26, 26, 0.78);
+  color: #ffffff;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translateY(-50%);
+}
+
+.hero-rotator__arrow--previous {
+  inset-inline-start: 1.25rem;
+}
+
+.hero-rotator__arrow--next {
+  inset-inline-end: 1.25rem;
+}
+
+.hero-rotator__arrow span {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.hero-rotator__arrow:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.hero-rotator__toggle {
+  position: absolute;
+  z-index: 5;
+  inset-block-start: 0.75rem;
+  inset-inline-start: 0.75rem;
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.85rem;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.hero-rotator__toggle:focus {
+  clip: auto;
+  clip-path: none;
+  overflow: visible;
+}
+
+.hero-rotator__toggle:focus-visible {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 3px;
+}
+
+html:dir(rtl) .hero-rotator__arrow span {
+  transform: scaleX(-1);
+}
+
+@media (hover: hover) {
+  .hero-rotator__arrow:hover {
+    background: #1a1a1a;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-rotator__arrow--previous {
+    inset-inline-start: 0.75rem;
+  }
+
+  .hero-rotator__arrow--next {
+    inset-inline-end: 0.75rem;
+  }
+
+  .hero-rotator__arrow {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rotator__slide,
+  .hero-rotator__slide.is-active {
+    transition: none;
+  }
+}

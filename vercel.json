@@ -1,9 +1,54 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build:seo",
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/programs/education-literacy",
+      "destination": "/programs/second-chance-education",
+      "statusCode": 301
+    },
+    {
+      "source": "/programs/education-literacy/",
+      "destination": "/programs/second-chance-education/",
+      "statusCode": 301
+    },
+    {
+      "source": "/impact/news",
+      "destination": "/updates/",
+      "statusCode": 301
+    },
+    {
+      "source": "/impact/news/",
+      "destination": "/updates/",
+      "statusCode": 301
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
     {
       "source": "/images/(.*)",
       "headers": [

@@ -63,6 +63,31 @@ function resolveLanguage(detected) {
   return DEFAULT_LANG
 }
 
+function resourceKeys(value, prefix = '', keys = []) {
+  if (value && typeof value === 'object') {
+    for (const [key, child] of Object.entries(value)) {
+      resourceKeys(child, prefix ? `${prefix}.${key}` : key, keys)
+    }
+  } else if (prefix) {
+    keys.push(prefix)
+  }
+  return keys
+}
+
+function warnForMissingLocaleKeys(code) {
+  if (!import.meta.env.DEV || code === DEFAULT_LANG) return
+
+  const english = i18n.getResourceBundle(DEFAULT_LANG, 'translation')
+  const locale = i18n.getResourceBundle(code, 'translation')
+  if (!english || !locale) return
+
+  const localeKeys = new Set(resourceKeys(locale))
+  const missingKeys = resourceKeys(english).filter((key) => !localeKeys.has(key))
+  for (const key of missingKeys) {
+    console.warn(`[i18n] Missing "${key}" in locale "${code}".`)
+  }
+}
+
 // Preload English synchronously so the very first paint is translated.
 const enBundle = import.meta.glob('../locales/en.json', { eager: true })
 loaded.en = true
@@ -78,6 +103,15 @@ i18n
     supportedLngs: LANGUAGES.map((l) => l.code),
     nonExplicitSupportedLngs: true,
     defaultNS: 'translation',
+    debug: import.meta.env.DEV,
+    saveMissing: import.meta.env.DEV,
+    missingKeyHandler: (languages, namespace, key) => {
+      if (import.meta.env.DEV) {
+        console.warn(
+          `[i18n] Missing key "${namespace}:${key}" for ${languages.join(', ')}.`,
+        )
+      }
+    },
     interpolation: { escapeValue: false }, // React already escapes
     detection: {
       // localStorage first (user's explicit choice), then browser language.
@@ -85,8 +119,8 @@ i18n
       lookupLocalStorage: 'wwbh.lang',
       caches: ['localStorage'],
     },
-    // Never surface raw keys to users.
-    parseMissingKeyHandler: () => '',
+    parseMissingKeyHandler: (key) =>
+      import.meta.env.DEV ? `[missing: ${key}]` : '',
     returnNull: false,
     react: { useSuspense: false },
   })
@@ -100,6 +134,7 @@ i18n
 // Whenever the language changes, keep <html> attributes/font in sync.
 i18n.on('languageChanged', (code) => {
   applyDocumentAttributes(code)
+  warnForMissingLocaleKeys(code)
 })
 
 /** Change language: load its bundle first (if needed), then switch. */

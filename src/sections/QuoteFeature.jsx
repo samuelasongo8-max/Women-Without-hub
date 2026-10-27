@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { ORG_NAME } from '../config/site.js'
 import './QuoteFeature.css'
 
 /**
@@ -10,7 +11,7 @@ const DEFAULTS = {
   quote:
     'Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.',
   name: 'Khadijoh Mahamed',
-  role: 'Member of Women Without Borders Hub',
+  role: `Member of ${ORG_NAME}`,
   image: '/Khadijoh%20Mahamed.jpg',
   alt: 'Khadijoh Mahamed',
 }

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { ORG_NAME } from '../config/site.js'
 import './Impact.css'
 
 const stats = [
@@ -19,7 +20,7 @@ export default function ImpactSection() {
           <img
             className="auvd-impact__img"
             src="/Impact%20at%20Women%20without%20border.png"
-            alt="Women Without Borders Hub programme impact in Kakuma"
+            alt={`${ORG_NAME} programme impact in Kakuma`}
             loading="lazy"
           />
         </div>

@@ -4,12 +4,6 @@ import { useTranslation } from 'react-i18next'
 import './GetInvolvedCards.css'
 
 /**
- * Single constant for the link destination used by all four cards.
- * Change this one value if a different page is added later.
- */
-const GI_DONATE_URL = '/contact'
-
-/**
  * Hero configuration — edit here to change kicker, heading or hero image.
  */
 const GI_CONFIG = {  
@@ -30,7 +24,7 @@ const GI_CARDS = [
     titleKey: 'getInvolvedCards.cardDonate.title',
     textKey: 'getInvolvedCards.cardDonate.text',
     linkLabelKey: 'getInvolvedCards.cardDonate.linkLabel',
-    href: GI_DONATE_URL,
+    href: '/get-involved/donate/',
     img: '/images/get-involved-donate.jpg',
     altKey: 'getInvolvedCards.cardDonate.alt',
   },
@@ -48,7 +42,7 @@ const GI_CARDS = [
     titleKey: 'getInvolvedCards.cardVolunteer.title',
     textKey: 'getInvolvedCards.cardVolunteer.text',
     linkLabelKey: 'getInvolvedCards.cardVolunteer.linkLabel',
-    href: '/contact',
+    href: '/get-involved/volunteer/',
     img: '/images/get-involved-volunteer.jpg',
     altKey: 'getInvolvedCards.cardVolunteer.alt',
   },
@@ -57,7 +51,7 @@ const GI_CARDS = [
     titleKey: 'getInvolvedCards.cardSkills.title',
     textKey: 'getInvolvedCards.cardSkills.text',
     linkLabelKey: 'getInvolvedCards.cardSkills.linkLabel',
-    href: '/contact',
+    href: '/get-involved/volunteer/',
     img: null,
     icon: <FaGraduationCap aria-hidden="true" />,
     altKey: 'getInvolvedCards.cardSkills.alt',
@@ -128,13 +122,13 @@ export default function GetInvolvedCards() {
             <div className="gi-card__body">
               <h3 className="gi-card__title">{t(card.titleKey)}</h3>
               <p className="gi-card__text">{t(card.textKey)}</p>
-              <a
-                href={card.href}
+              <Link
+                to={card.href}
                 className="gi-card__link"
               >
                 {t(card.linkLabelKey)}
                 <span className="gi-card__arrow">→</span>
-              </a>
+              </Link>
             </div>
           </article>
         ))}

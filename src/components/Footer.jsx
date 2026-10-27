@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { mainNav, donateCta } from '../data/site.js'
 import { SITE } from '../data/seo.js'
+import { ORG_NAME } from '../config/site.js'
 import emailjs from '@emailjs/browser'
 import './Footer.css'
 
@@ -108,12 +109,12 @@ export default function Footer() {
           <Link
             to="/"
             className="footer-subscribe__logo-link"
-            aria-label="Women Without Borders Hub, home"
+            aria-label={`${ORG_NAME}, home`}
           >
             <img
               className="footer-subscribe__logo"
               src="/images/women-hub-logo.png"
-              alt="Women Without Borders Hub"
+              alt={ORG_NAME}
             />
           </Link>
 
@@ -230,12 +231,6 @@ export default function Footer() {
             <li>
               <Link to="/get-involved/membership/">{t('footer.membership')}</Link>
             </li>
-            <li>
-              <Link to="/get-involved/mentor/">{t('footer.mentor')}</Link>
-            </li>
-            <li>
-              <Link to="/get-involved/partner/">{t('footer.partner')}</Link>
-            </li>
           </ul>
         </div>
 
@@ -244,9 +239,6 @@ export default function Footer() {
           <ul>
             <li>
               <Link to="/safeguarding/">{t('footer.safeguarding')}</Link>
-            </li>
-            <li>
-              <Link to="/resources/">{t('footer.resources')}</Link>
             </li>
             <li>
               <Link to="/contact/">{t('footer.contact')}</Link>

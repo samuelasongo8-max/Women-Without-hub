@@ -14,6 +14,9 @@ export default function FocusArea({
   icon: Icon,
   reverse = false,
   id,
+  hidden = false,
+  headingRef,
+  revealing = false,
 }) {
   const { t } = useTranslation()
   const [imageFailed, setImageFailed] = useState(false)
@@ -32,9 +35,10 @@ export default function FocusArea({
 
   return (
     <section
-      className={`livelihood-focus-area${reverse ? ' livelihood-focus-area--reverse' : ''}`}
+      className={`livelihood-focus-area${reverse ? ' livelihood-focus-area--reverse' : ''}${revealing ? ' livelihood-focus-area--revealing' : ''}`}
       id={id}
       aria-labelledby={`${id}-title`}
+      hidden={hidden}
     >
       {!imageFailed ? (
         <div className="livelihood-focus-area__picture">
@@ -62,7 +66,12 @@ export default function FocusArea({
       )}
 
       <div className="livelihood-focus-area__card">
-        <h2 className="livelihood-focus-area__title" id={`${id}-title`}>
+        <h2
+          className="livelihood-focus-area__title"
+          id={`${id}-title`}
+          ref={headingRef}
+          tabIndex={-1}
+        >
           {title}
         </h2>
         <div className="livelihood-focus-area__text">
