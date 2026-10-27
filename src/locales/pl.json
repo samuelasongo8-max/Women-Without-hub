@@ -108,7 +108,9 @@
       "Secretary": "Secretary",
       "Member": "Member",
       "whyIntro": "Kobiety i dziewczyny w obozie dla uchodźców w Kakuma stają przed wieloma wyzwaniami, w tym trudnościami finansowymi, przerwaną edukację, ograniczony dostęp do szkolenia zawodowego i bariery w dostępie do pracy i opieki zdrowotnej. Dla młodzieżowych matek te wyzwania mogą być jeszcze większe, ponieważ equilibrwana jest między opieką nad dziećmi a edukacją i rozwojem osobistym. W Women Without Borders Hub wierzymy, że każda dziewczyna i młoda kobieta zasługuje na szansę przezwyciężenia tych barier, odkrycie swojego potencjału i zbudowanie lepszego przyszłości. Promując edukację, praktyczne umiejętności, mentorowanie, świadomość zdrowotna i empowering ekonomiczny, staramy się tworzyć możliwości, aby kobiety i dziewczyny rosły w pewności siebie, umacniały swoją niezależność i przyczyniały się do swoich społeczności."
-    }
+    },
+    "whyIntro": "Kobiety i dziewczęta w Kakuma Refugee Camp mierzą się z wieloma trudnościami, takimi jak problemy finansowe, przerwana nauka, ograniczony dostęp do szkoleń oraz bariery w dostępie do pracy i opieki zdrowotnej. Młode matki muszą dodatkowo łączyć opiekę nad dziećmi z nauką i własnym rozwojem. W Women Without Borders Hub wierzymy, że każda dziewczyna i młoda kobieta zasługuje na szansę pokonania tych przeszkód, odkrycia swojego potencjału i zbudowania lepszej przyszłości. Wspierając edukację, praktyczne umiejętności, mentoring, wiedzę o zdrowiu i niezależność ekonomiczną, pomagamy kobietom i dziewczętom rozwijać pewność siebie, samodzielność i zaangażowanie w życie społeczności.",
+    "ctaSeeImpact": "Zobacz, jaką zmianę przynosi Twoje wsparcie →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -317,6 +319,7 @@
       "text": "Mentor or teach",
       "linkLabel": "Contribute skills →",
       "alt": "Share your skills - icon only"
-    }
+    },
+    "intro": "Naszą misję można wspierać na wiele sposobów: poświęcić czas na wolontariat, dzielić się umiejętnościami, udzielić wsparcia finansowego, wspierać młode kobiety jako mentor lub nawiązać z nami współpracę. Każdy wkład ma znaczenie i może zwiększyć dostęp kobiet i dziewcząt w Kakuma Refugee Camp do edukacji, szkoleń, wiedzy o zdrowiu i możliwości ekonomicznych. Razem możemy pokonywać bariery, budować pewność siebie i tworzyć przyszłość, w której każda dziewczyna i młoda kobieta może się rozwijać."
   }
 }

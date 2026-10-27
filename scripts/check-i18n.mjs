@@ -42,6 +42,16 @@ function readLocale(file) {
   }
 }
 
+function hasTranslation(resource, key) {
+  const segments = key.replace(/\[(\d+)\]/g, '.$1').split('.')
+  let value = resource
+  for (const segment of segments) {
+    if (value == null || !Object.hasOwn(value, segment)) return false
+    value = value[segment]
+  }
+  return true
+}
+
 function filesUnder(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
     const file = path.join(directory, entry.name)
@@ -123,23 +133,34 @@ function includesNamespace(key) {
   )
 }
 
-function reportLocale(code, english, locale, requiredKeys, stats) {
+function reportLocale(
+  code,
+  englishResource,
+  english,
+  localeResource,
+  locale,
+  requiredKeys,
+  stats,
+  keyPrefix = '',
+) {
   for (const key of requiredKeys) {
     if (!includesNamespace(key)) continue
     const group = namespaceFor(key)
     const row = (stats[group] ??= { missing: 0, empty: 0, identical: 0 })
-    if (!Object.hasOwn(locale, key)) {
+    const resourceKey = keyPrefix ? key.slice(keyPrefix.length) : key
+    if (!hasTranslation(localeResource, resourceKey)) {
       row.missing += 1
       errors.push(`${code}: missing locale key "${key}"`)
-    } else if (
+    } else if (Object.hasOwn(locale, key) && (
       locale[key] == null ||
       (typeof locale[key] === 'string' && !locale[key].trim())
-    ) {
+    )) {
       row.empty += 1
       errors.push(`${code}: empty locale key "${key}"`)
     } else if (
       code !== 'en' &&
       Object.hasOwn(english, key) &&
+      Object.hasOwn(locale, key) &&
       locale[key] === english[key]
     ) {
       row.identical += 1
@@ -188,7 +209,15 @@ for (const file of localeFiles) {
   if (!localeResource) continue
   const locale = flatten(localeResource)
   const stats = {}
-  reportLocale(code, english, locale, requiredKeys, stats)
+  reportLocale(
+    code,
+    englishResource,
+    english,
+    localeResource,
+    locale,
+    requiredKeys,
+    stats,
+  )
 
   const chatbotFile = chatbotFiles.get(code)
   const chatbotResource = chatbotFile ? readLocale(chatbotFile) : null
@@ -208,10 +237,13 @@ for (const file of localeFiles) {
   )
   reportLocale(
     code,
+    chatbotEnglishResource,
     chatbotEnglishValues,
+    chatbotResource,
     chatbotValues,
     chatbotRequired,
     stats,
+    'chatbot.',
   )
   summary.push({ code, stats })
 }

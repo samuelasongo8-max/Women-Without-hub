@@ -77,12 +77,7 @@ export default function GetInvolvedCards() {
           <h2 id="gi-heading" className="gi-heading">
             {t(GI_CONFIG.headingKey)}
           </h2>
-          <p className="gi-hero-intro">
-            {t('getInvolvedCards.intro', {
-              defaultValue:
-                'There are many ways you can support our mission, from volunteering your time and sharing your skills to providing financial support, mentoring young women, or partnering with us. Every contribution matters and can help expand access to education, skills development, health awareness, and economic opportunities for women and girls in Kakuma Refugee Camp. Together, we can break barriers, build confidence, and create a future where every girl and young woman has the opportunity to thrive.',
-            })}
-          </p>
+          <p className="gi-hero-intro">{t('getInvolvedCards.intro')}</p>
         </div>
         <div className="gi-hero-panel gi-hero-panel--image">
           <picture>

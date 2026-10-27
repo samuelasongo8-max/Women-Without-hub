@@ -75,7 +75,9 @@
       "Secretary": "Secretary",
       "Member": "Member",
       "whyIntro": "Wanana na waleshi katika kampuni wa refugees ya Kakuma zinatumainikisha mahitaji kadhalini, kulingana na wakati unapoishi mahiri ya kujifau, usimamiifu wa elimu, ukweli wa kuongea kwenye uhuru wa kufikia uhuru wa kazi, na hitilafu za usalama wa afya. kwa wazazi wa vijana, mahitaji haya yatangulia kugawanya kulingana na usalama wa watoto na ukuaji wa elimu. kwa Baba wa Borders ya Wanane wa Kijamii, tunajua kuwa binti binti na bintwana walipopoteza hali zinazoweza kuondoa hatari hizi, kuwafanya kufuata hali yao, kuwapa uwepo wetu, kuweka uhuru wowote, na kucontribute kwa jamii zao."
-    }
+    },
+    "whyIntro": "Wanawake na wasichana katika Kakuma Refugee Camp wanakabiliwa na changamoto nyingi, zikiwemo hali ngumu ya kifedha, kukatizwa kwa masomo, fursa chache za mafunzo ya ujuzi, na vikwazo vya kupata kazi na huduma za afya. Kwa akina mama vijana, changamoto hizi zinaweza kuwa kubwa zaidi wanapojitahidi kusawazisha malezi ya watoto, masomo na maendeleo yao binafsi. Katika Women Without Borders Hub, tunaamini kila msichana na mwanamke kijana anastahili nafasi ya kushinda vikwazo hivi, kugundua uwezo wake na kujenga maisha bora ya baadaye. Kwa kuendeleza elimu, ujuzi wa vitendo, ushauri, uelewa wa afya na uwezeshaji wa kiuchumi, tunalenga kuwasaidia wanawake na wasichana kujiamini, kujitegemea zaidi na kuchangia katika jamii zao.",
+    "ctaSeeImpact": "Ona mabadiliko yanayoletwa na msaada wako →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -317,6 +319,7 @@
       "text": "Mentor or teach",
       "linkLabel": "Contribute skills →",
       "alt": "Share your skills - icon only"
-    }
+    },
+    "intro": "Kuna njia nyingi za kuunga mkono dhamira yetu. Unaweza kujitolea kwa muda wako, kushiriki ujuzi wako, kutoa msaada wa kifedha, kuwa mshauri wa wanawake vijana au kushirikiana nasi. Kila mchango ni muhimu na unaweza kuongeza fursa za elimu, ujuzi, maarifa ya afya na kujipatia kipato kwa wanawake na wasichana katika Kakuma Refugee Camp. Kwa pamoja, tunaweza kuondoa vikwazo, kujenga kujiamini na kuunda mustakabali wenye nafasi ya kustawi kwa kila msichana na mwanamke kijana."
   }
 }

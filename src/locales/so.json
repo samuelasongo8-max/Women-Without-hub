@@ -75,7 +75,9 @@
       "Secretary": "Secretary",
       "Member": "Member",
       "whyIntro": "Women and girls in Kakuma Refugee Camp face many challenges, including financial hardship, interrupted education, limited access to skills training, and barriers to employment and healthcare. For teenage mothers, these challenges can be even greater as they balance childcare with their education and personal development. At Women Without Borders Hub, we believe every girl and young woman deserves the opportunity to overcome these barriers, discover her potential, and build a better future. By promoting education, practical skills, mentorship, health awareness, and economic empowerment, we aim to create opportunities for women and girls to grow in confidence, strengthen their independence, and contribute to their communities."
-    }
+    },
+    "whyIntro": "Haweenka iyo gabdhaha ku nool Kakuma Refugee Camp waxay la kulmaan caqabado badan, sida dhaqaale yari, waxbarasho hakad gasha, fursado kooban oo tababar xirfadeed ah, iyo caqabado ku wajahan shaqo helidda iyo daryeelka caafimaadka. Hooyooyinka da’da yar waxaa intaas u dheer inay isku dheelli tiraan daryeelka carruurta, waxbarashada iyo horumarkooda. Women Without Borders Hub waxay aaminsan tahay in gabar kasta iyo haweeney kasta oo da’ yar ay mudan tahay fursad ay caqabadaha uga gudubto, awooddeeda ku ogaato, mustaqbal wanaagsanna ku dhisato. Annagoo dhiirrigelinayna waxbarashada, xirfadaha wax-ku-oolka ah, hagidda, wacyiga caafimaadka iyo awood-siinta dhaqaale, waxaan doonaynaa in haweenka iyo gabdhuhu kalsooni yeeshaan, madaxbannaanidooda xoojiyaan, bulshadoodana wax ku biiriyaan.",
+    "ctaSeeImpact": "Eeg isbeddelka uu taageeradaadu keento →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -317,6 +319,7 @@
       "text": "Mentor or teach",
       "linkLabel": "Contribute skills →",
       "alt": "Share your skills - icon only"
-    }
+    },
+    "intro": "Waxaa jira siyaabo badan oo aad ku taageeri karto himiladeenna: waqtigaaga iskaa wax u qabso ugu bixi, xirfadahaaga la wadaag, taageero dhaqaale bixi, haweenka da’da yar hag, ama nala samee iskaashi. Wax ku biirin kastaa waa muhiim, waxayna ballaarin kartaa fursadaha waxbarasho, xirfad-barasho, wacyiga caafimaadka iyo dhaqaalaha ee haweenka iyo gabdhaha ku nool Kakuma Refugee Camp. Wadajir, waxaan u gudbi karnaa caqabadaha, dhisi karnaa kalsooni, abuuri karnaa mustaqbal ay gabar iyo haweeney kasta oo da’ yar ku kobci karto."
   }
 }

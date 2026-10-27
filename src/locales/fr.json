@@ -75,7 +75,9 @@
       "Secretary": "Secrétaire",
       "Member": "Membre",
       "whyIntro": "Femmes et filles dans le camp de réfugiés de Kakuma font face à de nombreux défis, notamment la difficulté financière, l'éducation interrompue, un accès limité à la formation professionnelle, et des barrières à l'emploi et aux soins de santé. Pour les mères adolescentes, ces défis peuvent être encore plus grands alors qu'elles équilibrent la garde d'enfants avec leur éducation et leur développement personnel. À Women Without Borders Hub, nous croyons que chaque fille et jeune femme mérite la possibilité de surmonter ces barrières, de découvrir son potentiel et de construire un avenir meilleur. En promouvant l'éducation, les compétences pratiques, le mentorat, la sensibilisation à la santé et l'empowerment économique, nous visons à créer des opportunités pour que les femmes et les filles grandissent en confiance, renforcent leur indépendance et contribuent à leurs communautés."
-    }
+    },
+    "whyIntro": "Les femmes et les filles de Kakuma Refugee Camp font face à de nombreux défis, notamment les difficultés financières, les interruptions de scolarité, le manque d’accès à la formation professionnelle et les obstacles à l’emploi et aux soins de santé. Pour les mères adolescentes, ces difficultés peuvent être encore plus grandes lorsqu’elles doivent concilier la garde des enfants, les études et leur développement personnel. À Women Without Borders Hub, nous croyons que chaque fille et chaque jeune femme mérite de pouvoir surmonter ces obstacles, découvrir son potentiel et construire un avenir meilleur. En favorisant l’éducation, les compétences pratiques, le mentorat, la sensibilisation à la santé et l’autonomie économique, nous voulons aider les femmes et les filles à gagner en confiance, à renforcer leur indépendance et à contribuer à leur communauté.",
+    "ctaSeeImpact": "Voyez ce que votre soutien peut changer →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -317,6 +319,7 @@
       "text": "Mentor or teach",
       "linkLabel": "Contribute skills →",
       "alt": "Share your skills - icon only"
-    }
+    },
+    "intro": "Vous pouvez soutenir notre mission de nombreuses façons : donner de votre temps, partager vos compétences, apporter un soutien financier, accompagner de jeunes femmes ou établir un partenariat avec nous. Chaque contribution compte et peut faciliter l’accès à l’éducation, aux compétences, à l’information sur la santé et aux possibilités économiques pour les femmes et les filles de Kakuma Refugee Camp. Ensemble, nous pouvons lever des obstacles, renforcer la confiance et créer un avenir où chaque fille et chaque jeune femme peut s’épanouir."
   }
 }
