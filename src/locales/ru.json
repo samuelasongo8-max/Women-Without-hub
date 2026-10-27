@@ -88,6 +88,11 @@
     "top": "В начало страницы",
     "bottom": "В конец страницы"
   },
+  "whyThisMatters": {
+    "schoolgirlsAlt": "Две школьницы идут вместе",
+    "educationAlt": "Женщина читает во время учебного занятия",
+    "skillsAlt": "Женщина учится шить"
+  },
   "common": {
     "learnMore": "Learn more",
     "readMore": "Read more",

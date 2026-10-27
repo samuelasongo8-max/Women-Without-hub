@@ -55,6 +55,11 @@
     "top": "Ir al inicio",
     "bottom": "Ir al final"
   },
+  "whyThisMatters": {
+    "schoolgirlsAlt": "Dos alumnas caminando juntas",
+    "educationAlt": "Una mujer leyendo durante una actividad educativa",
+    "skillsAlt": "Una mujer aprendiendo a coser"
+  },
   "common": {
     "learnMore": "Saber más",
     "readMore": "Leer más",

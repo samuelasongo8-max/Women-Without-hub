@@ -55,6 +55,11 @@
     "top": "Nenda juu ya ukurasa",
     "bottom": "Nenda chini ya ukurasa"
   },
+  "whyThisMatters": {
+    "schoolgirlsAlt": "Wasichana wawili wa shule wakitembea pamoja",
+    "educationAlt": "Mwanamke akisoma wakati wa shughuli ya elimu",
+    "skillsAlt": "Mwanamke akijifunza kushona"
+  },
   "common": {
     "learnMore": "Jifunze zaidi",
     "readMore": "Soma zaidi",
