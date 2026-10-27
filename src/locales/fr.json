@@ -58,7 +58,8 @@
   "whyThisMatters": {
     "schoolgirlsAlt": "Deux écolières marchant ensemble",
     "educationAlt": "Une femme qui lit pendant une activité éducative",
-    "skillsAlt": "Une femme qui apprend à coudre"
+    "skillsAlt": "Une femme qui apprend à coudre",
+    "exploreMore": "En savoir plus"
   },
   "common": {
     "learnMore": "En savoir plus",
@@ -81,7 +82,7 @@
       "Member": "Membre"
     },
     "whyIntro": "Les femmes et les filles de Kakuma Refugee Camp font face à de nombreux défis, notamment les difficultés financières, les interruptions de scolarité, le manque d’accès à la formation professionnelle et les obstacles à l’emploi et aux soins de santé. Pour les mères adolescentes, ces difficultés peuvent être encore plus grandes lorsqu’elles doivent concilier la garde des enfants, les études et leur développement personnel. À Women Without Borders Hub, nous croyons que chaque fille et chaque jeune femme mérite de pouvoir surmonter ces obstacles, découvrir son potentiel et construire un avenir meilleur. En favorisant l’éducation, les compétences pratiques, le mentorat, la sensibilisation à la santé et l’autonomie économique, nous voulons aider les femmes et les filles à gagner en confiance, à renforcer leur indépendance et à contribuer à leur communauté.",
-    "ctaSeeImpact": "Voyez ce que votre soutien peut changer →"
+    "ctaSeeImpact": "Découvrez notre impact →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -455,12 +456,13 @@
     "girls": "filles",
     "connector": "et des",
     "youngWomen": "jeunes femmes",
-    "location": "à Kakuma",
+    "location": "à Kakuma, au Kenya",
     "lead": "Créer des opportunités pour les filles vulnérables, les mères adolescentes et les jeunes femmes grâce à l'éducation, aux compétences, au mentorat, à la santé et à l'autonomisation économique à Kakuma, au Kenya.",
     "programs": "Nos programmes",
     "realPeople": "Des personnes réelles.",
     "realChange": "Un vrai changement.",
     "photoAlt": "Des femmes fières tenant leurs certificats de formation",
+    "imageBandAlt": "Des femmes participant à un programme communautaire à Kakuma",
     "facebook": "{{name}} sur Facebook",
     "linkedin": "{{name}} sur LinkedIn",
     "featuredMessage": "Message à la une",

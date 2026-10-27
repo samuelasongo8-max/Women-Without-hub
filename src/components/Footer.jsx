@@ -228,18 +228,12 @@ export default function Footer() {
             <li>
               <Link to="/get-involved/volunteer/">{t('footer.volunteer')}</Link>
             </li>
-            <li>
-              <Link to="/get-involved/membership/">{t('footer.membership')}</Link>
-            </li>
           </ul>
         </div>
 
         <div className="footer-col">
           <h3>{t('footer.trustLegal')}</h3>
           <ul>
-            <li>
-              <Link to="/safeguarding/">{t('footer.safeguarding')}</Link>
-            </li>
             <li>
               <Link to="/contact/">{t('footer.contact')}</Link>
             </li>

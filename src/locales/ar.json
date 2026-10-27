@@ -58,7 +58,8 @@
   "whyThisMatters": {
     "schoolgirlsAlt": "طالبتان تسيران معًا",
     "educationAlt": "امرأة تقرأ خلال نشاط تعليمي",
-    "skillsAlt": "امرأة تتعلم الخياطة"
+    "skillsAlt": "امرأة تتعلم الخياطة",
+    "exploreMore": "اكتشفوا المزيد"
   },
   "common": {
     "learnMore": "اعرف المزيد",
@@ -81,7 +82,7 @@
       "Member": "Member"
     },
     "whyIntro": "تواجه النساء والفتيات في Kakuma Refugee Camp تحديات كثيرة، منها الضائقة المالية وانقطاع التعليم ومحدودية فرص التدريب على المهارات والعوائق أمام العمل والرعاية الصحية. وقد تواجه الأمهات المراهقات صعوبات أكبر عند الموازنة بين رعاية الأطفال والتعليم والنمو الشخصي. في Women Without Borders Hub، نؤمن بأن كل فتاة وكل شابة تستحق فرصة لتجاوز هذه العوائق واكتشاف قدراتها وبناء مستقبل أفضل. ومن خلال دعم التعليم والمهارات العملية والإرشاد والتوعية الصحية والتمكين الاقتصادي، نسعى إلى مساعدة النساء والفتيات على اكتساب الثقة وتعزيز استقلالهن والمساهمة في مجتمعاتهن.",
-    "ctaSeeImpact": "اكتشفوا أثر دعمكم →"
+    "ctaSeeImpact": "اكتشفوا أثرنا ←"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -455,12 +456,13 @@
     "girls": "الفتيات",
     "connector": "و",
     "youngWomen": "الشابات",
-    "location": "في كاكوما",
+    "location": "في كاكوما، كينيا",
     "lead": "نعمل على إيجاد فرص للفتيات الأكثر عرضة للمخاطر والأمهات المراهقات والشابات من خلال التعليم والمهارات والإرشاد والدعم الصحي والتمكين الاقتصادي في كاكوما، كينيا.",
     "programs": "برامجنا",
     "realPeople": "أشخاص حقيقيون.",
     "realChange": "تغيير حقيقي.",
     "photoAlt": "نساء يحملن شهادات تخرجهن بفخر",
+    "imageBandAlt": "نساء يشاركن في برنامج مجتمعي في كاكوما",
     "facebook": "{{name}} على فيسبوك",
     "linkedin": "{{name}} على لينكدإن",
     "featuredMessage": "رسالة مميزة",

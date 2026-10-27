@@ -91,7 +91,8 @@
   "whyThisMatters": {
     "schoolgirlsAlt": "Dwie uczennice idą razem",
     "educationAlt": "Kobieta czyta podczas zajęć edukacyjnych",
-    "skillsAlt": "Kobieta uczy się szyć"
+    "skillsAlt": "Kobieta uczy się szyć",
+    "exploreMore": "Odkryj więcej"
   },
   "common": {
     "learnMore": "Learn more",
@@ -114,7 +115,7 @@
       "Member": "Member"
     },
     "whyIntro": "Kobiety i dziewczęta w Kakuma Refugee Camp mierzą się z wieloma trudnościami, takimi jak problemy finansowe, przerwana nauka, ograniczony dostęp do szkoleń oraz bariery w dostępie do pracy i opieki zdrowotnej. Młode matki muszą dodatkowo łączyć opiekę nad dziećmi z nauką i własnym rozwojem. W Women Without Borders Hub wierzymy, że każda dziewczyna i młoda kobieta zasługuje na szansę pokonania tych przeszkód, odkrycia swojego potencjału i zbudowania lepszej przyszłości. Wspierając edukację, praktyczne umiejętności, mentoring, wiedzę o zdrowiu i niezależność ekonomiczną, pomagamy kobietom i dziewczętom rozwijać pewność siebie, samodzielność i zaangażowanie w życie społeczności.",
-    "ctaSeeImpact": "Zobacz, jaką zmianę przynosi Twoje wsparcie →"
+    "ctaSeeImpact": "Zobacz nasz wpływ →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -455,12 +456,13 @@
     "girls": "dziewczęta",
     "connector": "i",
     "youngWomen": "młode kobiety",
-    "location": "w Kakumie",
+    "location": "w Kakumie, w Kenii",
     "lead": "Tworzymy możliwości dla dziewcząt w trudnej sytuacji, nastoletnich matek i młodych kobiet poprzez edukację, rozwój umiejętności, mentoring, wsparcie zdrowotne i wzmocnienie ekonomiczne w Kakumie w Kenii.",
     "programs": "Nasze programy",
     "realPeople": "Prawdziwi ludzie.",
     "realChange": "Prawdziwa zmiana.",
     "photoAlt": "Kobiety z dumą trzymające swoje certyfikaty ukończenia szkolenia",
+    "imageBandAlt": "Kobiety uczestniczące w programie społecznościowym w Kakumie",
     "facebook": "{{name}} na Facebooku",
     "linkedin": "{{name}} na LinkedIn",
     "featuredMessage": "Wyróżniona wiadomość",

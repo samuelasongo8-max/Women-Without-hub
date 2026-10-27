@@ -53,7 +53,11 @@ export default function Home() {
           "Community Updates & Stories" and "Our Programs".
           The message is overlaid on the photo; the band keeps its
           original height. */}
-      <ImageBand image={IMAGE_BAND_IMAGE} overlayText={t('homePage.intro', { defaultValue: `${ORG_NAME} — empowering girls and young women in Kakuma Refugee Camp, Kenya.` })} />
+      <ImageBand
+        image={IMAGE_BAND_IMAGE}
+        alt={t('homeHero.imageBandAlt')}
+        overlayText={t('homePage.intro', { defaultValue: `${ORG_NAME} — empowering girls and young women in Kakuma Refugee Camp, Kenya.` })}
+      />
       <Programs />
       <WhyThisMatters />
       <QuoteFeature

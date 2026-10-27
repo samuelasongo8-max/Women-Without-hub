@@ -58,7 +58,8 @@
   "whyThisMatters": {
     "schoolgirlsAlt": "Wasichana wawili wa shule wakitembea pamoja",
     "educationAlt": "Mwanamke akisoma wakati wa shughuli ya elimu",
-    "skillsAlt": "Mwanamke akijifunza kushona"
+    "skillsAlt": "Mwanamke akijifunza kushona",
+    "exploreMore": "Gundua Zaidi"
   },
   "common": {
     "learnMore": "Jifunze zaidi",
@@ -81,7 +82,7 @@
       "Member": "Member"
     },
     "whyIntro": "Wanawake na wasichana katika Kakuma Refugee Camp wanakabiliwa na changamoto nyingi, zikiwemo hali ngumu ya kifedha, kukatizwa kwa masomo, fursa chache za mafunzo ya ujuzi, na vikwazo vya kupata kazi na huduma za afya. Kwa akina mama vijana, changamoto hizi zinaweza kuwa kubwa zaidi wanapojitahidi kusawazisha malezi ya watoto, masomo na maendeleo yao binafsi. Katika Women Without Borders Hub, tunaamini kila msichana na mwanamke kijana anastahili nafasi ya kushinda vikwazo hivi, kugundua uwezo wake na kujenga maisha bora ya baadaye. Kwa kuendeleza elimu, ujuzi wa vitendo, ushauri, uelewa wa afya na uwezeshaji wa kiuchumi, tunalenga kuwasaidia wanawake na wasichana kujiamini, kujitegemea zaidi na kuchangia katika jamii zao.",
-    "ctaSeeImpact": "Ona mabadiliko yanayoletwa na msaada wako →"
+    "ctaSeeImpact": "Tazama Athari Yetu →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -455,12 +456,13 @@
     "girls": "wasichana",
     "connector": "na",
     "youngWomen": "wanawake vijana",
-    "location": "huko Kakuma",
+    "location": "huko Kakuma, Kenya",
     "lead": "Tunaunda fursa kwa wasichana walio katika mazingira hatarishi, akina mama vijana na wanawake vijana kupitia elimu, ujuzi, ushauri, afya na uwezeshaji wa kiuchumi huko Kakuma, Kenya.",
     "programs": "Programu Zetu",
     "realPeople": "Watu Halisi.",
     "realChange": "Mabadiliko Halisi.",
     "photoAlt": "Wanawake wakishikilia vyeti vyao vya kuhitimu kwa fahari",
+    "imageBandAlt": "Wanawake wakishiriki katika programu ya jamii huko Kakuma",
     "facebook": "{{name}} kwenye Facebook",
     "linkedin": "{{name}} kwenye LinkedIn",
     "featuredMessage": "Ujumbe maalum",

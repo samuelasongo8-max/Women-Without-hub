@@ -55,8 +55,7 @@ export const SITE = {
   name: ORG_NAME,
 
   // Primary site title (Home page SEO title).
-  homeTitle:
-    `${ORG_NAME} | Empowering Girls & Young Women in Kakuma`,
+  homeTitle: 'Empower girls in Kakuma, Kenya | Women Without Borders Hub',
 
   // Override VITE_SITE_URL when deploying to a verified custom domain.
   url: normalizeSiteUrl(import.meta.env.VITE_SITE_URL || DEFAULT_SITE_URL),
@@ -70,7 +69,7 @@ export const SITE = {
 
   // 3. Website descriptions.
   description:
-    `${ORG_NAME} is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women through education, literacy, mentorship, health support, practical skills and economic empowerment.`,
+    'Women Without Borders Hub empowers girls and young women in Kakuma, Kenya through education, mentorship, health support and practical skills.',
   shortDescription:
     'Creating opportunities for vulnerable girls, teenage mothers and young women through education, skills, mentorship, health and economic empowerment in Kakuma, Kenya.',
 

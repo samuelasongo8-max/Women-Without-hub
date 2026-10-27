@@ -58,7 +58,8 @@
   "whyThisMatters": {
     "schoolgirlsAlt": "Due studentesse camminano insieme",
     "educationAlt": "Una donna legge durante un'attività educativa",
-    "skillsAlt": "Una donna impara a cucire"
+    "skillsAlt": "Una donna impara a cucire",
+    "exploreMore": "Scopri di più"
   },
   "common": {
     "learnMore": "Scopri di più",
@@ -81,7 +82,7 @@
       "Member": "Member"
     },
     "whyIntro": "Le donne e le ragazze di Kakuma Refugee Camp affrontano molte difficoltà, tra cui problemi economici, interruzioni degli studi, scarso accesso alla formazione e ostacoli al lavoro e alle cure sanitarie. Per le giovani madri può essere ancora più difficile conciliare la cura dei figli con lo studio e la crescita personale. In Women Without Borders Hub crediamo che ogni ragazza e giovane donna meriti la possibilità di superare queste barriere, scoprire il proprio potenziale e costruire un futuro migliore. Promuovendo istruzione, competenze pratiche, tutoraggio, consapevolezza della salute e autonomia economica, vogliamo aiutare donne e ragazze a rafforzare fiducia, indipendenza e partecipazione alla comunità.",
-    "ctaSeeImpact": "Scopri il cambiamento che il tuo sostegno rende possibile →"
+    "ctaSeeImpact": "Scopri il nostro impatto →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -455,12 +456,13 @@
     "girls": "ragazze",
     "connector": "e",
     "youngWomen": "giovani donne",
-    "location": "a Kakuma",
+    "location": "a Kakuma, in Kenya",
     "lead": "Creiamo opportunità per ragazze vulnerabili, madri adolescenti e giovani donne attraverso istruzione, competenze, mentoring, salute e autonomia economica a Kakuma, in Kenya.",
     "programs": "I nostri programmi",
     "realPeople": "Persone vere.",
     "realChange": "Un cambiamento reale.",
     "photoAlt": "Donne che tengono con orgoglio i loro attestati di formazione",
+    "imageBandAlt": "Donne che partecipano a un programma comunitario a Kakuma",
     "facebook": "{{name}} su Facebook",
     "linkedin": "{{name}} su LinkedIn",
     "featuredMessage": "Messaggio in evidenza",

@@ -58,7 +58,8 @@
   "whyThisMatters": {
     "schoolgirlsAlt": "Two schoolgirls walking together",
     "educationAlt": "A woman reading during a learning activity",
-    "skillsAlt": "A woman learning to sew"
+    "skillsAlt": "A woman learning to sew",
+    "exploreMore": "Explore more"
   },
   "common": {
     "learnMore": "Learn more",
@@ -81,7 +82,7 @@
       "Member": "Member"
     },
     "whyIntro": "Women and girls in Kakuma Refugee Camp face many challenges, including financial hardship, interrupted education, limited access to skills training, and barriers to employment and healthcare. For teenage mothers, these challenges can be even greater as they balance childcare with their education and personal development. At Women Without Borders Hub, we believe every girl and young woman deserves the opportunity to overcome these barriers, discover her potential, and build a better future. By promoting education, practical skills, mentorship, health awareness, and economic empowerment, we aim to create opportunities for women and girls to grow in confidence, strengthen their independence, and contribute to their communities.",
-    "ctaSeeImpact": "See the difference your support makes →"
+    "ctaSeeImpact": "See our impact →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -103,12 +104,13 @@
     "girls": "girls",
     "connector": "&",
     "youngWomen": "young women",
-    "location": "in Kakuma",
+    "location": "in Kakuma, Kenya",
     "lead": "Creating opportunities for vulnerable girls, teenage mothers and young women through education, skills, mentorship, health and economic empowerment in Kakuma, Kenya.",
     "programs": "Our Programs",
     "realPeople": "Real People.",
     "realChange": "Real Change.",
     "photoAlt": "Women proudly holding their graduation certificates",
+    "imageBandAlt": "Women taking part in a community program in Kakuma",
     "facebook": "{{name}} on Facebook",
     "linkedin": "{{name}} on LinkedIn",
     "featuredMessage": "Featured message",

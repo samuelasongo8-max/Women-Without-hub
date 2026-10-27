@@ -1,16 +1,66 @@
 import { Link } from 'react-router-dom'
 import { ORG_NAME } from '../config/site.js'
+import { useEffect, useRef, useState } from 'react'
 import './Impact.css'
 
 const stats = [
-  { number: '200+', label: 'Women & girls reached' },
-  { number: '6', label: 'Core Programs' },
-  { number: '1', label: 'Kakuma Refugee Camp' },
+  { value: 200, suffix: '+', label: 'Women & girls reached' },
+  { value: 6, suffix: '', label: 'Core Programs' },
+  { value: 1, suffix: '', label: 'Kakuma Refugee Camp' },
 ]
 
 export default function ImpactSection() {
+  const sectionRef = useRef(null)
+  const [countProgress, setCountProgress] = useState(0)
+
+  useEffect(() => {
+    const section = sectionRef.current
+    if (!section) return undefined
+
+    let animationFrame = 0
+    let startTime
+    let observer
+
+    const startCount = () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        setCountProgress(1)
+        return
+      }
+
+      const animate = (time) => {
+        if (startTime === undefined) startTime = time
+        const progress = Math.min((time - startTime) / 900, 1)
+        setCountProgress(1 - (1 - progress) ** 3)
+        if (progress < 1) animationFrame = window.requestAnimationFrame(animate)
+      }
+
+      animationFrame = window.requestAnimationFrame(animate)
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      startCount()
+      return () => window.cancelAnimationFrame(animationFrame)
+    }
+
+    observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          observer.disconnect()
+          startCount()
+        }
+      },
+      { threshold: 0.25 },
+    )
+    observer.observe(section)
+
+    return () => {
+      observer.disconnect()
+      window.cancelAnimationFrame(animationFrame)
+    }
+  }, [])
+
   return (
-    <section className="auvd-impact" id="our-impact">
+    <section className="auvd-impact" id="our-impact" ref={sectionRef}>
       <div className="auvd-impact-inner">
         <div className="auvd-impact__photo" aria-hidden="true">
           <span className="auvd-impact__stroke auvd-impact__stroke--1" />
@@ -39,7 +89,7 @@ export default function ImpactSection() {
           {stats.map((s) => (
             <div key={s.label} className="auvd-stat">
               <dt>{s.label}</dt>
-              <dd>{s.number}</dd>
+              <dd>{Math.round(s.value * countProgress)}{s.suffix}</dd>
             </div>
           ))}
         </dl>

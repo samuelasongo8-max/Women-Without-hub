@@ -58,7 +58,8 @@
   "whyThisMatters": {
     "schoolgirlsAlt": "Laba gabdhood oo arday ah oo wada socda",
     "educationAlt": "Haweeney wax akhrinaysa inta lagu jiro hawl waxbarasho",
-    "skillsAlt": "Haweeney baranaysa tolidda"
+    "skillsAlt": "Haweeney baranaysa tolidda",
+    "exploreMore": "Wax badan Baadh"
   },
   "common": {
     "learnMore": "Wax badan baro",
@@ -81,7 +82,7 @@
       "Member": "Member"
     },
     "whyIntro": "Haweenka iyo gabdhaha ku nool Kakuma Refugee Camp waxay la kulmaan caqabado badan, sida dhaqaale yari, waxbarasho hakad gasha, fursado kooban oo tababar xirfadeed ah, iyo caqabado ku wajahan shaqo helidda iyo daryeelka caafimaadka. Hooyooyinka da’da yar waxaa intaas u dheer inay isku dheelli tiraan daryeelka carruurta, waxbarashada iyo horumarkooda. Women Without Borders Hub waxay aaminsan tahay in gabar kasta iyo haweeney kasta oo da’ yar ay mudan tahay fursad ay caqabadaha uga gudubto, awooddeeda ku ogaato, mustaqbal wanaagsanna ku dhisato. Annagoo dhiirrigelinayna waxbarashada, xirfadaha wax-ku-oolka ah, hagidda, wacyiga caafimaadka iyo awood-siinta dhaqaale, waxaan doonaynaa in haweenka iyo gabdhuhu kalsooni yeeshaan, madaxbannaanidooda xoojiyaan, bulshadoodana wax ku biiriyaan.",
-    "ctaSeeImpact": "Eeg isbeddelka uu taageeradaadu keento →"
+    "ctaSeeImpact": "Eeg Saameyntayada →"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -455,12 +456,13 @@
     "girls": "gabdhaha",
     "connector": "iyo",
     "youngWomen": "haweenka da'da yar",
-    "location": "ee Kakuma",
+    "location": "ee Kakuma, Kenya",
     "lead": "Waxaan abuurnaa fursado ay gabdhaha nugul, hooyooyinka da'da yar iyo haweenka da'da yar ku helaan waxbarasho, xirfado, hagid, taageero caafimaad iyo awood dhaqaale gudaha Kakuma, Kenya.",
     "programs": "Barnaamijyadeenna",
     "realPeople": "Dad Dhab ah.",
     "realChange": "Isbeddel Dhab ah.",
     "photoAlt": "Haween ku faraxsan oo haya shahaadooyinkooda qalin-jabinta",
+    "imageBandAlt": "Haween ka qayb qaadanaya barnaamij bulsho oo Kakuma ka socda",
     "facebook": "{{name}} oo ku jira Facebook",
     "linkedin": "{{name}} oo ku jira LinkedIn",
     "featuredMessage": "Fariin la soo bandhigay",

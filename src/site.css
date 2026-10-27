@@ -654,10 +654,10 @@ h1, h2, h3 {
   align-items: center;
   padding: 4rem 2rem;
   background-image:
-    linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.62), transparent 76%),
+    linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.24) 100%),
     url("/images/about-banner-desktop.jpg");
   background-image:
-    linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.62), transparent 76%),
+    linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.24) 100%),
     image-set(
       url("/images/about-banner-desktop.webp") type("image/webp"),
       url("/images/about-banner-desktop.jpg") type("image/jpeg")
@@ -667,6 +667,8 @@ h1, h2, h3 {
   background-repeat: no-repeat;
   background-color: #1f2430;
   background-attachment: scroll;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  box-sizing: border-box;
 }
 
 .auvd-about-overlay {
@@ -719,10 +721,10 @@ h1, h2, h3 {
     padding: 2.5rem 1.25rem;
     align-items: flex-end;
     background-image:
-      linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.65), transparent 90%),
+      linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.28) 100%),
       url("/images/about-banner-mobile.jpg");
     background-image:
-      linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.65), transparent 90%),
+      linear-gradient(var(--hero-scrim-direction), rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.28) 100%),
       image-set(
         url("/images/about-banner-mobile.webp") type("image/webp"),
         url("/images/about-banner-mobile.jpg") type("image/jpeg")

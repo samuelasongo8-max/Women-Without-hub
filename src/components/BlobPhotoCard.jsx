@@ -22,6 +22,7 @@ export default function BlobPhotoCard({ image, alt, lines = [] }) {
         <g clipPath={`url(#${clipId})`}>
           <rect x="10" y="-6" width="260" height="280" fill="#7b8f45" />
           <image
+            className="bp-photo"
             href={photo}
             loading="lazy"
             decoding="async"
