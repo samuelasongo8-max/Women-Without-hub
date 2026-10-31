@@ -1,50 +1,46 @@
 import { useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import PageHeader from '../components/PageHeader.jsx'
 import './Resources.css'
 
 const resources = [
   {
-    type: 'Report',
-    title: 'Annual Impact Report 2025',
-    description: 'Outcomes, finances and stories from every programme area.',
+    id: 'annualReport',
+    type: 'report',
     // No file yet: `file: null` renders the "Will be updated soon" button.
     // Put a path here later (e.g. '/files/annual-impact-report-2025.pdf')
     // and this row automatically becomes a real <a href={file} download> link.
     file: null,
   },
   {
-    type: 'Guide',
-    title: 'Menstrual Dignity Implementation Guide',
-    description: 'Practical guidance for schools and workplaces on WASH and supplies.',
+    id: 'menstrualGuide',
+    type: 'guide',
     file: null,
   },
   {
-    type: 'Toolkit',
-    title: 'Digital Skills Curriculum',
-    description: 'Open curriculum for community-led digital literacy bootcamps.',
+    id: 'digitalCurriculum',
+    type: 'toolkit',
     file: null,
   },
   {
-    type: 'Policy',
-    title: 'Safeguarding & Child Protection Policy',
-    description: 'Our standards for keeping participants safe.',
+    id: 'safeguardingPolicy',
+    type: 'policy',
     file: null,
   },
   {
-    type: 'Research',
-    title: 'SRHR Knowledge, Attitudes & Practices Study',
-    description: 'Baseline research across 12 districts.',
+    id: 'srhrStudy',
+    type: 'research',
     file: null,
   },
   {
-    type: 'Guide',
-    title: 'Starting a Savings Group',
-    description: 'A step-by-step handbook for forming and running a savings group.',
+    id: 'savingsGuide',
+    type: 'guide',
     file: null,
   },
 ]
 
 export default function Resources() {
+  const { t } = useTranslation()
   // Index of the row showing "Will be updated soon" (only one at a time).
   const [noticeIndex, setNoticeIndex] = useState(null)
   const timerRef = useRef(null)
@@ -58,34 +54,40 @@ export default function Resources() {
   return (
     <div className="resources-page">
       <PageHeader
-        title="Resources"
-        intro="Reports, toolkits and guides from our work — free to download and reuse."
+        title={t('resources.title')}
+        intro={t('resources.intro')}
       />
 
       <section className="resources-list-wrap">
         <div className="resources-list-column">
           <ul className="resources-list">
             {resources.map((r, index) => (
-              <li key={r.title} className="resources-list-row">
+              <li key={r.id} className="resources-list-row">
                 <div className="resources-list-main">
-                  <p className="resources-list-type">{r.type}</p>
-                  <h2 className="resources-list-title">{r.title}</h2>
-                  <p className="resources-list-desc">{r.description}</p>
+                  <p className="resources-list-type">{t(`resources.types.${r.type}`)}</p>
+                  <h2 className="resources-list-title">
+                    {t(`resources.items.${r.id}.title`)}
+                  </h2>
+                  <p className="resources-list-desc">
+                    {t(`resources.items.${r.id}.description`)}
+                  </p>
                 </div>
                 <p className="resources-list-action" aria-live="polite">
                   {r.file ? (
                     <a href={r.file} download className="resources-list-download">
-                      Download →
+                      {t('resources.download')} →
                     </a>
                   ) : noticeIndex === index ? (
-                    <span className="resources-list-notice">Will be updated soon</span>
+                    <span className="resources-list-notice">
+                      {t('common.willBeUpdatedSoon')}
+                    </span>
                   ) : (
                     <button
                       type="button"
                       className="resources-list-download"
                       onClick={() => showNotice(index)}
                     >
-                      Download →
+                      {t('resources.download')} →
                     </button>
                   )}
                 </p>

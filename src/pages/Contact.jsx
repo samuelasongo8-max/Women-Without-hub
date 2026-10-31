@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
 import PageHeader from '../components/PageHeader.jsx'
@@ -25,10 +25,6 @@ export default function Contact() {
   const [isSending, setIsSending] = useState(false)
   const [canResend, setCanResend] = useState(true)
   const { pathname } = useLocation()
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' })
-  }, [pathname])
 
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
@@ -215,7 +211,7 @@ export default function Contact() {
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{
-                __html: JSON.stringify(breadcrumbListSchema(pathname)),
+                __html: JSON.stringify(breadcrumbListSchema(pathname, undefined, t)),
               }}
             />
           </div>

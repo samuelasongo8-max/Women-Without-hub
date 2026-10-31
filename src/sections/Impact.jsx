@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom'
-import { ORG_NAME } from '../config/site.js'
+import { useTranslation } from 'react-i18next'
 import { useEffect, useRef, useState } from 'react'
+import Reveal from '../components/Reveal.jsx'
 import './Impact.css'
 
 const stats = [
-  { value: 200, suffix: '+', label: 'Women & girls reached' },
-  { value: 6, suffix: '', label: 'Core Programs' },
-  { value: 1, suffix: '', label: 'Kakuma Refugee Camp' },
+  { value: 200, suffix: '+', label: 'impact.sectionStats.reached' },
+  { value: 6, suffix: '', label: 'impact.sectionStats.programmes' },
+  { value: 1, suffix: '', label: 'impact.sectionStats.locations' },
 ]
 
 export default function ImpactSection() {
+  const { t } = useTranslation()
+
   const sectionRef = useRef(null)
   const [countProgress, setCountProgress] = useState(0)
 
@@ -70,25 +73,26 @@ export default function ImpactSection() {
           <img
             className="auvd-impact__img"
             src="/Impact%20at%20Women%20without%20border.png"
-            alt={`${ORG_NAME} programme impact in Kakuma`}
+            alt={t('impact.sectionImageAlt')}
             loading="lazy"
           />
         </div>
         <div className="auvd-impact-text">
-          <h2>Our Impact</h2>
-          <p>
-            Measured outcomes across our programmes with refugee and host
-            communities in Kakuma.
-          </p>
+          <Reveal as="h2" direction="up" duration={650}>
+            {t('nav.impact')}
+          </Reveal>
+          <Reveal as="p" direction="up" delay={120} duration={650}>
+            {t('impact.sectionIntro')}
+          </Reveal>
           <Link to="/impact/" className="auvd-impact-btn">
-            <span>See our impact</span>
+            <span>{t('common.ctaSeeImpact', { defaultValue: 'See our impact' })}</span>
             <span aria-hidden="true">→</span>
           </Link>
         </div>
         <dl className="auvd-impact-stats">
           {stats.map((s) => (
             <div key={s.label} className="auvd-stat">
-              <dt>{s.label}</dt>
+              <dt>{t(s.label)}</dt>
               <dd>{Math.round(s.value * countProgress)}{s.suffix}</dd>
             </div>
           ))}

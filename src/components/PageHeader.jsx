@@ -1,6 +1,6 @@
 import Breadcrumbs from './Breadcrumbs.jsx'
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import Reveal from './Reveal.jsx'
+import { useTranslation } from 'react-i18next'
 
 /**>
  * Consistent page header: breadcrumbs (communicates hierarchy to Google),
@@ -15,13 +15,13 @@ export default function PageHeader({
   backgroundPosition = 'center',
   minHeight = '420px',
   className = '',
+  revealTitle = false,
+  revealIntro = false,
+  revealDirection = 'up',
+  revealDelay = 0,
+  revealDuration = 650,
 }) {
-  const location = useLocation()
-
-  // Scroll to top when navigating to this page
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [location.pathname])
+  const { t } = useTranslation()
 
   return (
     <section
@@ -34,13 +34,27 @@ export default function PageHeader({
         backgroundAttachment: image ? 'scroll' : undefined,
         minHeight: minHeight ?? undefined,
       }}
-      aria-label={`Hero background image: ${title} page hero`}
+      aria-label={t('a11y.heroLabel', { title })}
       fetchPriority="high"
     >
       <div className="page-header__overlay" aria-hidden="true" />
       <div className="container">
-        <h1>{title}</h1>
-        {introContent || (intro && <p className="page-intro">{intro}</p>)}
+        {revealTitle ? (
+          <Reveal as="h1" direction={revealDirection} delay={revealDelay} duration={revealDuration}>
+            {title}
+          </Reveal>
+        ) : (
+          <h1>{title}</h1>
+        )}
+        {revealIntro ? (
+          introContent || (intro && (
+            <Reveal as="p" className="page-intro" direction="up" delay={revealDelay + 120} duration={revealDuration}>
+              {intro}
+            </Reveal>
+          ))
+        ) : (
+          introContent || (intro && <p className="page-intro">{intro}</p>)
+        )}
       </div>
     </section>
   )

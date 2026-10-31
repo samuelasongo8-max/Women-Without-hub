@@ -1,4 +1,5 @@
 import { NavLink, Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { newsPosts } from './../data/newsPosts.js'
 import { blogsPosts } from './../data/blogsPosts.js'
 import { reportPosts } from './../data/reportPosts.js'
@@ -8,11 +9,11 @@ import './ImpactsLayout.css'
 
 /** Sections of the Impact area, shown as the "Impacts" sidebar. */
 export const impactSections = [
-  { label: 'All', to: '/impact/' },
-  { label: 'News', to: '/impact/news/' },
-  { label: 'Blogs', to: '/impact/blogs/' },
-  { label: 'Report', to: '/impact/report/' },
-  { label: 'Post', to: '/impact/post/' },
+  { label: 'impact.all', to: '/impact/' },
+  { label: 'impact.sections.news', to: '/impact/news/' },
+  { label: 'impact.sections.blogs', to: '/impact/blogs/' },
+  { label: 'impact.sections.report', to: '/impact/report/' },
+  { label: 'impact.sections.post', to: '/impact/post/' },
 ]
 
 /**
@@ -28,35 +29,28 @@ const allPosts = [...newsPosts, ...blogsPosts, ...reportPosts, ...postPosts].sor
   (a, b) => new Date(b.date) - new Date(a.date),
 )
 
-/** Abbreviated month names, used when formatting each item's date. */
-const monthAbbr = [
-  'Jan',
-  'Feb',
-  'Mar',
-  'Apr',
-  'May',
-  'Jun',
-  'Jul',
-  'Aug',
-  'Sep',
-  'Oct',
-  'Nov',
-  'Dec',
-]
-
 /**
  * A single card rendered by the combined "All" list or a type filter.
  * Same 2-column grid style as the existing card grid, but each card is
  * built from the full item record (image, date, weeks-ago, caption,
  * read time, button + link) instead of a bare excerpt.
  */
-function ImpallCard({ item }) {
-  const date = item.date ? new Date(item.date) : null
+function ImpallCard({ item, t, language }) {
+  const content = item.slug
+    ? t(`updates.items.${item.slug}`, { returnObjects: true })
+    : item
+  const fullText = content.fullText || ''
+  const readMinutes = Math.max(1, Math.round(fullText.trim().split(/\s+/).filter(Boolean).length / 200))
+  const date = item.date ? new Date(`${item.date}T12:00:00`) : null
   // Badge counts live from the stored date on every render (Today →
   // Yesterday → N days/weeks ago), so it moves forward automatically.
-  const relativeLabel = item.date ? formatRelativeDate(item.date) : ''
+  const relativeLabel = item.date ? formatRelativeDate(item.date, language) : ''
   const formattedDate = date
-    ? `${monthAbbr[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+    ? new Intl.DateTimeFormat(language, {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      }).format(date)
     : ''
 
   return (
@@ -65,10 +59,15 @@ function ImpallCard({ item }) {
         className={`impall-card__image${item.image ? '' : ' impall-card__image--empty'}`}
       >
         {item.image ? (
-          <img src={item.image} alt={item.alt ?? item.title} loading="lazy" />
+          <img
+            src={item.image}
+            alt={content.alt || item.alt || content.title || ''}
+            loading="lazy"
+          />
         ) : (
-          /* Same "Photo coming soon" fallback as the Updates cards. */
-          <span className="impall-card__placeholder">Photo coming soon</span>
+          <span className="impall-card__placeholder">
+            {t('common.photoComingSoon')}
+          </span>
         )}
         {relativeLabel !== '' && (
           <span className="impall-card__badge">{relativeLabel}</span>
@@ -78,16 +77,20 @@ function ImpallCard({ item }) {
       <div className="impall-card__body">
         <p className="impall-card__label">
           <span aria-hidden="true" className="impall-card__label-dot" />
-          {item.type}
+          {t(`impact.sections.${item.type.toLowerCase()}`)}
         </p>
-        <h3 className="impall-card__title">{item.title}</h3>
-        {item.caption && <p className="impall-card__caption">{item.caption}</p>}
-        <p className="impall-card__text">{item.excerpt}</p>
+        <h3 className="impall-card__title">{content.title || item.title}</h3>
+        <p className="impall-card__caption">{t('impact.cardCaption')}</p>
+        <p className="impall-card__text">{content.summary || item.excerpt}</p>
         {formattedDate && <p className="impall-card__date">{formattedDate}</p>}
-        {item.readTime && <p className="impall-card__readtime">{item.readTime}</p>}
-        {item.button && (
+        {fullText && (
+          <p className="impall-card__readtime">
+            {t('impact.readTime', { count: readMinutes })}
+          </p>
+        )}
+        {item.to && (
           <Link to={item.to} className="impall-card__button">
-            {item.button}
+            {t('common.readMore')}
           </Link>
         )}
       </div>
@@ -112,6 +115,8 @@ export default function ImpactsLayout({
   notice = null,
   empty = false,
 }) {
+  const { t, i18n } = useTranslation()
+  const language = i18n.resolvedLanguage || 'en'
   const cards = type
     ? allPosts.filter((item) => item.type === type)
     : allPosts
@@ -120,8 +125,8 @@ export default function ImpactsLayout({
     <section className="section container">
       <div className="impacts-layout">
         <aside className="impacts-sidebar">
-          <h2 className="impacts-sidebar__title">Impact</h2>
-          <nav aria-label="Impact sections">
+          <h2 className="impacts-sidebar__title">{t('nav.impact')}</h2>
+          <nav aria-label={t('impact.sectionsLabel')}>
             <ul className="impacts-sidebar__list">
               {impactSections.map((section) => (
                 <li key={section.to}>
@@ -132,7 +137,7 @@ export default function ImpactsLayout({
                       `impacts-sidebar__link${isActive ? ' is-active' : ''}`
                     }
                   >
-                    {section.label}
+                    {t(section.label)}
                   </NavLink>
                 </li>
               ))}
@@ -142,22 +147,27 @@ export default function ImpactsLayout({
 
         <div className="impacts-main">
           {empty ? (
-            <p className="impall-empty">Nothing to show yet.</p>
+            <p className="impall-empty">{t('common.willBeUpdatedSoon')}</p>
           ) : notice ? (
             <p className="impacts-notice">{notice}</p>
           ) : (
             <>
               {type === null && (
-                <h2 className="impall-section-title">All</h2>
+                <h2 className="impall-section-title">{t('impact.all')}</h2>
               )}
               {cards.length > 0 ? (
                 <div className="impall-grid">
                   {cards.map((item) => (
-                    <ImpallCard key={item.id} item={item} />
+                    <ImpallCard
+                      key={item.id}
+                      item={item}
+                      t={t}
+                      language={language}
+                    />
                   ))}
                 </div>
               ) : (
-                <p className="impall-empty">Nothing to show yet.</p>
+                <p className="impall-empty">{t('common.willBeUpdatedSoon')}</p>
               )}
             </>
           )}

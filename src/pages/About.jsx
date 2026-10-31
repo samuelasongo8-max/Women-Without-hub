@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next'
 import Breadcrumbs from '../components/Breadcrumbs.jsx'
-import { ORG_NAME } from '../config/site.js'
-import { SITE } from '../data/seo.js'
 import useHeroImagePreload from '../hooks/useHeroImagePreload.js'
 import './About.css'
 
@@ -28,10 +26,7 @@ export default function About() {
             {t('about.heading', { defaultValue: 'About' })}
           </h1>
           <p className="auvd-about-text">
-            {t('about.paragraph', {
-              defaultValue:
-                `${ORG_NAME} is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women.`,
-            })}
+            {t('about.paragraph')}
           </p>
         </div>
       </section>
@@ -43,7 +38,7 @@ export default function About() {
             <h2 className="auvd-about-mission-title">
               {t('about.missionTitle', { defaultValue: 'Our mission' })}
             </h2>
-            <p className="auvd-about-mission-text">{SITE.mission}</p>
+            <p className="auvd-about-mission-text">{t('about.missionText')}</p>
           </div>
           <div className="auvd-about-vision-box">
             <span className="auvd-quote-mark" aria-hidden="true">&ldquo;</span>
@@ -51,21 +46,24 @@ export default function About() {
               {t('about.visionTitle', { defaultValue: 'Our vision' })}
             </h2>
             <p className="auvd-about-vision-text vision-statement">
-              {SITE.vision}
+              {t('about.visionText')}
             </p>
           </div>
         </div>
       </section>
 
-      <section className="about-info" aria-label="About details">
+      <section
+        className="about-info"
+        aria-label={t('about.detailsLabel', { defaultValue: 'About details' })}
+      >
         <div className="about-info-column">
           <div className="about-info-row">
             <h2 className="about-info-heading">
               {t('about.whoWeServe', { defaultValue: 'Who we serve' })}
             </h2>
             <ul className="about-info-serve">
-              {SITE.primaryAudiences.map((a) => <li key={a}>{a}</li>)}
-              {SITE.communities.map((c) => <li key={c}>{c}</li>)}
+              {t('about.audiences', { returnObjects: true }).map((a) => <li key={a}>{a}</li>)}
+              {t('about.communities', { returnObjects: true }).map((c) => <li key={c}>{c}</li>)}
             </ul>
           </div>
           <div className="about-info-row">
@@ -73,7 +71,7 @@ export default function About() {
               {t('about.coreValues', { defaultValue: 'Our core values' })}
             </h2>
             <ul className="about-info-values">
-              {SITE.values.map((v) => <li key={v}>{v}</li>)}
+              {t('about.coreValuesItems', { returnObjects: true }).map((v) => <li key={v}>{v}</li>)}
             </ul>
           </div>
           <div className="about-info-row">

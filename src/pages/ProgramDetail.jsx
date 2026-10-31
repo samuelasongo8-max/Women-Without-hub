@@ -6,7 +6,6 @@ import { FaBookOpen } from 'react-icons/fa'
 import { programImages } from '../data/programImages.js'
 import { programs } from '../data/site.js'
 import { breadcrumbListSchema } from '../data/seo.js'
-import livelihoodMarkdown from '../content/livelihood-economic-empowerment.en.md?raw'
 import './ProgramDetail.css'
 
 const LIVELIHOOD_SLUG = 'livelihood-economic-empowerment'
@@ -40,53 +39,6 @@ const PROGRAM_HERO_IMAGES = {
   },
 }
 
-function parseLivelihoodContent(markdown) {
-  const lines = markdown.trim().split(/\r?\n/)
-  const document = {
-    title: lines[0].replace(/^#\s+/, '').trim(),
-    subtitle: lines[2].replace(/^###\s+/, '').trim(),
-    intro: [],
-    sections: [],
-  }
-  let section = null
-  let paragraphLines = []
-
-  const flushParagraph = () => {
-    if (paragraphLines.length === 0) return
-
-    const paragraph = paragraphLines.join(' ').trim()
-    paragraphLines = []
-    if (!section) {
-      document.intro.push(paragraph)
-    } else {
-      section.paragraphs.push(paragraph)
-    }
-  }
-
-  for (const line of lines.slice(3)) {
-    if (!line.trim()) {
-      flushParagraph()
-      continue
-    }
-
-    if (line.startsWith('## ')) {
-      flushParagraph()
-      section = {
-        title: line.replace(/^##\s+/, '').trim(),
-        paragraphs: [],
-      }
-      document.sections.push(section)
-      continue
-    }
-
-    paragraphLines.push(line)
-  }
-  flushParagraph()
-
-  return document
-}
-
-const LIVELIHOOD_CONTENT = parseLivelihoodContent(livelihoodMarkdown)
 const LIVELIHOOD_SECTION_IDS = [
   'why-it-matters',
   'who-we-support',
@@ -101,18 +53,19 @@ function LivelihoodContent({
   workingImage,
 }) {
   const { t } = useTranslation()
-  const sections = LIVELIHOOD_CONTENT.sections
+  const content = t('programs.livelihood.overview', { returnObjects: true })
+  const sections = content.sections
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbListSchema(pathname)),
+          __html: JSON.stringify(breadcrumbListSchema(pathname, undefined, t)),
         }}
       />
       <div className="livelihood-intro">
-        {LIVELIHOOD_CONTENT.intro.map((paragraph) => (
+        {content.intro.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
@@ -137,14 +90,13 @@ function LivelihoodContent({
           index === 0
             ? { width: 1000, height: 1250 }
             : { width: 800, height: 800 }
-        const isWorkingTogether =
-          section.title === 'Working Together to Create Opportunities'
+        const isWorkingTogether = index === 2
         const partnerLink = isWorkingTogether ? (
           <Link
             className="livelihood-partner-link livelihood-program-button"
             to="/contact/"
           >
-            Partner with us
+            {t('common.partnerWithUs')}
           </Link>
         ) : null
         const whyActions =
@@ -171,16 +123,9 @@ function LivelihoodContent({
         const textContent = (
           <>
             <h2>{section.title}</h2>
-            {section.paragraphs.map((paragraph, paragraphIndex) => (
+            {section.paragraphs.map((paragraph) => (
               <p key={paragraph}>
-                {paragraphIndex === 1 && isWorkingTogether
-                  ? paragraph.replace(
-                      'Women Without Borders Hub',
-                      t('programs.livelihood.organizationName', {
-                        defaultValue: 'Women Without Borders Hub',
-                      }),
-                    )
-                  : paragraph}
+                {paragraph}
               </p>
             ))}
           </>
@@ -190,7 +135,7 @@ function LivelihoodContent({
           <section
             className={`livelihood-section${hasImage ? ` livelihood-section--with-image${index === 1 ? ' livelihood-section--support-image' : ''}${index === 2 ? ' livelihood-section--working-image' : ''}` : ''}`}
             id={LIVELIHOOD_SECTION_IDS[index]}
-            key={section.title}
+            key={LIVELIHOOD_SECTION_IDS[index]}
           >
             {hasImage ? (
               <>

@@ -9,17 +9,6 @@ import './Footer.css'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-// Route → i18n key for the footer "Explore" column (matches Navbar mapping).
-const FOOTER_NAV_KEY = {
-  '/': 'nav.home',
-  '/about/': 'nav.about',
-  '/programs/': 'nav.programs',
-  '/impact/': 'nav.impact',
-  '/get-involved/': 'nav.getInvolved',
-  '/resources/': 'nav.resources',
-  '/contact/': 'nav.contact',
-}
-
 export default function Footer() {
   const { t } = useTranslation()
   // "Stay in touch" subscribe form state.
@@ -170,7 +159,9 @@ export default function Footer() {
 
             {/* Honeypot — hidden from users; bots often fill it in. */}
             <div className="footer-subscribe__honeypot" aria-hidden="true">
-              <label htmlFor="footer-subscribe-website">Website</label>
+              <label htmlFor="footer-subscribe-website">
+                {t('footer.websiteField')}
+              </label>
               <input
                 id="footer-subscribe-website"
                 name="website"
@@ -212,7 +203,7 @@ export default function Footer() {
             {mainNav.map((item) => (
               <li key={item.to}>
                 <Link to={item.to}>
-                  {t(FOOTER_NAV_KEY[item.to] ?? '', { defaultValue: item.label })}
+                  {t(item.label)}
                 </Link>
               </li>
             ))}
@@ -239,7 +230,7 @@ export default function Footer() {
             </li>
           </ul>
           <Link to={donateCta.to} className="btn btn-donate footer-donate-btn">
-            {donateCta.label}
+            {t('nav.donate')}
           </Link>
         </div>
       </div>

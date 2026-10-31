@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
 import ProgramHero from '../components/ProgramHero.jsx'
@@ -25,12 +24,8 @@ export default function LivelihoodOurApproach() {
   ]
   const breadcrumbTrail = breadcrumbsFor(pathname).map((crumb, index) => ({
     ...crumb,
-    label: breadcrumbLabels[index] || crumb.label,
+    label: breadcrumbLabels[index] || t(crumb.labelKey),
   }))
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
 
   return (
     <>

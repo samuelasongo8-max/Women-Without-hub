@@ -12,7 +12,7 @@
   "contactTeam": "Contactar al equipo",
   "learnMore": "Más información",
   "openPage": "Abrir página",
-  "photoAlt": "Fatuma Abdulahi, Women Without Borders Hub team",
+  "photoAlt": "Fatuma Abdulahi, equipo de Women Without Borders Hub",
   "privacyNote": "No compartas información personal sensible aquí.",
   "clearChat": "Borrar chat",
   "leaveMessage": "Dejar un mensaje",
@@ -67,43 +67,254 @@
     "unsupportedLanguage": "Puedo responder en inglés, francés, árabe, suajili, somalí, español, alemán, portugués, ruso, italiano y polaco. Por ahora responderé en inglés. Nuestro equipo puede hacer seguimiento si dejas un mensaje."
   },
   "programmes": {
-    "education": {"title": "Educación de segunda oportunidad", "answer": "Becas, círculos de alfabetización, apoyo educativo y educación de segunda oportunidad que ayudan a las niñas a permanecer en la escuela y abren oportunidades educativas para las niñas vulnerables de Kakuma."},
-    "digital": {"title": "Habilidades digitales y técnicas", "answer": "Alfabetización informática y cursos intensivos de habilidades digitales, junto con formación profesional en costura, moda, belleza y peluquería para mujeres jóvenes."},
-    "mentorship": {"title": "Mentoría y habilidades para la vida", "answer": "Mentoría, habilidades para la vida, liderazgo, orientación profesional, establecimiento de objetivos y educación financiera para fortalecer la confianza y la autonomía."},
-    "health": {"title": "Salud y dignidad menstrual", "answer": "Educación sobre salud menstrual, productos menstruales, sensibilización sanitaria y derivaciones a servicios de salud para que nadie falte a la escuela o al trabajo."},
-    "srhr": {"title": "Salud y derechos sexuales y reproductivos (SRHR)", "answer": "Educación SRHR adecuada a la edad y sensible a las culturas, educación entre pares y sensibilización comunitaria basadas en el respeto y la elección."},
-    "livelihood": {"title": "Medios de vida y empoderamiento económico", "answer": "Emprendimiento, mentoría empresarial, prácticas, conexiones con mercados y derivaciones laborales para el empoderamiento económico de las mujeres."}
+    "education": {
+      "title": "Educación de segunda oportunidad",
+      "answer": "Becas, círculos de alfabetización, apoyo educativo y educación de segunda oportunidad que ayudan a las niñas a permanecer en la escuela y abren oportunidades educativas para las niñas vulnerables de Kakuma."
+    },
+    "digital": {
+      "title": "Habilidades digitales y técnicas",
+      "answer": "Alfabetización informática y cursos intensivos de habilidades digitales, junto con formación profesional en costura, moda, belleza y peluquería para mujeres jóvenes."
+    },
+    "mentorship": {
+      "title": "Mentoría y habilidades para la vida",
+      "answer": "Mentoría, habilidades para la vida, liderazgo, orientación profesional, establecimiento de objetivos y educación financiera para fortalecer la confianza y la autonomía."
+    },
+    "health": {
+      "title": "Salud y dignidad menstrual",
+      "answer": "Educación sobre salud menstrual, productos menstruales, sensibilización sanitaria y derivaciones a servicios de salud para que nadie falte a la escuela o al trabajo."
+    },
+    "srhr": {
+      "title": "Salud y derechos sexuales y reproductivos (SRHR)",
+      "answer": "Educación SRHR adecuada a la edad y sensible a las culturas, educación entre pares y sensibilización comunitaria basadas en el respeto y la elección."
+    },
+    "livelihood": {
+      "title": "Medios de vida y empoderamiento económico",
+      "answer": "Emprendimiento, mentoría empresarial, prácticas, conexiones con mercados y derivaciones laborales para el empoderamiento económico de las mujeres."
+    }
   },
-  "languageIndicators": ["hola", "gracias", "por favor", "cómo puedo", "dónde está"],
+  "languageIndicators": [
+    "hola",
+    "por favor",
+    "qué",
+    "dónde",
+    "cómo",
+    "gracias"
+  ],
   "keywords": {
-    "welcome": ["hola", "buenos días", "bienvenida"],
-    "about": ["sobre nosotros", "qué hacen", "quiénes son"],
-    "founder": ["fundadora", "quién fundó", "malua"],
-    "location": ["dónde están", "ubicación", "dirección", "kakuma"],
-    "programmes": ["programas", "qué programas", "servicios"],
-    "education": ["educación", "escuela", "alfabetización", "beca", "lectura", "Educación y alfabetización"],
-    "digital": ["digital", "ordenador", "costura", "moda", "belleza", "formación"],
-    "mentorship": ["mentoría", "liderazgo", "carrera", "objetivos", "confianza"],
-    "health": ["salud", "menstrual", "periodo", "compresas", "derivación"],
-    "srhr": ["reproductiva", "salud sexual", "srhr", "educación entre pares"],
-    "livelihood": ["medios de vida", "empresa", "empleo", "prácticas", "ingresos"],
-    "activities": ["actividades", "horario", "horas", "lunes", "viernes"],
-    "join": ["participar", "inscripción", "unirme", "gratis"],
-    "donate": ["donar", "donación", "mpesa", "cuenta bancaria"],
-    "volunteer": ["voluntariado", "voluntario", "ayudar"],
-    "partner": ["socio", "alianza", "colaborar", "fundación"],
-    "skills": ["compartir habilidades", "enseñar", "formación", "mentoría"],
-    "contact": ["contacto", "correo", "contactar al equipo"],
-    "responseTime": ["tiempo de respuesta", "responder", "cuánto tardan"],
-    "donations": ["destino de las donaciones", "uso de donaciones"],
-    "emergency": ["emergencia", "peligro", "violencia", "abuso"],
-    "thanks": ["gracias", "agradecer"],
-    "goodbye": ["adiós", "hasta luego"],
-    "joinDetails": ["quién puede participar", "es gratis", "cómo inscribirme", "cuota de inscripción"]
+    "welcome": [
+      "hola",
+      "buenas",
+      "bienvenidos",
+      "buenos días",
+      "buenas tardes"
+    ],
+    "about": [
+      "sobre nosotros",
+      "a qué se dedican",
+      "quiénes son",
+      "organización",
+      "entidad"
+    ],
+    "founder": [
+      "fundadora",
+      "quién fundó",
+      "quién inició",
+      "malua",
+      "liderazgo"
+    ],
+    "location": [
+      "dónde están",
+      "ubicación",
+      "dónde está el centro",
+      "kakuma",
+      "dirección"
+    ],
+    "programmes": [
+      "programas",
+      "programas",
+      "qué programas",
+      "qué programas",
+      "servicios"
+    ],
+    "education": [
+      "educación",
+      "escuela",
+      "alfabetización",
+      "beca",
+      "lectura",
+      "segunda oportunidad",
+      "clases de refuerzo",
+      "educación y alfabetización"
+    ],
+    "digital": [
+      "tecnología digital",
+      "ordenador",
+      "habilidades",
+      "costura",
+      "moda",
+      "belleza",
+      "peluquería",
+      "formación profesional",
+      "capacitación"
+    ],
+    "mentorship": [
+      "mentora",
+      "mentoría",
+      "habilidades para la vida",
+      "liderazgo",
+      "carrera",
+      "metas",
+      "confianza"
+    ],
+    "health": [
+      "salud",
+      "menstruación",
+      "periodo",
+      "compresas",
+      "productos",
+      "derivación"
+    ],
+    "srhr": [
+      "salud reproductiva",
+      "salud sexual",
+      "srhr",
+      "educación entre pares",
+      "concienciación"
+    ],
+    "livelihood": [
+      "medios de vida",
+      "empresa",
+      "emprendimiento",
+      "empleo",
+      "empleo",
+      "aprendizaje en el trabajo",
+      "ingresos",
+      "educación financiera"
+    ],
+    "activities": [
+      "actividades",
+      "horario",
+      "horario de apertura",
+      "cuándo",
+      "hora",
+      "lunes",
+      "viernes",
+      "centro",
+      "centro"
+    ],
+    "join": [
+      "unirse",
+      "registrarse",
+      "inscripción",
+      "quién puede unirse",
+      "gratis",
+      "matricularse",
+      "inscribirse"
+    ],
+    "donate": [
+      "donar",
+      "donación",
+      "aportar dinero",
+      "M-Pesa",
+      "M-Pesa",
+      "cuenta bancaria"
+    ],
+    "volunteer": [
+      "voluntario",
+      "voluntariado",
+      "ayudar",
+      "dedicar tiempo"
+    ],
+    "partner": [
+      "socio",
+      "colaboración",
+      "colaborar",
+      "organización",
+      "fundación",
+      "empresa"
+    ],
+    "skills": [
+      "compartir habilidades",
+      "ofrecer habilidades",
+      "enseñar",
+      "orientar",
+      "formación",
+      "competencias profesionales"
+    ],
+    "contact": [
+      "contacto",
+      "correo electrónico",
+      "número de teléfono",
+      "ponerse en contacto",
+      "contactar con el equipo"
+    ],
+    "responseTime": [
+      "tiempo de respuesta",
+      "responder",
+      "cuánto tarda",
+      "cuándo responderán"
+    ],
+    "donations": [
+      "destino de las donaciones",
+      "uso de las donaciones",
+      "dinero donado",
+      "fondos"
+    ],
+    "emergency": [
+      "emergencia",
+      "peligro",
+      "abuso",
+      "violencia",
+      "en peligro"
+    ],
+    "thanks": [
+      "gracias",
+      "gracias",
+      "lo agradezco"
+    ],
+    "goodbye": [
+      "adiós",
+      "chao",
+      "nos vemos",
+      "cuídate"
+    ],
+    "joinDetails": [
+      "quién puede participar",
+      "es gratis",
+      "cómo inscribirse",
+      "requisitos",
+      "cuota de inscripción"
+    ]
   },
   "riskKeywords": {
-    "emergency": ["abuso", "violencia", "peligro", "emergencia", "no estoy a salvo", "amenazada", "herida"],
-    "personal": ["información personal", "datos privados", "número personal", "dirección de su casa", "dónde vive"],
-    "advice": ["consejo médico", "asesoría legal", "asesoría psicológica", "diagnosticar", "qué medicamento"]
+    "emergency": [
+      "abuso",
+      "violencia",
+      "peligro",
+      "emergencia",
+      "no estar a salvo",
+      "amenazada",
+      "herida"
+    ],
+    "personal": [
+      "información personal",
+      "datos personales",
+      "datos privados",
+      "datos de las participantes",
+      "información privada del personal",
+      "número de teléfono de",
+      "dirección de",
+      "dónde vive ella",
+      "domicilio del personal",
+      "nombre de la participante"
+    ],
+    "advice": [
+      "consejo médico",
+      "asesoramiento legal",
+      "orientación psicológica",
+      "terapia",
+      "diagnosticar",
+      "medicamento para"
+    ]
   }
 }

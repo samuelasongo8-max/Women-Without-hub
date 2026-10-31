@@ -114,7 +114,8 @@
     "news": "Habari",
     "blogs": "Blogu",
     "report": "Ripoti",
-    "post": "Chapisho"
+    "post": "Chapisho",
+    "label": "Breadcrumb"
   },
   "footer": {
     "stayInTouch": "Wasiliana nasi",
@@ -213,10 +214,22 @@
       ],
       "approachTitle": "Mtazamo Wetu",
       "approachPoints": [
-        { "title": "Kukuza upatikanaji wa elimu", "text": "Kuwahimiza wasichana na wanawake kutumia fursa za kujifunza na kuendelea na safari yao ya elimu." },
-        { "title": "Kujenga kujiamini", "text": "Kuwatia moyo wanafunzi kuamini uwezo wao na kutambua thamani ya elimu katika maisha yao." },
-        { "title": "Kuongeza uelewa wa jamii", "text": "Kukuza uelewa wa umuhimu wa elimu na kuhimiza msaada kwa wasichana na wanawake wanaotaka kurejea masomoni." },
-        { "title": "Kuhimiza kujifunza maisha yote", "text": "Kusaidia kujenga mtazamo chanya kuhusu elimu, ukuaji binafsi na fursa za baadaye." }
+        {
+          "title": "Kukuza upatikanaji wa elimu",
+          "text": "Kuwahimiza wasichana na wanawake kutumia fursa za kujifunza na kuendelea na safari yao ya elimu."
+        },
+        {
+          "title": "Kujenga kujiamini",
+          "text": "Kuwatia moyo wanafunzi kuamini uwezo wao na kutambua thamani ya elimu katika maisha yao."
+        },
+        {
+          "title": "Kuongeza uelewa wa jamii",
+          "text": "Kukuza uelewa wa umuhimu wa elimu na kuhimiza msaada kwa wasichana na wanawake wanaotaka kurejea masomoni."
+        },
+        {
+          "title": "Kuhimiza kujifunza maisha yote",
+          "text": "Kusaidia kujenga mtazamo chanya kuhusu elimu, ukuaji binafsi na fursa za baadaye."
+        }
       ],
       "getInvolvedTitle": "Shiriki",
       "getInvolvedLead": "Unaweza kuunga mkono mpango wetu wa Elimu ya Nafasi ya Pili kwa",
@@ -353,6 +366,89 @@
         ],
         "backToProgram": "Rudi kwenye Kujikimu na Uwezeshaji wa Kiuchumi",
         "partner": "Shirikiana nasi"
+      },
+      "whatWeDo": {
+        "title": "What We Do",
+        "intro": [
+          "Livelihood & Economic Empowerment is one of our core programme areas. We work alongside women and girls, community members, educators, local organizations, and potential partners to identify barriers and explore practical ways to expand access to economic opportunities.",
+          "Our programme focuses on building knowledge, confidence, practical abilities, and connections that can help participants take steps toward employment, entrepreneurship, and sustainable income generation."
+        ],
+        "areas": [
+          {
+            "title": "Entrepreneurship and Small Business Development",
+            "imageAlt": "Women taking part in the Entrepreneurship and Small Business Development activity in Kakuma",
+            "paragraphs": [
+              "We promote entrepreneurship as one possible pathway toward economic independence. Through business learning and mentorship opportunities, women and girls can explore how to identify business ideas, understand customer needs, plan their activities, and develop the knowledge needed to manage a small business.",
+              "Topics may include identifying business opportunities, basic business planning, budgeting, record-keeping, customer service, pricing, marketing, and managing income and expenses. These skills can help aspiring entrepreneurs make informed decisions and approach business activities with greater confidence.",
+              "We also recognize the importance of learning from people with practical business experience. Where opportunities are available, connecting participants with local entrepreneurs and business mentors can help them understand common challenges and learn from real-life experiences."
+            ]
+          },
+          {
+            "title": "Skills Development and Vocational Training",
+            "imageAlt": "Women taking part in the Skills Development and Vocational Training activity in Kakuma",
+            "paragraphs": [
+              "Practical skills can open doors to employment, self-employment, and other livelihood opportunities. We aim to encourage access to relevant skills development and vocational learning that responds to the interests of participants and the needs of the local community.",
+              "Depending on available training opportunities and partnerships, this may include practical, technical, creative, or service-related skills that can help participants prepare for work or explore small income-generating activities.",
+              "Our approach emphasizes the value of continuous learning, practical experience, and the confidence to apply newly acquired skills. We seek to support pathways through which women and girls can identify their strengths and make informed decisions about their future."
+            ]
+          },
+          {
+            "title": "Business Mentorship and Guidance",
+            "imageAlt": "Women taking part in the Business Mentorship and Guidance activity in Kakuma",
+            "paragraphs": [
+              "Starting a business or pursuing employment can be challenging, especially for people who have limited access to professional networks and experienced advisers. Mentorship can help participants explore their goals, understand potential challenges, and identify realistic next steps.",
+              "Through mentorship opportunities, women and girls may receive guidance on setting goals, developing business ideas, improving decision-making, building confidence, and identifying resources that could support their progress.",
+              "We value mentorship that respects each participant's circumstances and encourages them to recognize their abilities. By learning from others and sharing experiences, participants can develop a stronger understanding of the opportunities available to them."
+            ]
+          },
+          {
+            "title": "Apprenticeships and Work Experience",
+            "imageAlt": "Women taking part in the Apprenticeships and Work Experience activity in Kakuma",
+            "paragraphs": [
+              "Practical work experience can help bridge the gap between learning and employment. Where suitable opportunities are available, we seek to encourage connections with skilled professionals, businesses, training providers, and other community partners that may offer apprenticeships or supervised learning experiences.",
+              "These opportunities can help participants gain practical knowledge, understand workplace expectations, develop professional habits, and become more familiar with the skills required in different fields.",
+              "Work-based learning can also help participants identify their interests, strengthen their confidence, and explore possible pathways toward employment or self-employment."
+            ]
+          },
+          {
+            "title": "Market Linkages and Networking",
+            "imageAlt": "Women taking part in the Market Linkages and Networking activity in Kakuma",
+            "paragraphs": [
+              "Access to customers, suppliers, professional contacts, and reliable information can make a difference for people who want to develop their livelihoods. We recognize that having a skill or business idea is only one part of the journey; participants may also need connections that help them find customers and explore markets.",
+              "Through potential partnerships and community networks, we aim to encourage opportunities for women and girls to learn about market needs, connect with relevant service providers, share ideas, and identify possible routes for promoting their products or services.",
+              "Stronger networks can help participants exchange knowledge, learn from other entrepreneurs, and explore opportunities to grow their activities over time."
+            ]
+          },
+          {
+            "title": "Employment Readiness and Referrals",
+            "imageAlt": "Women taking part in the Employment Readiness and Referrals activity in Kakuma",
+            "paragraphs": [
+              "For women and girls who want to pursue employment, preparing for work can involve more than technical skills. Communication, teamwork, problem-solving, time management, and confidence can all be important when seeking and maintaining employment.",
+              "We aim to promote awareness of employment preparation and, where appropriate opportunities exist, connect participants with relevant training providers, employers, job information, or employment referral services.",
+              "This support may include guidance on preparing for job opportunities, understanding workplace expectations, identifying relevant skills, and exploring available career pathways. Referrals depend on the availability and suitability of opportunities and do not guarantee employment."
+            ]
+          },
+          {
+            "title": "Financial Awareness and Responsible Money Management",
+            "imageAlt": "Women taking part in the Financial Awareness and Responsible Money Management activity in Kakuma",
+            "paragraphs": [
+              "Understanding how to manage money can help individuals make informed decisions about their personal finances and livelihood activities. We encourage the development of basic financial awareness, including planning expenses, saving where possible, managing business income, keeping financial records, and understanding the difference between costs, revenue, and profit.",
+              "These skills can support participants as they plan for their needs, evaluate business ideas, and work toward their financial goals.",
+              "We also recognize that financial circumstances differ from person to person. Our approach aims to promote practical, realistic learning that respects participants' situations and supports informed decision-making."
+            ]
+          },
+          {
+            "title": "Confidence, Leadership, and Economic Participation",
+            "imageAlt": "Women taking part in the Confidence, Leadership, and Economic Participation activity in Kakuma",
+            "paragraphs": [
+              "Economic empowerment involves more than earning an income. It also includes having the confidence to make decisions, express ideas, participate in community life, and pursue personal goals.",
+              "We encourage women and girls to recognize their strengths, develop their leadership abilities, and take an active role in decisions that affect their livelihoods and futures.",
+              "By promoting confidence, collaboration, and access to information, we aim to support participants in becoming more active contributors to their households and communities."
+            ]
+          }
+        ],
+        "backToProgram": "Back to Livelihood & Economic Empowerment",
+        "partner": "Partner with us"
       }
     },
     "howItWorks": "Jinsi inavyofanya kazi",
@@ -399,7 +495,9 @@
   },
   "updates": {
     "title": "Masasisho ya Jamii na Hadithi",
-    "intro": "Hadithi, matangazo na mambo ya kuvutia kutoka kazi yetu na jamii katika Kakuma."
+    "intro": "Hadithi, matangazo na mambo ya kuvutia kutoka kazi yetu na jamii katika Kakuma.",
+    "previous": "Previous updates",
+    "next": "Next updates"
   },
   "news": {
     "title": "Habari",
@@ -411,7 +509,8 @@
   },
   "team": {
     "title": "Timu yetu",
-    "subtitle": "Viongozi wa jamii, waelimishaji na washauri wa Women Without Borders Hub huko Kakuma."
+    "subtitle": "Viongozi wa jamii, waelimishaji na washauri wa Women Without Borders Hub huko Kakuma.",
+    "joinPrompt": "Want to join the team?"
   },
   "about": {
     "title": "Kutuhusu",
@@ -440,16 +539,22 @@
     "card3Label": "Fund Digital and Practical Skills",
     "card3Desc": "Support digital skills training",
     "card4Label": "Partner With Us",
-    "card4Desc": "Collaborate with us to empower more girls"
+    "card4Desc": "Collaborate with us to empower more girls",
+    "detailsLabel": "About details"
   },
   "ourStory": {
     "whatWeDo": "Tunachofanya",
     "donate": "Changia",
-    "contactUs": "Wasiliana Nasi"
+    "contactUs": "Wasiliana Nasi",
+    "fromKakuma": "From Kakuma to Hope",
+    "whyHub": "Why Women Without Borders Hub"
   },
   "safeguarding": {
     "title": "Ulinzi",
-    "intro": "Kujitolea kwetu kwa usalama, heshima na ulinzi wa kila msichana na mwanamke tunayehudumia."
+    "intro": "Kujitolea kwetu kwa usalama, heshima na ulinzi wa kila msichana na mwanamke tunayehudumia.",
+    "commitment": "Our commitment",
+    "howWeWork": "How we work",
+    "raiseConcern": "Raise a concern"
   },
   "homeHero": {
     "titlePrefix": "Kuwawezesha",
@@ -660,5 +765,23 @@
       "sending": "Inatuma...",
       "submit": "Tuma ombi langu"
     }
+  },
+  "impact": {
+    "measureImageAlt": "Women and girls taking part in a programme in Kakuma",
+    "howWeMeasure": "How we measure",
+    "multiply": "Help us multiply this impact",
+    "sectionsLabel": "Impact sections",
+    "all": "All"
+  },
+  "profile": {
+    "founderLeader": "Founder and organizational leader",
+    "motivation": "What motivated her to start the Hub",
+    "barriers": "The barriers women and girls face in Kakuma",
+    "problem": "The problem the Hub addresses",
+    "focusAreas": "The five focus areas of the Hub",
+    "challenges": "Leading the organization: current challenges",
+    "change": "The change she wants to see",
+    "vision": "The long-term vision",
+    "support": "Support this work"
   }
 }

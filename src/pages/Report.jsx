@@ -31,7 +31,7 @@ export default function Report() {
       />
       <ImpactsLayout
         type="Report"
-        notice="Our report is being prepared and will be uploaded soon."
+        notice={t('report.notice')}
       />
     </div>
   )

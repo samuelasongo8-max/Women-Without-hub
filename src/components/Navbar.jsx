@@ -8,23 +8,6 @@ import './Navbar.css'
 
 const SiteSearchPanel = lazy(() => import('./SiteSearchPanel.jsx'))
 
-// Route → i18n key, so the navigation labels translate while the design
-// (uppercase via CSS) stays identical.
-const NAV_LABEL_KEY = {
-  '/': 'nav.home',
-  '/about/': 'nav.about',
-  '/about/our-story/': 'nav.ourStory',
-  '/about/our-team/': 'nav.ourTeam',
-  '/programs/': 'nav.programs',
-  '/impact/': 'nav.impact',
-  '/impact/news/': 'nav.news',
-  '/impact/blogs/': 'nav.blogs',
-  '/impact/report/': 'nav.report',
-  '/get-involved/': 'nav.getInvolved',
-  '/resources/': 'nav.resources',
-  '/contact/': 'nav.contact',
-}
-
 export default function Navbar() {
   const { t } = useTranslation()
   const [open, setOpen] = useState(false)
@@ -38,9 +21,7 @@ export default function Navbar() {
   const orgName = t('nav.orgName', { defaultValue: ORG_NAME })
   const orgNameWords = orgName.split(/\s+(?=[^ ]+$)/)
 
-  // Translate a nav item's label; fall back to the data label if unmapped.
-  const label = (item) =>
-    t(NAV_LABEL_KEY[item.to] ?? '', { defaultValue: item.label })
+  const label = (item) => t(item.label)
 
   // Close the mobile menu (and any open sub-menu) whenever a link is clicked.
   const close = () => {

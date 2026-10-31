@@ -124,17 +124,12 @@ export function buildSearchIndex(t) {
   )
 
   programs.forEach((program) => {
-    const title =
-      program.slug === 'second-chance-education'
-        ? t('programs.secondChanceTitle', {
-            defaultValue: program.title,
-          })
-        : program.title
+    const title = t(program.titleKey)
     add(
       `program-${program.slug}`,
       programsTitle,
       title,
-      program.summary,
+      t(program.summaryKey),
       `/programs/${program.slug}/`,
     )
   })
@@ -186,8 +181,8 @@ export function buildSearchIndex(t) {
     add(
       `involvement-${option.slug}`,
       involvedTitle,
-      option.title,
-      option.summary,
+      t(option.titleKey),
+      t(option.summaryKey),
       `/get-involved/${option.slug}/`,
     )
   })

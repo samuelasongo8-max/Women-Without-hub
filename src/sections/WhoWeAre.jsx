@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
-import { ORG_NAME } from '../config/site.js'
+import { Trans, useTranslation } from 'react-i18next'
 import { SITE } from '../data/seo.js'
 import './WhoWeAre.css'
 
 export default function WhoWeAre() {
+  const { t } = useTranslation()
+
   return (
     <section className="who-we-are">
       <div className="container who-grid">
@@ -16,34 +18,29 @@ export default function WhoWeAre() {
             <img
               className="who-photo"
               src="/images/literacy-program-at-women-without-hub.jpg"
-              alt={`Girls sitting in a literacy class at ${ORG_NAME}`}
+              alt={t('about.literacyImageAlt')}
               loading="lazy"
             />
           </div>
         </div>
 
         <div className="who-copy">
-          <p className="who-eyebrow">About us</p>
-          <h2>Who We Are</h2>
+          <p className="who-eyebrow">{t('nav.about')}</p>
+          <h2>{t('about.heading')}</h2>
           <p>
-            {SITE.name} is a community-led organization in{' '}
-            <strong>{SITE.location}</strong>, working with refugee and host
-            communities to remove barriers to education and opportunity for
-            vulnerable girls, teenage mothers and young women.
+            <Trans
+              i18nKey="about.homeIntro"
+              components={{ location: <strong>{SITE.location}</strong> }}
+            />
           </p>
-          <p>
-            Through educational support, literacy, mentorship, health support,
-            practical skills and pathways toward economic empowerment, we help
-            young women learn, build confidence and secure an independent
-            future.
-          </p>
+          <p>{t('about.homeDetail')}</p>
           <Link className="who-btn" to="/about/">
-            About our organization →
+            {t('common.learnMore')} →
           </Link>
 
-          <h3>Our core values</h3>
+          <h3>{t('about.coreValues')}</h3>
           <ul className="who-values">
-            {SITE.values.map((v) => (
+            {t('about.coreValuesItems', { returnObjects: true }).map((v) => (
               <li key={v}>{v}</li>
             ))}
           </ul>

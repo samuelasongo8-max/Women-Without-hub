@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FaGraduationCap } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import Reveal from '../components/Reveal.jsx'
 import './GetInvolvedCards.css'
 
 /**
@@ -67,11 +68,15 @@ export default function GetInvolvedCards() {
       {/* ---------- Split hero ---------- */}
       <div className="gi-hero">
         <div className="gi-hero-panel gi-hero-panel--text">
-          <span className="gi-kicker">{t(GI_CONFIG.kickerKey)}</span>
-          <h2 id="gi-heading" className="gi-heading">
+          <Reveal as="span" className="gi-kicker" direction="up" delay={0} duration={650}>
+            {t(GI_CONFIG.kickerKey)}
+          </Reveal>
+          <Reveal as="h2" id="gi-heading" className="gi-heading" direction="up" delay={90} duration={650}>
             {t(GI_CONFIG.headingKey)}
-          </h2>
-          <p className="gi-hero-intro">{t('getInvolvedCards.intro')}</p>
+          </Reveal>
+          <Reveal as="p" className="gi-hero-intro" direction="up" delay={180} duration={650}>
+            {t('getInvolvedCards.intro')}
+          </Reveal>
         </div>
         <div className="gi-hero-panel gi-hero-panel--image">
           <picture>
@@ -99,8 +104,15 @@ export default function GetInvolvedCards() {
 
       {/* ---------- Cards grid (no overlap with hero heading) ---------- */}
       <div className="gi-cards-grid">
-        {GI_CARDS.map((card) => (
-          <article key={card.key} className="gi-card">
+        {GI_CARDS.map((card, index) => (
+          <Reveal
+            key={card.key}
+            as="article"
+            className="gi-card"
+            direction={index % 2 === 0 ? 'left' : 'right'}
+            delay={index * 120}
+            duration={650}
+          >
             <div className="gi-card__image">
               {card.img ? (
                 <picture>
@@ -130,7 +142,7 @@ export default function GetInvolvedCards() {
                 <span className="gi-card__arrow">→</span>
               </Link>
             </div>
-          </article>
+          </Reveal>
         ))}
       </div>
     </section>

@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { Link, useParams, useLocation } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { updates as allUpdates, formatPostDate, formatRelativeDate } from '../sections/CommunityUpdates.jsx'
 import '../sections/CommunityUpdates.css'
 
@@ -42,53 +42,39 @@ function renderBody(fullText) {
 
 export default function UpdateDetail() {
   const { slug } = useParams()
-  const location = useLocation()
-  const [update, setUpdate] = useState(null)
-  const [error, setError] = useState(null)
+  const { t, i18n } = useTranslation()
+  const update = allUpdates.find((item) => item.slug === slug)
+  const content = update
+    ? t(`updates.items.${slug}`, { returnObjects: true })
+    : null
+  const language = i18n.resolvedLanguage || 'en'
 
-  useEffect(() => {
-    const found = allUpdates.find((u) => u.slug === slug)
-    if (found) {
-      setUpdate(found)
-      setError(null)
-    } else {
-      setUpdate(null)
-      setError('Update not found')
-    }
-  }, [slug])
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [location.pathname])
-
-  if (error) {
+  if (!update) {
     return (
       <div className="update-detail-page">
-        <div className="update-detail__error">{error}</div>
+        <div className="update-detail__error">{t('updates.notFound')}</div>
         <Link to="/updates/" className="update-detail__backlink">
-          ← Back to all updates
+          ← {t('updates.backToAll')}
         </Link>
       </div>
     )
   }
 
-  if (!update) return null
-
   return (
     <div className="update-detail-page">
       <div className="update-detail__breadcrumb">
-        <Link to="/">Home</Link>
+        <Link to="/">{t('breadcrumb.home')}</Link>
         <span aria-hidden="true">›</span>
-        <Link to="/updates/">Updates</Link>
+        <Link to="/updates/">{t('updates.title')}</Link>
         <span aria-hidden="true">›</span>
-        <span className="update-detail__breadcrumb-title">{update.title}</span>
+        <span className="update-detail__breadcrumb-title">{content.title}</span>
       </div>
 
       <figure className="update-detail__media">
         {update.image ? (
           <img
             src={update.image}
-            alt={update.alt}
+            alt={content.alt}
             className="update-detail__media-image"
           />
         ) : (
@@ -97,34 +83,36 @@ export default function UpdateDetail() {
           <div
             className="update-detail__placeholder"
             role="img"
-            aria-label={update.alt}
+            aria-label={content.alt}
           >
             <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2h6l2 2h3v11H4z" fill="none" stroke="#2E8C8C" strokeWidth="1.8" strokeLinejoin="round" /><circle cx="12" cy="13" r="3.2" fill="none" stroke="#2E8C8C" strokeWidth="1.8" /></svg>
-            <p className="updates-card__placeholder-text">Photo coming soon</p>
+            <p className="updates-card__placeholder-text">
+              {t('common.photoComingSoon')}
+            </p>
           </div>
         )}
       </figure>
 
       <div className="update-detail">
-        <h1 className="update-detail__title">{update.title}</h1>
+        <h1 className="update-detail__title">{content.title}</h1>
 
         <div className="update-detail__meta">
           <time dateTime={update.date ?? '2024'}>
             {update.date
-              ? `${formatPostDate(update.date)} · ${formatRelativeDate(update.date)} · Community Updates`
-              : 'Community Updates'}
+              ? `${formatPostDate(update.date, language)} · ${formatRelativeDate(update.date, language)} · ${t('updates.title')}`
+              : t('updates.title')}
           </time>
         </div>
 
         <div
           className="update-detail__body"
           dangerouslySetInnerHTML={{
-            __html: renderBody(update.fullText),
+            __html: renderBody(content.fullText),
           }}
         />
 
         <Link to="/updates/" className="update-detail__back-link">
-          ← Back to all updates
+          ← {t('updates.backToAll')}
         </Link>
       </div>
     </div>

@@ -12,9 +12,15 @@ const errors = []
 const namespaceFilter = process.argv.includes('--ns')
   ? process.argv[process.argv.indexOf('--ns') + 1]
   : null
+const languageFilter = process.argv.includes('--lang')
+  ? process.argv[process.argv.indexOf('--lang') + 1]
+  : null
 
-if (process.argv.includes('--ns') && !namespaceFilter) {
-  console.error('Usage: npm run check:i18n -- --ns <namespace>')
+if (
+  (process.argv.includes('--ns') && !namespaceFilter) ||
+  (process.argv.includes('--lang') && !languageFilter)
+) {
+  console.error('Usage: npm run check:i18n -- [--ns <namespace>] [--lang <language>]')
   process.exit(1)
 }
 
@@ -44,12 +50,20 @@ function readLocale(file) {
 
 function hasTranslation(resource, key) {
   const segments = key.replace(/\[(\d+)\]/g, '.$1').split('.')
-  let value = resource
-  for (const segment of segments) {
-    if (value == null || !Object.hasOwn(value, segment)) return false
-    value = value[segment]
+  function hasPath(value, index) {
+    if (index === segments.length) return true
+    if (value == null || typeof value !== 'object') return false
+
+    for (let end = segments.length; end > index; end -= 1) {
+      const segment = segments.slice(index, end).join('.')
+      if (Object.hasOwn(value, segment) && hasPath(value[segment], end)) {
+        return true
+      }
+    }
+    return false
   }
-  return true
+
+  return hasPath(resource, 0)
 }
 
 function filesUnder(directory) {
@@ -174,11 +188,18 @@ if (!englishResource || !chatbotEnglishResource) process.exit(1)
 
 const english = flatten(englishResource)
 const chatbotEnglish = flatten(chatbotEnglishResource)
-const localeFiles = fs
+const allLocaleFiles = fs
   .readdirSync(localeDirectory)
   .filter((name) => name.endsWith('.json'))
   .map((name) => path.join(localeDirectory, name))
-const languageCodes = localeFiles.map((file) => path.basename(file, '.json'))
+const languageCodes = allLocaleFiles.map((file) => path.basename(file, '.json'))
+if (languageFilter && !languageCodes.includes(languageFilter)) {
+  console.error(`Unknown locale "${languageFilter}". Available locales: ${languageCodes.join(', ')}`)
+  process.exit(1)
+}
+const localeFiles = languageFilter
+  ? allLocaleFiles.filter((file) => path.basename(file, '.json') === languageFilter)
+  : allLocaleFiles
 const chatbotFiles = new Map(
   fs
     .readdirSync(chatbotLocaleDirectory)

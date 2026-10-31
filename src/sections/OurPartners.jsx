@@ -1,20 +1,20 @@
 import './OurPartners.css'
+import { useTranslation } from 'react-i18next'
 
 /** Our Partners — a centered strip of partner logos below Get Involved. */
 const PARTNERS = [
   {
     name: 'Teach for Community',
     logo: '/images/partners/teach-for-community.jpg',
-    alt: 'Teach for Community logo',
   },
 ]
 
-function PartnerSlot({ partner }) {
+function PartnerSlot({ partner, t }) {
   const inner = (
     <img
       className="ourpartners__img"
       src={partner.logo}
-      alt={partner.alt}
+      alt={t('partners.logoAlt', { name: partner.name })}
       width="300"
       height="300"
       loading="lazy"
@@ -41,17 +41,19 @@ function PartnerSlot({ partner }) {
 }
 
 export default function OurPartners() {
+  const { t } = useTranslation()
+
   return (
     <section className="ourpartners" aria-labelledby="ourpartners-heading">
       <div className="ourpartners__inner">
         <h2 className="ourpartners__heading" id="ourpartners-heading">
-          Our Partners
+          {t('partners.title')}
         </h2>
         <p className="ourpartners__subtitle">Teach for Community</p>
 
         <div className="ourpartners__grid">
           {PARTNERS.map((partner) => (
-            <PartnerSlot key={partner.name} partner={partner} />
+            <PartnerSlot key={partner.name} partner={partner} t={t} />
           ))}
         </div>
 

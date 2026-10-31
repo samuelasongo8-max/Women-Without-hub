@@ -12,7 +12,7 @@
   "contactTeam": "Skontaktuj się z zespołem",
   "learnMore": "Dowiedz się więcej",
   "openPage": "Otwórz stronę",
-  "photoAlt": "Fatuma Abdulahi, Women Without Borders Hub team",
+  "photoAlt": "Fatuma Abdulahi, zespół Women Without Borders Hub",
   "privacyNote": "Nie udostępniaj tutaj poufnych danych osobowych.",
   "clearChat": "Wyczyść czat",
   "leaveMessage": "Zostaw wiadomość",
@@ -57,24 +57,24 @@
     "srhr": {"title": "Zdrowie i prawa seksualne i reprodukcyjne (SRHR)", "answer": "Edukacja SRHR dostosowana do wieku i wrażliwa kulturowo, edukacja rówieśnicza i działania informacyjne oparte na szacunku i wyborze."},
     "livelihood": {"title": "Źródła utrzymania i wzmocnienie ekonomiczne", "answer": "Przedsiębiorczość, mentoring biznesowy, staże, kontakty rynkowe i kierowanie do pracy wspierające ekonomiczne usamodzielnienie kobiet."}
   },
-  "languageIndicators": ["cześć", "dziękuję", "proszę", "jak mogę", "gdzie jest"],
+  "languageIndicators": ["cześć","dziękuję","proszę","jak mogę","gdzie jest","dzi?kuj?"],
   "keywords": {
-    "welcome": ["cześć", "witaj", "dzień dobry"], "about": ["o nas", "co robicie", "kim jesteście"],
-    "founder": ["założycielka", "kto założył", "malua"], "location": ["gdzie jesteście", "lokalizacja", "adres", "kakuma"],
-    "programmes": ["programy", "jakie programy", "usługi"], "education": ["edukacja", "szkoła", "czytanie", "stypendium", "nauka", "Edukacja i umiejętność czytania i pisania"],
-    "digital": ["cyfrowe", "komputer", "szycie", "moda", "uroda", "szkolenie"], "mentorship": ["mentoring", "przywództwo", "kariera", "cele", "pewność siebie"],
-    "health": ["zdrowie", "menstruacja", "okres", "produkty", "skierowanie"], "srhr": ["reprodukcyjne", "zdrowie seksualne", "srhr", "edukacja rówieśnicza"],
-    "livelihood": ["źródła utrzymania", "firma", "praca", "staż", "dochód"], "activities": ["zajęcia", "harmonogram", "godziny", "poniedziałek", "piątek"],
-    "join": ["dołączyć", "uczestniczyć", "rejestracja", "bezpłatnie"], "donate": ["darowizna", "wpłacić", "mpesa", "konto bankowe"],
-    "volunteer": ["wolontariat", "wolontariusz", "pomagać"], "partner": ["partner", "współpraca", "współpracować", "fundacja"],
-    "skills": ["podzielić się umiejętnościami", "uczyć", "szkolenie", "mentoring"], "contact": ["kontakt", "e-mail", "skontaktować się z zespołem"],
-    "responseTime": ["czas odpowiedzi", "odpowiedzieć", "ile czasu"], "donations": ["na co idą darowizny", "wykorzystanie darowizn"],
-    "emergency": ["nagły wypadek", "niebezpieczeństwo", "przemoc", "nadużycie"], "thanks": ["dziękuję", "podziękować"], "goodbye": ["do widzenia", "pa"],
-    "joinDetails": ["kto może uczestniczyć", "czy to bezpłatne", "jak się zapisać", "opłata rejestracyjna"]
+    "welcome": ["cześć","witaj","dzień dobry","dzie? dobry","mi?ego popo?udnia"], "about": ["o nas","co robicie","kim jesteście","organizacja","stowarzyszenie"],
+    "founder": ["założycielka","kto założył","malua","malua","kierownictwo"], "location": ["gdzie jesteście","lokalizacja","adres","kakuma","adres"],
+    "programmes": ["programy","jakie programy","usługi","jakie programy","us?ugi"], "education": ["edukacja","szkoła","czytanie","stypendium","nauka","Edukacja i umiejętność czytania i pisania","zaj?cia wyr?wnawcze","Edukacja i umiej?tno?? czytania i pisania"],
+    "digital": ["cyfrowe","komputer","szycie","moda","uroda","szkolenie","fryzjerstwo","szkolenie zawodowe","szkolenie"], "mentorship": ["mentoring","przywództwo","kariera","cele","pewność siebie","cele","pewno?? siebie"],
+    "health": ["zdrowie","menstruacja","okres","produkty","skierowanie","skierowanie do specjalisty"], "srhr": ["reprodukcyjne","zdrowie seksualne","srhr","edukacja rówieśnicza","?wiadomo??"],
+    "livelihood": ["źródła utrzymania","firma","praca","staż","dochód","praktyka zawodowa","doch?d","umiej?tno?ci finansowe"], "activities": ["zajęcia","harmonogram","godziny","poniedziałek","piątek","poniedzia?ek","pi?tek","centrum","centrum"],
+    "join": ["dołączyć","uczestniczyć","rejestracja","bezpłatnie","bezp?atnie","zapisa? si?","zarejestrowa? si?"], "donate": ["darowizna","wpłacić","mpesa","konto bankowe","m-pesa","konto bankowe"],
+    "volunteer": ["wolontariat","wolontariusz","pomagać","po?wi?ci? czas"], "partner": ["partnerstwo","współpraca","współpracować","fundacja","fundacja","firma"],
+    "skills": ["podzielić się umiejętnościami","uczyć","szkolenie","mentoring","szkolenie","umiej?tno?ci zawodowe"], "contact": ["kontakt","e-mail","skontaktować się z zespołem","nawi?za? kontakt","skontaktowa? si? z zespo?em"],
+    "responseTime": ["czas odpowiedzi","odpowiedzieć","ile czasu","kiedy odpowiecie"], "donations": ["na co idą darowizny","wykorzystanie darowizn","pieni?dze z darowizn","?rodki"],
+    "emergency": ["nagły wypadek","niebezpieczeństwo","przemoc","nadużycie","niebezpiecznie"], "thanks": ["dziękuję","podziękować","doceniam"], "goodbye": ["do widzenia","pa","do zobaczenia","trzymaj si?"],
+    "joinDetails": ["kto może uczestniczyć","czy to bezpłatne","jak się zapisać","opłata rejestracyjna","op?ata rejestracyjna"]
   },
   "riskKeywords": {
     "emergency": ["nadużycie", "przemoc", "niebezpieczeństwo", "nagły wypadek", "nie jestem bezpieczna", "grożono", "ranna"],
-    "personal": ["dane osobowe", "prywatne dane", "prywatny numer", "adres domowy", "gdzie mieszka"],
-    "advice": ["porada medyczna", "porada prawna", "porada psychologiczna", "zdiagnozować", "jaki lek"]
+    "personal": ["dane osobowe","prywatne dane","prywatny numer","adres domowy","gdzie mieszka","czyj? numer telefonu","czyj? adres","gdzie ona mieszka","dom pracownika","imi? uczestniczki"],
+    "advice": ["porada medyczna","porada prawna","porada psychologiczna","zdiagnozować","jaki lek","lekarstwo na"]
   }
 }

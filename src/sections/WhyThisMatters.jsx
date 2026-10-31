@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useRef, useState } from 'react'
 import BlobPhotoCard from '../components/BlobPhotoCard'
+import Reveal from '../components/Reveal.jsx'
 import './WhyThisMatters.css'
 
 const photos = [
@@ -51,10 +52,12 @@ export default function WhyThisMatters() {
     <section className="section why-matters" id="why-this-matters">
 
       <div className="container">
-        <h2 className="section-title why-matters__title">
+        <Reveal as="h2" className="section-title why-matters__title" direction="left" duration={650}>
           {t('common.whyThisMatters')}
-        </h2>
-        <p className="why-intro">{t('common.whyIntro')}</p>
+        </Reveal>
+        <Reveal as="p" className="why-intro" direction="up" delay={120} duration={650}>
+          {t('common.whyIntro')}
+        </Reveal>
 
         <div
           ref={photosRef}

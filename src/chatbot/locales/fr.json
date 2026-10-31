@@ -12,7 +12,7 @@
   "contactTeam": "Contacter l’équipe",
   "learnMore": "En savoir plus",
   "openPage": "Ouvrir la page",
-  "photoAlt": "Fatuma Abdulahi, Women Without Borders Hub team",
+  "photoAlt": "Fatuma Abdulahi, ?quipe de Women Without Borders Hub",
   "privacyNote": "Veuillez ne pas partager d’informations personnelles sensibles ici.",
   "clearChat": "Effacer la conversation",
   "leaveMessage": "Laisser un message",
@@ -28,7 +28,7 @@
     "title": "Laisser un message à notre équipe",
     "name": "Nom (facultatif)",
     "contact": "E-mail ou téléphone",
-    "message": "Message",
+    "message": "Votre message",
     "consent": "J’accepte que notre équipe utilise ces coordonnées pour répondre à mon message.",
     "send": "Envoyer",
     "sending": "Envoi...",
@@ -67,43 +67,254 @@
     "unsupportedLanguage": "Je peux répondre en anglais, français, arabe, swahili, somali, espagnol, allemand, portugais, russe, italien et polonais. Pour le moment, je répondrai en anglais. Notre équipe peut vous répondre si vous laissez un message."
   },
   "programmes": {
-    "education": {"title": "Éducation de la seconde chance", "answer": "Bourses, cercles d’alphabétisation, soutien scolaire et éducation de la deuxième chance pour aider les filles à rester à l’école et ouvrir des possibilités éducatives aux filles vulnérables de Kakuma."},
-    "digital": {"title": "Compétences numériques et techniques", "answer": "Initiation à l’informatique et camps intensifs de compétences numériques, avec des formations professionnelles en couture, mode, beauté et coiffure pour les jeunes femmes."},
-    "mentorship": {"title": "Mentorat et compétences de vie", "answer": "Mentorat, compétences de vie, leadership, orientation professionnelle, définition d’objectifs et culture financière pour renforcer la confiance et l’autonomie."},
-    "health": {"title": "Santé et dignité menstruelle", "answer": "Éducation à la santé menstruelle, produits menstruels, sensibilisation à la santé et orientations vers des services de santé afin que personne ne manque l’école ou le travail."},
-    "srhr": {"title": "Santé et droits sexuels et reproductifs (SRHR)", "answer": "Éducation SRHR adaptée à l’âge et sensible aux cultures, éducation par les pairs et sensibilisation communautaire fondées sur le respect et le choix."},
-    "livelihood": {"title": "Moyens de subsistance et autonomisation économique", "answer": "Entrepreneuriat, mentorat commercial, apprentissages, liens avec les marchés et orientations vers l’emploi pour l’autonomisation économique des femmes."}
+    "education": {
+      "title": "Éducation de la seconde chance",
+      "answer": "Bourses, cercles d’alphabétisation, soutien scolaire et éducation de la deuxième chance pour aider les filles à rester à l’école et ouvrir des possibilités éducatives aux filles vulnérables de Kakuma."
+    },
+    "digital": {
+      "title": "Compétences numériques et techniques",
+      "answer": "Initiation à l’informatique et camps intensifs de compétences numériques, avec des formations professionnelles en couture, mode, beauté et coiffure pour les jeunes femmes."
+    },
+    "mentorship": {
+      "title": "Mentorat et compétences de vie",
+      "answer": "Mentorat, compétences de vie, leadership, orientation professionnelle, définition d’objectifs et culture financière pour renforcer la confiance et l’autonomie."
+    },
+    "health": {
+      "title": "Santé et dignité menstruelle",
+      "answer": "Éducation à la santé menstruelle, produits menstruels, sensibilisation à la santé et orientations vers des services de santé afin que personne ne manque l’école ou le travail."
+    },
+    "srhr": {
+      "title": "Santé et droits sexuels et reproductifs (SRHR)",
+      "answer": "Éducation SRHR adaptée à l’âge et sensible aux cultures, éducation par les pairs et sensibilisation communautaire fondées sur le respect et le choix."
+    },
+    "livelihood": {
+      "title": "Moyens de subsistance et autonomisation économique",
+      "answer": "Entrepreneuriat, mentorat commercial, apprentissages, liens avec les marchés et orientations vers l’emploi pour l’autonomisation économique des femmes."
+    }
   },
-  "languageIndicators": ["bonjour", "merci", "s’il vous plaît", "comment puis-je", "où se trouve"],
+  "languageIndicators": [
+    "bonjour",
+    "merci",
+    "s’il vous plaît",
+    "comment puis-je",
+    "où se trouve",
+    "merci"
+  ],
   "keywords": {
-    "welcome": ["bonjour", "salut", "bienvenue"],
-    "about": ["à propos", "que faites-vous", "qui êtes-vous"],
-    "founder": ["fondatrice", "qui a fondé", "malua"],
-    "location": ["où êtes-vous", "emplacement", "adresse", "kakuma"],
-    "programmes": ["programmes", "quels programmes", "services"],
-    "education": ["éducation", "école", "alphabétisation", "bourse", "lecture", "Éducation et alphabétisation"],
-    "digital": ["numérique", "informatique", "couture", "mode", "beauté", "formation"],
-    "mentorship": ["mentor", "mentorat", "leadership", "carrière", "confiance"],
-    "health": ["santé", "menstruel", "règles", "serviettes", "orientation"],
-    "srhr": ["reproduction", "santé sexuelle", "srhr", "éducation par les pairs"],
-    "livelihood": ["moyens de subsistance", "entreprise", "emploi", "apprentissage", "revenus"],
-    "activities": ["activités", "horaire", "heures", "lundi", "vendredi"],
-    "join": ["participer", "inscription", "rejoindre", "gratuit"],
-    "donate": ["don", "faire un don", "mpesa", "compte bancaire"],
-    "volunteer": ["bénévolat", "bénévole", "aider"],
-    "partner": ["partenaire", "partenariat", "collaborer", "fondation"],
-    "skills": ["partager mes compétences", "enseigner", "formation", "mentorat"],
-    "contact": ["contact", "e-mail", "joindre l’équipe"],
-    "responseTime": ["délai de réponse", "répondre", "combien de temps"],
-    "donations": ["où vont les dons", "utilisation des dons"],
-    "emergency": ["urgence", "danger", "violence", "abus"],
-    "thanks": ["merci", "remercier"],
-    "goodbye": ["au revoir", "à bientôt"],
-    "joinDetails": ["qui peut participer", "est-ce gratuit", "comment s’inscrire", "frais d’inscription"]
+    "welcome": [
+      "bonjour",
+      "salut",
+      "bienvenue",
+      "bonjour",
+      "bon apr?s-midi"
+    ],
+    "about": [
+      "à propos",
+      "que faites-vous",
+      "qui êtes-vous",
+      "organisation",
+      "organisme"
+    ],
+    "founder": [
+      "fondatrice",
+      "qui a fondé",
+      "malua",
+      "malua",
+      "gouvernance"
+    ],
+    "location": [
+      "où êtes-vous",
+      "emplacement",
+      "adresse",
+      "kakuma",
+      "adresse"
+    ],
+    "programmes": [
+      "actions",
+      "quels programmes",
+      "services",
+      "quels programmes",
+      "accompagnement"
+    ],
+    "education": [
+      "éducation",
+      "école",
+      "alphabétisation",
+      "bourse",
+      "lecture",
+      "Éducation et alphabétisation",
+      "rattrapage scolaire",
+      "?ducation et alphab?tisation"
+    ],
+    "digital": [
+      "numérique",
+      "informatique",
+      "couture",
+      "mode",
+      "beauté",
+      "formation",
+      "coiffure",
+      "professionnel",
+      "formation"
+    ],
+    "mentorship": [
+      "mentore",
+      "mentorat",
+      "leadership",
+      "gouvernance",
+      "confiance",
+      "objectifs",
+      "confiance"
+    ],
+    "health": [
+      "santé",
+      "menstruel",
+      "règles",
+      "serviettes",
+      "orientation",
+      "orientation"
+    ],
+    "srhr": [
+      "reproduction",
+      "santé sexuelle",
+      "srhr",
+      "éducation par les pairs",
+      "sensibilisation"
+    ],
+    "livelihood": [
+      "moyens de subsistance",
+      "entreprise",
+      "emploi",
+      "apprentissage",
+      "revenus",
+      "apprentissage",
+      "revenu",
+      "gestion financi?re"
+    ],
+    "activities": [
+      "activités",
+      "horaire",
+      "heures",
+      "lundi",
+      "vendredi",
+      "lundi",
+      "vendredi",
+      "centre",
+      "?tablissement"
+    ],
+    "join": [
+      "participer",
+      "inscription",
+      "rejoindre",
+      "gratuit",
+      "gratuit",
+      "inscription",
+      "inscription"
+    ],
+    "donate": [
+      "don",
+      "faire un don",
+      "mpesa",
+      "compte bancaire",
+      "M-Pesa",
+      "compte bancaire"
+    ],
+    "volunteer": [
+      "bénévolat",
+      "bénévole",
+      "aider",
+      "offrir de son temps"
+    ],
+    "partner": [
+      "partenaire",
+      "partenariat",
+      "collaborer",
+      "organisation",
+      "fondation",
+      "entreprise"
+    ],
+    "skills": [
+      "partager mes compétences",
+      "enseigner",
+      "formation",
+      "mentore",
+      "formation",
+      "comp?tences professionnelles"
+    ],
+    "contact": [
+      "contacter",
+      "e-mail",
+      "joindre l’équipe",
+      "prendre contact",
+      "contacter l??quipe"
+    ],
+    "responseTime": [
+      "délai de réponse",
+      "répondre",
+      "combien de temps",
+      "quand r?pondrez-vous"
+    ],
+    "donations": [
+      "où vont les dons",
+      "utilisation des dons",
+      "montant du don",
+      "fonds"
+    ],
+    "emergency": [
+      "urgence",
+      "menace",
+      "violence",
+      "maltraitance",
+      "en danger"
+    ],
+    "thanks": [
+      "merci",
+      "merci",
+      "reconnaissante"
+    ],
+    "goodbye": [
+      "au revoir",
+      "à bientôt",
+      "? bient?t",
+      "prenez soin de vous"
+    ],
+    "joinDetails": [
+      "qui peut participer",
+      "est-ce gratuit",
+      "comment s’inscrire",
+      "frais d’inscription",
+      "frais d?inscription"
+    ]
   },
   "riskKeywords": {
-    "emergency": ["abus", "violence", "danger", "urgence", "en danger", "menacée", "blessée"],
-    "personal": ["informations personnelles", "données privées", "numéro personnel", "adresse personnelle", "où habite-t-elle"],
-    "advice": ["conseil médical", "conseil juridique", "conseil psychologique", "diagnostiquer", "quel médicament"]
+    "emergency": [
+      "abus",
+      "maltraitance",
+      "menace",
+      "urgence",
+      "en danger",
+      "menacée",
+      "blessée"
+    ],
+    "personal": [
+      "informations personnelles",
+      "données privées",
+      "numéro personnel",
+      "adresse personnelle",
+      "où habite-t-elle",
+      "num?ro de t?l?phone de",
+      "adresse de",
+      "o? habite-t-elle",
+      "domicile du personnel",
+      "nom de la participante"
+    ],
+    "advice": [
+      "conseil médical",
+      "conseil juridique",
+      "conseil psychologique",
+      "diagnostiquer",
+      "quel médicament",
+      "m?dicament pour"
+    ]
   }
 }

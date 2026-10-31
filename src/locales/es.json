@@ -12,6 +12,7 @@
     "closeMenu": "Cerrar menú",
     "primaryNav": "Navegación principal",
     "footerNav": "Pie de página",
+    "heroLabel": "Banner de la página {{title}}",
     "logoLink": "Women Without Borders Hub, inicio",
     "routesTrailingSlash": "Nota: las rutas usan barras finales (p. ej."
   },
@@ -27,8 +28,9 @@
     "donate": "Donar",
     "ourStory": "Nuestra historia",
     "ourTeam": "Nuestro equipo",
+    "safeguarding": "Protección y salvaguarda",
     "news": "Noticias",
-    "blogs": "Blogs",
+    "blogs": "Blog",
     "report": "Informe",
     "expandSub": "Expandir el submenú {{label}}",
     "collapseSub": "Contraer el submenú {{label}}"
@@ -75,29 +77,67 @@
     "readStory": "Leer la historia",
     "whyThisMatters": "Por qué esto importa",
     "roles": {
-      "Chairperson": "Chairperson",
-      "Vice Chairperson": "Vice Chairperson",
-      "Treasurer": "Treasurer",
-      "Secretary": "Secretary",
-      "Member": "Member"
+      "Chairperson": "Presidenta",
+      "Vice Chairperson": "Vicepresidenta",
+      "Treasurer": "Tesorera",
+      "Secretary": "Secretaria",
+      "Member": "Integrante"
     },
     "whyIntro": "Las mujeres y niñas de Kakuma Refugee Camp afrontan muchos retos, como las dificultades económicas, la interrupción de los estudios, el acceso limitado a la formación y las barreras para encontrar empleo y recibir atención médica. Para las madres adolescentes, estos retos pueden ser aún mayores al compaginar el cuidado de sus hijos con los estudios y su desarrollo personal. En Women Without Borders Hub creemos que cada niña y cada joven merece la oportunidad de superar estas barreras, descubrir su potencial y construir un futuro mejor. Mediante la educación, las habilidades prácticas, la mentoría, la información sobre salud y el empoderamiento económico, queremos ayudar a mujeres y niñas a ganar confianza, fortalecer su autonomía y contribuir a sus comunidades.",
-    "ctaSeeImpact": "Mira nuestro impacto →"
+    "ctaSeeImpact": "Mira nuestro impacto →",
+    "partnerWithUs": "Colabora con nosotras"
   },
   "quoteFeature": {
-    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
-    "role": "Miembro de Women Without Borders Hub",
-    "label": "Cita destacada",
-    "name": "Khadijoh Mahamed"
+    "quote": "Toda niña y mujer joven merece un espacio seguro para aprender, crecer y creer en sí misma. Cuando nos apoyamos, compartimos conocimientos y fortalecemos nuestra confianza, creamos oportunidades para un futuro mejor para nosotras y nuestra comunidad.",
+    "name": "Khadijoh Mahamed",
+    "role": "Integrante de Women Without Borders Hub",
+    "label": "Cita destacada"
   },
   "quoteSection": {
-    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "quote": "Toda niña y mujer joven merece un espacio seguro para aprender, crecer y creer en sí misma. Cuando nos apoyamos, compartimos conocimientos y fortalecemos nuestra confianza, creamos oportunidades para un futuro mejor para nosotras y nuestra comunidad.",
     "name": "Khadijoh Mahamed",
-    "role": "Miembro de Women Without Borders Hub",
+    "role": "Integrante de Women Without Borders Hub",
     "label": "Cita destacada",
-    "quote2": "I founded Women Without Borders Hub because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.",
+    "quote2": "Fundé Women Without Borders Hub porque creo que todas las niñas y mujeres jóvenes merecen la oportunidad de construir un futuro mejor, sin importar los desafíos que enfrenten. Demasiadas jóvenes talentosas ven sus sueños fuera de alcance por las dificultades económicas, la falta de oportunidades y las barreras que las frenan. Quiero contribuir a cambiar esta realidad creando oportunidades de aprendizaje, empoderamiento y crecimiento personal, donde cada niña pueda descubrir sus fortalezas, encontrar su voz y avanzar con confianza.",
     "name2": "MaLua Lugazo",
-    "role2": "Founder of Women Without Borders Hub"
+    "role2": "Fundadora de Women Without Borders Hub"
+  },
+  "homeHero": {
+    "titlePrefix": "Empoderando a",
+    "girls": "las niñas",
+    "connector": "y a",
+    "youngWomen": "las jóvenes",
+    "location": "en Kakuma, Kenia",
+    "lead": "Creamos oportunidades para niñas vulnerables, madres adolescentes y mujeres jóvenes mediante la educación, las habilidades, la mentoría, la salud y el empoderamiento económico en Kakuma, Kenia.",
+    "programs": "Nuestros programas",
+    "realPeople": "Personas reales.",
+    "realChange": "Un cambio real.",
+    "photoAlt": "Mujeres sosteniendo con orgullo sus certificados de graduación",
+    "imageBandAlt": "Mujeres participando en un programa comunitario en Kakuma",
+    "facebook": "{{name}} en Facebook",
+    "linkedin": "{{name}} en LinkedIn",
+    "featuredMessage": "Mensaje destacado",
+    "pauseRotation": "Pausar la rotación",
+    "playRotation": "Reanudar la rotación",
+    "slideOneLabel": "1 de 2",
+    "slideTwoLabel": "2 de 2",
+    "showSlideOne": "Mostrar diapositiva 1 de 2",
+    "showSlideTwo": "Mostrar diapositiva 2 de 2",
+    "slideTwoPhotoAlt": "Mujeres aprendiendo juntas en Kakuma",
+    "slideTwoLineOne": "Aprender. Crecer.",
+    "slideTwoLineTwo": "Liderar. Construir un",
+    "slideTwoLineThree": "futuro mejor.",
+    "slideTwoLead": "Fundada en 2024 por MaLua Lugazo, Women Without Borders Hub apoya a mujeres y niñas de Kakuma mediante educación, habilidades y mentoría.",
+    "slideTwoStory": "Nuestra historia",
+    "slideTwoSupport": "Apoya nuestro trabajo"
+  },
+  "homePage": {
+    "title": "Women Without Borders Hub",
+    "intro": "Explora nuestros programas, diseñados para empoderar a las niñas y mujeres jóvenes mediante la educación, el desarrollo de habilidades, la concienciación sobre la salud y las oportunidades económicas."
+  },
+  "impactSection": {
+    "title": "Nuestro impacto",
+    "intro": "Resultados medibles de nuestros programas con las comunidades refugiadas y de acogida en Kakuma."
   },
   "breadcrumb": {
     "home": "Inicio",
@@ -112,13 +152,15 @@
     "contact": "Contacto",
     "communityUpdates": "Actualizaciones de la comunidad e historias",
     "news": "Noticias",
-    "blogs": "Blogs",
+    "blogs": "Artículos del blog",
     "report": "Informe",
-    "post": "Publicación"
+    "post": "Publicación",
+    "label": "Ruta de navegación"
   },
   "footer": {
     "stayInTouch": "Mantente en contacto",
     "emailAddress": "Correo electrónico",
+    "websiteField": "Sitio web",
     "firstName": "Nombre",
     "required": "obligatorio",
     "subscribe": "Suscribirse",
@@ -159,6 +201,7 @@
     "messagePlaceholder": "Escribe tu mensaje aquí...",
     "send": "Enviar mensaje",
     "sending": "Enviando…",
+    "website": "Sitio web",
     "errName": "Por favor, introduce tu nombre.",
     "errEmail": "Por favor, introduce una dirección de correo electrónico válida.",
     "errSubject": "Por favor, elige un asunto.",
@@ -169,7 +212,6 @@
     "addressHeading": "Nuestra dirección",
     "mapText": "Encuéntranos en Kakuma, condado de Turkana.",
     "mapLink": "Abrir en Google Maps",
-    "website": "Website",
     "heroLabel": "Equipo y comunidad de Women Without Borders Hub en el campamento de Kakuma, Kenia",
     "partnerHeading": "Socios de Women Without Borders Hub",
     "partnerText1": "Women Without Borders Hub es una organización comunitaria ubicada en el campamento de Kakuma, Kenia. Acogemos a personas, organizaciones, fundaciones, donantes y socios que comparten nuestro compromiso de fortalecer a las niñas y las jóvenes en las comunidades de refugiados y de acogida",
@@ -213,10 +255,22 @@
       ],
       "approachTitle": "Nuestro enfoque",
       "approachPoints": [
-        { "title": "Promover el acceso a la educación", "text": "Animar a las niñas y mujeres a aprovechar las oportunidades de aprendizaje y continuar su trayectoria educativa." },
-        { "title": "Fortalecer la confianza", "text": "Inspirar a las estudiantes a creer en sus capacidades y reconocer el valor de la educación en sus vidas." },
-        { "title": "Crear conciencia comunitaria", "text": "Promover la comprensión de la importancia de la educación y fomentar el apoyo a las niñas y mujeres que desean volver a estudiar." },
-        { "title": "Fomentar el aprendizaje permanente", "text": "Ayudar a crear una actitud positiva hacia la educación, el crecimiento personal y las oportunidades futuras." }
+        {
+          "title": "Promover el acceso a la educación",
+          "text": "Animar a las niñas y mujeres a aprovechar las oportunidades de aprendizaje y continuar su trayectoria educativa."
+        },
+        {
+          "title": "Fortalecer la confianza",
+          "text": "Inspirar a las estudiantes a creer en sus capacidades y reconocer el valor de la educación en sus vidas."
+        },
+        {
+          "title": "Crear conciencia comunitaria",
+          "text": "Promover la comprensión de la importancia de la educación y fomentar el apoyo a las niñas y mujeres que desean volver a estudiar."
+        },
+        {
+          "title": "Fomentar el aprendizaje permanente",
+          "text": "Ayudar a crear una actitud positiva hacia la educación, el crecimiento personal y las oportunidades futuras."
+        }
       ],
       "getInvolvedTitle": "Participa",
       "getInvolvedLead": "Puedes apoyar nuestro programa de Educación de Segunda Oportunidad",
@@ -320,6 +374,125 @@
       "exploreMore": "Explorar más",
       "exploreMoreLabel": "Explorar más: {{title}}",
       "sectionRevealed": "Sección mostrada: {{title}}",
+      "overview": {
+        "intro": [
+          "El empoderamiento económico es un paso importante para ayudar a las mujeres y niñas a construir vidas seguras, independientes y dignas. Mediante nuestro programa de Medios de Vida y Empoderamiento Económico, Women Without Borders Hub busca apoyar a las mujeres y personas jóvenes para que desarrollen habilidades prácticas, exploren oportunidades para generar ingresos, fortalezcan su confianza y avancen hacia una mayor independencia económica.",
+          "Reconocemos que muchas mujeres y niñas enfrentan barreras que limitan su acceso a la educación, el empleo, las oportunidades de negocio y los recursos que necesitan para mantenerse a sí mismas y a sus familias. Entre estas dificultades se encuentran el acceso limitado a la formación vocacional, los recursos financieros, los conocimientos empresariales, las redes profesionales y las oportunidades de empleo.",
+          "Como organización comunitaria ubicada en el campamento de personas refugiadas de Kakuma, Kenia, buscamos contribuir a superar estas barreras mediante el aprendizaje práctico, el emprendimiento, la mentoría y los vínculos con oportunidades disponibles. Creemos que toda mujer y niña merece descubrir su potencial, desarrollar habilidades útiles y participar activamente en su comunidad.",
+          "Nuestro objetivo es promover medios de vida sostenibles que ayuden a las mujeres y niñas a fortalecer su independencia, mejorar sus perspectivas económicas y contribuir al bienestar de sus hogares y comunidades."
+        ],
+        "sections": [
+          {
+            "title": "Por qué son importantes los medios de vida y el empoderamiento económico",
+            "paragraphs": [
+              "Cuando las mujeres y niñas acceden a habilidades, conocimientos, mentoría y oportunidades económicas pertinentes, están mejor preparadas para explorar maneras de mejorar sus circunstancias y planificar el futuro.",
+              "Las oportunidades para desarrollar medios de vida pueden ayudar a las personas a avanzar hacia una mayor independencia económica, cubrir mejor sus necesidades cotidianas y contribuir al bienestar de sus hogares. También pueden fomentar la creatividad, la resiliencia, la capacidad para resolver problemas y la participación comunitaria.",
+              "Para las mujeres y niñas que viven en circunstancias difíciles, como el desplazamiento y el acceso limitado a recursos, las oportunidades para desarrollar habilidades y participar en la economía pueden ser especialmente importantes. Sin embargo, el progreso sostenible requiere más que el esfuerzo individual: también depende de comunidades solidarias, capacitación accesible, oportunidades pertinentes y alianzas que respondan a necesidades reales.",
+              "En Women Without Borders Hub creemos que invertir en las habilidades, ideas y potencial de las mujeres es fundamental para construir comunidades más fuertes e inclusivas."
+            ]
+          },
+          {
+            "title": "A quiénes queremos apoyar",
+            "paragraphs": [
+              "Nuestro programa de Medios de Vida y Empoderamiento Económico busca apoyar a las mujeres y niñas que desean desarrollar sus habilidades, explorar oportunidades económicas y avanzar hacia una mayor independencia.",
+              "Nos enfocamos en las mujeres y mujeres jóvenes de la comunidad, las niñas que se preparan para futuras oportunidades de sustento y quienes enfrentan barreras para desarrollar habilidades, emprender o acceder al empleo. Reconocemos que cada participante tiene experiencias, responsabilidades, intereses y metas diferentes.",
+              "Por ello, valoramos los enfoques que respetan las circunstancias de cada persona y ayudan a las participantes a identificar caminos realistas, acordes con sus capacidades y aspiraciones."
+            ]
+          },
+          {
+            "title": "Creemos oportunidades trabajando en conjunto",
+            "paragraphs": [
+              "El empoderamiento económico sostenible requiere colaboración. Las organizaciones comunitarias, empresas locales, empleadores, instituciones de formación, mentoras, entidades donantes y socios para el desarrollo pueden contribuir a ampliar el acceso a conocimientos, habilidades, recursos y oportunidades.",
+              "Women Without Borders Hub invita a colaborar a las entidades que comparten nuestro compromiso de apoyar a las mujeres y niñas mediante el desarrollo de medios de vida y su participación económica.",
+              "Entre las posibles áreas de colaboración se encuentran la formación vocacional y empresarial, la mentoría, el apoyo al desarrollo de negocios, las oportunidades de aprendizaje laboral, los vínculos con mercados, las derivaciones laborales y los recursos para iniciativas comunitarias de medios de vida.",
+              "Al trabajar en conjunto, podemos crear más oportunidades para que las mujeres y niñas desarrollen su potencial, alcancen sus metas y contribuyan a una comunidad más inclusiva y resiliente."
+            ]
+          }
+        ]
+      },
+      "whatWeDo": {
+        "title": "Lo que hacemos",
+        "intro": [
+          "Medios de Vida y Empoderamiento Económico es una de nuestras áreas programáticas principales. Trabajamos junto con mujeres y niñas, integrantes de la comunidad, educadoras, organizaciones locales y posibles aliadas para identificar barreras y explorar formas prácticas de ampliar el acceso a oportunidades económicas.",
+          "Nuestro programa se centra en desarrollar conocimientos, confianza, habilidades prácticas y vínculos que ayuden a las participantes a avanzar hacia el empleo, el emprendimiento y la generación sostenible de ingresos."
+        ],
+        "areas": [
+          {
+            "title": "Emprendimiento y desarrollo de pequeños negocios",
+            "imageAlt": "Mujeres participan en una actividad de emprendimiento y desarrollo de pequeños negocios en Kakuma",
+            "paragraphs": [
+              "Promovemos el emprendimiento como una posible vía hacia la independencia económica. Mediante oportunidades de aprendizaje empresarial y mentoría, las mujeres y niñas pueden explorar cómo identificar ideas de negocio, comprender las necesidades de sus clientes, planificar sus actividades y adquirir los conocimientos necesarios para gestionar un pequeño negocio.",
+              "Los temas pueden incluir la identificación de oportunidades de negocio, planificación básica, presupuestos, registro de operaciones, atención al cliente, fijación de precios, comercialización y gestión de ingresos y gastos. Estas habilidades pueden ayudar a quienes aspiran a emprender a tomar decisiones informadas y gestionar sus actividades con mayor confianza.",
+              "También reconocemos la importancia de aprender de personas con experiencia empresarial práctica. Cuando existen oportunidades, conectar a las participantes con emprendedoras y mentoras empresariales locales puede ayudarlas a comprender los desafíos habituales y aprender de experiencias reales."
+            ]
+          },
+          {
+            "title": "Desarrollo de habilidades y formación vocacional",
+            "imageAlt": "Mujeres participan en una actividad de desarrollo de habilidades y formación vocacional en Kakuma",
+            "paragraphs": [
+              "Las habilidades prácticas pueden abrir puertas al empleo, al trabajo por cuenta propia y a otras oportunidades para generar medios de vida. Buscamos promover el acceso a la formación vocacional y al desarrollo de habilidades pertinentes que respondan a los intereses de las participantes y a las necesidades de la comunidad local.",
+              "Según la disponibilidad de oportunidades de formación y alianzas, esto puede incluir habilidades prácticas, técnicas, creativas o de servicios que ayuden a las participantes a prepararse para trabajar o explorar pequeñas actividades para generar ingresos.",
+              "Nuestro enfoque destaca el valor del aprendizaje continuo, la experiencia práctica y la confianza para aplicar las habilidades adquiridas. Buscamos apoyar procesos que ayuden a las mujeres y niñas a reconocer sus fortalezas y tomar decisiones informadas sobre su futuro."
+            ]
+          },
+          {
+            "title": "Mentoría y orientación empresarial",
+            "imageAlt": "Mujeres participan en una actividad de mentoría y orientación empresarial en Kakuma",
+            "paragraphs": [
+              "Emprender un negocio o buscar empleo puede ser difícil, sobre todo para quienes tienen poco acceso a redes profesionales y asesoras con experiencia. La mentoría puede ayudar a las participantes a explorar sus metas, comprender los posibles desafíos e identificar los siguientes pasos realistas.",
+              "Mediante oportunidades de mentoría, las mujeres y niñas pueden recibir orientación para fijar metas, desarrollar ideas de negocio, mejorar la toma de decisiones, ganar confianza e identificar recursos que podrían apoyar su progreso.",
+              "Valoramos una mentoría que respete las circunstancias de cada participante y la anime a reconocer sus capacidades. Al aprender de otras personas y compartir experiencias, las participantes pueden comprender mejor las oportunidades a su alcance."
+            ]
+          },
+          {
+            "title": "Pasantías y experiencia laboral",
+            "imageAlt": "Mujeres participan en una actividad de pasantías y experiencia laboral en Kakuma",
+            "paragraphs": [
+              "La experiencia laboral práctica puede ayudar a cerrar la brecha entre el aprendizaje y el empleo. Cuando existen oportunidades adecuadas, buscamos promover vínculos con profesionales especializados, empresas, proveedores de formación y otras entidades comunitarias que puedan ofrecer pasantías o experiencias de aprendizaje supervisadas.",
+              "Estas oportunidades pueden ayudar a las participantes a adquirir conocimientos prácticos, comprender las expectativas laborales, desarrollar hábitos profesionales y familiarizarse con las habilidades necesarias en distintos sectores.",
+              "El aprendizaje en el lugar de trabajo también puede ayudar a las participantes a identificar sus intereses, fortalecer su confianza y explorar posibles caminos hacia el empleo o el trabajo por cuenta propia."
+            ]
+          },
+          {
+            "title": "Vínculos con mercados y creación de redes",
+            "imageAlt": "Mujeres participan en una actividad de vinculación con mercados y creación de redes en Kakuma",
+            "paragraphs": [
+              "El acceso a clientes, proveedores, contactos profesionales e información fiable puede marcar la diferencia para quienes desean desarrollar sus medios de vida. Reconocemos que contar con una habilidad o una idea de negocio es solo una parte del camino: las participantes también pueden necesitar contactos que les ayuden a encontrar clientes y explorar mercados.",
+              "Mediante posibles alianzas y redes comunitarias, buscamos promover oportunidades para que las mujeres y niñas conozcan las necesidades del mercado, contacten con proveedores de servicios pertinentes, compartan ideas e identifiquen posibles formas de promocionar sus productos o servicios.",
+              "Las redes más sólidas pueden ayudar a las participantes a intercambiar conocimientos, aprender de otras emprendedoras y explorar oportunidades para ampliar sus actividades con el tiempo."
+            ]
+          },
+          {
+            "title": "Preparación para el empleo y derivaciones",
+            "imageAlt": "Mujeres participan en una actividad de preparación para el empleo y derivaciones en Kakuma",
+            "paragraphs": [
+              "Para las mujeres y niñas que buscan empleo, prepararse para trabajar puede requerir más que habilidades técnicas. La comunicación, el trabajo en equipo, la resolución de problemas, la gestión del tiempo y la confianza también pueden ser importantes para encontrar y mantener un empleo.",
+              "Buscamos promover la preparación para el empleo y, cuando existen oportunidades adecuadas, conectar a las participantes con proveedores de formación, empleadores, información laboral o servicios de derivación para el empleo.",
+              "Este apoyo puede incluir orientación para prepararse ante oportunidades laborales, comprender las expectativas en el lugar de trabajo, identificar habilidades pertinentes y explorar las trayectorias profesionales disponibles. Las derivaciones dependen de la disponibilidad y pertinencia de las oportunidades y no garantizan empleo."
+            ]
+          },
+          {
+            "title": "Educación financiera y gestión responsable del dinero",
+            "imageAlt": "Mujeres participan en una actividad de educación financiera y gestión responsable del dinero en Kakuma",
+            "paragraphs": [
+              "Comprender cómo gestionar el dinero puede ayudar a las personas a tomar decisiones informadas sobre sus finanzas personales y sus actividades para generar medios de vida. Promovemos conocimientos financieros básicos, como planificar gastos, ahorrar cuando sea posible, gestionar los ingresos de un negocio, llevar registros financieros y distinguir entre costos, ingresos y ganancias.",
+              "Estas habilidades pueden ayudar a las participantes a planificar sus necesidades, evaluar ideas de negocio y avanzar hacia sus metas financieras.",
+              "También reconocemos que la situación económica varía de una persona a otra. Nuestro enfoque promueve un aprendizaje práctico y realista que respeta las circunstancias de las participantes y respalda la toma de decisiones informadas."
+            ]
+          },
+          {
+            "title": "Confianza, liderazgo y participación económica",
+            "imageAlt": "Mujeres participan en una actividad sobre confianza, liderazgo y participación económica en Kakuma",
+            "paragraphs": [
+              "El empoderamiento económico es mucho más que generar ingresos. También implica tener confianza para tomar decisiones, expresar ideas, participar en la vida comunitaria y perseguir metas personales.",
+              "Animamos a las mujeres y niñas a reconocer sus fortalezas, desarrollar sus capacidades de liderazgo y participar activamente en las decisiones que afectan sus medios de vida y su futuro.",
+              "Al promover la confianza, la colaboración y el acceso a la información, buscamos apoyar a las participantes para que contribuyan más activamente a sus hogares y comunidades."
+            ]
+          }
+        ],
+        "backToProgram": "Volver al programa de medios de vida y empoderamiento económico",
+        "partner": "Colabora con nosotras"
+      },
       "ourApproach": {
         "programTitle": "Medios de vida y empoderamiento económico",
         "title": "Nuestro enfoque",
@@ -367,12 +540,37 @@
   "getInvolved": {
     "title": "Participa",
     "intro": "Hay muchas formas de apoyar a mujeres y niñas: dona, sé voluntario, sé mentor, únete o colabora.",
+    "pageIntroOne": "Creemos que el impacto duradero comienza cuando las personas se unen para apoyarse, empoderarse y animarse mutuamente.",
+    "pageIntroTwo": "Hay muchas formas de participar: puedes donar para apoyar nuestros programas, ofrecerte como voluntaria, ser mentora de mujeres jóvenes, compartir tus habilidades o colaborar con nosotras para crear nuevas oportunidades. Cada aporte, grande o pequeño, puede abrir puertas, fortalecer la confianza y marcar una diferencia significativa en la vida de las mujeres y niñas del campamento de personas refugiadas de Kakuma, Kenia.",
+    "pageClosing": "Acompáñanos a crear un futuro en el que todas las niñas y mujeres jóvenes tengan la oportunidad de prosperar.",
     "howItWorks": "Cómo funciona",
     "readyTitle": "¿Listo para dar el siguiente paso?",
+    "detailContactPrefix": "Escríbenos a través de nuestra",
+    "detailContactLink": "página de contacto",
+    "detailDonateConnector": "o",
+    "detailDonateLink": "haz una donación",
+    "detailDonateSuffix": "hoy.",
     "thankYouInterest": "Gracias por tu interés en {{title}}. Nuestro equipo quiere contactarte y explicarte cómo dar el siguiente paso.",
     "reachUs": "Para preguntas, contáctanos en:",
     "emailUs": "Escríbenos",
-    "callUs": "Llámanos"
+    "callUs": "Llámanos",
+    "items": {
+      "donate": {
+        "summary": "Tu aporte financia directamente nuestros programas de educación, desarrollo de habilidades y dignidad."
+      },
+      "volunteer": {
+        "summary": "Ofrece tu tiempo y tus habilidades para apoyar a las mujeres y niñas de tu comunidad."
+      },
+      "membership": {
+        "summary": "Hazte integrante y ayúdanos a definir nuestras prioridades y programas."
+      },
+      "mentor": {
+        "summary": "Comparte tu experiencia como mentora de mujeres jóvenes y niñas."
+      },
+      "partner": {
+        "summary": "Colabora con nosotras como entidad financiadora, institución u organización comunitaria."
+      }
+    }
   },
   "post": {
     "title": "Publicación",
@@ -380,10 +578,11 @@
   },
   "report": {
     "title": "Informe",
-    "subtitle": "Resultados, alcance y cómo medimos el cambio en nuestros programas."
+    "subtitle": "Resultados, alcance y cómo medimos el cambio en nuestros programas.",
+    "notice": "Estamos preparando nuestro informe y lo publicaremos pronto."
   },
   "blogs": {
-    "title": "Blogs",
+    "title": "Artículos del blog",
     "subtitle": "Reflexiones de nuestro equipo, nuestros mentores y las mujeres y niñas con quienes trabajamos."
   },
   "impactSectionPages": {
@@ -399,7 +598,31 @@
   },
   "updates": {
     "title": "Actualizaciones de la comunidad e historias",
-    "intro": "Historias, anuncios y momentos destacados de nuestro trabajo con la comunidad de Kakuma."
+    "intro": "Historias, anuncios y momentos destacados de nuestro trabajo con la comunidad de Kakuma.",
+    "previous": "Novedades anteriores",
+    "next": "Novedades siguientes",
+    "notFound": "No se encontró la novedad",
+    "backToAll": "Volver a todas las novedades",
+    "items": {
+      "building-pathways-for-women-and-girls": {
+        "title": "Creando caminos para las mujeres y niñas de Kakuma",
+        "alt": "Mujeres y niñas aprenden juntas en Women Without Borders Hub, en Kakuma",
+        "summary": "¿Qué ocurre cuando las mujeres de Kakuma acceden a educación, habilidades y oportunidades?",
+        "fullText": "¿Qué ocurre cuando las mujeres de Kakuma acceden a educación, habilidades y oportunidades?\n\nWomen Without Borders Hub está creando caminos para que las mujeres y niñas de Kakuma aprendan, generen ingresos y lideren.\n\nPorque cuando las mujeres acceden a oportunidades, las comunidades se vuelven más resilientes.\n\nWomen Without Borders Hub, en Kakuma, es una iniciativa comunitaria que empodera a las mujeres y niñas del campamento de personas refugiadas de Kakuma mediante:\n\n- Educación,\n- Promoción de la salud,\n- Emprendimiento,\n- Desarrollo de habilidades técnicas.\n\nEstamos creando caminos para que las mujeres y niñas accedan a las herramientas, los conocimientos y las oportunidades que necesitan para construir futuros independientes y comunidades más fuertes.\n\nNuestro trabajo se centra en cuatro pilares principales:\n\n- Promoción de la educación\n- Promoción de la salud\n- Promoción del emprendimiento\n- Desarrollo de habilidades técnicas\n\nEsto es mucho más que un programa.\n\nEs una plataforma para la dignidad, la resiliencia y la inclusión económica.\n\nCreemos que a las mujeres de las comunidades refugiadas no se las debe definir por el desplazamiento, sino por sus circunstancias, su potencial, su liderazgo y su capacidad para construir el futuro.\n\nWomen Without Borders Hub existe para convertir el acceso en oportunidades y las oportunidades en una transformación duradera.\n\nSi te importa el empoderamiento de las mujeres, los medios de vida de las personas refugiadas y el desarrollo inclusivo, nos encantaría conectar contigo."
+      },
+      "graduation-celebration-skills": {
+        "title": "Día de graduación: mujeres jóvenes completan su capacitación en costura y habilidades digitales",
+        "alt": "Mujeres jóvenes graduadas sostienen sus certificados de capacitación",
+        "summary": "Para las mujeres de Women Without Borders Hub, esta graduación fue mucho más que recibir certificados: fue una celebración de su resiliencia, valentía, crecimiento y nuevas posibilidades.",
+        "fullText": "Para las mujeres de Women Without Borders Hub, esta graduación fue mucho más que recibir certificados: fue una celebración de su resiliencia, valentía, crecimiento y nuevas posibilidades.\n\nDetrás de cada certificado hay una mujer que eligió aprender, adquirir nuevas habilidades, encontrar su voz y construir un futuro mejor para ella, su familia y su comunidad.\n\nAgradecemos a Teach for Community por organizar esta ceremonia especial y celebrar con nosotras a estas mujeres.\n\nCuando las mujeres aprenden, las comunidades crecen. Cuando las mujeres lideran, las comunidades avanzan.\n\n¡Felicitaciones a nuestras graduadas!"
+      },
+      "health-advocacy": {
+        "title": "Promovemos el derecho a la salud: Women Without Borders Hub",
+        "alt": "Promoción de la salud en comunidades refugiadas y de acogida de Kakuma",
+        "summary": "La salud es un derecho humano, no un privilegio.",
+        "fullText": "La salud es un derecho humano, no un privilegio.\n\nSin embargo, muchas mujeres, niñas, niños y familias desplazadas aún tienen dificultades para acceder a la atención básica de salud, a información y a apoyo.\n\nHoy, en Women Without Borders Hub, aprendemos, dialogamos y promovemos una mayor conciencia sobre la salud y el bienestar comunitario.\n\nCreemos que, mediante la promoción de la salud, las comunidades se fortalecen, se sienten más seguras y pueden tomar decisiones informadas sobre sus vidas y su futuro.\n\nDesde la salud materna y el bienestar emocional hasta la higiene y el acceso a los servicios de salud, cada conversación importa.\n\nLas comunidades saludables construyen futuros más fuertes.\n\nLa concienciación salva vidas.\n\nLa promoción de derechos genera cambios.\n\nJuntas, seguimos alzando la voz por una atención de salud equitativa e inclusiva para las comunidades refugiadas y de acogida de Kakuma y otros lugares."
+      }
+    }
   },
   "news": {
     "title": "Noticias",
@@ -407,11 +630,46 @@
   },
   "resources": {
     "title": "Recursos",
-    "intro": "Informes, herramientas y guías de nuestro trabajo, gratis para descargar y reutilizar."
+    "intro": "Informes, herramientas y guías de nuestro trabajo, gratis para descargar y reutilizar.",
+    "download": "Descargar",
+    "types": {
+      "report": "Informe",
+      "guide": "Guía",
+      "toolkit": "Caja de herramientas",
+      "policy": "Política",
+      "research": "Investigación"
+    },
+    "items": {
+      "annualReport": {
+        "title": "Informe anual de impacto 2025",
+        "description": "Resultados, finanzas e historias de todas las áreas de nuestros programas."
+      },
+      "menstrualGuide": {
+        "title": "Guía para promover la dignidad menstrual",
+        "description": "Orientación práctica sobre agua, saneamiento e higiene (WASH) y suministros para escuelas y lugares de trabajo."
+      },
+      "digitalCurriculum": {
+        "title": "Plan de estudios de habilidades digitales",
+        "description": "Plan de estudios abierto para cursos comunitarios de alfabetización digital."
+      },
+      "safeguardingPolicy": {
+        "title": "Política de protección y salvaguarda de la niñez",
+        "description": "Nuestros estándares para proteger a las personas participantes."
+      },
+      "srhrStudy": {
+        "title": "Estudio sobre conocimientos, actitudes y prácticas en salud y derechos sexuales y reproductivos",
+        "description": "Investigación de referencia realizada en 12 distritos."
+      },
+      "savingsGuide": {
+        "title": "Cómo crear un grupo de ahorro",
+        "description": "Manual paso a paso para crear y gestionar un grupo de ahorro."
+      }
+    }
   },
   "team": {
     "title": "Nuestro equipo",
-    "subtitle": "Los líderes comunitarios, educadores y mentores de Women Without Borders Hub en Kakuma."
+    "subtitle": "Los líderes comunitarios, educadores y mentores de Women Without Borders Hub en Kakuma.",
+    "joinPrompt": "¿Quieres unirte al equipo?"
   },
   "about": {
     "title": "Acerca de",
@@ -422,96 +680,115 @@
       "viewProfile": "Ver el perfil",
       "profileComingSoon": "Se actualizará pronto"
     },
-    "heading": "About",
-    "paragraph": "Women Without Borders Hub is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women.",
-    "missionTitle": "Our mission",
-    "visionTitle": "Our vision",
-    "whoWeServe": "Who we serve",
-    "coreValues": "Our core values",
-    "whereWeWork": "Where we work",
-    "partnersText": "We partner with schools, training institutions, health providers, NGOs, development organizations, donors and private-sector partners — adapting each programme to local needs while holding consistent standards for quality and safeguarding.",
-    "getToKnowUs": "Get to know us better",
-    "exploreText": "Explore our programs, read our impact or get involved.",
-    "actionsHeading": "Ways to support",
-    "card1Label": "Sponsor a Girl's Education",
-    "card1Desc": "Help fund a girl's education journey",
-    "card2Label": "Support Menstrual Health Education",
-    "card2Desc": "Provide menstrual health resources",
-    "card3Label": "Fund Digital and Practical Skills",
-    "card3Desc": "Support digital skills training",
-    "card4Label": "Partner With Us",
-    "card4Desc": "Collaborate with us to empower more girls"
+    "heading": "Sobre nosotras",
+    "paragraph": "Women Without Borders Hub es una organización comunitaria de Kakuma, condado de Turkana, Kenia, que crea oportunidades para niñas en situación de vulnerabilidad, madres adolescentes y mujeres jóvenes.",
+    "homeIntro": "Women Without Borders Hub es una organización impulsada por la comunidad en <location/>, que trabaja con comunidades refugiadas y de acogida para eliminar las barreras a la educación y las oportunidades que enfrentan las niñas en situación de vulnerabilidad, las madres adolescentes y las mujeres jóvenes.",
+    "homeDetail": "Mediante apoyo educativo, alfabetización, mentoría, atención de salud, habilidades prácticas y oportunidades para el empoderamiento económico, ayudamos a las mujeres jóvenes a aprender, ganar confianza y construir un futuro independiente.",
+    "literacyImageAlt": "Niñas participan en una clase de alfabetización en Women Without Borders Hub",
+    "missionText": "Nuestra misión es eliminar las barreras a la educación y las oportunidades que enfrentan las niñas en situación de vulnerabilidad, las madres adolescentes y las mujeres jóvenes, mediante apoyo educativo, alfabetización, mentoría, atención de salud, habilidades prácticas y oportunidades para el empoderamiento económico y la autosuficiencia.",
+    "visionText": "Un futuro en el que todas las niñas y mujeres jóvenes de Kakuma puedan aprender, desarrollar su potencial, ganar confianza y construir un futuro independiente.",
+    "audiences": [
+      "Niñas en situación de vulnerabilidad",
+      "Madres adolescentes",
+      "Mujeres jóvenes"
+    ],
+    "communities": [
+      "Comunidades refugiadas",
+      "Comunidades de acogida"
+    ],
+    "coreValuesItems": [
+      "Educación",
+      "Integridad",
+      "Igualdad",
+      "Empoderamiento",
+      "Dignidad",
+      "Inclusión",
+      "Respeto",
+      "Liderazgo comunitario",
+      "Alianzas",
+      "Rendición de cuentas",
+      "Aprendizaje"
+    ],
+    "missionTitle": "Nuestra misión",
+    "visionTitle": "Nuestra visión",
+    "whoWeServe": "A quiénes acompañamos",
+    "coreValues": "Nuestros valores fundamentales",
+    "whereWeWork": "Dónde trabajamos",
+    "partnersText": "Colaboramos con escuelas, instituciones de formación, proveedores de salud, ONG, organizaciones de desarrollo, entidades donantes y empresas del sector privado. Adaptamos cada programa a las necesidades locales y mantenemos estándares constantes de calidad y protección.",
+    "getToKnowUs": "Conócenos mejor",
+    "exploreText": "Explora nuestros programas, conoce nuestro impacto o participa.",
+    "actionsHeading": "Formas de apoyar",
+    "card1Label": "Apadrina la educación de una niña",
+    "card1Desc": "Ayuda a financiar la educación de una niña",
+    "card2Label": "Apoya la educación sobre salud menstrual",
+    "card2Desc": "Proporciona recursos para la salud menstrual",
+    "card3Label": "Financia la formación en habilidades digitales y prácticas",
+    "card3Desc": "Apoya la formación en habilidades digitales",
+    "card4Label": "Colabora con nosotras",
+    "card4Desc": "Colabora con nosotras para empoderar a más niñas",
+    "detailsLabel": "Detalles sobre nosotras"
   },
   "ourStory": {
-    "whatWeDo": "Lo que hacemos",
+    "whatWe": "Lo que",
+    "do": "Hacemos",
     "donate": "DONAR",
-    "contactUs": "Contáctanos"
+    "contactUs": "Contáctanos",
+    "fromKakuma": "De Kakuma a la esperanza",
+    "whyHub": "Por qué existe Women Without Borders Hub",
+    "pageTitle": "MaLua Lugazo: creando esperanza para las niñas de Kakuma",
+    "lead": "MaLua Lugazo es una refugiada somalí que vive en el campamento de personas refugiadas de Kakuma y fundó Women Without Borders Hub para que todas las niñas y mujeres jóvenes tengan la oportunidad de aprender, crecer y liderar.",
+    "photoAlt": "MaLua Lugazo, fundadora de Women Without Borders Hub",
+    "quote": "Todas las niñas tienen derecho a aprender, crecer y liderar.",
+    "quoteAttribution": "? MaLua Lugazo, fundadora",
+    "fromKakumaText": "MaLua Lugazo conoce Kakuma desde dentro. Como refugiada somalí que creció en el campamento, vio cómo niñas brillantes abandonaban las aulas: el matrimonio precoz, el embarazo, las tareas del hogar y los costos escolares les cerraban las puertas una a una. También vio lo que puede lograr una sola oportunidad: una beca, una mentora, un espacio seguro para estudiar. Ese contraste ?entre lo que se les niega a las niñas de Kakuma y lo que pueden llegar a ser cuando alguien cree en ellas? dio origen a Women Without Borders Hub.",
+    "whyHubText": "MaLua fundó Women Without Borders Hub para que ninguna niña de Kakuma tuviera que luchar sola por su educación. Hub reúne a niñas de comunidades refugiadas y de acogida en un mismo movimiento: educación y alfabetización, habilidades digitales y vocacionales, mentoría, dignidad menstrual, salud y oportunidades laborales. Cada programa se impulsa desde la comunidad y se diseña junto con las niñas a quienes sirve, porque las niñas de Kakuma no son un problema que haya que resolver, sino líderes a quienes hay que brindar herramientas.",
+    "closingText": "Hoy, Hub acompaña a niñas en situación de vulnerabilidad, madres adolescentes y mujeres jóvenes de Kakuma, desde el aula hasta el mercado. Explora nuestros programas, descubre el cambio que genera tu apoyo y súmate a esta historia:"
   },
   "safeguarding": {
     "title": "Protección",
-    "intro": "Nuestro compromiso con la seguridad, la dignidad y la protección de cada niña y mujer a la que servimos."
-  },
-  "homeHero": {
-    "titlePrefix": "Empoderando a",
-    "girls": "las niñas",
-    "connector": "y a",
-    "youngWomen": "las jóvenes",
-    "location": "en Kakuma, Kenia",
-    "lead": "Creamos oportunidades para niñas vulnerables, madres adolescentes y mujeres jóvenes mediante la educación, las habilidades, la mentoría, la salud y el empoderamiento económico en Kakuma, Kenia.",
-    "programs": "Nuestros programas",
-    "realPeople": "Personas reales.",
-    "realChange": "Un cambio real.",
-    "photoAlt": "Mujeres sosteniendo con orgullo sus certificados de graduación",
-    "imageBandAlt": "Mujeres participando en un programa comunitario en Kakuma",
-    "facebook": "{{name}} en Facebook",
-    "linkedin": "{{name}} en LinkedIn",
-    "featuredMessage": "Mensaje destacado",
-    "pauseRotation": "Pausar la rotación",
-    "playRotation": "Reanudar la rotación",
-    "slideOneLabel": "1 de 2",
-    "slideTwoLabel": "2 de 2",
-    "showSlideOne": "Mostrar diapositiva 1 de 2",
-    "showSlideTwo": "Mostrar diapositiva 2 de 2",
-    "slideTwoPhotoAlt": "Mujeres aprendiendo juntas en Kakuma",
-    "slideTwoLineOne": "Aprender. Crecer.",
-    "slideTwoLineTwo": "Liderar. Construir un",
-    "slideTwoLineThree": "futuro mejor.",
-    "slideTwoLead": "Fundada en 2024 por MaLua Lugazo, Women Without Borders Hub apoya a mujeres y niñas de Kakuma mediante educación, habilidades y mentoría.",
-    "slideTwoStory": "Nuestra historia",
-    "slideTwoSupport": "Apoya nuestro trabajo"
-  },
-  "homePage": {
-    "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
+    "intro": "Nuestro compromiso con la seguridad, la dignidad y la protección de cada niña y mujer a la que servimos.",
+    "commitment": "Nuestro compromiso",
+    "commitmentText": "Aplicamos una política de tolerancia cero frente a la explotación, el abuso y el acoso. Cada integrante del equipo, voluntaria y entidad aliada recibe capacitación en protección y debe cumplir nuestro código de conducta.",
+    "howWeWork": "Cómo trabajamos",
+    "practices": {
+      "recruitment": "Procesos de contratación más seguros, incluidas verificaciones de antecedentes",
+      "focalPoints": "Referentes de protección capacitados en cada programa",
+      "reporting": "Canales confidenciales para informar incidentes, con protección frente a represalias",
+      "survivorResponse": "Respuesta centrada en las personas sobrevivientes y derivación a servicios especializados"
+    },
+    "raiseConcern": "Comunica una preocupación",
+    "concernPrefix": "Si te preocupa la seguridad de una persona participante o integrante del personal, comunícate de inmediato con nuestro equipo de protección a través del",
+    "confidentialSuffix": "Tratamos los informes de manera confidencial."
   },
   "getInvolvedCards": {
-    "kicker": "Get Involved",
-    "heading": "Ways to support women and girls",
-    "heroAlt": "Girls and young women supported by Women Without Borders Hub in Kakuma",
+    "kicker": "Participa",
+    "heading": "Formas de apoyar a las mujeres y niñas",
+    "intro": "Hay muchas formas de apoyar nuestra misión: ofrecer tu tiempo como voluntario, compartir tus habilidades, brindar apoyo económico, orientar a mujeres jóvenes o colaborar con nosotros. Cada aporte cuenta y puede ampliar el acceso a la educación, la formación, la información sobre salud y las oportunidades económicas para mujeres y niñas de Kakuma Refugee Camp. Juntos podemos superar barreras, fortalecer la confianza y crear un futuro en el que cada niña y joven pueda prosperar.",
+    "heroAlt": "Niñas y mujeres jóvenes acompañadas por Women Without Borders Hub en Kakuma",
     "cardDonate": {
-      "title": "Donate",
-      "text": "Support our mission",
-      "linkLabel": "Donate now →",
-      "alt": "Donate to Women Without Borders Hub"
+      "title": "Donar",
+      "text": "Apoya nuestra misión",
+      "linkLabel": "Dona ahora →",
+      "alt": "Haz una donación a Women Without Borders Hub"
     },
     "cardPartner": {
-      "title": "Partner with us",
-      "text": "Join our network of partners",
-      "linkLabel": "Become a partner →",
-      "alt": "Become a partner of Women Without Borders Hub"
+      "title": "Colabora con nosotras",
+      "text": "Súmate a nuestra red de alianzas",
+      "linkLabel": "Conviértete en aliada →",
+      "alt": "Conviértete en aliada de Women Without Borders Hub"
     },
     "cardVolunteer": {
-      "title": "Volunteer",
-      "text": "Give your time and skills",
-      "linkLabel": "Volunteer →",
-      "alt": "Volunteer with Women Without Borders Hub"
+      "title": "Voluntariado",
+      "text": "Ofrece tu tiempo y tus habilidades",
+      "linkLabel": "Haz voluntariado →",
+      "alt": "Haz voluntariado con Women Without Borders Hub"
     },
     "cardSkills": {
-      "title": "Share your skills",
-      "text": "Mentor or teach",
-      "linkLabel": "Contribute skills →",
-      "alt": "Share your skills - icon only"
-    },
-    "intro": "Hay muchas formas de apoyar nuestra misión: ofrecer tu tiempo como voluntario, compartir tus habilidades, brindar apoyo económico, orientar a mujeres jóvenes o colaborar con nosotros. Cada aporte cuenta y puede ampliar el acceso a la educación, la formación, la información sobre salud y las oportunidades económicas para mujeres y niñas de Kakuma Refugee Camp. Juntos podemos superar barreras, fortalecer la confianza y crear un futuro en el que cada niña y joven pueda prosperar."
+      "title": "Comparte tus habilidades",
+      "text": "Ofrece mentoría o enseña",
+      "linkLabel": "Comparte tus habilidades →",
+      "alt": "Comparte tus habilidades: solo el icono"
+    }
   },
   "volunteer": {
     "displayOptions": {
@@ -529,14 +806,14 @@
       },
       "textSizeLegend": "Tamaño del texto",
       "scales": {
-        "1": "Normal",
+        "1": "Tamaño normal",
         "1.25": "Grande (125%)",
         "1.5": "Extra grande (150%)"
       },
       "reset": "Restablecer valores predeterminados",
       "announcement": "Tema {{theme}} seleccionado",
       "resetAnnouncement": "Opciones de visualización restablecidas.",
-      "errorPrefix": "Error"
+      "errorPrefix": "Aviso"
     },
     "breadcrumb": "Voluntariado",
     "introLabel": "Sobre el voluntariado",
@@ -545,6 +822,7 @@
     "heroCta": "Completa el formulario de voluntariado",
     "intro": "Nuestros voluntarios ayudan con programas de educación, habilidades, mentoría, salud y empoderamiento económico. Cuéntanos cómo te gustaría ayudar y nuestro equipo se pondrá en contacto contigo en un plazo de 2 días hábiles.",
     "form": {
+      "consent": "Acepto que Women Without Borders Hub se comunique conmigo sobre el voluntariado y almacene mis datos para este fin.",
       "title": "Solicitud de voluntariado",
       "required": "obligatorio",
       "requiredNote": "Los campos marcados con * son obligatorios.",
@@ -660,5 +938,127 @@
       "sending": "Enviando...",
       "submit": "Enviar mi solicitud"
     }
+  },
+  "impact": {
+    "title": "Impacto",
+    "subtitle": "Medimos lo que importa y publicamos los resultados. Esto es lo que hemos logrado gracias a tu apoyo.",
+    "measureTitle": "Cómo medimos",
+    "measureText": "Cada programa registra indicadores de participación, finalización y resultados, verificados mediante encuestas de seguimiento a los 3, 6 y 12 meses. Los informes anuales se publican en Recursos.",
+    "intro": "Medimos lo que importa y publicamos los resultados. Esto es lo que hemos logrado gracias a tu apoyo.",
+    "measureImageAlt": "Mujeres y niñas participan en un programa en Kakuma",
+    "howWeMeasure": "Cómo medimos",
+    "measureDescription": "Cada programa registra indicadores de participación, finalización y resultados, verificados mediante encuestas de seguimiento a los 3, 6 y 12 meses. Los informes anuales se publican en",
+    "multiply": "Ayúdanos a ampliar este impacto",
+    "supportConnector": ",",
+    "or": "o",
+    "withUs": "con nosotras.",
+    "cardCaption": "Novedades de la comunidad",
+    "readTime": "Tiempo de lectura: {{count}} min",
+    "sectionsLabel": "Secciones de impacto",
+    "all": "Todo",
+    "sections": {
+      "news": "Noticias",
+      "blogs": "Artículos del blog",
+      "report": "Informe",
+      "post": "Publicación"
+    },
+    "stats": {
+      "reached": "Mujeres y niñas alcanzadas",
+      "programmes": "Programas principales",
+      "locations": "Campamento de personas refugiadas de Kakuma"
+    },
+    "sectionIntro": "Resultados medibles de nuestros programas con las comunidades refugiadas y de acogida en Kakuma.",
+    "sectionImageAlt": "Impacto de los programas de Women Without Borders Hub en Kakuma",
+    "sectionStats": {
+      "reached": "Mujeres y niñas alcanzadas",
+      "programmes": "Programas principales",
+      "locations": "Campamento de personas refugiadas de Kakuma"
+    }
+  },
+  "partners": {
+    "title": "Nuestras organizaciones aliadas",
+    "logoAlt": "Logotipo de {{name}}"
+  },
+  "profile": {
+    "founderLeader": "Fundadora y líder de la organización",
+    "motivation": "Qué la motivó a crear Hub",
+    "barriers": [
+      "Interrupción de los estudios y pocas oportunidades para volver a la escuela",
+      "Limitaciones económicas",
+      "Acceso limitado a habilidades digitales y capacitación vocacional",
+      "Pocas oportunidades para acceder a medios de vida sostenibles",
+      "Para las madres adolescentes: responsabilidades de cuidado infantil, estigma y dificultad para conciliar la maternidad con los estudios y el desarrollo personal",
+      "Riesgo de violencia de género",
+      "Acceso limitado a información y servicios de salud",
+      "Barreras sociales que limitan la participación en la toma de decisiones"
+    ],
+    "problem": "El problema que aborda Hub",
+    "focusAreas": [
+      {
+        "title": "Educación",
+        "text": "Una base para el crecimiento personal, la toma de decisiones informadas y las oportunidades futuras. Ofrece a las niñas y mujeres jóvenes cuyos estudios se interrumpieron la posibilidad de retomarlos y perseguir sus aspiraciones."
+      },
+      {
+        "title": "Mentoría",
+        "text": "Ayuda a las mujeres y niñas a ganar confianza, reconocer sus fortalezas, desarrollar habilidades de liderazgo y aprender de personas que puedan orientarlas y alentarlas."
+      },
+      {
+        "title": "Habilidades digitales",
+        "text": "Ayuda a las mujeres a acceder a información, comunicarse, participar en el aprendizaje en línea, explorar oportunidades laborales y desarrollar o promocionar pequeños negocios en el entorno digital."
+      },
+      {
+        "title": "Concienciación sobre la salud",
+        "text": "Ayuda a las mujeres y niñas a tomar decisiones informadas sobre su bienestar, salud menstrual, salud sexual y reproductiva, higiene y servicios de apoyo disponibles."
+      },
+      {
+        "title": "Empoderamiento económico de las mujeres",
+        "text": "Desarrolla habilidades prácticas y empresariales, y oportunidades para generar ingresos, con miras a una mayor independencia económica."
+      }
+    ],
+    "challenges": [
+      "Movilizar los recursos financieros y materiales necesarios para iniciar programas, llegar a más mujeres y niñas y sostener las actividades a lo largo del tiempo",
+      "Forjar alianzas con organizaciones que comprendan el enfoque comunitario y estén dispuestas a invertir en soluciones impulsadas localmente",
+      "Desarrollar los sistemas, las políticas y los procesos de seguimiento y evaluación necesarios para crecer de manera responsable, con rendición de cuentas y medidas de protección",
+      "Equilibrar las necesidades urgentes de la comunidad con el trabajo a largo plazo de construir una organización sostenible"
+    ],
+    "change": "El cambio que quiere ver",
+    "vision": "La visión a largo plazo",
+    "support": "Apoya esta labor",
+    "leadership": "Liderazgo de Women Without Borders Hub",
+    "title": "MaLua Lugazo - Fundadora y directora ejecutiva de Women Without Borders Hub",
+    "heroIntro": "MaLua Lugazo es fundadora y directora ejecutiva de Women Without Borders Hub, una iniciativa comunitaria del campamento de personas refugiadas de Kakuma, Kenia. Hub trabaja para crear oportunidades que permitan a las mujeres y niñas refugiadas y marginadas aprender, desarrollar habilidades y construir su propio futuro.",
+    "photoAlt": "MaLua Lugazo, fundadora y directora ejecutiva de Women Without Borders Hub",
+    "featureParagraphs": [
+      "MaLua cuenta con más de nueve años de experiencia en ayuda humanitaria y desarrollo comunitario. Durante cinco años fue coordinadora de proyectos en Wings to Fly Initiative ? CBO y, durante cuatro, facilitadora en Norwegian Refugee Council, donde implementó el Programa de Educación Acelerada y fue promotora del Better Learning Programme.",
+      "Tiene un diploma en Trabajo Social y Desarrollo Comunitario y cursa una licenciatura en Trabajo Social y Administración. Su labor ha fortalecido su compromiso con la educación, el desarrollo comunitario, la protección infantil y la creación de oportunidades para poblaciones en situación de vulnerabilidad y marginación, en particular para las mujeres y niñas refugiadas."
+    ],
+    "officialRoleLabel": "Cargo oficial:",
+    "officialRole": "Fundadora | Directora ejecutiva",
+    "meetTeam": "Conoce al equipo directivo",
+    "readStory": "Lee nuestra historia",
+    "motivationParagraphs": [
+      "MaLua fundó Women Without Borders Hub tras años de trabajo junto a mujeres y niñas refugiadas y marginadas de Kakuma. Una y otra vez observó el mismo patrón: estaban dispuestas y preparadas para aprender, liderar y construir una vida propia, pero las frenaban barreras que las respuestas a corto plazo nunca abordaban.",
+      "En lugar de organizar otra actividad de corto plazo, fundó Hub para crear un espacio donde las mujeres y niñas fueran tratadas como aliadas y líderes de su propio desarrollo. Esa decisión sigue siendo el eje de todo lo que hace la organización."
+    ],
+    "barriersTitle": "Barreras que enfrentan las mujeres y niñas de Kakuma",
+    "barriersIntro": "Vivir en el campamento de personas refugiadas de Kakuma implica que las oportunidades son limitadas y que la competencia por las pocas disponibles es intensa. Estas son las principales barreras que observa Hub:",
+    "problemTitle": "El problema que aborda Hub",
+    "problemParagraphs": [
+      "A menudo, las mujeres y niñas de Kakuma quedan excluidas de las decisiones que afectan sus vidas. Los programas se diseñan para ellas, en vez de junto a ellas, y el apoyo termina cuando concluye un proyecto. Como consecuencia, las mismas barreras reaparecen año tras año y su potencial de liderazgo queda sin desarrollar.",
+      "Women Without Borders Hub responde a esta brecha con un enfoque comunitario que fortalece las habilidades prácticas, restablece el acceso al aprendizaje y reconoce a las mujeres y niñas como líderes de sus propias soluciones."
+    ],
+    "focusAreasTitle": "Las cinco áreas de trabajo de Hub",
+    "missionTitle": "La misión de Women Without Borders Hub",
+    "mission": "Empoderar a las mujeres y niñas refugiadas y marginadas de Kakuma mediante el fortalecimiento de la educación, las habilidades, la confianza y el liderazgo, para que puedan construir su propio futuro e impulsar cambios en su comunidad.",
+    "challengesTitle": "Dirigir la organización: desafíos actuales",
+    "challengesIntro": "Como fundadora y directora ejecutiva, MaLua dirige el trabajo cotidiano de la organización y, al mismo tiempo, define su rumbo a largo plazo. Estos son los principales desafíos que aborda:",
+    "changeTitle": "El cambio que quiere ver",
+    "changeParagraphs": [
+      "MaLua quiere que las mujeres y niñas de Kakuma dejen de ser vistas solo como beneficiarias y sean reconocidas como aliadas y líderes. Quiere debilitar las barreras que impiden que las niñas vuelvan a la escuela, aprendan nuevas habilidades y generen sus propios ingresos, y lograr que más mujeres participen en las decisiones que afectan a su comunidad.",
+      "Para Hub, esto significa que las mujeres jóvenes terminen sus estudios con nuevas habilidades y confianza, que las mujeres generen ingresos estables y que las niñas asuman funciones de liderazgo en sus familias, escuelas y comunidades."
+    ],
+    "visionTitle": "La visión a largo plazo",
+    "longTermVision": "MaLua imagina que Women Without Borders Hub crecerá hasta convertirse en una organización comunitaria sólida y autosostenible, dirigida por las mujeres y niñas a quienes acompaña. A largo plazo, busca que Hub sea un modelo de cambio impulsado por la comunidad en Kakuma y otros lugares, que demuestre que el liderazgo local es la fuerza más poderosa para lograr cambios duraderos e inspire a otras organizaciones a trabajar de otra manera.",
+    "closing": "Cada aporte ayuda a que más mujeres y niñas de Kakuma accedan a la educación, desarrollen habilidades y tengan espacio para liderar."
   }
 }

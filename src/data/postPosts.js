@@ -9,28 +9,15 @@
  */
 import { updates } from '../sections/CommunityUpdates.jsx'
 
-const WORDS_PER_MINUTE = 200
-
-function readTimeFor(fullText) {
-  const words = fullText.trim().split(/\s+/).filter(Boolean).length
-  return `${Math.max(1, Math.round(words / WORDS_PER_MINUTE))} min read`
-}
-
 function postFromUpdate(slug, { id, date }) {
   const update = updates.find((u) => u.slug === slug)
   return {
     id,
     type: 'Post',
-    title: update.title,
-    caption: 'Community Updates',
-    // Card preview: first paragraph only (CSS clamps it to 3 lines).
-    excerpt: update.fullText.split('\n\n')[0].trim(),
+    slug,
     date,
     image: update.image,
-    alt: update.alt,
-    readTime: readTimeFor(update.fullText),
     to: update.to,
-    button: 'Read more',
   }
 }
 
