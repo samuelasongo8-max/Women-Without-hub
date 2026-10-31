@@ -6,6 +6,25 @@
   "brand": {
     "name": "Women Without Borders Hub"
   },
+  "cookieConsent": {
+    "ariaLabel": "Mapendeleo ya vidakuzi",
+    "message": "Tunatumia hifadhi muhimu ili tovuti ifanye kazi na kukumbuka chaguo lako. Unaweza kukubali au kukataa vidakuzi visivyo vya lazima.",
+    "acceptAll": "Kubali vidakuzi vyote",
+    "rejectNonEssential": "Kataa visivyo vya lazima",
+    "customize": "Badilisha mapendeleo",
+    "policyLink": "Sera ya vidakuzi",
+    "settings": "Mipangilio ya vidakuzi",
+    "essential": "Muhimu",
+    "alwaysOn": "Huwashwa kila wakati",
+    "analytics": "Uchanganuzi",
+    "marketing": "Masoko",
+    "savePreferences": "Hifadhi mapendeleo",
+    "policyTitle": "Sera ya vidakuzi",
+    "policyIntro": "Tovuti hii huhifadhi chaguo lako la vidakuzi kwenye kivinjari chako ili iweze kulikumbuka.",
+    "policyStorage": "Hifadhi muhimu hukumbuka ikiwa umekubali, umekataa au umebadilisha vidakuzi visivyo vya lazima. Inahitajika ili kuheshimu chaguo lako utakapotembelea tena.",
+    "policyOptional": "Hifadhi ya uchanganuzi na masoko ni ya hiari. Kwa sasa tovuti hii haipakii hati za uchanganuzi wala masoko. Zikiongezwa, zitaendeshwa tu baada ya kutoa ruhusa husika.",
+    "policyManage": "Unaweza kubadilisha chaguo lako wakati wowote kupitia Mipangilio ya vidakuzi iliyo kwenye sehemu ya chini ya ukurasa."
+  },
   "a11y": {
     "skipToMain": "Rukia maudhui kuu",
     "openMenu": "Fungua menyu",

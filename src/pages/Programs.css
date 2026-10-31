@@ -9,8 +9,8 @@
   --hero-overlay-start: 0.84;
   --hero-overlay-end: 0.3;
   --hero-overlay-mobile: 0.82;
-  --hero-focus: center 36%;
-  --hero-focus-mobile: center 40%;
+  --hero-focus: center 32%;
+  --hero-focus-mobile: center top;
   position: relative;
   background-image:
     linear-gradient(
@@ -19,18 +19,7 @@
       rgba(0, 0, 0, var(--hero-overlay-start)) 60%,
       rgba(0, 0, 0, var(--hero-overlay-end)) 100%
     ),
-    url('/images/programs-banner-desktop.jpg');
-  background-image:
-    linear-gradient(
-      var(--hero-scrim-direction),
-      rgba(0, 0, 0, var(--hero-overlay-start)) 0%,
-      rgba(0, 0, 0, var(--hero-overlay-start)) 60%,
-      rgba(0, 0, 0, var(--hero-overlay-end)) 100%
-    ),
-    image-set(
-      url('/images/programs-banner-desktop.webp') type('image/webp'),
-      url('/images/programs-banner-desktop.jpg') type('image/jpeg')
-    );
+    url('/girls.jpg');
   background-size: cover;
   background-position: center, var(--hero-focus);
   background-repeat: no-repeat;
@@ -73,17 +62,7 @@
         rgba(0, 0, 0, var(--hero-overlay-mobile)),
         rgba(0, 0, 0, var(--hero-overlay-mobile))
       ),
-      url('/images/programs-banner-mobile.jpg');
-    background-image:
-      linear-gradient(
-        var(--hero-scrim-direction),
-        rgba(0, 0, 0, var(--hero-overlay-mobile)),
-        rgba(0, 0, 0, var(--hero-overlay-mobile))
-      ),
-      image-set(
-        url('/images/programs-banner-mobile.webp') type('image/webp'),
-        url('/images/programs-banner-mobile.jpg') type('image/jpeg')
-      );
+      url('/girls.jpg');
     background-position: center, var(--hero-focus-mobile);
   }
 }

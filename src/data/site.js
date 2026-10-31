@@ -145,6 +145,7 @@ export const routeMeta = {
   '/resources/': { labelKey: 'breadcrumb.resources', parent: '/' },
   '/safeguarding/': { labelKey: 'breadcrumb.safeguarding', parent: '/' },
   '/contact/': { labelKey: 'breadcrumb.contact', parent: '/' },
+  '/privacy/': { labelKey: 'cookieConsent.policyTitle', parent: '/' },
 }
 
 programs.forEach((p) => {

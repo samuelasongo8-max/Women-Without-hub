@@ -192,6 +192,11 @@ const pageSeo = {
     description:
       `Partner with ${ORG_NAME} in Kakuma Refugee Camp, Kenya. Support girls’ education, mentorship, digital skills, menstrual health and economic empowerment.`,
   },
+  '/privacy/': {
+    title: 'Cookie Policy',
+    description:
+      'Learn how this website stores your cookie preferences and how to change them.',
+  },
 }
 
 // Get Involved sub-pages.
@@ -375,6 +380,10 @@ export function seoFor(pathname, translate) {
       '/resources/': ['resources.title', 'resources.intro'],
       '/safeguarding/': ['safeguarding.title', 'safeguarding.intro'],
       '/contact/': ['contact.title', 'contact.intro'],
+      '/privacy/': [
+        'cookieConsent.policyTitle',
+        'cookieConsent.policyIntro',
+      ],
     }
 
     if (path === '/') {

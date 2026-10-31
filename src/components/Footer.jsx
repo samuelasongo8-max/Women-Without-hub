@@ -228,6 +228,24 @@ export default function Footer() {
             <li>
               <Link to="/contact/">{t('footer.contact')}</Link>
             </li>
+            <li>
+              <Link to="/privacy/">{t('cookieConsent.policyLink')}</Link>
+            </li>
+            <li>
+              <button
+                className="cookie-settings-button"
+                type="button"
+                onClick={(event) =>
+                  window.dispatchEvent(
+                    new CustomEvent('cookie-settings-open', {
+                      detail: { trigger: event.currentTarget },
+                    }),
+                  )
+                }
+              >
+                {t('cookieConsent.settings')}
+              </button>
+            </li>
           </ul>
           <Link to={donateCta.to} className="btn btn-donate footer-donate-btn">
             {t('nav.donate')}

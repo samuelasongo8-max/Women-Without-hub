@@ -6,6 +6,25 @@
   "brand": {
     "name": "Women Without Borders Hub"
   },
+  "cookieConsent": {
+    "ariaLabel": "Doorbidyada buskudka",
+    "message": "Waxaan isticmaalnaa kaydin lama huraan ah si boggu u shaqeeyo oo uu u xasuusto doorashadaada. Waad aqbali kartaa ama diidi kartaa buskudka aan muhiimka ahayn.",
+    "acceptAll": "Aqbal dhammaan buskudka",
+    "rejectNonEssential": "Diid kuwa aan muhiimka ahayn",
+    "customize": "Habee doorbidyada",
+    "policyLink": "Siyaasadda buskudka",
+    "settings": "Dejinta buskudka",
+    "essential": "Lama huraan",
+    "alwaysOn": "Had iyo jeer waa shaqaynayaa",
+    "analytics": "Falanqayn",
+    "marketing": "Suuqgeyn",
+    "savePreferences": "Kaydi doorbidyada",
+    "policyTitle": "Siyaasadda buskudka",
+    "policyIntro": "Boggan wuxuu doorashadaada buskudka ku kaydiyaa biraawsarkaaga si uu u xasuusto.",
+    "policyStorage": "Kaydinta lama huraanka ahi waxay xasuusataa inaad aqbashay, diidday ama habaysay buskudka ikhtiyaariga ah. Tani waxay noo suurtagelisaa inaan ixtiraamno doorashadaada markaad mar kale timaaddo.",
+    "policyOptional": "Kaydinta falanqaynta iyo suuqgeyntu waa ikhtiyaari. Waqtigan boggani ma soo geliyo qoraallo falanqayn ama suuqgeyn ah. Haddii lagu daro, waxay shaqayn doonaan oo keliya markaad bixiso oggolaanshaha ku habboon.",
+    "policyManage": "Doorashadaada waad beddeli kartaa wakhti kasta adigoo adeegsanaya Dejinta buskudka ee gunta bogga."
+  },
   "a11y": {
     "skipToMain": "Aad nuxurka muhiimka ah",
     "openMenu": "Fur menu-ga",
