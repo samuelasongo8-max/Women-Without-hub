@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { mainNav, donateCta } from '../data/site.js'
+import { footerNav, donateCta } from '../data/site.js'
 import { SITE } from '../data/seo.js'
 import { ORG_NAME } from '../config/site.js'
 import emailjs from '@emailjs/browser'
@@ -200,7 +200,7 @@ export default function Footer() {
         <nav className="footer-col" aria-label={t('footer.explore')}>
           <h3>{t('footer.explore')}</h3>
           <ul>
-            {mainNav.map((item) => (
+            {footerNav.map((item) => (
               <li key={item.to}>
                 <Link to={item.to}>
                   {t(item.label)}

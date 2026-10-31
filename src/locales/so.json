@@ -6,6 +6,29 @@
   "brand": {
     "name": "Women Without Borders Hub"
   },
+  "chatbot": {
+    "openChat": "Fur sheekada",
+    "tooltip": "Wax kasta na weydii"
+  },
+  "timeAgo": {
+    "today": "Maanta",
+    "yesterday": "Shalay",
+    "day_one": "{{formattedCount}} maalin ka hor",
+    "day_other": "{{formattedCount}} maalmood ka hor",
+    "week_one": "{{formattedCount}} toddobaad ka hor",
+    "week_other": "{{formattedCount}} toddobaad ka hor"
+  },
+  "megaMenu": {
+    "aboutDescription": "Waxaan garab soconnaa gabdhaha iyo haweenka da'da yar ee Kakuma, annagoo u abuurayna fursado ay wax ku bartaan, isku kalsoonaadaan, una dhistaan mustaqbal wanaagsan.",
+    "aboutUs": "Nagu saabsan",
+    "imageAlt": "Xubno bulshada ka tirsan oo wada baranaya",
+    "whoWeAre": "Cidda aan nahay",
+    "ourImpact": "Saamayntayada",
+    "impactDescription": "Waxaan cabbirnaa waxa muhiimka ah, natiijooyinkana waan wadaagnaa. Eeg waxa taageeradaadu u qabatay haweenka iyo gabdhaha Kakuma.",
+    "impactOverview": "Dulmarka saamayntayada",
+    "impactImageAlt": "Haween ka qayb qaadanaya kulan waxbarasho oo bulshada ah Kakuma",
+    "contactUs": "Nala soo xiriir"
+  },
   "cookieConsent": {
     "ariaLabel": "Doorbidyada buskudka",
     "message": "Waxaan isticmaalnaa kaydin lama huraan ah si boggu u shaqeeyo oo uu u xasuusto doorashadaada. Waad aqbali kartaa ama diidi kartaa buskudka aan muhiimka ahayn.",
@@ -46,6 +69,7 @@
     "donate": "Deeq",
     "ourStory": "Sheekadeenna",
     "ourTeam": "Kooxdayada",
+    "safeguarding": "Ilaalinta",
     "news": "Wararka",
     "blogs": "Qoraalo",
     "report": "Warbixin",

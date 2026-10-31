@@ -6,6 +6,29 @@
   "brand": {
     "name": "Women Without Borders Hub"
   },
+  "chatbot": {
+    "openChat": "Chat öffnen",
+    "tooltip": "Fragen Sie uns alles"
+  },
+  "timeAgo": {
+    "today": "Heute",
+    "yesterday": "Gestern",
+    "day_one": "vor {{formattedCount}} Tag",
+    "day_other": "vor {{formattedCount}} Tagen",
+    "week_one": "vor {{formattedCount}} Woche",
+    "week_other": "vor {{formattedCount}} Wochen"
+  },
+  "megaMenu": {
+    "aboutDescription": "Gemeinsam mit Mädchen und jungen Frauen in Kakuma schaffen wir Möglichkeiten zum Lernen, stärken ihr Selbstvertrauen und fördern eine bessere Zukunft.",
+    "aboutUs": "Über uns",
+    "imageAlt": "Menschen aus der Gemeinschaft lernen gemeinsam",
+    "whoWeAre": "Wer wir sind",
+    "ourImpact": "Unsere Wirkung",
+    "impactDescription": "Wir messen, was zählt, und veröffentlichen die Ergebnisse. Entdecken Sie, was Ihre Unterstützung für Frauen und Mädchen in Kakuma bewirkt hat.",
+    "impactOverview": "Überblick über unsere Wirkung",
+    "impactImageAlt": "Frauen nehmen an einer gemeinschaftlichen Lerneinheit in Kakuma teil",
+    "contactUs": "Kontakt"
+  },
   "cookieConsent": {
     "ariaLabel": "Cookie-Einstellungen",
     "message": "Wir verwenden notwendige Speicherung, damit die Website funktioniert und Ihre Auswahl gespeichert wird. Optionale Cookies können Sie annehmen oder ablehnen.",

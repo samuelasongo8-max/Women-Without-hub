@@ -25,6 +25,7 @@ export const mainNav = [
     children: [
       { label: 'nav.ourStory', to: '/about/our-story/' },
       { label: 'nav.ourTeam', to: '/about/our-team/' },
+      { label: 'nav.getInvolved', to: '/get-involved/' },
     ],
   },
   { label: 'nav.programs', to: '/programs/' },
@@ -37,9 +38,14 @@ export const mainNav = [
       { label: 'nav.report', to: '/impact/report/' },
     ],
   },
-  { label: 'nav.getInvolved', to: '/get-involved/' },
   { label: 'nav.contact', to: '/contact/' },
 ]
+
+export const footerNav = mainNav.flatMap((item) =>
+  item.to === '/contact/'
+    ? [{ label: 'nav.getInvolved', to: '/get-involved/' }, item]
+    : [item],
+)
 
 // The prominent call to action.
 export const donateCta = { label: 'nav.donate', to: '/get-involved/donate/' }
