@@ -21,12 +21,8 @@ export default function LivelihoodWhatWeDo() {
   const nextArea = livelihoodFocusAreas[revealedCount]
   const breadcrumbTrail = breadcrumbsFor(pathname).map((crumb) => ({
     ...crumb,
-    label: crumb.isLast ? content.title : crumb.label,
+    label: crumb.isLast ? content.title : t(crumb.labelKey),
   }))
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
 
   useEffect(() => {
     const match = /^#area-([1-8])$/.exec(hash)
@@ -124,7 +120,7 @@ export default function LivelihoodWhatWeDo() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(breadcrumbListSchema(pathname)),
+            __html: JSON.stringify(breadcrumbListSchema(pathname, undefined, t)),
           }}
         />
 

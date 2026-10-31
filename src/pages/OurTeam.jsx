@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ORG_NAME } from '../config/site.js'
 import PageHeader from '../components/PageHeader.jsx'
+import Reveal from '../components/Reveal.jsx'
 import './OurTeam.css'
 
 /** 
@@ -118,11 +119,22 @@ export default function OurTeam() {
         intro={t('team.subtitle')}
         className="impact-image-header team-page-header"
         minHeight={null}
+        revealTitle
+        revealIntro
+        revealDirection="up"
+        revealDelay={80}
       />
 
       <div className="ourteam-grid">
         {team.map((member, index) => (
-          <article key={`ourteam-${member.name}-${index}`} className="ourteam-card">
+          <Reveal
+            key={`ourteam-${member.name}-${index}`}
+            as="article"
+            className="ourteam-card"
+            direction="up"
+            delay={index * 90}
+            duration={650}
+          >
             <div
               className="ourteam-photo"
               style={{ background: '#F2F2F0' }}
@@ -173,17 +185,17 @@ export default function OurTeam() {
                 {t('about.ourTeam.viewProfile')}
               </Link>
             )}
-          </article>
+          </Reveal>
         ))}
       </div>
 
       <div className="ourteam-cta-wrap">
         <div className="ourteam-cta">
-          <h2>Want to join the team?</h2>
+          <h2>{t('team.joinPrompt', { defaultValue: 'Want to join the team?' })}</h2>
           <p>
-            <Link to="/get-involved/volunteer/">Volunteer</Link>,{' '}
-            <Link to="/get-involved/mentor/">mentor</Link> or{' '}
-            <Link to="/contact/">contact us</Link>.
+            <Link to="/get-involved/volunteer/">{t('footer.volunteer')}</Link>,{' '}
+            <Link to="/get-involved/mentor/">{t('getInvolvedCards.cardSkills.title')}</Link> or{' '}
+            <Link to="/contact/">{t('footer.contact')}</Link>.
           </p>
         </div>
       </div>

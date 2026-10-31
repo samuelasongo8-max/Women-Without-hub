@@ -1,7 +1,7 @@
 {
   "donate": {
     "title": "Faire un don",
-    "subtitle": "Votre don finance directement les programmes d’éducation, de développement des compétences et de dignité."
+    "subtitle": "Votre don finance directement nos programmes d??ducation, de d?veloppement des comp?tences et de dignit?."
   },
   "brand": {
     "name": "Women Without Borders Hub"
@@ -12,23 +12,25 @@
     "closeMenu": "Fermer le menu",
     "primaryNav": "Principal",
     "footerNav": "Pied de page",
+    "heroLabel": "Banni?re de la page ? {{title}} ?",
     "logoLink": "Women Without Borders Hub, accueil",
     "routesTrailingSlash": "Remarque : les routes utilisent des barres obliques finales (ex."
   },
   "nav": {
     "home": "Accueil",
-    "about": "À propos",
+    "about": "? propos",
     "programs": "Programmes",
-    "impact": "Impact",
-    "getInvolved": "S'impliquer",
+    "impact": "Retomb?es",
+    "getInvolved": "S?impliquer",
     "resources": "Ressources",
-    "contact": "Contact",
+    "contact": "Nous contacter",
     "orgName": "Women Without Borders Hub",
     "donate": "Faire un don",
     "ourStory": "Notre histoire",
-    "ourTeam": "Notre équipe",
-    "news": "Actualités",
-    "blogs": "Blogs",
+    "ourTeam": "Notre ?quipe",
+    "safeguarding": "Protection et s?curit?",
+    "news": "Actualit?s",
+    "blogs": "Articles",
     "report": "Rapport",
     "expandSub": "Déplier le sous-menu {{label}}",
     "collapseSub": "Replier le sous-menu {{label}}"
@@ -41,14 +43,14 @@
   "search": {
     "open": "Rechercher",
     "close": "Fermer la recherche",
-    "placeholder": "Rechercher sur Women Without Borders Hub...",
+    "placeholder": "Rechercher sur Women Without Borders Hub?",
     "clear": "Effacer la recherche",
-    "results": "Résultats de recherche",
-    "noResults": "Aucun résultat pour « {{query}} ». Essayez d'autres mots.",
-    "getInvolved": "S'engager",
-    "contact": "Contact",
-    "loading": "Chargement de la recherche...",
-    "error": "Impossible de charger la recherche. Veuillez réessayer."
+    "results": "R?sultats de recherche",
+    "noResults": "Aucun r?sultat pour ? {{query}} ?. Essayez d?autres mots.",
+    "getInvolved": "S?impliquer",
+    "contact": "Nous contacter",
+    "loading": "Chargement de la recherche?",
+    "error": "La recherche n?a pas pu ?tre charg?e. Veuillez r?essayer."
   },
   "scroll": {
     "controls": "Défilement de la page",
@@ -58,117 +60,158 @@
   "whyThisMatters": {
     "schoolgirlsAlt": "Deux écolières marchant ensemble",
     "educationAlt": "Une femme qui lit pendant une activité éducative",
-    "skillsAlt": "Une femme qui apprend à coudre"
+    "skillsAlt": "Une femme qui apprend à coudre",
+    "exploreMore": "En savoir plus"
   },
   "common": {
     "learnMore": "En savoir plus",
     "readMore": "Lire la suite",
-    "allStoriesAndNews": "Toutes les histoires et actualités",
-    "storiesAndNews": "Histoires et actualités",
-    "willBeUpdatedSoon": "Sera mis à jour bientôt",
-    "photoComingSoon": "Photo bientôt disponible",
-    "underDevelopment": "En développement",
-    "partnerLogosSoon": "Les logos des partenaires sont en développement.",
+    "allStoriesAndNews": "Toutes les histoires et actualit?s",
+    "storiesAndNews": "Histoires et actualit?s",
+    "willBeUpdatedSoon": "Bient?t mis ? jour",
+    "photoComingSoon": "Photo bient?t disponible",
+    "underDevelopment": "En cours de d?veloppement",
+    "partnerLogosSoon": "Les logos de nos partenaires sont en cours de pr?paration.",
     "partnerLogo": "Logo du partenaire",
-    "viewAll": "Voir tout",
-    "readStory": "Lire l'histoire",
-    "whyThisMatters": "Pourquoi c'est important",
+    "viewAll": "Tout voir",
+    "readStory": "Lire l?histoire",
+    "whyThisMatters": "Pourquoi c?est important",
     "roles": {
-      "Chairperson": "Chairperson",
-      "Vice Chairperson": "Vice-Chairperson",
-      "Treasurer": "Trésorière",
-      "Secretary": "Secrétaire",
+      "Chairperson": "Pr?sidente",
+      "Vice Chairperson": "Vice-pr?sidente",
+      "Treasurer": "Tr?sori?re",
+      "Secretary": "Secr?taire",
       "Member": "Membre"
     },
     "whyIntro": "Les femmes et les filles de Kakuma Refugee Camp font face à de nombreux défis, notamment les difficultés financières, les interruptions de scolarité, le manque d’accès à la formation professionnelle et les obstacles à l’emploi et aux soins de santé. Pour les mères adolescentes, ces difficultés peuvent être encore plus grandes lorsqu’elles doivent concilier la garde des enfants, les études et leur développement personnel. À Women Without Borders Hub, nous croyons que chaque fille et chaque jeune femme mérite de pouvoir surmonter ces obstacles, découvrir son potentiel et construire un avenir meilleur. En favorisant l’éducation, les compétences pratiques, le mentorat, la sensibilisation à la santé et l’autonomie économique, nous voulons aider les femmes et les filles à gagner en confiance, à renforcer leur indépendance et à contribuer à leur communauté.",
-    "ctaSeeImpact": "Voyez ce que votre soutien peut changer →"
+    "ctaSeeImpact": "D?couvrir notre impact",
+    "partnerWithUs": "Devenez partenaire"
   },
   "quoteFeature": {
-    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "quote": "Chaque fille et chaque jeune femme m?rite un lieu s?r pour apprendre, s??panouir et croire en elle. En nous soutenant mutuellement, en partageant nos connaissances et en renfor?ant notre confiance, nous ouvrons la voie ? un avenir meilleur pour nous-m?mes et notre communaut?.",
+    "name": "Khadijoh Mahamed",
     "role": "Membre de Women Without Borders Hub",
-    "label": "Citation à la une",
-    "name": "Khadijoh Mahamed"
+    "label": "Citation à la une"
   },
   "quoteSection": {
-    "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
+    "quote": "Chaque fille et chaque jeune femme m?rite un lieu s?r pour apprendre, s??panouir et croire en elle. En nous soutenant mutuellement, en partageant nos connaissances et en renfor?ant notre confiance, nous ouvrons la voie ? un avenir meilleur pour nous-m?mes et notre communaut?.",
     "name": "Khadijoh Mahamed",
     "role": "Membre de Women Without Borders Hub",
     "label": "Citation à la une",
-    "quote2": "I founded Women Without Borders Hub because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.",
+    "quote2": "J?ai fond? Women Without Borders Hub parce que je crois que chaque fille et chaque jeune femme m?rite la possibilit? de se construire un avenir meilleur, quels que soient les d?fis qu?elle rencontre. Trop de jeunes femmes talentueuses ne peuvent r?aliser leurs r?ves en raison de difficult?s financi?res, du manque de possibilit?s et des obstacles qui les freinent. Je veux contribuer ? changer cela en cr?ant des espaces d?apprentissage, d?autonomisation et d??panouissement personnel o? chaque fille peut d?couvrir ses forces, faire entendre sa voix et avancer avec confiance.",
     "name2": "MaLua Lugazo",
-    "role2": "Founder of Women Without Borders Hub"
+    "role2": "Fondatrice de Women Without Borders Hub"
+  },
+  "homeHero": {
+    "titlePrefix": "Renforcer le pouvoir d'agir des",
+    "girls": "filles",
+    "connector": "et des",
+    "youngWomen": "jeunes femmes",
+    "location": "à Kakuma, au Kenya",
+    "lead": "Créer des opportunités pour les filles vulnérables, les mères adolescentes et les jeunes femmes grâce à l'éducation, aux compétences, au mentorat, à la santé et à l'autonomisation économique à Kakuma, au Kenya.",
+    "programs": "Nos programmes",
+    "realPeople": "Des personnes réelles.",
+    "realChange": "Un vrai changement.",
+    "photoAlt": "Des femmes fières tenant leurs certificats de formation",
+    "imageBandAlt": "Des femmes participant à un programme communautaire à Kakuma",
+    "facebook": "{{name}} sur Facebook",
+    "linkedin": "{{name}} sur LinkedIn",
+    "featuredMessage": "Message à la une",
+    "pauseRotation": "Mettre le carrousel en pause",
+    "playRotation": "Relancer le carrousel",
+    "slideOneLabel": "1 sur 2",
+    "slideTwoLabel": "2 sur 2",
+    "showSlideOne": "Afficher la diapositive 1 sur 2",
+    "showSlideTwo": "Afficher la diapositive 2 sur 2",
+    "slideTwoPhotoAlt": "Des femmes apprennent ensemble à Kakuma",
+    "slideTwoLineOne": "Apprendre. Grandir.",
+    "slideTwoLineTwo": "Diriger. Bâtir un",
+    "slideTwoLineThree": "meilleur avenir.",
+    "slideTwoLead": "Fondé en 2024 par MaLua Lugazo, Women Without Borders Hub accompagne les femmes et les filles de Kakuma grâce à l'éducation, aux compétences et au mentorat.",
+    "slideTwoStory": "Notre histoire",
+    "slideTwoSupport": "Soutenir notre action"
+  },
+  "homePage": {
+    "title": "Women Without Borders Hub",
+    "intro": "D?couvrez nos programmes qui donnent aux filles et aux jeunes femmes les moyens d?agir gr?ce ? l??ducation, au d?veloppement des comp?tences, ? la sensibilisation ? la sant? et aux possibilit?s ?conomiques."
+  },
+  "impactSection": {
+    "title": "Notre impact",
+    "intro": "Des r?sultats mesurables dans nos programmes aupr?s des communaut?s r?fugi?es et d?accueil de Kakuma."
   },
   "breadcrumb": {
     "home": "Accueil",
-    "about": "À propos",
-    "ourTeam": "Notre équipe",
+    "about": "? propos",
+    "ourTeam": "Notre ?quipe",
     "ourStory": "Notre histoire",
     "programs": "Programmes",
-    "impact": "Impact",
-    "getInvolved": "S'impliquer",
+    "impact": "Retomb?es",
+    "getInvolved": "S?impliquer",
     "resources": "Ressources",
-    "safeguarding": "Sauvegarde",
-    "contact": "Contact",
-    "communityUpdates": "Mises à jour et histoires de la communauté",
-    "news": "Actualités",
-    "blogs": "Blogs",
+    "safeguarding": "Protection et s?curit?",
+    "contact": "Nous contacter",
+    "communityUpdates": "Actualit?s et r?cits de la communaut?",
+    "news": "Actualit?s",
+    "blogs": "Articles",
     "report": "Rapport",
-    "post": "Article"
+    "post": "Publication",
+    "label": "Fil d?Ariane"
   },
   "footer": {
     "stayInTouch": "Restons en contact",
     "emailAddress": "Adresse e-mail",
-    "firstName": "Prénom",
+    "websiteField": "Site web",
+    "firstName": "Pr?nom",
     "required": "obligatoire",
-    "subscribe": "S'abonner",
+    "subscribe": "S?abonner",
     "subscribing": "Abonnement…",
-    "thankYou": "Merci ! Vous êtes abonné.",
-    "errorGeneric": "Désolé, une erreur s'est produite. Veuillez réessayer.",
-    "errFirstName": "Veuillez saisir votre prénom.",
+    "thankYou": "Merci ! Votre inscription est confirm?e.",
+    "errorGeneric": "D?sol?, une erreur s?est produite. Veuillez r?essayer.",
+    "errFirstName": "Veuillez saisir votre pr?nom.",
     "errEmail": "Veuillez saisir votre adresse e-mail.",
     "errEmailInvalid": "Veuillez saisir une adresse e-mail valide.",
     "about": "Une organisation communautaire à Kakuma, dans le comté de Turkana, au Kenya, qui crée des opportunités pour les filles vulnérables, les mères adolescentes et les jeunes femmes à travers l'éducation, les compétences, le mentorat, la santé et l'autonomisation économique.",
     "explore": "Explorer",
-    "getInvolved": "S'impliquer",
+    "getInvolved": "S?impliquer",
     "trustLegal": "Confiance et légal",
-    "volunteer": "Bénévolat",
+    "volunteer": "B?n?vole",
     "membership": "Adhésion",
-    "safeguarding": "Sauvegarde",
-    "contact": "Contact",
-    "rightsReserved": "Tous droits réservés."
+    "safeguarding": "Protection et s?curit?",
+    "contact": "Nous contacter",
+    "rightsReserved": "Tous droits r?serv?s."
   },
   "contact": {
-    "title": "Contact",
+    "title": "Nous contacter",
     "intro": "Que vous soyez un donateur, une ONG, une école, un partenaire de santé, un groupe communautaire, un bénévole ou un membre de la presse, nous serions heureux d'échanger avec vous.",
-    "name": "Full name",
-    "namePlaceholder": "Your full name",
-    "email": "Email",
-    "subject": "Subject",
-    "subjectPlaceholder": "Choose a subject",
-    "subjectDonor": "Donor",
-    "subjectDevelopmentOrg": "Development organization",
-    "subjectNgo": "NGO",
-    "subjectCommunityPartner": "Community partner",
-    "subjectSchool": "School or training institution",
-    "subjectHealthPartner": "Health partner",
-    "subjectVolunteer": "Volunteer",
-    "subjectPress": "Press",
-    "subjectOther": "Other",
-    "message": "Message",
-    "messagePlaceholder": "Write your message here...",
-    "send": "Send message",
-    "sending": "Sending…",
-    "errName": "Please enter your name.",
-    "errEmail": "Please enter a valid email address.",
-    "errSubject": "Please choose a subject.",
-    "errMessage": "Message must be at least 10 characters.",
-    "successContact": "Thank you for contacting Women Without Borders Hub! Your message has been sent successfully. Our team will review your inquiry and reply within 24 to 48 hours. For urgent matters, please call us directly at +254 784 062 882.",
-    "errorSend": "Sorry, your message could not be sent. Please try again or email us directly.",
-    "formHeading": "Send us a message",
-    "addressHeading": "Our address",
-    "mapText": "Find us in Kakuma, Turkana County.",
-    "mapLink": "Open in Google Maps",
-    "website": "Website",
+    "name": "Nom complet",
+    "namePlaceholder": "Votre nom complet",
+    "email": "E-mail",
+    "subject": "Objet",
+    "subjectPlaceholder": "Choisissez un objet",
+    "subjectDonor": "Donateur ou donatrice",
+    "subjectDevelopmentOrg": "Organisation de d?veloppement",
+    "subjectNgo": "ONG",
+    "subjectCommunityPartner": "Partenaire communautaire",
+    "subjectSchool": "?tablissement scolaire ou de formation",
+    "subjectHealthPartner": "Partenaire de sant?",
+    "subjectVolunteer": "B?n?vole",
+    "subjectPress": "Presse",
+    "subjectOther": "Autre",
+    "message": "Votre message",
+    "messagePlaceholder": "?crivez votre message ici?",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours?",
+    "website": "Site web",
+    "errName": "Veuillez saisir votre nom.",
+    "errEmail": "Veuillez saisir une adresse e-mail valide.",
+    "errSubject": "Veuillez choisir un objet.",
+    "errMessage": "Le message doit comporter au moins 10 caract?res.",
+    "successContact": "Merci d?avoir contact? Women Without Borders Hub ! Votre message a bien ?t? envoy?. Notre ?quipe examinera votre demande et vous r?pondra sous 24 ? 48 heures. Pour toute urgence, appelez-nous directement au +254 784 062 882.",
+    "errorSend": "D?sol?, votre message n?a pas pu ?tre envoy?. Veuillez r?essayer ou nous ?crire directement par e-mail.",
+    "formHeading": "Envoyez-nous un message",
+    "addressHeading": "Notre adresse",
+    "mapText": "Retrouvez-nous ? Kakuma, dans le comt? de Turkana.",
+    "mapLink": "Ouvrir dans Google Maps",
     "heroLabel": "Équipe et communauté de Women Without Borders Hub dans le camp de Kakuma, au Kenya",
     "partnerHeading": "Partenaire de Women Without Borders Hub",
     "partnerText1": "Women Without Borders Hub est une organisation à base communautaire située dans le camp de Kakuma, au Kenya. Nous accueillons les personnes, organisations, fondations, donateurs et partenaires qui partagent notre engagement en faveur de l'autonomisation des filles et des jeunes femmes dans les communautés de réfugiés et d'accueil.",
@@ -212,16 +255,28 @@
       ],
       "approachTitle": "Notre approche",
       "approachPoints": [
-        { "title": "Favoriser l’accès à l’éducation", "text": "Encourager les filles et les femmes à saisir les possibilités d’apprentissage et à poursuivre leur parcours éducatif." },
-        { "title": "Renforcer la confiance", "text": "Aider les apprenantes à croire en leurs capacités et à reconnaître la valeur de l’éducation dans leur vie." },
-        { "title": "Sensibiliser la communauté", "text": "Faire mieux comprendre l’importance de l’éducation et encourager le soutien aux filles et aux femmes qui souhaitent reprendre leurs études." },
-        { "title": "Encourager l’apprentissage tout au long de la vie", "text": "Contribuer à une attitude positive envers l’éducation, le développement personnel et les possibilités futures." }
+        {
+          "title": "Favoriser l’accès à l’éducation",
+          "text": "Encourager les filles et les femmes à saisir les possibilités d’apprentissage et à poursuivre leur parcours éducatif."
+        },
+        {
+          "title": "Renforcer la confiance",
+          "text": "Aider les apprenantes à croire en leurs capacités et à reconnaître la valeur de l’éducation dans leur vie."
+        },
+        {
+          "title": "Sensibiliser la communauté",
+          "text": "Faire mieux comprendre l’importance de l’éducation et encourager le soutien aux filles et aux femmes qui souhaitent reprendre leurs études."
+        },
+        {
+          "title": "Encourager l’apprentissage tout au long de la vie",
+          "text": "Contribuer à une attitude positive envers l’éducation, le développement personnel et les possibilités futures."
+        }
       ],
-      "getInvolvedTitle": "S’impliquer",
+      "getInvolvedTitle": "S?impliquer",
       "getInvolvedLead": "Vous pouvez soutenir notre programme d’éducation de la seconde chance en",
       "donate": "faisant un don",
       "volunteer": "devenant bénévole",
-      "or": "ou en",
+      "or": "ou",
       "partner": "devenant partenaire",
       "getInvolvedClosing": "Votre soutien peut nous aider à promouvoir les possibilités d’éducation pour les filles et les femmes du camp de réfugiés de Kakuma et à encourager celles dont les études ont été interrompues à poursuivre leurs objectifs.",
       "getInvolvedFinal": "Ensemble, nous pouvons créer une communauté où les filles et les femmes sont encouragées à apprendre, à développer leur potentiel et à construire un avenir plus prometteur et autonome."
@@ -306,7 +361,7 @@
       "actions": {
         "donate": "faisant un don",
         "volunteer": "devenant bénévole",
-        "joiner": "ou en",
+        "joiner": "ou",
         "partner": "devenant partenaire"
       }
     },
@@ -319,6 +374,125 @@
       "exploreMore": "Explorer davantage",
       "exploreMoreLabel": "Explorer davantage : {{title}}",
       "sectionRevealed": "Section affichée : {{title}}",
+      "overview": {
+        "intro": [
+          "L?autonomisation ?conomique est une ?tape importante pour aider les femmes et les filles ? b?tir une vie s?re, autonome et digne. Par son programme consacr? aux moyens de subsistance et ? l?autonomisation ?conomique, Women Without Borders Hub accompagne les femmes et les jeunes dans l?acquisition de comp?tences pratiques, l?exploration d?activit?s g?n?ratrices de revenus, le renforcement de leur confiance et la recherche d?une plus grande ind?pendance financi?re.",
+          "Nous savons que de nombreuses femmes et filles rencontrent des obstacles qui limitent leur acc?s ? l??ducation, ? l?emploi, aux possibilit?s d?entreprendre et aux ressources n?cessaires pour subvenir ? leurs besoins et ? ceux de leur famille. Ces obstacles peuvent notamment ?tre le manque d?acc?s ? la formation professionnelle, aux ressources financi?res, aux connaissances commerciales, aux r?seaux professionnels et aux possibilit?s d?emploi.",
+          "En tant qu?organisation communautaire ?tablie dans le camp de r?fugi?s de Kakuma, au Kenya, nous cherchons ? lever ces obstacles en favorisant l?apprentissage pratique, l?entrepreneuriat, le mentorat et les liens avec les possibilit?s existantes. Nous croyons que chaque femme et chaque fille m?rite de d?couvrir son potentiel, d?acqu?rir des comp?tences utiles et de participer pleinement ? la vie de sa communaut?.",
+          "Nous voulons promouvoir des moyens de subsistance durables qui aident les femmes et les filles ? renforcer leur autonomie, ? am?liorer leurs perspectives ?conomiques et ? contribuer positivement ? leur foyer et ? leur communaut?."
+        ],
+        "sections": [
+          {
+            "title": "Pourquoi les moyens de subsistance et l?autonomisation ?conomique sont importants",
+            "paragraphs": [
+              "Lorsque les femmes et les filles ont acc?s ? des comp?tences et ? des connaissances pertinentes, au mentorat et ? des possibilit?s ?conomiques, elles sont mieux ? m?me d?am?liorer leur situation et de pr?parer leur avenir.",
+              "Les possibilit?s de d?velopper ses moyens de subsistance peuvent aider chacune ? gagner en ind?pendance financi?re, ? mieux r?pondre ? ses besoins quotidiens et ? contribuer au bien-?tre de son foyer. Elles favorisent aussi la cr?ativit?, la r?silience, la r?solution de probl?mes et la participation communautaire.",
+              "Pour les femmes et les filles confront?es ? des conditions difficiles, notamment au d?placement et ? un acc?s limit? aux ressources, les possibilit?s de d?velopper leurs comp?tences et de participer ? l??conomie peuvent ?tre particuli?rement importantes. Toutefois, des progr?s durables ne reposent pas uniquement sur les efforts individuels : ils d?pendent ?galement de communaut?s solidaires, de formations accessibles, de possibilit?s adapt?es et de partenariats r?pondant aux besoins r?els.",
+              "? Women Without Borders Hub, nous croyons qu?investir dans les comp?tences, les id?es et le potentiel des femmes contribue ? b?tir des communaut?s plus fortes et plus inclusives."
+            ]
+          },
+          {
+            "title": "Les personnes que nous souhaitons accompagner",
+            "paragraphs": [
+              "Notre programme consacr? aux moyens de subsistance et ? l?autonomisation ?conomique s?adresse aux femmes et aux filles qui souhaitent d?velopper leurs comp?tences, explorer des possibilit?s ?conomiques et gagner en autonomie.",
+              "Nous accompagnons les femmes et les jeunes femmes de la communaut?, les filles qui se pr?parent ? de futures possibilit?s de subsistance ainsi que les personnes confront?es ? des obstacles dans le d?veloppement de leurs comp?tences, l?entrepreneuriat ou l?acc?s ? l?emploi. Nous savons que chaque participante a un parcours, des responsabilit?s, des int?r?ts et des objectifs qui lui sont propres.",
+              "Nous privil?gions donc des approches qui respectent la situation de chacune et aident les participantes ? rep?rer des parcours r?alistes, adapt?s ? leurs capacit?s et ? leurs aspirations."
+            ]
+          },
+          {
+            "title": "Cr?er des possibilit?s ensemble",
+            "paragraphs": [
+              "Une autonomisation ?conomique durable n?cessite une action collective. Les organisations communautaires, les entreprises locales, les employeurs, les ?tablissements de formation, les mentors, les bailleurs de fonds et les partenaires de d?veloppement peuvent tous contribuer ? ?largir l?acc?s aux connaissances, aux comp?tences, aux ressources et aux possibilit?s.",
+              "Women Without Borders Hub accueille les partenaires qui partagent son engagement en faveur des femmes et des filles, du d?veloppement de leurs moyens de subsistance et de leur participation ?conomique.",
+              "Les collaborations peuvent porter sur la formation professionnelle et ? l?entrepreneuriat, le mentorat, l?accompagnement au d?veloppement d?activit?s, les possibilit?s d?apprentissage, les liens avec les march?s, l?orientation professionnelle et le soutien aux initiatives communautaires de d?veloppement des moyens de subsistance.",
+              "En unissant nos efforts, nous pouvons cr?er davantage de possibilit?s pour que les femmes et les filles d?veloppent leur potentiel, r?alisent leurs objectifs et contribuent ? une communaut? plus inclusive et r?siliente."
+            ]
+          }
+        ]
+      },
+      "whatWeDo": {
+        "title": "Ce que nous faisons",
+        "intro": [
+          "Les moyens de subsistance et l?autonomisation ?conomique constituent l?un de nos domaines d?action essentiels. Nous travaillons aux c?t?s des femmes et des filles, des membres de la communaut?, des ?quipes ?ducatives, des organisations locales et de partenaires potentiels afin de rep?rer les obstacles et de trouver des moyens concrets d??largir l?acc?s aux possibilit?s ?conomiques.",
+          "Notre programme vise ? renforcer les connaissances, la confiance en soi, les comp?tences pratiques et les r?seaux qui peuvent aider les participantes ? acc?der ? l?emploi, ? entreprendre et ? g?n?rer des revenus durables."
+        ],
+        "areas": [
+          {
+            "title": "Entrepreneuriat et d?veloppement des petites entreprises",
+            "imageAlt": "Femmes participant aux activit?s d?entrepreneuriat et de d?veloppement des petites entreprises ? Kakuma",
+            "paragraphs": [
+              "Nous encourageons l?entrepreneuriat comme l?une des voies possibles vers l?ind?pendance ?conomique. Gr?ce ? des formations en gestion et ? des possibilit?s de mentorat, les femmes et les filles peuvent apprendre ? faire ?merger des id?es d?entreprise, ? comprendre les besoins de la client?le, ? planifier leurs activit?s et ? acqu?rir les connaissances n?cessaires pour g?rer une petite entreprise.",
+              "Les th?mes abord?s peuvent inclure le rep?rage de d?bouch?s, la planification de base d?une entreprise, l??tablissement d?un budget, la tenue de registres, le service ? la client?le, la fixation des prix, le marketing ainsi que la gestion des revenus et des d?penses. Ces comp?tences aident les entrepreneures en devenir ? prendre des d?cisions ?clair?es et ? aborder leurs activit?s avec davantage d?assurance.",
+              "Nous reconnaissons ?galement l?importance d?apprendre aupr?s de personnes ayant une exp?rience concr?te des affaires. Lorsque cela est possible, mettre les participantes en contact avec des entrepreneures locales et des mentors peut les aider ? mieux comprendre les difficult?s courantes et ? tirer parti d?exp?riences v?cues."
+            ]
+          },
+          {
+            "title": "D?veloppement des comp?tences et formation professionnelle",
+            "imageAlt": "Femmes participant aux activit?s de d?veloppement des comp?tences et de formation professionnelle ? Kakuma",
+            "paragraphs": [
+              "Les comp?tences pratiques peuvent ouvrir la voie ? l?emploi, au travail ind?pendant et ? d?autres moyens de subsistance. Nous souhaitons favoriser l?acc?s ? des formations professionnelles et ? des parcours de d?veloppement des comp?tences pertinents, qui r?pondent aux int?r?ts des participantes et aux besoins de la communaut? locale.",
+              "Selon les formations et les partenariats disponibles, il peut s?agir de comp?tences pratiques, techniques, cr?atives ou li?es aux services, qui aident les participantes ? se pr?parer ? l?emploi ou ? explorer de petites activit?s g?n?ratrices de revenus.",
+              "Notre approche met l?accent sur l?apprentissage continu, l?exp?rience pratique et la confiance n?cessaire pour mettre en ?uvre les comp?tences nouvellement acquises. Nous souhaitons soutenir des parcours qui permettent aux femmes et aux filles de reconna?tre leurs atouts et de prendre des d?cisions ?clair?es pour leur avenir."
+            ]
+          },
+          {
+            "title": "Mentorat et accompagnement en affaires",
+            "imageAlt": "Femmes participant aux activit?s de mentorat et d?accompagnement en affaires ? Kakuma",
+            "paragraphs": [
+              "Cr?er une entreprise ou chercher un emploi peut ?tre difficile, en particulier lorsque l?on a peu acc?s aux r?seaux professionnels et aux conseils de personnes exp?riment?es. Le mentorat peut aider les participantes ? pr?ciser leurs objectifs, ? comprendre les difficult?s possibles et ? d?finir des prochaines ?tapes r?alistes.",
+              "Gr?ce au mentorat, les femmes et les filles peuvent ?tre accompagn?es pour se fixer des objectifs, d?velopper des id?es d?entreprise, am?liorer leur prise de d?cision, renforcer leur confiance et rep?rer les ressources susceptibles de soutenir leur progression.",
+              "Nous privil?gions un mentorat qui respecte la situation de chaque participante et l?encourage ? reconna?tre ses capacit?s. En apprenant aupr?s des autres et en partageant leurs exp?riences, les participantes peuvent mieux comprendre les possibilit?s qui s?offrent ? elles."
+            ]
+          },
+          {
+            "title": "Apprentissage et exp?rience professionnelle",
+            "imageAlt": "Femmes participant aux activit?s d?apprentissage et d?exp?rience professionnelle ? Kakuma",
+            "paragraphs": [
+              "Une exp?rience professionnelle concr?te peut aider ? faire le lien entre la formation et l?emploi. Lorsque des possibilit?s adapt?es existent, nous cherchons ? favoriser les contacts avec des professionnelles qualifi?es, des entreprises, des organismes de formation et d?autres partenaires communautaires susceptibles de proposer des apprentissages ou des exp?riences encadr?es.",
+              "Ces possibilit?s peuvent aider les participantes ? acqu?rir des connaissances pratiques, ? comprendre les attentes du milieu professionnel, ? d?velopper des habitudes de travail et ? mieux conna?tre les comp?tences requises dans diff?rents domaines.",
+              "L?apprentissage en milieu professionnel peut ?galement aider les participantes ? d?couvrir leurs int?r?ts, ? renforcer leur confiance et ? explorer diff?rentes voies vers l?emploi ou le travail ind?pendant."
+            ]
+          },
+          {
+            "title": "Acc?s aux march?s et mise en r?seau",
+            "imageAlt": "Femmes participant aux activit?s d?acc?s aux march?s et de mise en r?seau ? Kakuma",
+            "paragraphs": [
+              "L?acc?s ? la client?le, aux fournisseurs, aux contacts professionnels et ? des informations fiables peut faire toute la diff?rence pour celles qui souhaitent d?velopper leurs moyens de subsistance. Poss?der une comp?tence ou une id?e d?entreprise n?est qu?une ?tape : les participantes ont aussi besoin de liens qui les aident ? trouver une client?le et ? explorer les march?s.",
+              "Gr?ce ? des partenariats ?ventuels et aux r?seaux communautaires, nous souhaitons permettre aux femmes et aux filles de mieux conna?tre les besoins des march?s, de rencontrer les prestataires concern?s, d??changer des id?es et de rep?rer des moyens de faire conna?tre leurs produits ou leurs services.",
+              "Des r?seaux plus solides permettent aux participantes de partager leurs connaissances, d?apprendre aupr?s d?autres entrepreneures et d?explorer des possibilit?s de d?velopper leurs activit?s au fil du temps."
+            ]
+          },
+          {
+            "title": "Pr?paration ? l?emploi et orientation",
+            "imageAlt": "Femmes participant aux activit?s de pr?paration ? l?emploi et d?orientation ? Kakuma",
+            "paragraphs": [
+              "Pour les femmes et les filles qui souhaitent travailler, la pr?paration ? l?emploi ne se limite pas aux comp?tences techniques. La communication, le travail d??quipe, la r?solution de probl?mes, la gestion du temps et la confiance en soi sont ?galement importants pour trouver et conserver un emploi.",
+              "Nous souhaitons sensibiliser ? la pr?paration ? l?emploi et, lorsque des possibilit?s adapt?es existent, mettre les participantes en contact avec des organismes de formation, des employeurs, des informations sur les offres d?emploi ou des services d?orientation professionnelle.",
+              "Cet accompagnement peut porter sur la pr?paration aux offres d?emploi, la compr?hension des attentes professionnelles, l?identification des comp?tences pertinentes et l?exploration des parcours disponibles. Les orientations d?pendent de l?existence et de la pertinence des possibilit?s et ne garantissent pas un emploi."
+            ]
+          },
+          {
+            "title": "?ducation financi?re et gestion responsable de l?argent",
+            "imageAlt": "Femmes participant aux activit?s d??ducation financi?re et de gestion responsable de l?argent ? Kakuma",
+            "paragraphs": [
+              "Comprendre comment g?rer son argent aide ? prendre des d?cisions ?clair?es concernant ses finances personnelles et ses activit?s ?conomiques. Nous encourageons l?acquisition de notions financi?res de base : planifier ses d?penses, ?pargner lorsque cela est possible, g?rer les revenus d?une activit?, tenir des registres financiers et distinguer co?ts, recettes et b?n?fices.",
+              "Ces comp?tences aident les participantes ? planifier leurs besoins, ? ?valuer leurs id?es d?entreprise et ? avancer vers leurs objectifs financiers.",
+              "Nous savons ?galement que la situation financi?re varie d?une personne ? l?autre. Notre approche encourage un apprentissage concret et r?aliste, respectueux de la situation de chacune et propice ? des d?cisions ?clair?es."
+            ]
+          },
+          {
+            "title": "Confiance, leadership et participation ?conomique",
+            "imageAlt": "Femmes participant aux activit?s de renforcement de la confiance, du leadership et de la participation ?conomique ? Kakuma",
+            "paragraphs": [
+              "L?autonomisation ?conomique ne consiste pas seulement ? gagner un revenu. Elle suppose aussi d?avoir confiance en soi pour prendre des d?cisions, exprimer ses id?es, participer ? la vie communautaire et poursuivre ses objectifs personnels.",
+              "Nous encourageons les femmes et les filles ? reconna?tre leurs forces, ? d?velopper leur leadership et ? prendre une part active aux d?cisions qui influencent leurs moyens de subsistance et leur avenir.",
+              "En favorisant la confiance, la collaboration et l?acc?s ? l?information, nous souhaitons aider les participantes ? contribuer davantage ? la vie de leur foyer et de leur communaut?."
+            ]
+          }
+        ],
+        "backToProgram": "Retour au programme Moyens de subsistance et autonomisation ?conomique",
+        "partner": "Devenez partenaire"
+      },
       "ourApproach": {
         "programTitle": "Moyens de subsistance et autonomisation économique",
         "title": "Notre approche",
@@ -350,28 +524,53 @@
             "text": "Nous cherchons à tirer des enseignements des activités du programme, à écouter les retours des participantes et à communiquer les progrès de manière transparente. Lorsque des activités sont mises en œuvre, le suivi peut nous aider à comprendre la participation, à repérer les difficultés et à améliorer le soutien futur."
           }
         ],
-        "backToProgram": "Retour aux moyens de subsistance et à l’autonomisation économique",
-        "partner": "Devenir partenaire"
+        "backToProgram": "Retour au programme Moyens de subsistance et autonomisation ?conomique",
+        "partner": "Devenez partenaire"
       }
     },
-    "howItWorks": "Comment ça marche",
-    "readyTitle": "Prêt à passer à l'étape suivante ?",
-    "thankYouInterest": "Merci de l'intérêt que vous portez à {{title}}. Notre équipe aimerait vous contacter et vous expliquer comment passer à l'étape suivante.",
-    "reachUs": "Si vous avez des questions, n'hésitez pas à nous contacter :",
-    "emailUs": "Écrivez-nous",
+    "howItWorks": "Comment cela fonctionne",
+    "readyTitle": "Pr?te ? franchir le pas ?",
+    "thankYouInterest": "Merci de l?int?r?t que vous portez ? {{title}}. Notre ?quipe serait ravie d??changer avec vous et de vous pr?senter les prochaines ?tapes.",
+    "reachUs": "Pour toute question, n?h?sitez pas ? nous contacter ? l?adresse suivante :",
+    "emailUs": "?crivez-nous",
     "callUs": "Appelez-nous",
     "donate": "Faire un don",
     "fillImageAlt": "Une femme vend des produits frais sur un marché à Kakuma"
   },
   "getInvolved": {
-    "title": "S'impliquer",
+    "title": "S?impliquer",
     "intro": "Il existe de nombreuses façons de soutenir les femmes et les filles — donner, devenir bénévole, mentorer, adhérer ou devenir partenaire.",
-    "howItWorks": "Comment ça marche",
-    "readyTitle": "Prêt à passer à l'étape suivante ?",
-    "thankYouInterest": "Merci de l'intérêt que vous portez à {{title}}. Notre équipe aimerait vous contacter et vous expliquer comment passer à l'étape suivante.",
-    "reachUs": "Si vous avez des questions, n'hésitez pas à nous contacter :",
-    "emailUs": "Écrivez-nous",
-    "callUs": "Appelez-nous"
+    "pageIntroOne": "Nous croyons qu?un changement durable commence lorsque les personnes s?unissent pour se soutenir, s??manciper et s??lever mutuellement.",
+    "pageIntroTwo": "Il existe de nombreuses fa?ons de s?impliquer : faire un don pour soutenir nos programmes, offrir de son temps, accompagner de jeunes femmes, partager ses comp?tences ou s?associer ? nous pour cr?er de nouvelles possibilit?s. Chaque contribution, petite ou grande, peut ouvrir des portes, renforcer la confiance et am?liorer concr?tement la vie des femmes et des filles du camp de r?fugi?s de Kakuma, au Kenya.",
+    "pageClosing": "Aidez-nous ? b?tir un avenir o? chaque fille et chaque jeune femme peut s??panouir.",
+    "howItWorks": "Comment cela fonctionne",
+    "readyTitle": "Pr?te ? franchir le pas ?",
+    "detailContactPrefix": "Contactez-nous via notre",
+    "detailContactLink": "page de contact",
+    "detailDonateConnector": "ou",
+    "detailDonateLink": "faire un don",
+    "detailDonateSuffix": "d?s aujourd?hui.",
+    "thankYouInterest": "Merci de l?int?r?t que vous portez ? {{title}}. Notre ?quipe serait ravie d??changer avec vous et de vous pr?senter les prochaines ?tapes.",
+    "reachUs": "Pour toute question, n?h?sitez pas ? nous contacter ? l?adresse suivante :",
+    "emailUs": "?crivez-nous",
+    "callUs": "Appelez-nous",
+    "items": {
+      "donate": {
+        "summary": "Votre don finance directement nos programmes d??ducation, de d?veloppement des comp?tences et de dignit?."
+      },
+      "volunteer": {
+        "summary": "Offrez de votre temps et de vos comp?tences pour soutenir les femmes et les filles de votre communaut?."
+      },
+      "membership": {
+        "summary": "Devenez membre et contribuez ? d?finir nos priorit?s et nos programmes."
+      },
+      "mentor": {
+        "summary": "Partagez votre exp?rience en accompagnant des jeunes femmes et des filles."
+      },
+      "partner": {
+        "summary": "Devenez partenaire en tant que bailleur de fonds, institution ou organisation communautaire."
+      }
+    }
   },
   "post": {
     "title": "Publication",
@@ -379,137 +578,217 @@
   },
   "report": {
     "title": "Rapport",
-    "subtitle": "Résultats, portée et méthodes de mesure des changements dans nos programmes."
+    "subtitle": "Résultats, portée et méthodes de mesure des changements dans nos programmes.",
+    "notice": "Notre rapport est en cours de pr?paration et sera bient?t mis en ligne."
   },
   "blogs": {
-    "title": "Blogs",
-    "subtitle": "Réflexions de notre équipe, de nos mentors et des femmes et filles avec lesquelles nous travaillons."
+    "title": "Articles",
+    "subtitle": "T?moignages et r?flexions de notre ?quipe, de nos mentors et des femmes et des filles avec lesquelles nous travaillons."
   },
   "impactSectionPages": {
     "post": {
       "intro": "Histoires, annonces et temps forts de notre travail à Kakuma."
     },
     "blogs": {
-      "intro": "Réflexions de notre équipe, de nos mentors et des femmes et filles avec qui nous travaillons."
+      "intro": "T?moignages et r?flexions de notre ?quipe, de nos mentors et des femmes et des filles avec lesquelles nous travaillons."
     },
     "report": {
       "intro": "Résultats, portée et mesure du changement à travers nos programmes."
     }
   },
   "updates": {
-    "title": "Mises à jour et histoires de la communauté",
-    "intro": "Histoires, annonces et temps forts de notre travail avec la communauté de Kakuma."
+    "title": "Actualit?s et r?cits de la communaut?",
+    "intro": "R?cits, annonces et temps forts de notre travail avec la communaut? de Kakuma.",
+    "previous": "Actualit?s pr?c?dentes",
+    "next": "Actualit?s suivantes",
+    "notFound": "Actualit? introuvable",
+    "backToAll": "Retour ? toutes les actualit?s",
+    "items": {
+      "building-pathways-for-women-and-girls": {
+        "title": "Ouvrir des perspectives aux femmes et aux filles de Kakuma",
+        "alt": "Femmes et filles apprenant ensemble au sein de Women Without Borders Hub ? Kakuma",
+        "summary": "Que se passe-t-il lorsque les femmes de Kakuma ont acc?s ? l??ducation, aux comp?tences et aux possibilit?s ?",
+        "fullText": "Que se passe-t-il lorsque les femmes de Kakuma ont acc?s ? l??ducation, aux comp?tences et aux possibilit?s ?\n\nWomen Without Borders Hub ouvre aux femmes et aux filles de Kakuma des voies pour apprendre, gagner leur vie et prendre les devants.\n\nCar lorsque les femmes ont acc?s aux possibilit?s, les communaut?s deviennent plus r?silientes.\n\nWomen Without Borders Hub, ? Kakuma, est une initiative communautaire qui donne aux femmes et aux filles du camp de r?fugi?s de Kakuma les moyens d?agir gr?ce ? :\n\n- l??ducation ;\n- la promotion de la sant? ;\n- l?entrepreneuriat ;\n- le d?veloppement de comp?tences techniques.\n\nNous ouvrons des voies permettant aux femmes et aux filles d?acc?der aux outils, aux connaissances et aux possibilit?s n?cessaires pour construire leur autonomie et renforcer leurs communaut?s.\n\nNotre action repose sur quatre piliers :\n\n- la promotion de l??ducation ;\n- la promotion de la sant? ;\n- la promotion de l?entrepreneuriat ;\n- le d?veloppement de comp?tences techniques.\n\nC?est bien plus qu?un programme.\n\nC?est un espace d?di? ? la dignit?, ? la r?silience et ? l?inclusion ?conomique.\n\nNous croyons que les femmes des communaut?s r?fugi?es ne doivent pas ?tre d?finies par le d?placement, mais par leur parcours, leur potentiel, leur leadership et leur capacit? ? fa?onner l?avenir.\n\nWomen Without Borders Hub transforme l?acc?s en possibilit?s, et les possibilit?s en changement durable.\n\nSi l?autonomisation des femmes, les moyens de subsistance des personnes r?fugi?es et le d?veloppement inclusif vous tiennent ? c?ur, nous serions ravies d??changer avec vous."
+      },
+      "graduation-celebration-skills": {
+        "title": "Jour de remise des dipl?mes : de jeunes femmes ach?vent une formation en couture et en comp?tences num?riques",
+        "alt": "Jeunes dipl?m?es tenant leurs certificats de formation",
+        "summary": "Pour les femmes de Women Without Borders Hub, cette c?r?monie ?tait bien plus qu?une remise de certificats : elle c?l?brait la r?silience, le courage, l??panouissement et de nouvelles possibilit?s.",
+        "fullText": "Pour les femmes de Women Without Borders Hub, cette c?r?monie ?tait bien plus qu?une remise de certificats : elle c?l?brait la r?silience, le courage, l??panouissement et de nouvelles possibilit?s.\n\nDerri?re chaque certificat se trouve une femme qui a choisi d?apprendre, d?acqu?rir de nouvelles comp?tences, de faire entendre sa voix et de b?tir un avenir meilleur pour elle-m?me, sa famille et sa communaut?.\n\nNous remercions Teach for Community d?avoir accueilli cette c?r?monie sp?ciale et c?l?br? ces femmes ? nos c?t?s.\n\nQuand les femmes apprennent, les communaut?s grandissent. Quand elles prennent les devants, les communaut?s avancent.\n\nF?licitations ? nos dipl?m?es !"
+      },
+      "health-advocacy": {
+        "title": "Agir pour la sant? : Women Without Borders Hub",
+        "alt": "Promotion de la sant? aupr?s des communaut?s r?fugi?es et d?accueil de Kakuma",
+        "summary": "La sant? est un droit humain, pas un privil?ge.",
+        "fullText": "La sant? est un droit humain, pas un privil?ge.\n\nPourtant, de nombreuses femmes, de nombreux enfants et des familles d?plac?es peinent encore ? acc?der aux soins essentiels, ? l?information et au soutien dont ils ont besoin.\n\nAujourd?hui, ? Women Without Borders Hub, nous apprenons, ?changeons et plaidons pour une meilleure sensibilisation ? la sant? et le bien-?tre de la communaut?.\n\nNous croyons que la promotion de la sant? rend les communaut?s plus fortes et plus s?res, et leur permet de prendre des d?cisions ?clair?es concernant leur vie et leur avenir.\n\nDe la sant? maternelle au bien-?tre mental, en passant par l?hygi?ne et l?acc?s aux services de sant?, chaque ?change compte.\n\nDes communaut?s en bonne sant? b?tissent un avenir plus solide.\n\nLa sensibilisation sauve des vies.\n\nLe plaidoyer fait avancer les choses.\n\nEnsemble, nous continuons ? faire entendre nos voix pour des soins de sant? ?quitables et inclusifs pour les communaut?s r?fugi?es et d?accueil de Kakuma et d?ailleurs."
+      }
+    }
   },
   "news": {
-    "title": "Actualités",
+    "title": "Actualit?s",
     "intro": "Les dernières nouvelles et annonces de Women Without Borders Hub."
   },
   "resources": {
     "title": "Ressources",
-    "intro": "Rapports, boîtes à outils et guides issus de notre travail — libres de téléchargement et de réutilisation."
+    "intro": "Rapports, boîtes à outils et guides issus de notre travail — libres de téléchargement et de réutilisation.",
+    "download": "T?l?charger",
+    "types": {
+      "report": "Rapport",
+      "guide": "Manuel",
+      "toolkit": "Trousse ? outils",
+      "policy": "Politique",
+      "research": "Recherche"
+    },
+    "items": {
+      "annualReport": {
+        "title": "Rapport d?impact annuel 2025",
+        "description": "R?sultats, donn?es financi?res et r?cits de chacun de nos domaines d?action."
+      },
+      "menstrualGuide": {
+        "title": "Guide de mise en ?uvre pour la dignit? menstruelle",
+        "description": "Conseils pratiques ? l?intention des ?coles et des lieux de travail sur l?eau, l?assainissement, l?hygi?ne et les fournitures n?cessaires."
+      },
+      "digitalCurriculum": {
+        "title": "Programme de formation aux comp?tences num?riques",
+        "description": "Programme libre pour des ateliers communautaires d?alphab?tisation num?rique."
+      },
+      "safeguardingPolicy": {
+        "title": "Politique de protection et de protection de l?enfance",
+        "description": "Nos normes pour assurer la s?curit? des participantes."
+      },
+      "srhrStudy": {
+        "title": "?tude sur les connaissances, attitudes et pratiques en mati?re de sant? et de droits sexuels et reproductifs",
+        "description": "?tude de r?f?rence men?e dans 12 districts."
+      },
+      "savingsGuide": {
+        "title": "Cr?er un groupe d??pargne",
+        "description": "Guide pratique, ?tape par ?tape, pour cr?er et g?rer un groupe d??pargne."
+      }
+    }
   },
   "team": {
-    "title": "Notre équipe",
-    "subtitle": "Les responsables communautaires, les éducateurs et les mentors de Women Without Borders Hub à Kakuma."
+    "title": "Notre ?quipe",
+    "subtitle": "Les responsables communautaires, les éducateurs et les mentors de Women Without Borders Hub à Kakuma.",
+    "joinPrompt": "Envie de rejoindre l??quipe ?"
   },
   "about": {
-    "title": "À propos",
+    "title": "? propos",
     "ourTeam": {
-      "title": "Notre équipe",
+      "title": "Notre ?quipe",
       "intro": "Découvrez les personnes derrière Women Without Borders Hub.",
-      "getInvolved": "S'impliquer",
+      "getInvolved": "S?impliquer",
       "viewProfile": "Voir le profil",
-      "profileComingSoon": "Bientôt mis à jour"
+      "profileComingSoon": "Bient?t mis ? jour"
     },
-    "heading": "About",
-    "paragraph": "Women Without Borders Hub is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women.",
-    "missionTitle": "Our mission",
-    "visionTitle": "Our vision",
-    "whoWeServe": "Who we serve",
-    "coreValues": "Our core values",
-    "whereWeWork": "Where we work",
-    "partnersText": "We partner with schools, training institutions, health providers, NGOs, development organizations, donors and private-sector partners — adapting each programme to local needs while holding consistent standards for quality and safeguarding.",
-    "getToKnowUs": "Get to know us better",
-    "exploreText": "Explore our programs, read our impact or get involved.",
-    "actionsHeading": "Ways to support",
-    "card1Label": "Sponsor a Girl's Education",
-    "card1Desc": "Help fund a girl's education journey",
-    "card2Label": "Support Menstrual Health Education",
-    "card2Desc": "Provide menstrual health resources",
-    "card3Label": "Fund Digital and Practical Skills",
-    "card3Desc": "Support digital skills training",
-    "card4Label": "Partner With Us",
-    "card4Desc": "Collaborate with us to empower more girls"
+    "heading": "? propos",
+    "paragraph": "Women Without Borders Hub est une organisation dirig?e par la communaut? ? Kakuma, dans le comt? de Turkana, au Kenya. Elle cr?e des possibilit?s pour les filles vuln?rables, les adolescentes m?res et les jeunes femmes.",
+    "homeIntro": "Women Without Borders Hub est une organisation dirig?e par la communaut? de <location/>. Elle travaille avec les communaut?s r?fugi?es et d?accueil pour lever les obstacles ? l??ducation et aux possibilit?s offertes aux filles vuln?rables, aux adolescentes m?res et aux jeunes femmes.",
+    "homeDetail": "Gr?ce au soutien scolaire, ? l?alphab?tisation, au mentorat, ? l?accompagnement en sant?, aux comp?tences pratiques et aux parcours vers l?autonomisation ?conomique, nous aidons les jeunes femmes ? apprendre, ? prendre confiance en elles et ? b?tir un avenir autonome.",
+    "literacyImageAlt": "Filles participant ? un cours d?alphab?tisation ? Women Without Borders Hub",
+    "missionText": "Notre mission est de lever les obstacles ? l??ducation et aux possibilit?s pour les filles vuln?rables, les adolescentes m?res et les jeunes femmes, en leur offrant un soutien scolaire, des cours d?alphab?tisation, du mentorat, un accompagnement en sant?, des comp?tences pratiques et des parcours vers l?autonomisation ?conomique et l?autonomie.",
+    "visionText": "Un avenir o? chaque fille et chaque jeune femme de Kakuma peut apprendre, d?velopper son potentiel, prendre confiance en elle et construire son ind?pendance.",
+    "audiences": [
+      "Filles vuln?rables",
+      "Adolescentes m?res",
+      "Jeunes femmes"
+    ],
+    "communities": [
+      "Communaut?s r?fugi?es",
+      "Communaut?s d?accueil"
+    ],
+    "coreValuesItems": [
+      "?ducation",
+      "Int?grit?",
+      "?galit?",
+      "Autonomisation",
+      "Dignit?",
+      "Inclusivit?",
+      "Consid?ration",
+      "Leadership communautaire",
+      "Partenariat",
+      "Responsabilit?",
+      "Apprentissage"
+    ],
+    "missionTitle": "Notre mission",
+    "visionTitle": "Notre vision",
+    "whoWeServe": "? qui nous nous adressons",
+    "coreValues": "Nos valeurs fondamentales",
+    "whereWeWork": "O? nous travaillons",
+    "partnersText": "Nous travaillons avec des ?coles, des ?tablissements de formation, des prestataires de sant?, des ONG, des organisations de d?veloppement, des bailleurs de fonds et des partenaires du secteur priv? ? en adaptant chaque programme aux besoins locaux tout en maintenant des normes de qualit? et de protection coh?rentes.",
+    "getToKnowUs": "Apprenez ? mieux nous conna?tre",
+    "exploreText": "D?couvrez nos programmes, lisez notre bilan d?impact ou impliquez-vous.",
+    "actionsHeading": "Comment nous soutenir",
+    "card1Label": "Soutenir la scolarit? d?une fille",
+    "card1Desc": "Contribuez au parcours scolaire d?une fille",
+    "card2Label": "Soutenir l??ducation ? la sant? menstruelle",
+    "card2Desc": "Fournir des ressources sur la sant? menstruelle",
+    "card3Label": "Financer des comp?tences num?riques et pratiques",
+    "card3Desc": "Soutenir la formation aux comp?tences num?riques",
+    "card4Label": "Devenir partenaire",
+    "card4Desc": "Collaborez avec nous pour donner plus de moyens aux filles",
+    "detailsLabel": "En savoir plus sur nous"
   },
   "ourStory": {
-    "whatWeDo": "Ce que nous faisons",
+    "whatWe": "Ce que nous",
+    "do": "faisons",
     "donate": "Faire un don",
-    "contactUs": "Contactez-nous"
+    "contactUs": "Contactez-nous",
+    "fromKakuma": "De Kakuma ? l?espoir",
+    "whyHub": "Pourquoi Women Without Borders Hub",
+    "pageTitle": "MaLua Lugazo : b?tir l?espoir pour les filles de Kakuma",
+    "lead": "MaLua Lugazo est une r?fugi?e somalienne vivant dans le camp de r?fugi?s de Kakuma. Elle a fond? Women Without Borders Hub pour que chaque fille et chaque jeune femme puisse apprendre, s??panouir et prendre les devants.",
+    "photoAlt": "MaLua Lugazo, fondatrice de Women Without Borders Hub",
+    "quote": "Chaque fille a le droit d?apprendre, de s??panouir et de prendre les devants.",
+    "quoteAttribution": "? MaLua Lugazo, fondatrice",
+    "fromKakumaText": "MaLua Lugazo conna?t Kakuma de l?int?rieur. En grandissant dans le camp en tant que r?fugi?e somalienne, elle a vu des filles prometteuses quitter l??cole : le mariage pr?coce, la grossesse, les t?ches domestiques et les frais scolaires leur fermaient les portes les unes apr?s les autres. Elle a aussi vu ce qu?une seule possibilit? peut changer : une bourse, une mentore, un espace s?r pour ?tudier. C?est de ce contraste ? entre ce qui est refus? aux filles de Kakuma et ce qu?elles peuvent devenir lorsqu?on croit en elles ? qu?est n? Women Without Borders Hub.",
+    "whyHubText": "MaLua a fond? Women Without Borders Hub pour qu?aucune fille de Kakuma n?ait ? lutter seule pour acc?der ? l??ducation. Le Hub rassemble les filles des communaut?s r?fugi?es et d?accueil autour d?un m?me mouvement : ?ducation et alphab?tisation, comp?tences num?riques et professionnelles, mentorat, dignit? menstruelle, sant? et acc?s ? l?emploi. Chaque programme est dirig? par la communaut? et con?u avec les filles concern?es, car les filles de Kakuma ne sont pas un probl?me ? r?soudre, mais des leaders ? accompagner.",
+    "closingText": "Aujourd?hui, le Hub accompagne les filles vuln?rables, les adolescentes m?res et les jeunes femmes de Kakuma, de la salle de classe au march?. D?couvrez nos programmes, voyez les changements que votre soutien rend possibles et prenez part ? cette histoire :"
   },
   "safeguarding": {
-    "title": "Sauvegarde",
-    "intro": "Notre engagement pour la sécurité, la dignité et la protection de chaque fille et femme que nous servons."
-  },
-  "homeHero": {
-    "titlePrefix": "Renforcer le pouvoir d'agir des",
-    "girls": "filles",
-    "connector": "et des",
-    "youngWomen": "jeunes femmes",
-    "location": "à Kakuma",
-    "lead": "Créer des opportunités pour les filles vulnérables, les mères adolescentes et les jeunes femmes grâce à l'éducation, aux compétences, au mentorat, à la santé et à l'autonomisation économique à Kakuma, au Kenya.",
-    "programs": "Nos programmes",
-    "realPeople": "Des personnes réelles.",
-    "realChange": "Un vrai changement.",
-    "photoAlt": "Des femmes fières tenant leurs certificats de formation",
-    "facebook": "{{name}} sur Facebook",
-    "linkedin": "{{name}} sur LinkedIn",
-    "featuredMessage": "Message à la une",
-    "pauseRotation": "Mettre le carrousel en pause",
-    "playRotation": "Relancer le carrousel",
-    "slideOneLabel": "1 sur 2",
-    "slideTwoLabel": "2 sur 2",
-    "showSlideOne": "Afficher la diapositive 1 sur 2",
-    "showSlideTwo": "Afficher la diapositive 2 sur 2",
-    "slideTwoPhotoAlt": "Des femmes apprennent ensemble à Kakuma",
-    "slideTwoLineOne": "Apprendre. Grandir.",
-    "slideTwoLineTwo": "Diriger. Bâtir un",
-    "slideTwoLineThree": "meilleur avenir.",
-    "slideTwoLead": "Fondé en 2024 par MaLua Lugazo, Women Without Borders Hub accompagne les femmes et les filles de Kakuma grâce à l'éducation, aux compétences et au mentorat.",
-    "slideTwoStory": "Notre histoire",
-    "slideTwoSupport": "Soutenir notre action"
-  },
-  "homePage": {
-    "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
+    "title": "Protection et s?curit?",
+    "intro": "Notre engagement envers la s?curit?, la dignit? et la protection de chaque fille et femme que nous accompagnons.",
+    "commitment": "Notre engagement",
+    "commitmentText": "Nous appliquons une politique de tol?rance z?ro ? l??gard de l?exploitation, des abus et du harc?lement. Chaque membre de l??quipe, b?n?vole et partenaire suit une formation sur la protection et doit respecter notre code de conduite.",
+    "howWeWork": "Notre approche",
+    "practices": {
+      "recruitment": "Recrutement plus s?r, comprenant la v?rification des ant?c?dents",
+      "focalPoints": "Des r?f?rentes et r?f?rents form?s ? la protection dans chaque programme",
+      "reporting": "Des m?canismes de signalement confidentiels et une protection contre les repr?sailles",
+      "survivorResponse": "Une r?ponse centr?e sur les personnes survivantes, avec orientation vers des services sp?cialis?s"
+    },
+    "raiseConcern": "Signaler une pr?occupation",
+    "concernPrefix": "Si vous avez des inqui?tudes concernant la s?curit? d?une participante ou d?un membre du personnel, contactez imm?diatement notre ?quipe charg?e de la protection via la",
+    "confidentialSuffix": "Les signalements sont trait?s de mani?re confidentielle."
   },
   "getInvolvedCards": {
-    "kicker": "Get Involved",
-    "heading": "Ways to support women and girls",
-    "heroAlt": "Girls and young women supported by Women Without Borders Hub in Kakuma",
+    "kicker": "S?impliquer",
+    "heading": "Des fa?ons de soutenir les femmes et les filles",
+    "intro": "Vous pouvez soutenir notre mission de nombreuses façons : donner de votre temps, partager vos compétences, apporter un soutien financier, accompagner de jeunes femmes ou établir un partenariat avec nous. Chaque contribution compte et peut faciliter l’accès à l’éducation, aux compétences, à l’information sur la santé et aux possibilités économiques pour les femmes et les filles de Kakuma Refugee Camp. Ensemble, nous pouvons lever des obstacles, renforcer la confiance et créer un avenir où chaque fille et chaque jeune femme peut s’épanouir.",
+    "heroAlt": "Filles et jeunes femmes accompagn?es par Women Without Borders Hub ? Kakuma",
     "cardDonate": {
-      "title": "Donate",
-      "text": "Support our mission",
-      "linkLabel": "Donate now →",
-      "alt": "Donate to Women Without Borders Hub"
+      "title": "Faire un don",
+      "text": "Soutenez notre mission",
+      "linkLabel": "Faire un don maintenant ?",
+      "alt": "Faire un don ? Women Without Borders Hub"
     },
     "cardPartner": {
-      "title": "Partner with us",
-      "text": "Join our network of partners",
-      "linkLabel": "Become a partner →",
-      "alt": "Become a partner of Women Without Borders Hub"
+      "title": "Devenez partenaire",
+      "text": "Rejoignez notre r?seau de partenaires",
+      "linkLabel": "Devenir partenaire ?",
+      "alt": "Devenir partenaire de Women Without Borders Hub"
     },
     "cardVolunteer": {
-      "title": "Volunteer",
-      "text": "Give your time and skills",
-      "linkLabel": "Volunteer →",
-      "alt": "Volunteer with Women Without Borders Hub"
+      "title": "B?n?vole",
+      "text": "Offrez votre temps et vos comp?tences",
+      "linkLabel": "Devenir b?n?vole ?",
+      "alt": "Faire du b?n?volat aupr?s de Women Without Borders Hub"
     },
     "cardSkills": {
-      "title": "Share your skills",
-      "text": "Mentor or teach",
-      "linkLabel": "Contribute skills →",
-      "alt": "Share your skills - icon only"
-    },
-    "intro": "Vous pouvez soutenir notre mission de nombreuses façons : donner de votre temps, partager vos compétences, apporter un soutien financier, accompagner de jeunes femmes ou établir un partenariat avec nous. Chaque contribution compte et peut faciliter l’accès à l’éducation, aux compétences, à l’information sur la santé et aux possibilités économiques pour les femmes et les filles de Kakuma Refugee Camp. Ensemble, nous pouvons lever des obstacles, renforcer la confiance et créer un avenir où chaque fille et chaque jeune femme peut s’épanouir."
+      "title": "Partagez vos comp?tences",
+      "text": "Devenez mentore ou formatrice",
+      "linkLabel": "Mettre ses comp?tences au service de l?action ?",
+      "alt": "Partager ses comp?tences ? ic?ne uniquement"
+    }
   },
   "volunteer": {
     "displayOptions": {
@@ -536,13 +815,14 @@
       "resetAnnouncement": "Options d’affichage réinitialisées.",
       "errorPrefix": "Erreur"
     },
-    "breadcrumb": "Bénévolat",
+    "breadcrumb": "B?n?vole",
     "introLabel": "À propos du bénévolat",
     "heroTitle": "Devenez bénévole",
     "heroSentence": "Offrez votre temps et vos compétences pour aider les filles et les jeunes femmes de Kakuma à apprendre, à grandir et à s'épanouir.",
     "heroCta": "Remplir le formulaire de bénévolat",
     "intro": "Nos bénévoles contribuent à nos programmes d'éducation, de compétences, de mentorat, de santé et d'autonomisation économique. Dites-nous comment vous souhaitez aider et notre équipe vous contactera sous deux jours ouvrables.",
     "form": {
+      "consent": "J?accepte que Women Without Borders Hub me contacte au sujet du b?n?volat et conserve mes renseignements ? cette fin.",
       "title": "Candidature bénévole",
       "required": "obligatoire",
       "requiredNote": "Les champs marqués d'un * sont obligatoires.",
@@ -553,12 +833,12 @@
         "programmes": "Où souhaitez-vous aider ?",
         "contributions": "Comment souhaitez-vous contribuer ?",
         "availability": "Disponibilités",
-        "motivation": "Motivation",
+        "motivation": "Motivations",
         "consent": "Consentement"
       },
       "fields": {
         "fullName": "Nom complet",
-        "email": "Adresse e-mail",
+        "email": "E-mail",
         "phone": "Téléphone ou WhatsApp",
         "location": "Pays et ville ou localité",
         "adult": "Je confirme avoir 18 ans ou plus",
@@ -571,7 +851,7 @@
         "startWhen": "Quand pouvez-vous commencer ?",
         "startDate": "Choisir une date de début",
         "motivation": "Pourquoi souhaitez-vous être bénévole avec Women Without Borders Hub ?",
-        "consent": "J'accepte que Women Without Borders Hub me contacte au sujet du bénévolat et conserve mes coordonnées à cette fin."
+        "consent": "J?accepte que Women Without Borders Hub me contacte au sujet du b?n?volat et conserve mes renseignements ? cette fin."
       },
       "helpers": {
         "fullName": "Indiquez votre prénom et votre nom.",
@@ -658,5 +938,127 @@
       "sending": "Envoi en cours...",
       "submit": "Envoyer ma candidature"
     }
+  },
+  "impact": {
+    "title": "Retomb?es",
+    "subtitle": "Nous mesurons ce qui compte et publions les r?sultats. Voici ce que votre soutien a permis d?accomplir.",
+    "measureTitle": "Comment nous mesurons les r?sultats",
+    "measureText": "Chaque programme suit des indicateurs de participation, d?ach?vement et de r?sultats, v?rifi?s au moyen d?enqu?tes de suivi apr?s 3, 6 et 12 mois. Les rapports annuels sont publi?s dans la section Ressources.",
+    "intro": "Nous mesurons ce qui compte et publions les r?sultats. Voici ce que votre soutien a permis d?accomplir.",
+    "measureImageAlt": "Femmes et filles participant ? un programme ? Kakuma",
+    "howWeMeasure": "Comment nous mesurons les r?sultats",
+    "measureDescription": "Chaque programme suit des indicateurs de participation, d?ach?vement et de r?sultats, v?rifi?s au moyen d?enqu?tes de suivi apr?s 3, 6 et 12 mois. Les rapports annuels sont publi?s dans la section",
+    "multiply": "Aidez-nous ? amplifier cet impact",
+    "supportConnector": ",",
+    "or": "ou",
+    "withUs": "avec nous.",
+    "cardCaption": "Actualit?s de la communaut?",
+    "readTime": "Temps de lecture : {{count}} min",
+    "sectionsLabel": "Rubriques sur notre impact",
+    "all": "Tout",
+    "sections": {
+      "news": "Actualit?s",
+      "blogs": "Articles",
+      "report": "Rapport",
+      "post": "Publication"
+    },
+    "stats": {
+      "reached": "Femmes et filles accompagn?es",
+      "programmes": "Programmes principaux",
+      "locations": "Camp de r?fugi?s de Kakuma"
+    },
+    "sectionIntro": "Des r?sultats mesurables dans nos programmes aupr?s des communaut?s r?fugi?es et d?accueil de Kakuma.",
+    "sectionImageAlt": "Impact des programmes de Women Without Borders Hub ? Kakuma",
+    "sectionStats": {
+      "reached": "Femmes et filles accompagn?es",
+      "programmes": "Programmes principaux",
+      "locations": "Camp de r?fugi?s de Kakuma"
+    }
+  },
+  "partners": {
+    "title": "Nos partenaires",
+    "logoAlt": "Logo de {{name}}"
+  },
+  "profile": {
+    "founderLeader": "Fondatrice et dirigeante de l?organisation",
+    "motivation": "Ce qui l?a motiv?e ? cr?er le Hub",
+    "barriers": [
+      "Scolarit? interrompue et possibilit?s limit?es de reprendre les ?tudes",
+      "Difficult?s financi?res",
+      "Acc?s limit? aux comp?tences num?riques et ? la formation professionnelle",
+      "Peu de parcours vers des moyens de subsistance durables",
+      "Pour les adolescentes m?res : responsabilit?s li?es ? la garde des enfants, stigmatisation et difficult? ? concilier maternit?, ?tudes et d?veloppement personnel",
+      "Risques de violence fond?e sur le genre",
+      "Acc?s limit? ? l?information et aux services de sant?",
+      "Obstacles sociaux limitant la participation ? la prise de d?cision"
+    ],
+    "problem": "Le probl?me auquel le Hub r?pond",
+    "focusAreas": [
+      {
+        "title": "?ducation",
+        "text": "Une base pour l??panouissement personnel, des d?cisions ?clair?es et de futures possibilit?s, qui permet aux filles et aux jeunes femmes dont la scolarit? a ?t? interrompue de reprendre leurs ?tudes et de poursuivre leurs ambitions."
+      },
+      {
+        "title": "Mentorat",
+        "text": "Aide les femmes et les filles ? prendre confiance, ? reconna?tre leurs forces, ? d?velopper leur leadership et ? apprendre aupr?s de personnes qui peuvent les guider et les encourager."
+      },
+      {
+        "title": "Comp?tences num?riques",
+        "text": "Aident les femmes ? acc?der ? l?information, ? communiquer, ? suivre des formations en ligne, ? explorer les possibilit?s d?emploi et ? d?velopper ou promouvoir de petites entreprises dans un monde num?rique."
+      },
+      {
+        "title": "Sensibilisation ? la sant?",
+        "text": "Aide les femmes et les filles ? prendre des d?cisions ?clair?es concernant leur bien-?tre, leur sant? menstruelle et sexuelle et reproductive, l?hygi?ne et les services de soutien disponibles."
+      },
+      {
+        "title": "Autonomisation ?conomique des femmes",
+        "text": "Renforce les comp?tences pratiques et entrepreneuriales et favorise les activit?s g?n?ratrices de revenus pour accro?tre l?ind?pendance financi?re."
+      }
+    ],
+    "challenges": [
+      "Mobiliser les ressources financi?res et mat?rielles n?cessaires pour lancer des programmes, accompagner davantage de femmes et de filles et p?renniser les activit?s.",
+      "Nouer des partenariats avec des organisations qui comprennent l?approche communautaire et souhaitent investir dans des solutions locales.",
+      "Mettre en place les syst?mes, politiques et processus de suivi et d??valuation n?cessaires ? une croissance responsable, fond?e sur la redevabilit? et la protection.",
+      "Concilier les besoins urgents de la communaut? avec le travail de long terme n?cessaire ? la p?rennit? de l?organisation."
+    ],
+    "change": "Le changement qu?elle souhaite voir",
+    "vision": "La vision ? long terme",
+    "support": "Soutenir cette action",
+    "leadership": "L??quipe dirigeante de Women Without Borders Hub",
+    "title": "MaLua Lugazo ? fondatrice et directrice g?n?rale de Women Without Borders Hub",
+    "heroIntro": "MaLua Lugazo est la fondatrice et la directrice g?n?rale de Women Without Borders Hub, une initiative communautaire ?tablie dans le camp de r?fugi?s de Kakuma, au Kenya. Le Hub cr?e des possibilit?s pour que les femmes et les filles r?fugi?es et marginalis?es puissent apprendre, acqu?rir des comp?tences et fa?onner leur avenir.",
+    "photoAlt": "MaLua Lugazo, fondatrice et directrice g?n?rale de Women Without Borders Hub",
+    "featureParagraphs": [
+      "MaLua poss?de plus de neuf ans d?exp?rience dans l?action humanitaire et le d?veloppement communautaire. Elle a ?t? coordinatrice de projet pendant cinq ans aupr?s de Wings to Fly Initiative ? CBO, puis facilitatrice pendant quatre ans au Conseil norv?gien pour les r?fugi?s, o? elle a mis en ?uvre le programme d??ducation acc?l?r?e et jou? le r?le de r?f?rente du programme Better Learning.",
+      "Elle est titulaire d?un dipl?me en travail social et d?veloppement communautaire et poursuit une licence en travail social et administration. Son exp?rience a renforc? son engagement en faveur de l??ducation, du d?veloppement communautaire, de la protection de l?enfance et de la cr?ation de possibilit?s pour les populations vuln?rables et marginalis?es, en particulier les femmes et les filles r?fugi?es."
+    ],
+    "officialRoleLabel": "Fonction officielle :",
+    "officialRole": "Fondatrice | Directrice g?n?rale",
+    "meetTeam": "Rencontrer l??quipe dirigeante",
+    "readStory": "Lire notre histoire",
+    "motivationParagraphs": [
+      "MaLua a cr?? Women Without Borders Hub apr?s avoir travaill? pendant des ann?es aux c?t?s de femmes et de filles r?fugi?es et marginalis?es ? Kakuma. Elle a constat? ? maintes reprises la m?me r?alit? : les femmes et les filles ?taient pr?tes ? apprendre, ? prendre les devants et ? b?tir leur vie, mais des obstacles que les r?ponses ? court terme ne prenaient jamais en compte les en emp?chaient.",
+      "Au lieu de lancer une autre activit? ponctuelle, elle a fond? le Hub pour cr?er un espace o? les femmes et les filles sont reconnues comme partenaires et leaders de leur propre d?veloppement. Cette conviction est aujourd?hui au c?ur de toutes les actions de l?organisation."
+    ],
+    "barriersTitle": "Les obstacles rencontr?s par les femmes et les filles ? Kakuma",
+    "barriersIntro": "Dans le camp de r?fugi?s de Kakuma, les possibilit?s sont limit?es et la concurrence pour y acc?der est forte. Voici les principaux obstacles relev?s par le Hub :",
+    "problemTitle": "Le probl?me auquel le Hub r?pond",
+    "problemParagraphs": [
+      "? Kakuma, les femmes et les filles sont souvent exclues des d?cisions qui influencent leur vie. Les programmes sont con?us pour elles plut?t qu?avec elles, et le soutien prend fin avec les projets. Les m?mes obstacles r?apparaissent donc chaque ann?e, tandis que leur potentiel de leadership reste inexploit?.",
+      "Women Without Borders Hub r?pond ? cette lacune par une approche communautaire qui renforce les comp?tences pratiques, r?tablit l?acc?s ? l?apprentissage et place les femmes et les filles ? la t?te des solutions qui les concernent."
+    ],
+    "focusAreasTitle": "Les cinq domaines d?action du Hub",
+    "missionTitle": "La mission de Women Without Borders Hub",
+    "mission": "Donner aux femmes et aux filles r?fugi?es et marginalis?es de Kakuma les moyens d?agir en renfor?ant leur ?ducation, leurs comp?tences, leur confiance et leur leadership, afin qu?elles puissent fa?onner leur avenir et impulser le changement dans leur communaut?.",
+    "challengesTitle": "Diriger l?organisation : les d?fis actuels",
+    "challengesIntro": "En tant que fondatrice et directrice g?n?rale, MaLua dirige les activit?s quotidiennes de l?organisation tout en d?finissant son orientation ? long terme. Les principaux d?fis qu?elle doit relever sont les suivants :",
+    "changeTitle": "Le changement qu?elle souhaite voir",
+    "changeParagraphs": [
+      "MaLua souhaite que les femmes et les filles de Kakuma ne soient plus consid?r?es uniquement comme des b?n?ficiaires, mais reconnues comme des partenaires et des leaders. Elle veut voir reculer les obstacles qui emp?chent les filles de reprendre leurs ?tudes, d?acqu?rir de nouvelles comp?tences et de gagner leur propre revenu, et souhaite que davantage de femmes participent aux d?cisions qui fa?onnent leur communaut?.",
+      "Pour le Hub, cela signifie que les jeunes femmes quittent l??cole avec de nouvelles comp?tences et confiance en elles, que les femmes gagnent un revenu r?gulier et que les filles assument des r?les de leadership au sein de leur famille, de leur ?cole et de leur communaut?."
+    ],
+    "visionTitle": "La vision ? long terme",
+    "longTermVision": "MaLua imagine Women Without Borders Hub devenir une organisation communautaire forte et autonome, dirig?e par les femmes et les filles qu?elle accompagne. ? long terme, elle souhaite que le Hub devienne un mod?le de changement communautaire ? Kakuma et ailleurs, d?montrant que le leadership local est le moteur le plus puissant d?un changement durable et inspirant d?autres organisations ? faire ?voluer leurs pratiques.",
+    "closing": "Chaque contribution permet ? davantage de femmes et de filles de Kakuma d?acc?der ? l??ducation, aux comp?tences et ? un espace o? exercer leur leadership."
   }
 }

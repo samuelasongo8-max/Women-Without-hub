@@ -86,10 +86,9 @@ export default function Volunteer() {
   })
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' })
     document.body.classList.add('volunteer-form-page')
     return () => document.body.classList.remove('volunteer-form-page')
-  }, [pathname])
+  }, [])
 
   function updateField(name, value) {
     setForm((current) => ({ ...current, [name]: value }))
@@ -307,7 +306,7 @@ export default function Volunteer() {
     )
   }
 
-  const routeSchema = breadcrumbListSchema(pathname)
+  const routeSchema = breadcrumbListSchema(pathname, undefined, t)
 
   return (
     <div className="getinvolved-page volunteer-page">

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { donateCta } from '../data/site.js'
 import { ORG_NAME } from '../config/site.js'
 import './OurStory.css'
@@ -9,15 +10,17 @@ import './OurStory.css'
  * Layout: teal banner -> solid pink founder section (auvd-founder).
  */
 export default function OurStory() {
+  const { t } = useTranslation()
+
   return (
     <article className="story-page">
       <header className="story-banner auvd-story-hero">
         <div className="container auvd-story-content">
           <h1 className="story-title">
-            MaLua Lugazo: Building Hope for Girls in Kakuma
+            {t('ourStory.pageTitle')}
           </h1>
           <p className="story-lead">
-            {`MaLua Lugazo is a Somali refugee living in Kakuma Refugee Camp who founded ${ORG_NAME} so that every girl and young woman has a chance to learn, grow and lead.`}
+            {t('ourStory.lead')}
           </p>
         </div>
       </header>
@@ -35,7 +38,7 @@ export default function OurStory() {
                   <img
                     className="auvd-person__img"
                     src="/images/malua-lugazo.jpg"
-                    alt={`MaLua Lugazo, Founder of ${ORG_NAME}`}
+                    alt={t('ourStory.photoAlt')}
                     loading="eager"
                     fetchPriority="high"
                     width="280"
@@ -47,10 +50,10 @@ export default function OurStory() {
               <div className="auvd-founder__bubble">
                 <div className="auvd-founder__bubble-inner">
                   <p className="auvd-founder__quote">
-                    Every girl has the right to learn, grow and lead.
+                    {t('ourStory.quote')}
                   </p>
                   <p className="auvd-founder__cite">
-                    - MaLua Lugazo, Founder
+                    {t('ourStory.quoteAttribution')}
                   </p>
                 </div>
               </div>
@@ -58,68 +61,46 @@ export default function OurStory() {
 
             <div className="auvd-founder__blocks">
               <div className="auvd-founder__block">
-                <h2>From Kakuma to Hope</h2>
-                <p>
-                  MaLua Lugazo knows Kakuma from the inside. As a Somali
-                  refugee growing up in the camp, she watched bright girls
-                  disappear from classrooms - early marriage, pregnancy,
-                  household labour and school costs closing doors one by
-                  one. She also saw what a single opportunity could do: a
-                  scholarship, a mentor, a safe room to study in. That
-                  contrast - between what girls in Kakuma are denied and
-                  what they become when someone believes in them - is where
-                  {ORG_NAME} began.
-                </p>
+                <h2>{t('ourStory.fromKakuma', { defaultValue: 'From Kakuma to Hope' })}</h2>
+                <p>{t('ourStory.fromKakumaText')}</p>
               </div>
 
               <div className="auvd-founder__block">
-                <h2>Why {ORG_NAME}</h2>
-                <p>
-                  MaLua founded {ORG_NAME} so that no girl in
-                  Kakuma would have to fight for an education alone. The Hub
-                  brings refugee and host-community girls together in one
-                  movement: education and literacy, digital and vocational
-                  skills, mentorship, menstrual dignity, health and pathways
-                  into work. Every programme is community-led - designed with
-                  the girls it serves - because the girls of Kakuma are not a
-                  problem to be solved but leaders to be equipped.
-                </p>
+                <h2>{t('ourStory.whyHub', { defaultValue: `Why ${ORG_NAME}` })}</h2>
+                <p>{t('ourStory.whyHubText')}</p>
               </div>
             </div>
           </div>
 
           <div className="auvd-founder__right">
             <h2 className="auvd-founder__heading">
-              What
+              {t('ourStory.whatWe')}
               <br />
-              we do
+              {t('ourStory.do')}
             </h2>
             <p className="auvd-founder__intro">
-              Today the Hub walks with vulnerable girls, teenage mothers and
-              young women across Kakuma - from the classroom to the
-              marketplace. Explore our programmes, see the change your
-              support creates, and join the story:
+              {t('ourStory.closingText')}
             </p>
 
             <ul className="auvd-founder__links">
               <li>
                 <Link to="/programs/">
-                  Our Programs <span aria-hidden="true">→</span>
+                  {t('nav.programs')} <span aria-hidden="true">→</span>
                 </Link>
               </li>
               <li>
                 <Link to="/impact/">
-                  Our Impact <span aria-hidden="true">→</span>
+                  {t('nav.impact')} <span aria-hidden="true">→</span>
                 </Link>
               </li>
               <li>
                 <Link to="/updates/">
-                  Community Updates &amp; Stories <span aria-hidden="true">→</span>
+                  {t('updates.title')} <span aria-hidden="true">→</span>
                 </Link>
               </li>
               <li>
                 <Link to="/get-involved/">
-                  Get Involved <span aria-hidden="true">→</span>
+                  {t('nav.getInvolved')} <span aria-hidden="true">→</span>
                 </Link>
               </li>
             </ul>
@@ -129,13 +110,13 @@ export default function OurStory() {
                 className="auvd-founder__btn auvd-founder__btn--donate"
                 to={donateCta.to}
               >
-                {donateCta.label}
+                {t('nav.donate')}
               </Link>
               <Link
                 className="auvd-founder__btn auvd-founder__btn--contact"
                 to="/contact/"
               >
-                Contact Us
+                {t('ourStory.contactUs')}
               </Link>
             </div>
 

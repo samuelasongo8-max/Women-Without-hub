@@ -89,6 +89,10 @@
   cursor: pointer;
 }
 
+.lang-switch__native {
+  min-width: max-content;
+}
+
 .lang-switch__item:focus-visible {
   background: #ffffff;
   border-inline-start-color: #F2865E;
@@ -116,6 +120,12 @@
   font-size: 0.78rem;
   letter-spacing: 0.05em;
   color: #6b7777;
+}
+
+.lang-switch__check {
+  color: #2E8C8C;
+  font-size: 1rem;
+  line-height: 1;
 }
 
 /* Arabic items get a slightly larger font for readability. */

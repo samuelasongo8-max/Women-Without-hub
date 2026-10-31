@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
 import PageHeader from '../components/PageHeader.jsx'
@@ -25,10 +25,6 @@ export default function Contact() {
   const [isSending, setIsSending] = useState(false)
   const [canResend, setCanResend] = useState(true)
   const { pathname } = useLocation()
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' })
-  }, [pathname])
 
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
@@ -134,76 +130,69 @@ export default function Contact() {
               <p className="contact-partner__text">{t('contact.partnerText2')}</p>
               <p className="contact-partner__text">{t('contact.partnerText3')}</p>
               <p className="contact-partner__text">{t('contact.partnerText4')}</p>
-            </div>
+              <div className="contact-partner__details">
+                <h3>{t('contact.getInTouchHeading')}</h3>
+                <p>{t('contact.getInTouchText')}</p>
 
-            <div className="contact-partner__card">
-              <h3>{t('contact.getInTouchHeading')}</h3>
-              <p>{t('contact.getInTouchText')}</p>
+                <address className="contact-partner__address">
+                  <p className="contact-partner__contact-item">
+                    <svg
+                      className="contact-partner__icon"
+                      aria-hidden="true"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    <span>
+                      <strong>{t('contact.emailLabel')}</strong>{' '}
+                      <a href="mailto:womenwithoutbordershub@gmail.com">
+                        womenwithoutbordershub@gmail.com
+                      </a>
+                    </span>
+                  </p>
+                  <p className="contact-partner__contact-item">
+                    <svg
+                      className="contact-partner__icon"
+                      aria-hidden="true"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>
+                      <strong>{t('contact.locationLabel')}</strong>{' '}
+                      {t('contact.locationValue')}
+                    </span>
+                  </p>
+                </address>
 
-              <address className="contact-partner__address">
-                <p className="contact-partner__contact-item">
-                  <svg
-                    className="contact-partner__icon"
-                    aria-hidden="true"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    <polyline points="22,6 12,13 2,6" />
-                  </svg>
-                  <span>
-                    <strong>{t('contact.emailLabel')}</strong>{' '}
-                    <a href="mailto:womenwithoutbordershub@gmail.com">
-                      womenwithoutbordershub@gmail.com
-                    </a>
-                  </span>
+                <p className="contact-partner__closing">
+                  <strong>{t('contact.closingText')}</strong>
                 </p>
-                <p className="contact-partner__contact-item">
-                  <svg
-                    className="contact-partner__icon"
-                    aria-hidden="true"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span>
-                    <strong>{t('contact.locationLabel')}</strong>{' '}
-                    {t('contact.locationValue')}
-                  </span>
-                </p>
-              </address>
 
-              <p className="contact-partner__closing">
-                <strong>{t('contact.closingText')}</strong>
-              </p>
-              <p className="contact-partner__closing">
-                <strong>
-                  Together, we can create opportunities for girls and young women
-                  to learn, grow, and thrive.
-                </strong>
-              </p>
-
-              <a
-                href="mailto:womenwithoutbordershub@gmail.com?subject=Partnership%20Enquiry"
-                className="btn btn-lg contact-partner__cta"
-                aria-label={t('contact.emailUsAria', { email: 'womenwithoutbordershub@gmail.com' })}
-              >
-                {t('contact.emailUs')}
-              </a>
+                <a
+                  href="mailto:womenwithoutbordershub@gmail.com?subject=Partnership%20Enquiry"
+                  className="btn btn-lg contact-partner__cta"
+                  aria-label={t('contact.emailUsAria', { email: 'womenwithoutbordershub@gmail.com' })}
+                >
+                  {t('contact.emailUs')}
+                </a>
+              </div>
             </div>
 
             {/* Structured data: ContactPage, Organization (NGO), BreadcrumbList. */}
@@ -222,7 +211,7 @@ export default function Contact() {
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{
-                __html: JSON.stringify(breadcrumbListSchema(pathname)),
+                __html: JSON.stringify(breadcrumbListSchema(pathname, undefined, t)),
               }}
             />
           </div>

@@ -59,7 +59,8 @@ function applyDocumentAttributes(code) {
 
 /** Map any detected value to a supported language, else the default. */
 function resolveLanguage(detected) {
-  if (detected && isSupported(detected)) return detected
+  const code = typeof detected === 'string' ? detected.split('-')[0].toLowerCase() : ''
+  if (code && isSupported(code)) return code
   return DEFAULT_LANG
 }
 
@@ -126,7 +127,7 @@ i18n
   })
   .then(() => {
     // Apply the resolved language and load it if it isn't English.
-    const current = resolveLanguage(i18n.resolvedLanguage || i18n.language)
+    const current = resolveLanguage(i18n.language || i18n.resolvedLanguage)
     loadLanguage(current).then(() => i18n.changeLanguage(current))
     applyDocumentAttributes(current)
   })

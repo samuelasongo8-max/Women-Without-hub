@@ -55,8 +55,7 @@ export const SITE = {
   name: ORG_NAME,
 
   // Primary site title (Home page SEO title).
-  homeTitle:
-    `${ORG_NAME} | Empowering Girls & Young Women in Kakuma`,
+  homeTitle: 'Empower girls in Kakuma, Kenya | Women Without Borders Hub',
 
   // Override VITE_SITE_URL when deploying to a verified custom domain.
   url: normalizeSiteUrl(import.meta.env.VITE_SITE_URL || DEFAULT_SITE_URL),
@@ -70,7 +69,7 @@ export const SITE = {
 
   // 3. Website descriptions.
   description:
-    `${ORG_NAME} is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women through education, literacy, mentorship, health support, practical skills and economic empowerment.`,
+    'Women Without Borders Hub empowers girls and young women in Kakuma, Kenya through education, mentorship, health support and practical skills.',
   shortDescription:
     'Creating opportunities for vulnerable girls, teenage mothers and young women through education, skills, mentorship, health and economic empowerment in Kakuma, Kenya.',
 
@@ -330,9 +329,180 @@ const teamProfileSeo = {
  * Resolve the SEO metadata for a pathname.
  * Returns { title, description, noindex }.
  */
-export function seoFor(pathname) {
+export function seoFor(pathname, translate) {
   const path =
     pathname === '/' || pathname.endsWith('/') ? pathname : `${pathname}/`
+
+  if (translate) {
+    const text = (key, fallback, returnObjects = false) =>
+      translate(key, { defaultValue: fallback, returnObjects })
+    const stringValue = (key, fallback) => {
+      const value = text(key, fallback, true)
+      return Array.isArray(value) ? value.join(' ') : value
+    }
+    const pageMetadata = {
+      '/': ['homeHero.titlePrefix', 'homeHero.lead', '/images/og-home.jpg'],
+      '/about/': ['about.heading', 'about.paragraph'],
+      '/about/our-team/': [
+        'about.ourTeam.title',
+        'about.ourTeam.intro',
+        '/images/team-hero-og.jpg',
+      ],
+      '/programs/': ['programs.title', 'programs.intro'],
+      '/impact/': ['nav.impact', 'impactSection.intro'],
+      '/about/our-story/': ['ourStory.pageTitle', 'ourStory.lead'],
+      '/updates/': ['updates.title', 'updates.intro'],
+      '/impact/blogs/': [
+        'blogs.title',
+        'impactSectionPages.blogs.intro',
+        '/images/blogs-hero-og.jpg',
+      ],
+      '/impact/report/': [
+        'report.title',
+        'impactSectionPages.report.intro',
+        '/images/report-hero-og.jpg',
+      ],
+      '/impact/post/': [
+        'post.title',
+        'impactSectionPages.post.intro',
+        '/images/post-hero-og.jpg',
+      ],
+      '/get-involved/': [
+        'getInvolved.title',
+        'getInvolved.intro',
+        '/images/get-involved-hero.jpg',
+      ],
+      '/resources/': ['resources.title', 'resources.intro'],
+      '/safeguarding/': ['safeguarding.title', 'safeguarding.intro'],
+      '/contact/': ['contact.title', 'contact.intro'],
+    }
+
+    if (path === '/') {
+      const title = [
+        text('homeHero.titlePrefix', 'Empowering'),
+        text('homeHero.girls', 'girls'),
+        text('homeHero.connector', '&'),
+        text('homeHero.youngWomen', 'young women'),
+        text('homeHero.location', 'in Kakuma, Kenya'),
+      ].join(' ')
+      return {
+        title: `${title} | ${SITE.name}`,
+        description: text('homeHero.lead', SITE.description),
+        noindex: false,
+        ogImage: '/images/og-home.jpg',
+      }
+    }
+
+    const page = pageMetadata[path]
+    if (page) {
+      const [titleKey, descriptionKey, ogImage] = page
+      return {
+        title: `${text(titleKey, pageSeo[path]?.title || SITE.name)} | ${SITE.name}`,
+        description: text(
+          descriptionKey,
+          pageSeo[path]?.description || SITE.shortDescription,
+        ),
+        noindex: false,
+        ogImage: ogImage || pageSeo[path]?.ogImage || null,
+      }
+    }
+
+    const profileMatch = path.match(/^\/about\/our-team\/([^/]+)\/$/)
+    if (profileMatch) {
+      const profile = teamProfileSeo[profileMatch[1]]
+      return {
+        title: profile
+          ? `${stringValue('profile.title', profile.title)} | ${SITE.name}`
+          : `Profile not found | ${SITE.name}`,
+        description: text(
+          profile ? 'profile.heroIntro' : 'team.subtitle',
+          profile?.description || SITE.shortDescription,
+        ),
+        noindex: !profile,
+      }
+    }
+
+    if (path === '/programs/livelihood-economic-empowerment/what-we-do/') {
+      return {
+        title: `${stringValue('programs.livelihood.whatWeDo.title', livelihoodWhatWeDoSeo.title)} | ${SITE.name}`,
+        description: stringValue(
+          'programs.livelihood.whatWeDo.intro',
+          livelihoodWhatWeDoSeo.description,
+        ),
+        noindex: false,
+        ogImage: '/images/program-livelihood-banner-desktop.jpg',
+      }
+    }
+
+    if (path === '/programs/livelihood-economic-empowerment/our-approach/') {
+      return {
+        title: `${stringValue('programs.livelihood.ourApproach.title', livelihoodOurApproachSeo.title)} | ${SITE.name}`,
+        description: stringValue(
+          'programs.livelihood.ourApproach.intro',
+          livelihoodOurApproachSeo.description,
+        ),
+        noindex: false,
+        ogImage: '/images/livelihood-hero-og.jpg',
+      }
+    }
+
+    const programMatch = path.match(/^\/programs\/([^/]+)\/$/)
+    if (programMatch) {
+      const slug = programMatch[1]
+      const key = `programs.cards.${slug}`
+      const program = programSeo[slug]
+      if (program) {
+        return {
+          title: `${text(`${key}.title`, program.title)} | ${SITE.name}`,
+          description: text(`${key}.summary`, program.seoDescription),
+          noindex: false,
+          ogImage: program.ogImage || null,
+        }
+      }
+    }
+
+    const updateMatch = path.match(/^\/updates\/([^/]+)\/$/)
+    if (updateMatch) {
+      const update = updateSeo[updateMatch[1]]
+      if (update) {
+        return {
+          title: `${text(`updates.items.${updateMatch[1]}.title`, update.title)} | ${SITE.name}`,
+          description: text(
+            `updates.items.${updateMatch[1]}.summary`,
+            update.description,
+          ),
+          noindex: false,
+          ogImage: update.ogImage,
+        }
+      }
+    }
+
+    const involvedMatch = path.match(/^\/get-involved\/([^/]+)\/$/)
+    if (involvedMatch) {
+      const keys = {
+        donate: ['getInvolvedCards.cardDonate.title', 'donate.subtitle'],
+        volunteer: ['getInvolvedCards.cardVolunteer.title', 'volunteer.intro'],
+        membership: ['footer.membership', 'getInvolved.intro'],
+        mentor: ['getInvolvedCards.cardSkills.title', 'getInvolved.intro'],
+        partner: ['getInvolvedCards.cardPartner.title', 'getInvolved.intro'],
+      }[involvedMatch[1]]
+      const page = involvementSeo[involvedMatch[1]]
+      if (page && keys) {
+        return {
+          title: `${text(keys[0], page.title)} | ${SITE.name}`,
+          description: text(keys[1], page.description),
+          noindex: false,
+          ogImage: page.ogImage || null,
+        }
+      }
+    }
+
+    return {
+      title: `${text('notFound.title', 'Page not found')} | ${SITE.name}`,
+      description: text('notFound.message', SITE.shortDescription),
+      noindex: true,
+    }
+  }
 
   // Home page — strongest title + full description.
   if (path === '/') {
@@ -607,7 +777,7 @@ export function contactPageSchema() {
   };
 }
 
-export function breadcrumbListSchema(pathname, labels) {
+export function breadcrumbListSchema(pathname, labels, translate) {
   const path = normalizePath(pathname);
   const trail = breadcrumbsFor(path)
 
@@ -617,7 +787,7 @@ export function breadcrumbListSchema(pathname, labels) {
     itemListElement: trail.map((crumb, index) => ({
       '@type': 'ListItem',
       position: index + 1,
-      name: labels?.[index] || crumb.label,
+      name: labels?.[index] || translate?.(crumb.labelKey) || crumb.labelKey,
       item: SITE.url ? new URL(crumb.to, SITE.url).toString() : crumb.to,
     })),
   };

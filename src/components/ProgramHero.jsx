@@ -59,7 +59,10 @@ export default function ProgramHero({
       }
     >
       <div className="program-hero__inner">
-        <nav className="program-hero__crumb" aria-label="Breadcrumb">
+        <nav
+          className="program-hero__crumb"
+          aria-label={t('breadcrumb.label', { defaultValue: 'Breadcrumb' })}
+        >
           <ol>
             {(breadcrumbTrail || [
               { label: t('breadcrumb.home'), to: '/' },

@@ -12,7 +12,7 @@
   "contactTeam": "La xiriir kooxda",
   "learnMore": "Wax badan baro",
   "openPage": "Fur bogga",
-  "photoAlt": "Fatuma Abdulahi, Women Without Borders Hub team",
+  "photoAlt": "Fatuma Abdulahi, kooxda Women Without Borders Hub",
   "privacyNote": "Fadlan halkan ha ku wadaagin xog gaar ah oo xasaasi ah.",
   "clearChat": "Nadiifi sheekada",
   "leaveMessage": "Fariin u reeb",
@@ -57,24 +57,24 @@
     "srhr": {"title": "Caafimaadka iyo Xuquuqda Galmada iyo Taranka (SRHR)", "answer": "Waxbarashada SRHR ee ku habboon da'da oo tixgelisa dhaqamada, waxbarashada asaagga iyo wacyigelinta bulshada oo ku dhisan ixtiraam iyo doorasho."},
     "livelihood": {"title": "Nolol-maalmeedka iyo Awood-siinta Dhaqaale", "answer": "Ganacsi-abuur, hagid ganacsi, tababar shaqo, isku xirka suuqyada iyo gudbinta fursadaha shaqo si loo xoojiyo dhaqaalaha haweenka."}
   },
-  "languageIndicators": ["salaan", "mahadsanid", "fadlan", "sideen", "xaggee"],
+  "languageIndicators": ["salaan", "fadlan", "maxaa", "xaggee", "sidee", "waad ku mahadsan tahay"],
   "keywords": {
-    "welcome": ["salaan", "iska warran", "soo dhawoow"], "about": ["nagu saabsan", "maxaad qabataan", "yaa tihiin"],
-    "founder": ["aasaasaha", "yaa aasaasay", "malua"], "location": ["xaggee tihiin", "goobta", "cinwaanka", "kakuma"],
-    "programmes": ["barnaamijyada", "barnaamijyo noocee ah", "adeegyada"], "education": ["waxbarasho", "dugsi", "akhris-qoraal", "deeq", "akhris", "Waxbarashada iyo Akhris-qoraalka"],
-    "digital": ["dijitaal", "kombiyuutar", "tolid", "moodo", "qurux", "tababar"], "mentorship": ["hagid", "hoggaamin", "shaqo", "yoolal", "kalsooni"],
-    "health": ["caafimaad", "caado", "xilliga caadada", "agab", "gudbin"], "srhr": ["taranka", "caafimaadka galmada", "srhr", "waxbarashada asaagga"],
-    "livelihood": ["nolol-maalmeed", "ganacsi", "shaqo", "tababar shaqo", "dakhli"], "activities": ["hawlo", "jadwal", "saacadaha", "isniin", "jimce"],
-    "join": ["ku biir", "diiwaangelin", "ka qaybgal", "bilaash"], "donate": ["tabaruc", "ku deeq", "mpesa", "akoon bangi"],
-    "volunteer": ["mutadawac", "mutadawacnimo", "caawi"], "partner": ["wada-hawlgal", "iskaashi", "wada shaqayn", "aasaas"],
-    "skills": ["wadaag xirfado", "wax bar", "tababar", "hagid"], "contact": ["xiriir", "iimayl", "la xiriir kooxda"],
-    "responseTime": ["waqtiga jawaabta", "jawaab", "intee ayay qaadataa"], "donations": ["tabarucaadku xaggee aadaa", "isticmaalka tabarucaadka"],
-    "emergency": ["xaalad degdeg ah", "khatar", "rabshad", "xadgudub"], "thanks": ["mahadsanid", "waan ku mahadsanahay"], "goodbye": ["nabadgelyo", "macasalaamo"],
-    "joinDetails": ["yaa ka qayb qaadan kara", "bilaash ma tahay", "sideen isu diiwaangeliyaa", "khidmad diiwaangelin"]
+    "welcome": ["salaan", "iska warran", "soo dhawoow", "subax wanaagsan", "galab wanaagsan"], "about": ["nagu saabsan", "maxaad qabataan", "yaa tihiin", "urur", "hay?ad"],
+    "founder": ["aasaasaha", "yaa aasaasay", "yaa bilaabay", "malua", "hoggaanka"], "location": ["xaggee tihiin", "goobta", "xaruntu xaggee ku taal", "kakuma", "cinwaanka"],
+    "programmes": ["barnaamijyada", "barnaamijyo", "barnaamijyadee", "barnaamijyo noocee ah", "adeegyo"], "education": ["waxbarasho", "dugsi", "akhris-qoris", "deeq waxbarasho", "akhris", "fursad labaad", "casharro dib-u-xoojin", "waxbarashada iyo akhris-qoraalka"],
+    "digital": ["tiknoolajiyad dijitaal ah", "kombiyuutar", "xirfado", "tolid", "moodo", "qurux", "timo-habayn", "xirfado farsamo", "tababar"], "mentorship": ["la-taliye", "hagid", "xirfadaha nolosha", "hoggaamin", "xirfad", "hadafyo", "isku-kalsooni"],
+    "health": ["caafimaad", "caadada", "xilliga caadada", "suufka caadada", "agab", "gudbin"], "srhr": ["caafimaadka taranka", "caafimaadka galmada", "srhr", "waxbarashada asaagga", "wacyigelin"],
+    "livelihood": ["nolol-maalmeed", "ganacsi", "ganacsi-abuur", "shaqo", "shaqaalayn", "tababar shaqo", "dakhli", "maareynta lacagta"], "activities": ["hawlo", "jadwal", "saacadaha furitaanka", "goorma", "waqti", "isniin", "jimce", "xarun", "xarun"],
+    "join": ["ku biir", "isdiiwaangeli", "diiwaangelin", "yaa ku biiri kara", "lacag la?aan", "isqor", "isdiiwaangeli"], "donate": ["tabaruc", "deeq", "lacag ku deeq", "M-Pesa", "M-Pesa", "akoon bangi"],
+    "volunteer": ["mutadawac", "mutadawacnimo", "caawi", "waqti bixi"], "partner": ["wada-hawlgal", "iskaashi", "la shaqee", "urur", "aasaas", "ganacsi"],
+    "skills": ["xirfadaha la wadaago", "xirfado bixi", "bar", "la taliye", "tababar", "xirfado xirfadeed"], "contact": ["xiriir", "iimayl", "lambarka telefoonka", "nala soo xiriir", "la xiriir kooxda"],
+    "responseTime": ["waqtiga jawaabta", "jawaab", "intee ayay qaadataa", "goorma ayaad jawaabaysaan?"], "donations": ["halka deeqaha loo isticmaalo", "isticmaalka deeqaha", "lacagta deeqda", "maalgelin"],
+    "emergency": ["xaalad degdeg ah", "khatar", "xadgudub", "rabshad", "ammaan-darro"], "thanks": ["mahadsanid", "waad mahadsan tahay", "waan qadarinayaa"], "goodbye": ["nabadgelyo", "nabadey", "mar kale is arag", "is ilaali"],
+    "joinDetails": ["yaa ka qayb qaadan kara", "bilaash ma tahay", "sidee isu diiwaangeliyaa", "shuruudaha u-qalmitaanka", "khidmadda diiwaangelinta"]
   },
   "riskKeywords": {
-    "emergency": ["xadgudub", "rabshad", "khatar", "xaalad degdeg ah", "ammaan ma ihi", "hanjabaad", "dhaawac"],
-    "personal": ["xog shakhsiyeed", "xog gaar ah", "lambarkeeda telefoonka", "cinwaankeeda guriga", "halkee ayay degan tahay"],
-    "advice": ["talo caafimaad", "talo sharci", "la-talin nafsi", "ogaanshaha cudur", "daawo noocee ah"]
+    "emergency": ["xadgudub", "rabshad", "khatar", "xaalad degdeg ah", "ammaan-darro", "hanjabaad", "dhaawac"],
+    "personal": ["xog shakhsiyeed", "faahfaahinta shakhsiga", "xog gaar ah", "faahfaahinta ka qaybgalayaasha", "xogta gaarka ah ee shaqaalaha", "lambarka telefoonka ee", "cinwaanka qofka", "xaggee ayay ku nooshahay", "guriga shaqaalaha", "magaca ka qaybgalaha"],
+    "advice": ["talo caafimaad", "talo sharci", "la-talin nafsiyeed", "daawayn", "ogaanshaha cudur", "daawo loogu talagalay"]
   }
 }

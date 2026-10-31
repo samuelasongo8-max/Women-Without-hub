@@ -2,10 +2,23 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { donateCta, socialLinks } from '../data/site.js'
 import { ORG_NAME } from '../config/site.js'
+import Reveal, { SplitWords } from '../components/Reveal.jsx'
 import './Hero.css'
+
+const countWords = (text) => text.trim().split(/\s+/u).filter(Boolean).length
 
 export default function Hero() {
   const { t } = useTranslation()
+  const titlePrefix = t('homeHero.titlePrefix')
+  const girls = t('homeHero.girls')
+  const connector = t('homeHero.connector')
+  const youngWomen = t('homeHero.youngWomen')
+  const location = t('homeHero.location')
+  const phraseStart = countWords(titlePrefix) + 2
+  const youngWomenStart = phraseStart + countWords(girls) + countWords(connector)
+  const locationStart = youngWomenStart + countWords(youngWomen)
+  const headingWordCount = locationStart + countWords(location)
+  const headingFinishDelay = headingWordCount * 80 + 650
 
   return (
     <section className="hero">
@@ -31,23 +44,58 @@ export default function Hero() {
 
         <div className="container hero-grid">
           <div className="hero-copy">
-            <h1 className="hero-title">
-              {t('homeHero.titlePrefix')}
+            <Reveal
+              as="h1"
+              className="hero-title"
+              direction="up"
+              duration={650}
+              playOnMount
+              wordStagger
+            >
+              <SplitWords>{titlePrefix}</SplitWords>
               <br />
-              <span className="hero-h1-yellow">{t('homeHero.girls')}</span>{' '}
-              {t('homeHero.connector')}{' '}
-              <span className="hero-h1-coral">{t('homeHero.youngWomen')}</span>
+              <span className="hero-h1-yellow">
+                <SplitWords startIndex={phraseStart}>{girls}</SplitWords>
+              </span>{' '}
+              <SplitWords startIndex={phraseStart + countWords(girls)}>
+                {connector}
+              </SplitWords>{' '}
+              <span className="hero-h1-coral">
+                <SplitWords startIndex={youngWomenStart}>{youngWomen}</SplitWords>
+              </span>
               <br />
-              {t('homeHero.location')}
-            </h1>
-            <p className="hero-lead">{t('homeHero.lead')}</p>
+              <SplitWords startIndex={locationStart}>{location}</SplitWords>
+            </Reveal>
+            <Reveal
+              as="p"
+              className="hero-lead"
+              direction="up"
+              delay={headingFinishDelay}
+              playOnMount
+            >
+              {t('homeHero.lead')}
+            </Reveal>
             <div className="hero-actions">
-              <Link to={donateCta.to} className="hero-btn hero-btn-fill">
+              <Reveal
+                as={Link}
+                to={donateCta.to}
+                className="hero-btn hero-btn-fill"
+                direction="up"
+                delay={headingFinishDelay + 760}
+                playOnMount
+              >
                 {t('nav.donate')} <span aria-hidden="true">→</span>
-              </Link>
-              <Link to="/programs/" className="hero-btn hero-btn-outline">
+              </Reveal>
+              <Reveal
+                as={Link}
+                to="/programs/"
+                className="hero-btn hero-btn-outline"
+                direction="up"
+                delay={headingFinishDelay + 900}
+                playOnMount
+              >
                 {t('homeHero.programs')}
-              </Link>
+              </Reveal>
             </div>
 
             {/* Social icon row — sits directly below the two buttons, above the

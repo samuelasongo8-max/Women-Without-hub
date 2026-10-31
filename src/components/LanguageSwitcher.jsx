@@ -165,6 +165,14 @@ export default function LanguageSwitcher() {
                 >
                   <span className="lang-switch__native">{lang.native}</span>
                   <span className="lang-switch__short">{lang.short}</span>
+                  {isCurrent && (
+                    <span
+                      className="lang-switch__check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+                  )}
                 </button>
               </li>
             )

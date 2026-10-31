@@ -18,70 +18,64 @@ export const socialLinks = {
 
 // Main navigation shown in the header (in order).
 export const mainNav = [
-  { label: 'HOME', to: '/' },
+  { label: 'nav.home', to: '/' },
   {
-    label: 'ABOUT',
+    label: 'nav.about',
     to: '/about/',
     children: [
-      { label: 'Our Story', to: '/about/our-story/' },
-      { label: 'Our Team', to: '/about/our-team/' },
+      { label: 'nav.ourStory', to: '/about/our-story/' },
+      { label: 'nav.ourTeam', to: '/about/our-team/' },
     ],
   },
-  { label: 'PROGRAMS', to: '/programs/' },
+  { label: 'nav.programs', to: '/programs/' },
   {
-    label: 'IMPACT',
+    label: 'nav.impact',
     to: '/impact/',
     children: [
-      { label: 'News', to: '/impact/news/' },
-      { label: 'Blogs', to: '/impact/blogs/' },
-      { label: 'Report', to: '/impact/report/' },
+      { label: 'nav.news', to: '/impact/news/' },
+      { label: 'nav.blogs', to: '/impact/blogs/' },
+      { label: 'nav.report', to: '/impact/report/' },
     ],
   },
-  { label: 'GET INVOLVED', to: '/get-involved/' },
-  { label: 'CONTACT', to: '/contact/' },
+  { label: 'nav.getInvolved', to: '/get-involved/' },
+  { label: 'nav.contact', to: '/contact/' },
 ]
 
 // The prominent call to action.
-export const donateCta = { label: 'DONATE', to: '/get-involved/donate/' }
+export const donateCta = { label: 'nav.donate', to: '/get-involved/donate/' }
 
 // Program pages, keyed by slug under /programs/.
 // Summaries reflect the eight main SEO topics (see src/data/seo.js).
 export const programs = [
   {
     slug: 'second-chance-education',
-    title: 'Second Chance Education',
-    summary:
-      'Scholarships, literacy circles, remedial and second-chance education that keep girls in school and open educational opportunities for vulnerable girls in Kakuma.',
+    titleKey: 'programs.cards.second-chance-education.title',
+    summaryKey: 'programs.cards.second-chance-education.summary',
   },
   {
     slug: 'digital-technical-skills',
-    title: 'Digital & Technical Skills',
-    summary:
-      'Computer literacy and digital skills bootcamps alongside vocational training in tailoring, fashion, beauty and hairdressing for young women.',
+    titleKey: 'programs.cards.digital-technical-skills.title',
+    summaryKey: 'programs.cards.digital-technical-skills.summary',
   },
   {
     slug: 'mentorship-life-skills',
-    title: 'Mentorship & Life Skills',
-    summary:
-      'Mentorship, life skills, leadership, career guidance, goal setting and financial literacy that build confidence and self-reliance.',
+    titleKey: 'programs.cards.mentorship-life-skills.title',
+    summaryKey: 'programs.cards.mentorship-life-skills.summary',
   },
   {
     slug: 'health-menstrual-dignity',
-    title: 'Health & Menstrual Dignity',
-    summary:
-      'Menstrual health education, menstrual products, health awareness and health referrals so no one misses school or work.',
+    titleKey: 'programs.cards.health-menstrual-dignity.title',
+    summaryKey: 'programs.cards.health-menstrual-dignity.summary',
   },
   {
     slug: 'srhr',
-    title: 'Sexual & Reproductive Health and Rights (SRHR)',
-    summary:
-      'Age-appropriate, culturally sensitive SRHR education, peer education and community awareness built on respect and choice.',
+    titleKey: 'programs.cards.srhr.title',
+    summaryKey: 'programs.cards.srhr.summary',
   },
   {
     slug: 'livelihood-economic-empowerment',
-    title: 'Livelihood & Economic Empowerment',
-    summary:
-      'Entrepreneurship, business mentorship, apprenticeships, market linkages and employment referrals for women’s economic empowerment.',
+    titleKey: 'programs.cards.livelihood-economic-empowerment.title',
+    summaryKey: 'programs.cards.livelihood-economic-empowerment.summary',
     whyImage: '/images/livelihood-why-it-matters',
     supportImage: '/images/livelihood-who-we-support',
     supportImageAlt: 'programs.livelihood.supportImageAlt',
@@ -93,85 +87,85 @@ export const programs = [
 export const involvement = [
   {
     slug: 'donate',
-    title: 'Donate',
-    summary: 'Your gift funds education, skills and dignity programmes directly.',
+    titleKey: 'getInvolvedCards.cardDonate.title',
+    summaryKey: 'donate.subtitle',
   },
   {
     slug: 'volunteer',
-    title: 'Volunteer',
-    summary: 'Give your time and skills to support women and girls in your community.',
+    titleKey: 'getInvolvedCards.cardVolunteer.title',
+    summaryKey: 'getInvolved.items.volunteer.summary',
   },
   {
     slug: 'membership',
-    title: 'Membership',
-    summary: 'Join as a member and help shape our priorities and programmes.',
+    titleKey: 'footer.membership',
+    summaryKey: 'getInvolved.items.membership.summary',
   },
   {
     slug: 'mentor',
-    title: 'Mentor',
-    summary: 'Share your experience as a mentor for young women and girls.',
+    titleKey: 'getInvolvedCards.cardSkills.title',
+    summaryKey: 'getInvolved.items.mentor.summary',
   },
   {
     slug: 'partner',
-    title: 'Partner',
-    summary: 'Partner with us as a funder, institution or community organisation.',
+    titleKey: 'getInvolvedCards.cardPartner.title',
+    summaryKey: 'getInvolved.items.partner.summary',
   },
 ]
 
-// Route metadata: label + parent path, used for breadcrumbs.
+// Route metadata: translation key + parent path, used for breadcrumbs.
 // Keys are URL paths (trailing slash), parents may be null (top-level pages).
 export const routeMeta = {
-  '/': { label: 'Home', parent: null },
-  '/about/': { label: 'About', parent: '/' },
-  '/about/our-team/': { label: 'Our Team', parent: '/about/' },
+  '/': { labelKey: 'breadcrumb.home', parent: null },
+  '/about/': { labelKey: 'breadcrumb.about', parent: '/' },
+  '/about/our-team/': { labelKey: 'breadcrumb.ourTeam', parent: '/about/' },
   '/about/our-team/malua-lugazo/': {
-    label: 'MaLua Lugazo',
+    labelKey: 'profile.title',
     parent: '/about/our-team/',
   },
-  '/programs/': { label: 'Programs', parent: '/' },
-  '/impact/': { label: 'Impact', parent: '/' },
-  '/about/our-story/': { label: 'Our Story', parent: '/about/' },
-  '/updates/': { label: 'Community Updates & Stories', parent: '/' },
+  '/programs/': { labelKey: 'breadcrumb.programs', parent: '/' },
+  '/impact/': { labelKey: 'breadcrumb.impact', parent: '/' },
+  '/about/our-story/': { labelKey: 'breadcrumb.ourStory', parent: '/about/' },
+  '/updates/': { labelKey: 'breadcrumb.communityUpdates', parent: '/' },
   '/updates/building-pathways-for-women-and-girls/': {
-    label: 'Building Pathways for Women and Girls in Kakuma',
+    labelKey: 'updates.items.building-pathways-for-women-and-girls.title',
     parent: '/updates/',
   },
   '/updates/graduation-celebration-skills/': {
-    label: 'Young Women Graduate from Tailoring and Digital Skills Training',
+    labelKey: 'updates.items.graduation-celebration-skills.title',
     parent: '/updates/',
   },
   '/updates/health-advocacy/': {
-    label: 'Health Advocacy in Kakuma',
+    labelKey: 'updates.items.health-advocacy.title',
     parent: '/updates/',
   },
-  '/impact/blogs/': { label: 'Blogs', parent: '/impact/' },
-  '/impact/report/': { label: 'Report', parent: '/impact/' },
-  '/impact/post/': { label: 'Post', parent: '/impact/' },
-  '/get-involved/': { label: 'Get Involved', parent: '/' },
-  '/resources/': { label: 'Resources', parent: '/' },
-  '/safeguarding/': { label: 'Safeguarding', parent: '/' },
-  '/contact/': { label: 'Contact', parent: '/' },
+  '/impact/blogs/': { labelKey: 'breadcrumb.blogs', parent: '/impact/' },
+  '/impact/report/': { labelKey: 'breadcrumb.report', parent: '/impact/' },
+  '/impact/post/': { labelKey: 'breadcrumb.post', parent: '/impact/' },
+  '/get-involved/': { labelKey: 'breadcrumb.getInvolved', parent: '/' },
+  '/resources/': { labelKey: 'breadcrumb.resources', parent: '/' },
+  '/safeguarding/': { labelKey: 'breadcrumb.safeguarding', parent: '/' },
+  '/contact/': { labelKey: 'breadcrumb.contact', parent: '/' },
 }
 
 programs.forEach((p) => {
   routeMeta[`/programs/${p.slug}/`] = {
-    label: p.title,
+    labelKey: p.titleKey,
     parent: '/programs/',
   }
 })
 
 routeMeta['/programs/livelihood-economic-empowerment/what-we-do/'] = {
-  label: 'What We Do',
+  labelKey: 'programs.livelihood.whatWeDo.title',
   parent: '/programs/livelihood-economic-empowerment/',
 }
 routeMeta['/programs/livelihood-economic-empowerment/our-approach/'] = {
-  label: 'Our Approach',
+  labelKey: 'programs.livelihood.ourApproach.title',
   parent: '/programs/livelihood-economic-empowerment/',
 }
 
 involvement.forEach((i) => {
   routeMeta[`/get-involved/${i.slug}/`] = {
-    label: i.title,
+    labelKey: i.titleKey,
     parent: '/get-involved/',
   }
 })
@@ -182,7 +176,7 @@ export function normalizePath(pathname) {
   return pathname.endsWith('/') ? pathname : `${pathname}/`
 }
 
-/** Build a breadcrumb trail (array of {label, to, isLast}) for a pathname. */
+/** Build a breadcrumb trail (array of {labelKey, to, isLast}) for a pathname. */
 export function breadcrumbsFor(pathname) {
   const path = normalizePath(pathname)
   const trail = []
@@ -193,11 +187,11 @@ export function breadcrumbsFor(pathname) {
     seen.add(cursor)
     const meta = routeMeta[cursor]
     if (!meta) break
-    trail.unshift({ label: meta.label, to: cursor })
+    trail.unshift({ labelKey: meta.labelKey, to: cursor })
     cursor = meta.parent
   }
   if (trail.length === 0) {
-    trail.push({ label: 'Home', to: '/' })
+    trail.push({ labelKey: 'breadcrumb.home', to: '/' })
   }
   return trail.map((crumb, i) => ({ ...crumb, isLast: i === trail.length - 1 }))
 }

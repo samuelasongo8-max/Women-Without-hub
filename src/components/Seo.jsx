@@ -51,14 +51,8 @@ export default function Seo() {
       noindex,
       siteName,
       ogImage: pageOgImage,
-    } = seoFor(pathname)
-    const isSecondChanceProgram =
-      pathname === '/programs/second-chance-education/'
-    const title = isSecondChanceProgram
-      ? `${t('programs.secondChanceTitle')}${seoTitle.slice(
-          'Second Chance Education'.length,
-        )}`
-      : seoTitle
+    } = seoFor(pathname, t)
+    const title = seoTitle
 
     document.title = title
     setMeta('description', description)

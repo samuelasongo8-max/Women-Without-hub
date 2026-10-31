@@ -53,7 +53,11 @@ export default function Home() {
           "Community Updates & Stories" and "Our Programs".
           The message is overlaid on the photo; the band keeps its
           original height. */}
-      <ImageBand image={IMAGE_BAND_IMAGE} overlayText={t('homePage.intro', { defaultValue: `${ORG_NAME} — empowering girls and young women in Kakuma Refugee Camp, Kenya.` })} />
+      <ImageBand
+        image={IMAGE_BAND_IMAGE}
+        alt={t('homeHero.imageBandAlt')}
+        overlayText={t('homePage.intro', { defaultValue: `${ORG_NAME} — empowering girls and young women in Kakuma Refugee Camp, Kenya.` })}
+      />
       <Programs />
       <WhyThisMatters />
       <QuoteFeature
@@ -61,7 +65,7 @@ export default function Home() {
         name={t('quoteFeature.name', { defaultValue: "Khadijoh Mahamed" })}
         role={t('quoteFeature.role', { defaultValue: `Member of ${ORG_NAME}` })}
         image="/Khadijoh%20Mahamed.jpg"
-        alt="Khadijoh Mahamed"
+        alt={t('quoteFeature.name', { defaultValue: 'Khadijoh Mahamed' })}
       />
       <QuoteFeature
         quote={t('quoteSection.quote2', { defaultValue: `I founded ${ORG_NAME} because I believe that every girl and young woman deserves a chance to create a better future, regardless of the challenges she faces. Too many talented young women have dreams that remain out of reach because of financial hardship, limited opportunities, and barriers that hold them back. I want to help change that by creating opportunities for learning, empowerment, and personal growth, where every girl can discover her strengths, find her voice, and move forward with confidence.` })}

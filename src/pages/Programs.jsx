@@ -69,6 +69,9 @@ const icons = {
 
 export default function Programs() {
   const { t } = useTranslation()
+  const visiblePrograms = programs.filter(
+    (program) => program.slug !== 'digital-technical-skills',
+  )
 
   useHeroImagePreload({
     desktop: '/images/programs-banner-desktop.webp',
@@ -96,7 +99,7 @@ export default function Programs() {
       <section className="home-programs">
         <div className="container">
           <div className="home-programs-grid">
-            {programs.map((p) => (
+            {visiblePrograms.map((p) => (
               <article key={p.slug} className="home-program">
               {(() => {
                 const img = programImages[p.slug]
@@ -156,6 +159,29 @@ export default function Programs() {
               )}
               </article>
             ))}
+            <div className="home-program-fill">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="/images/programs-fill.webp"
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  type="image/jpeg"
+                  srcSet="/images/programs-fill.jpg"
+                  media="(min-width: 1024px)"
+                />
+                <img
+                  className="home-program-fill-image"
+                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                  alt={t('programs.fillImageAlt')}
+                  width="900"
+                  height="1350"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
           </div>
         </div>
       </section>

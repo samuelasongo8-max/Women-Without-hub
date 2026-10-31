@@ -12,6 +12,7 @@
     "closeMenu": "Close menu",
     "primaryNav": "Primary",
     "footerNav": "Footer",
+    "heroLabel": "{{title}} page banner",
     "logoLink": "Women Without Borders Hub, home",
     "routesTrailingSlash": "Note: routes are matched with trailing slashes (e.g."
   },
@@ -27,6 +28,7 @@
     "donate": "Donate",
     "ourStory": "Our Story",
     "ourTeam": "Our Team",
+    "safeguarding": "Safeguarding",
     "news": "News",
     "blogs": "Blogs",
     "report": "Report",
@@ -58,7 +60,8 @@
   "whyThisMatters": {
     "schoolgirlsAlt": "Two schoolgirls walking together",
     "educationAlt": "A woman reading during a learning activity",
-    "skillsAlt": "A woman learning to sew"
+    "skillsAlt": "A woman learning to sew",
+    "exploreMore": "Explore more"
   },
   "common": {
     "learnMore": "Learn more",
@@ -81,7 +84,8 @@
       "Member": "Member"
     },
     "whyIntro": "Women and girls in Kakuma Refugee Camp face many challenges, including financial hardship, interrupted education, limited access to skills training, and barriers to employment and healthcare. For teenage mothers, these challenges can be even greater as they balance childcare with their education and personal development. At Women Without Borders Hub, we believe every girl and young woman deserves the opportunity to overcome these barriers, discover her potential, and build a better future. By promoting education, practical skills, mentorship, health awareness, and economic empowerment, we aim to create opportunities for women and girls to grow in confidence, strengthen their independence, and contribute to their communities.",
-    "ctaSeeImpact": "See the difference your support makes →"
+    "ctaSeeImpact": "See our impact",
+    "partnerWithUs": "Partner with us"
   },
   "quoteFeature": {
     "quote": "Every girl and young woman deserves a safe space to learn, grow, and believe in herself. When we support one another, share knowledge, and build our confidence, we create opportunities for a brighter future for ourselves and our community.",
@@ -103,12 +107,13 @@
     "girls": "girls",
     "connector": "&",
     "youngWomen": "young women",
-    "location": "in Kakuma",
+    "location": "in Kakuma, Kenya",
     "lead": "Creating opportunities for vulnerable girls, teenage mothers and young women through education, skills, mentorship, health and economic empowerment in Kakuma, Kenya.",
     "programs": "Our Programs",
     "realPeople": "Real People.",
     "realChange": "Real Change.",
     "photoAlt": "Women proudly holding their graduation certificates",
+    "imageBandAlt": "Women taking part in a community program in Kakuma",
     "facebook": "{{name}} on Facebook",
     "linkedin": "{{name}} on LinkedIn",
     "featuredMessage": "Featured message",
@@ -127,7 +132,12 @@
     "slideTwoSupport": "Support Our Work"
   },
   "homePage": {
+    "title": "Women Without Borders Hub",
     "intro": "Explore our programmes designed to empower girls and young women through education, skills development, health awareness, and economic opportunities."
+  },
+  "impactSection": {
+    "title": "Our Impact",
+    "intro": "Measured outcomes across our programmes with refugee and host communities in Kakuma."
   },
   "breadcrumb": {
     "home": "Home",
@@ -144,11 +154,13 @@
     "news": "News",
     "blogs": "Blogs",
     "report": "Report",
-    "post": "Post"
+    "post": "Post",
+    "label": "Breadcrumb"
   },
   "footer": {
     "stayInTouch": "Stay in touch",
     "emailAddress": "Email Address",
+    "websiteField": "Website",
     "firstName": "First Name",
     "required": "required",
     "subscribe": "Subscribe",
@@ -362,6 +374,42 @@
       "exploreMore": "Explore more",
       "exploreMoreLabel": "Explore more: {{title}}",
       "sectionRevealed": "Section revealed: {{title}}",
+      "overview": {
+        "intro": [
+          "Economic empowerment is an important step toward helping women and girls build secure, independent, and dignified lives. Through our Livelihood & Economic Empowerment programme, Women Without Borders Hub aims to support women and young people in developing practical skills, exploring income-generating opportunities, strengthening their confidence, and working toward greater financial independence.",
+          "We recognize that many women and girls face barriers that limit their ability to access education, employment, business opportunities, and the resources needed to support themselves and their families. These challenges can include limited access to vocational training, financial resources, business knowledge, professional networks, and employment opportunities.",
+          "As a community-based organization located in Kakuma Refugee Camp, Kenya, we seek to help address these barriers by promoting practical learning, entrepreneurship, mentorship, and connections to available opportunities. We believe that every woman and girl deserves the chance to discover her potential, develop useful skills, and participate meaningfully in her community.",
+          "Our goal is to encourage sustainable livelihoods that help women and girls strengthen their independence, improve their economic prospects, and contribute positively to their households and communities."
+        ],
+        "sections": [
+          {
+            "title": "Why Livelihood & Economic Empowerment Matters",
+            "paragraphs": [
+              "When women and girls have access to relevant skills, knowledge, mentorship, and economic opportunities, they are better positioned to explore ways of improving their circumstances and planning for the future.",
+              "Livelihood opportunities can help individuals work toward greater financial independence, strengthen their ability to meet everyday needs, and contribute to the well-being of their households. They can also encourage creativity, resilience, problem-solving, and community participation.",
+              "For women and girls living in challenging circumstances, including displacement and limited access to resources, opportunities for skills development and economic participation can be especially important. However, sustainable progress requires more than individual effort. It also depends on supportive communities, accessible training, relevant opportunities, and partnerships that respond to real needs.",
+              "At Women Without Borders Hub, we believe that investing in women's skills, ideas, and potential is an important part of building stronger and more inclusive communities."
+            ]
+          },
+          {
+            "title": "Who We Aim to Support",
+            "paragraphs": [
+              "Our Livelihood & Economic Empowerment programme is intended to support women and girls who want to develop their skills, explore economic opportunities, and work toward greater independence.",
+              "Our focus includes women and young women in the community, girls preparing for future livelihood opportunities, and individuals who face barriers to skills development, entrepreneurship, or employment. We recognize that each participant has different experiences, responsibilities, interests, and goals.",
+              "We therefore value approaches that respect individual circumstances and help participants identify realistic pathways suited to their abilities and aspirations."
+            ]
+          },
+          {
+            "title": "Working Together to Create Opportunities",
+            "paragraphs": [
+              "Sustainable economic empowerment requires collaboration. Community organizations, local businesses, employers, training institutions, mentors, donors, and development partners can all play a role in expanding access to knowledge, skills, resources, and opportunities.",
+              "Women Without Borders Hub welcomes engagement with partners who share our commitment to supporting women and girls through livelihood development and economic participation.",
+              "Potential areas of collaboration include vocational and entrepreneurship training, mentorship, business development support, apprenticeship opportunities, market connections, employment referrals, and resources for community-based livelihood initiatives.",
+              "By working together, we can help create more opportunities for women and girls to develop their potential, pursue their goals, and contribute to a more inclusive and resilient community."
+            ]
+          }
+        ]
+      },
       "whatWeDo": {
         "title": "What We Do",
         "intro": [
@@ -492,12 +540,37 @@
   "getInvolved": {
     "title": "Get Involved",
     "intro": "There are many ways to stand with women and girls — give, volunteer, mentor, join or partner.",
+    "pageIntroOne": "We believe that lasting impact begins when people come together to support, empower, and uplift one another.",
+    "pageIntroTwo": "There are many ways to get involved, whether by donating to support our programmes, volunteering your time, mentoring young women, sharing your skills, or partnering with us to create new opportunities. Every contribution, big or small, can help open doors, strengthen confidence, and make a meaningful difference in the lives of women and girls in Kakuma Refugee Camp, Kenya.",
+    "pageClosing": "Join us in creating a future where every girl and young woman has the opportunity to thrive.",
     "howItWorks": "How it works",
     "readyTitle": "Ready to take the next step?",
+    "detailContactPrefix": "Reach out via our",
+    "detailContactLink": "contact page",
+    "detailDonateConnector": "or",
+    "detailDonateLink": "make a donation",
+    "detailDonateSuffix": "today.",
     "thankYouInterest": "Thank you for your interest in {{title}}. Our team would love to connect with you and share how you can take the next step.",
     "reachUs": "If you have any questions, feel free to reach us at:",
     "emailUs": "Email us",
-    "callUs": "Call us"
+    "callUs": "Call us",
+    "items": {
+      "donate": {
+        "summary": "Your gift funds education, skills and dignity programmes directly."
+      },
+      "volunteer": {
+        "summary": "Give your time and skills to support women and girls in your community."
+      },
+      "membership": {
+        "summary": "Join as a member and help shape our priorities and programmes."
+      },
+      "mentor": {
+        "summary": "Share your experience as a mentor for young women and girls."
+      },
+      "partner": {
+        "summary": "Partner with us as a funder, institution or community organisation."
+      }
+    }
   },
   "post": {
     "title": "Post",
@@ -505,7 +578,8 @@
   },
   "report": {
     "title": "Report",
-    "subtitle": "Outcomes, reach and how we measure change across our programmes."
+    "subtitle": "Outcomes, reach and how we measure change across our programmes.",
+    "notice": "Our report is being prepared and will be uploaded soon."
   },
   "blogs": {
     "title": "Blogs",
@@ -524,7 +598,31 @@
   },
   "updates": {
     "title": "Community Updates & Stories",
-    "intro": "Stories, announcements and highlights from our work with the community in Kakuma."
+    "intro": "Stories, announcements and highlights from our work with the community in Kakuma.",
+    "previous": "Previous updates",
+    "next": "Next updates",
+    "notFound": "Update not found",
+    "backToAll": "Back to all updates",
+    "items": {
+      "building-pathways-for-women-and-girls": {
+        "title": "Building Pathways for Women and Girls in Kakuma",
+        "alt": "Women and girls learning together at Women Without Borders Hub in Kakuma",
+        "summary": "What happens when women in Kakuma gain access to education, skills, and opportunity?",
+        "fullText": "What happens when women in Kakuma gain access to education, skills, and opportunity?\n\nWomen Without Borders Hub is building pathways for women and girls in Kakuma to learn, earn, and lead.\n\nBecause when women gain access, communities gain resilience.\n\nWomen Without Borders Hub, Kakuma, is a community-led initiative empowering women and girls in Kakuma refugee camp through:\n\n- Education,\n- Health advocacy,\n- Entrepreneurship,\n- Technical skills development.\n\nWe are building pathways for women and girls to access the tools, knowledge, and opportunities needed to create independent futures and stronger communities.\n\nOur work is focused on four core pillars:\n\n- Education Advocacy\n- Health Advocacy\n- Entrepreneurship Advocacy\n- Technical Skills Development\n\nThis is more than a program.\n\nIt is a platform for dignity, resilience, and economic inclusion.\n\nWe believe women in refugee communities should not be defined by displacement but by their circumstances, potential, leadership, and power to shape the future.\n\nWomen Without Borders Hub exists to turn access into opportunity, and opportunity into long-term transformation.\n\nIf you care about women's empowerment, refugee livelihoods, and inclusive development, we'd love to connect."
+      },
+      "graduation-celebration-skills": {
+        "title": "Graduation Day: Young Women Complete Tailoring and Digital Skills Training",
+        "alt": "Young women graduates holding their training certificates",
+        "summary": "For the women of Women Without Borders Hub, this graduation was more than certificates; it was a celebration of resilience, courage, growth, and new possibilities.",
+        "fullText": "For the women of Women Without Borders Hub, this graduation was more than certificates; it was a celebration of resilience, courage, growth, and new possibilities.\n\nBehind every certificate is a woman who chose to learn, build new skills, find her voice, and create a better future for herself, her family, and her community.\n\nWe are grateful to Teach for Community for hosting this special ceremony and celebrating these women with us.\n\nWhen women learn, communities grow. When women lead, communities move forward.\n\nCongratulations to our graduates!"
+      },
+      "health-advocacy": {
+        "title": "Advocating for Health: Women Without Borders Hub",
+        "alt": "Health advocacy for refugee and host communities in Kakuma",
+        "summary": "Health is a human right, not a privilege.",
+        "fullText": "Health is a human right, not a privilege.\n\nYet many women, children, and displaced families still struggle to access basic healthcare, information, and support.\n\nToday at Women Without Borders Hub, we are learning, engaging, and advocating for stronger health awareness and community well-being.\n\nThrough health advocacy, we believe communities become stronger, safer, and more empowered to make informed decisions about their lives and futures.\n\nFrom maternal health and mental wellness to hygiene awareness and access to healthcare services, every conversation matters.\n\nHealthy communities build stronger futures.\n\nAwareness saves lives.\n\nAdvocacy creates change.\n\nTogether, we continue raising voices for equitable and inclusive healthcare for refugee and host communities in Kakuma and beyond."
+      }
+    }
   },
   "news": {
     "title": "News",
@@ -532,11 +630,46 @@
   },
   "resources": {
     "title": "Resources",
-    "intro": "Reports, toolkits and guides from our work — free to download and reuse."
+    "intro": "Reports, toolkits and guides from our work — free to download and reuse.",
+    "download": "Download",
+    "types": {
+      "report": "Report",
+      "guide": "Guide",
+      "toolkit": "Toolkit",
+      "policy": "Policy",
+      "research": "Research"
+    },
+    "items": {
+      "annualReport": {
+        "title": "Annual Impact Report 2025",
+        "description": "Outcomes, finances and stories from every programme area."
+      },
+      "menstrualGuide": {
+        "title": "Menstrual Dignity Implementation Guide",
+        "description": "Practical guidance for schools and workplaces on WASH and supplies."
+      },
+      "digitalCurriculum": {
+        "title": "Digital Skills Curriculum",
+        "description": "Open curriculum for community-led digital literacy bootcamps."
+      },
+      "safeguardingPolicy": {
+        "title": "Safeguarding & Child Protection Policy",
+        "description": "Our standards for keeping participants safe."
+      },
+      "srhrStudy": {
+        "title": "SRHR Knowledge, Attitudes & Practices Study",
+        "description": "Baseline research across 12 districts."
+      },
+      "savingsGuide": {
+        "title": "Starting a Savings Group",
+        "description": "A step-by-step handbook for forming and running a savings group."
+      }
+    }
   },
   "team": {
     "title": "Our Team",
-    "subtitle": "The community leaders, educators and mentors behind Women Without Borders Hub in Kakuma."
+    "subtitle": "The community leaders, educators and mentors behind Women Without Borders Hub in Kakuma.",
+    "joinPrompt": "Want to join the team?"
   },
   "about": {
     "title": "About",
@@ -549,6 +682,33 @@
     },
     "heading": "About",
     "paragraph": "Women Without Borders Hub is a community-led organization in Kakuma, Turkana County, Kenya, creating opportunities for vulnerable girls, teenage mothers and young women.",
+    "homeIntro": "Women Without Borders Hub is a community-led organization in <location/>, working with refugee and host communities to remove barriers to education and opportunity for vulnerable girls, teenage mothers and young women.",
+    "homeDetail": "Through educational support, literacy, mentorship, health support, practical skills and pathways toward economic empowerment, we help young women learn, build confidence and secure an independent future.",
+    "literacyImageAlt": "Girls sitting in a literacy class at Women Without Borders Hub",
+    "missionText": "Our mission is to remove barriers to education and opportunity for vulnerable girls, teenage mothers and young women by providing educational support, literacy, mentorship, health support, practical skills and pathways toward economic empowerment and self-reliance.",
+    "visionText": "A future where every girl and young woman in Kakuma can learn, develop her potential, build confidence and secure an independent future.",
+    "audiences": [
+      "Vulnerable girls",
+      "Teenage mothers",
+      "Young women"
+    ],
+    "communities": [
+      "Refugee communities",
+      "Host communities"
+    ],
+    "coreValuesItems": [
+      "Education",
+      "Integrity",
+      "Equality",
+      "Empowerment",
+      "Dignity",
+      "Inclusion",
+      "Respect",
+      "Community Leadership",
+      "Partnership",
+      "Accountability",
+      "Learning"
+    ],
     "missionTitle": "Our mission",
     "visionTitle": "Our vision",
     "whoWeServe": "Who we serve",
@@ -565,16 +725,40 @@
     "card3Label": "Fund Digital and Practical Skills",
     "card3Desc": "Support digital skills training",
     "card4Label": "Partner With Us",
-    "card4Desc": "Collaborate with us to empower more girls"
+    "card4Desc": "Collaborate with us to empower more girls",
+    "detailsLabel": "About details"
   },
   "ourStory": {
-    "whatWeDo": "What We Do",
+    "whatWe": "What We",
+    "do": "Do",
     "donate": "Donate",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "fromKakuma": "From Kakuma to Hope",
+    "whyHub": "Why Women Without Borders Hub",
+    "pageTitle": "MaLua Lugazo: Building Hope for Girls in Kakuma",
+    "lead": "MaLua Lugazo is a Somali refugee living in Kakuma Refugee Camp who founded Women Without Borders Hub so that every girl and young woman has a chance to learn, grow and lead.",
+    "photoAlt": "MaLua Lugazo, Founder of Women Without Borders Hub",
+    "quote": "Every girl has the right to learn, grow and lead.",
+    "quoteAttribution": "— MaLua Lugazo, Founder",
+    "fromKakumaText": "MaLua Lugazo knows Kakuma from the inside. As a Somali refugee growing up in the camp, she watched bright girls disappear from classrooms — early marriage, pregnancy, household labour and school costs closing doors one by one. She also saw what a single opportunity could do: a scholarship, a mentor, a safe room to study in. That contrast — between what girls in Kakuma are denied and what they become when someone believes in them — is where Women Without Borders Hub began.",
+    "whyHubText": "MaLua founded Women Without Borders Hub so that no girl in Kakuma would have to fight for an education alone. The Hub brings refugee and host-community girls together in one movement: education and literacy, digital and vocational skills, mentorship, menstrual dignity, health and pathways into work. Every programme is community-led — designed with the girls it serves — because the girls of Kakuma are not a problem to be solved but leaders to be equipped.",
+    "closingText": "Today the Hub walks with vulnerable girls, teenage mothers and young women across Kakuma — from the classroom to the marketplace. Explore our programmes, see the change your support creates, and join the story:"
   },
   "safeguarding": {
     "title": "Safeguarding",
-    "intro": "Our commitment to the safety, dignity and protection of every girl and woman we serve."
+    "intro": "Our commitment to the safety, dignity and protection of every girl and woman we serve.",
+    "commitment": "Our commitment",
+    "commitmentText": "We operate a zero-tolerance policy on exploitation, abuse and harassment. Every team member, volunteer and partner completes safeguarding training and is bound by our code of conduct.",
+    "howWeWork": "How we work",
+    "practices": {
+      "recruitment": "Safer recruitment including background checks",
+      "focalPoints": "Trained safeguarding focal points in every programme",
+      "reporting": "Confidential reporting channels with protection from retaliation",
+      "survivorResponse": "Survivor-centred response, referring to specialist services"
+    },
+    "raiseConcern": "Raise a concern",
+    "concernPrefix": "If you have a concern about the safety of a participant or staff member, contact our safeguarding team immediately via the",
+    "confidentialSuffix": "Reports are treated confidentially."
   },
   "getInvolvedCards": {
     "kicker": "Get Involved",
@@ -638,6 +822,7 @@
     "heroCta": "Fill in the volunteer form",
     "intro": "Our volunteers help us run programmes in education, skills, mentorship, health and economic empowerment. Tell us how you would like to help, and our team will contact you within 2 business days.",
     "form": {
+      "consent": "I agree that Women Without Borders Hub may contact me about volunteering and store my details for this purpose.",
       "title": "Volunteer application",
       "required": "required",
       "requiredNote": "Fields marked with * are required.",
@@ -753,5 +938,127 @@
       "sending": "Sending...",
       "submit": "Send my application"
     }
+  },
+  "impact": {
+    "title": "Impact",
+    "subtitle": "We measure what matters and publish it. Here is what your support has achieved.",
+    "measureTitle": "How we measure",
+    "measureText": "Every programme tracks participation, completion and outcome indicators, verified through follow-up surveys at 3, 6 and 12 months. Annual reports are published in Resources.",
+    "intro": "We measure what matters and publish it. Here is what your support has achieved.",
+    "measureImageAlt": "Women and girls taking part in a programme in Kakuma",
+    "howWeMeasure": "How we measure",
+    "measureDescription": "Every programme tracks participation, completion and outcome indicators, verified through follow-up surveys at 3, 6 and 12 months. Annual reports are published in",
+    "multiply": "Help us multiply this impact",
+    "supportConnector": ",",
+    "or": "or",
+    "withUs": "with us.",
+    "cardCaption": "Community Updates",
+    "readTime": "Read time: {{count}} min",
+    "sectionsLabel": "Impact sections",
+    "all": "All",
+    "sections": {
+      "news": "News",
+      "blogs": "Blogs",
+      "report": "Report",
+      "post": "Post"
+    },
+    "stats": {
+      "reached": "Women & girls reached",
+      "programmes": "Core programmes",
+      "locations": "Kakuma Refugee Camp"
+    },
+    "sectionIntro": "Measured outcomes across our programmes with refugee and host communities in Kakuma.",
+    "sectionImageAlt": "Women Without Borders Hub programme impact in Kakuma",
+    "sectionStats": {
+      "reached": "Women & girls reached",
+      "programmes": "Core programmes",
+      "locations": "Kakuma Refugee Camp"
+    }
+  },
+  "partners": {
+    "title": "Our Partners",
+    "logoAlt": "{{name}} logo"
+  },
+  "profile": {
+    "founderLeader": "Founder and organizational leader",
+    "motivation": "What motivated her to start the Hub",
+    "barriers": [
+      "Interrupted education and limited opportunities to return to school",
+      "Financial constraints",
+      "Limited access to digital skills and vocational training",
+      "Few pathways to sustainable livelihoods",
+      "For teenage mothers: childcare responsibilities, stigma, and the difficulty of balancing motherhood with education and personal development",
+      "Risks of gender-based violence",
+      "Limited access to health information and services",
+      "Social barriers that restrict participation in decision-making"
+    ],
+    "problem": "The problem the Hub addresses",
+    "focusAreas": [
+      {
+        "title": "Education",
+        "text": "A foundation for personal growth, informed decisions and future opportunities, with a chance for girls and young women whose learning was interrupted to continue their studies and pursue their ambitions."
+      },
+      {
+        "title": "Mentorship",
+        "text": "Helps women and girls build confidence, identify their strengths, develop leadership skills and learn from people who can guide and encourage them."
+      },
+      {
+        "title": "Digital skills",
+        "text": "Help women access information, communicate, join online learning, explore employment and develop or market small businesses in a digital world."
+      },
+      {
+        "title": "Health awareness",
+        "text": "Helps women and girls make informed decisions about their wellbeing, menstrual health, sexual and reproductive health, hygiene and available support services."
+      },
+      {
+        "title": "Women’s economic empowerment",
+        "text": "Builds practical and entrepreneurial skills and income-generating opportunities, toward greater financial independence."
+      }
+    ],
+    "challenges": [
+      "Mobilizing the financial and material resources needed to start programmes, reach more women and girls and sustain activities over time",
+      "Building partnerships with organizations that understand the community-led approach and are willing to invest in locally driven solutions",
+      "Developing the systems, policies and monitoring and evaluation processes needed to grow responsibly, with accountability and safeguarding",
+      "Balancing the urgent needs of the community with the long-term work of building a sustainable organization"
+    ],
+    "change": "The change she wants to see",
+    "vision": "The long-term vision",
+    "support": "Support this work",
+    "leadership": "Women Without Borders Hub Leadership",
+    "title": "MaLua Lugazo - Founder & Executive Director of Women Without Borders Hub",
+    "heroIntro": "MaLua Lugazo is the Founder and Executive Director of Women Without Borders Hub, a community-led initiative based in Kakuma Refugee Camp, Kenya. The Hub works to create opportunities for refugee and marginalized women and girls to learn, build skills and shape their own futures.",
+    "photoAlt": "MaLua Lugazo, Founder and Executive Director of Women Without Borders Hub",
+    "featureParagraphs": [
+      "MaLua brings more than nine years of experience in humanitarian and community development. She served for five years as a Project Coordinator with Wings to Fly Initiative — CBO, and for four years as a Facilitator with the Norwegian Refugee Council, where she implemented the Accelerated Education Programme and served as a Better Learning Programme Champion.",
+      "She holds a Diploma in Social Work and Community Development and is pursuing a Bachelor’s Degree in Social Work and Administration. Her work has strengthened her commitment to education, community development, child protection, and creating opportunities for vulnerable and marginalized populations, particularly refugee women and girls."
+    ],
+    "officialRoleLabel": "Official role:",
+    "officialRole": "Founder | Executive Director",
+    "meetTeam": "Meet the leadership team",
+    "readStory": "Read our story",
+    "motivationParagraphs": [
+      "MaLua started Women Without Borders Hub after years of working alongside refugee and marginalized women and girls in Kakuma. She repeatedly saw the same pattern: women and girls were willing and ready to learn, to lead and to build a life for themselves, but they were held back by barriers that were never addressed by short-term responses.",
+      "Rather than run another short-term activity, she founded the Hub to build a space where women and girls are treated as partners and leaders in their own development. That decision is at the heart of everything the organization does today."
+    ],
+    "barriersTitle": "The barriers women and girls face in Kakuma",
+    "barriersIntro": "Living in Kakuma Refugee Camp means that opportunities are limited and competition for the few that exist is intense. The main barriers observed by the Hub are:",
+    "problemTitle": "The problem the Hub addresses",
+    "problemParagraphs": [
+      "Women and girls in Kakuma are often excluded from the decisions that affect their lives. Programmes are designed for them rather than with them, and support stops once a project ends. As a result, the same barriers return year after year and leadership potential stays untapped.",
+      "Women Without Borders Hub responds to this gap with a community-led approach that strengthens practical skills, restores access to learning, and positions women and girls as leaders of their own solutions."
+    ],
+    "focusAreasTitle": "The five focus areas of the Hub",
+    "missionTitle": "The mission of Women Without Borders Hub",
+    "mission": "To empower refugee and marginalized women and girls in Kakuma by strengthening education, skills, confidence and leadership, so that they can shape their own futures and lead change in their community.",
+    "challengesTitle": "Leading the organization: current challenges",
+    "challengesIntro": "As Founder and Executive Director, MaLua leads the organization day to day while also shaping its long-term direction. The main challenges she leads on are:",
+    "changeTitle": "The change she wants to see",
+    "changeParagraphs": [
+      "MaLua wants to see women and girls in Kakuma move from being seen only as beneficiaries to being recognized as partners and leaders. She wants the barriers that stop girls from returning to school, from learning new skills and from earning their own income to weaken, and she wants more women included in the decisions that shape their community.",
+      "For the Hub, this means young women leaving school with new skills and confidence, women earning a steady income, and girls stepping into leadership roles in their families, schools and community."
+    ],
+    "visionTitle": "The long-term vision",
+    "longTermVision": "MaLua envisions Women Without Borders Hub growing into a strong, self-sustaining community organization that is led by the women and girls it serves. The long-term goal is for the Hub to become a model of community-led change in Kakuma and beyond, proving that local leadership is the most powerful force for lasting change, and inspiring other organizations to work differently.",
+    "closing": "Every contribution helps more women and girls in Kakuma access education, skills and the space to lead."
   }
 }
