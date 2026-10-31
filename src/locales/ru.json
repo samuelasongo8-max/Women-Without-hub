@@ -3,6 +3,18 @@
     "title": "Пожертвование",
     "subtitle": "Ваше пожертвование напрямую финансирует программы образования, развития навыков и поддержки достоинства."
   },
+  "timeAgo": {
+    "today": "Сегодня",
+    "yesterday": "Вчера",
+    "day_one": "{{formattedCount}} день назад",
+    "day_few": "{{formattedCount}} дня назад",
+    "day_many": "{{formattedCount}} дней назад",
+    "day_other": "{{formattedCount}} дня назад",
+    "week_one": "{{formattedCount}} неделю назад",
+    "week_few": "{{formattedCount}} недели назад",
+    "week_many": "{{formattedCount}} недель назад",
+    "week_other": "{{formattedCount}} недели назад"
+  },
   "team": {
     "title": "Наша команда",
     "subtitle": "Общественные лидеры, педагоги и наставники Women Without Borders Hub в Какуме.",
@@ -41,6 +53,21 @@
   "brand": {
     "name": "Women Without Borders Hub"
   },
+  "chatbot": {
+    "openChat": "Открыть чат",
+    "tooltip": "Задайте нам вопрос"
+  },
+  "megaMenu": {
+    "aboutDescription": "В Какуме мы вместе с девочками и молодыми женщинами создаём возможности для обучения, укрепления уверенности в себе и построения лучшего будущего.",
+    "aboutUs": "О нас",
+    "imageAlt": "Участницы сообщества учатся вместе",
+    "whoWeAre": "Кто мы",
+    "ourImpact": "Наши результаты",
+    "impactDescription": "Мы измеряем важные результаты и делимся ими. Узнайте, чего ваша поддержка помогла достичь для женщин и девочек в Какуме.",
+    "impactOverview": "Обзор нашего влияния",
+    "impactImageAlt": "Женщины на общественном занятии в Какуме",
+    "contactUs": "Связаться с нами"
+  },
   "cookieConsent": {
     "ariaLabel": "Настройки файлов cookie",
     "message": "Мы используем необходимые данные хранилища, чтобы сайт работал и запоминал ваш выбор. Вы можете разрешить или отклонить необязательные файлы cookie.",
@@ -74,13 +101,14 @@
     "about": "About",
     "programs": "Programs",
     "impact": "Impact",
-    "getInvolved": "Get Involved",
+    "getInvolved": "Присоединяйтесь",
     "resources": "Resources",
     "contact": "Contact",
     "orgName": "Women Without Borders Hub",
     "donate": "Donate",
     "ourStory": "Our Story",
     "ourTeam": "Our Team",
+    "safeguarding": "Защита",
     "news": "News",
     "blogs": "Blogs",
     "report": "Report",

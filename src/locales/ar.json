@@ -6,6 +6,37 @@
   "brand": {
     "name": "Women Without Borders Hub"
   },
+  "chatbot": {
+    "openChat": "افتح المحادثة",
+    "tooltip": "اسألنا أي شيء"
+  },
+  "timeAgo": {
+    "today": "اليوم",
+    "yesterday": "أمس",
+    "day_zero": "قبل {{formattedCount}} يوم",
+    "day_one": "قبل يوم واحد",
+    "day_two": "قبل يومين",
+    "day_few": "قبل {{formattedCount}} أيام",
+    "day_many": "قبل {{formattedCount}} يومًا",
+    "day_other": "قبل {{formattedCount}} يوم",
+    "week_zero": "قبل {{formattedCount}} أسبوع",
+    "week_one": "قبل أسبوع واحد",
+    "week_two": "قبل أسبوعين",
+    "week_few": "قبل {{formattedCount}} أسابيع",
+    "week_many": "قبل {{formattedCount}} أسبوعًا",
+    "week_other": "قبل {{formattedCount}} أسبوع"
+  },
+  "megaMenu": {
+    "aboutDescription": "نعمل جنبًا إلى جنب مع الفتيات والشابات في كاكوما، ونهيئ لهن فرصًا للتعلم وتعزيز الثقة بالنفس وبناء مستقبل أكثر إشراقًا.",
+    "aboutUs": "من نحن",
+    "imageAlt": "أفراد من المجتمع يتعلمون معًا",
+    "whoWeAre": "من نحن",
+    "ourImpact": "أثرنا",
+    "impactDescription": "نقيس ما يهم ونشارك النتائج. اكتشفوا ما حققه دعمكم للنساء والفتيات في كاكوما.",
+    "impactOverview": "نظرة عامة على أثرنا",
+    "impactImageAlt": "نساء يشاركن في جلسة تعلم مجتمعية في كاكوما",
+    "contactUs": "اتصل بنا"
+  },
   "cookieConsent": {
     "ariaLabel": "تفضيلات ملفات تعريف الارتباط",
     "message": "نستخدم التخزين الضروري لتشغيل الموقع وحفظ اختيارك. يمكنك قبول ملفات تعريف الارتباط الاختيارية أو رفضها.",
@@ -46,6 +77,7 @@
     "donate": "تبرَّع",
     "ourStory": "قصتنا",
     "ourTeam": "فريقنا",
+    "safeguarding": "الحماية",
     "news": "الأخبار",
     "blogs": "المدونات",
     "report": "التقرير",

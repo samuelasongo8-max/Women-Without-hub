@@ -3,6 +3,18 @@
     "title": "Przekaż darowiznę",
     "subtitle": "Twoja darowizna bezpośrednio finansuje programy edukacyjne, rozwój umiejętności i działania na rzecz godności."
   },
+  "timeAgo": {
+    "today": "Dzisiaj",
+    "yesterday": "Wczoraj",
+    "day_one": "{{formattedCount}} dzień temu",
+    "day_few": "{{formattedCount}} dni temu",
+    "day_many": "{{formattedCount}} dni temu",
+    "day_other": "{{formattedCount}} dnia temu",
+    "week_one": "{{formattedCount}} tydzień temu",
+    "week_few": "{{formattedCount}} tygodnie temu",
+    "week_many": "{{formattedCount}} tygodni temu",
+    "week_other": "{{formattedCount}} tygodnia temu"
+  },
   "team": {
     "title": "Nasz zespół",
     "subtitle": "Liderzy społeczności, edukatorzy i mentorzy Women Without Borders Hub w Kakumie.",
@@ -41,6 +53,21 @@
   "brand": {
     "name": "Women Without Borders Hub"
   },
+  "chatbot": {
+    "openChat": "Otwórz czat",
+    "tooltip": "Zapytaj nas o wszystko"
+  },
+  "megaMenu": {
+    "aboutDescription": "W Kakumie wspieramy dziewczęta i młode kobiety, tworząc im możliwości nauki, wzmacniania pewności siebie i budowania lepszej przyszłości.",
+    "aboutUs": "O nas",
+    "imageAlt": "Osoby ze społeczności uczą się razem",
+    "whoWeAre": "Kim jesteśmy",
+    "ourImpact": "Nasze działania i efekty",
+    "impactDescription": "Mierzymy to, co ważne, i dzielimy się wynikami. Zobacz, co Twoje wsparcie umożliwiło kobietom i dziewczętom w Kakumie.",
+    "impactOverview": "Przegląd naszego wpływu",
+    "impactImageAlt": "Kobiety uczestniczą w społecznościowym spotkaniu edukacyjnym w Kakumie",
+    "contactUs": "Skontaktuj się z nami"
+  },
   "cookieConsent": {
     "ariaLabel": "Ustawienia plików cookie",
     "message": "Korzystamy z niezbędnego zapisu danych, aby strona działała i zapamiętała Twój wybór. Możesz zaakceptować lub odrzucić opcjonalne pliki cookie.",
@@ -74,13 +101,14 @@
     "about": "About",
     "programs": "Programs",
     "impact": "Impact",
-    "getInvolved": "Get Involved",
+    "getInvolved": "Zaangażuj się",
     "resources": "Resources",
     "contact": "Contact",
     "orgName": "Women Without Borders Hub",
     "donate": "Donate",
     "ourStory": "Our Story",
     "ourTeam": "Our Team",
+    "safeguarding": "Ochrona",
     "news": "News",
     "blogs": "Blogs",
     "report": "Report",

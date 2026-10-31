@@ -6,6 +6,29 @@
   "brand": {
     "name": "Women Without Borders Hub"
   },
+  "chatbot": {
+    "openChat": "Fungua gumzo",
+    "tooltip": "Tuulize chochote"
+  },
+  "timeAgo": {
+    "today": "Leo",
+    "yesterday": "Jana",
+    "day_one": "Siku {{formattedCount}} iliyopita",
+    "day_other": "Siku {{formattedCount}} zilizopita",
+    "week_one": "Wiki {{formattedCount}} iliyopita",
+    "week_other": "Wiki {{formattedCount}} zilizopita"
+  },
+  "megaMenu": {
+    "aboutDescription": "Tukiwa pamoja na wasichana na wanawake vijana wa Kakuma, tunawafungulia nafasi za kujifunza, kujiamini na kujenga maisha bora ya baadaye.",
+    "aboutUs": "Kuhusu sisi",
+    "imageAlt": "Wanajamii wakijifunza pamoja",
+    "whoWeAre": "Sisi ni nani",
+    "ourImpact": "Mchango wetu",
+    "impactDescription": "Tunapima mambo muhimu na kushiriki matokeo. Tazama jinsi msaada wako ulivyosaidia wanawake na wasichana wa Kakuma.",
+    "impactOverview": "Muhtasari wa mchango wetu",
+    "impactImageAlt": "Wanawake wakishiriki katika kipindi cha kujifunza kwa jamii Kakuma",
+    "contactUs": "Wasiliana nasi"
+  },
   "cookieConsent": {
     "ariaLabel": "Mapendeleo ya vidakuzi",
     "message": "Tunatumia hifadhi muhimu ili tovuti ifanye kazi na kukumbuka chaguo lako. Unaweza kukubali au kukataa vidakuzi visivyo vya lazima.",
@@ -46,6 +69,7 @@
     "donate": "Changia",
     "ourStory": "Hadithi Yetu",
     "ourTeam": "Timu Yetu",
+    "safeguarding": "Ulinzi",
     "news": "Habari",
     "blogs": "Blogu",
     "report": "Ripoti",

@@ -4,6 +4,7 @@ import { newsPosts } from './../data/newsPosts.js'
 import { blogsPosts } from './../data/blogsPosts.js'
 import { reportPosts } from './../data/reportPosts.js'
 import { postPosts } from './../data/postPosts.js'
+import RelativeTimeBadge from './RelativeTimeBadge.jsx'
 import { formatRelativeDate } from './../sections/CommunityUpdates.jsx'
 import './ImpactsLayout.css'
 
@@ -35,7 +36,7 @@ const allPosts = [...newsPosts, ...blogsPosts, ...reportPosts, ...postPosts].sor
  * built from the full item record (image, date, weeks-ago, caption,
  * read time, button + link) instead of a bare excerpt.
  */
-function ImpallCard({ item, t, language }) {
+function ImpallCard({ item, t, language, useLivePostAge }) {
   const content = item.slug
     ? t(`updates.items.${item.slug}`, { returnObjects: true })
     : item
@@ -44,7 +45,10 @@ function ImpallCard({ item, t, language }) {
   const date = item.date ? new Date(`${item.date}T12:00:00`) : null
   // Badge counts live from the stored date on every render (Today →
   // Yesterday → N days/weeks ago), so it moves forward automatically.
-  const relativeLabel = item.date ? formatRelativeDate(item.date, language) : ''
+  const relativeLabel =
+    item.date && !(useLivePostAge && item.type === 'Post')
+      ? formatRelativeDate(item.date, language)
+      : ''
   const formattedDate = date
     ? new Intl.DateTimeFormat(language, {
         month: 'short',
@@ -69,9 +73,11 @@ function ImpallCard({ item, t, language }) {
             {t('common.photoComingSoon')}
           </span>
         )}
-        {relativeLabel !== '' && (
+        {useLivePostAge && item.type === 'Post' && item.date ? (
+          <RelativeTimeBadge publishDate={item.date} />
+        ) : relativeLabel !== '' ? (
           <span className="impall-card__badge">{relativeLabel}</span>
-        )}
+        ) : null}
       </div>
 
       <div className="impall-card__body">
@@ -163,6 +169,7 @@ export default function ImpactsLayout({
                       item={item}
                       t={t}
                       language={language}
+                      useLivePostAge={type === 'Post'}
                     />
                   ))}
                 </div>

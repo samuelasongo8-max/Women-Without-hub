@@ -172,10 +172,85 @@
   display: none;
 }
 
-/* ---------- Dropdown panel ---------- */
-/* Off-white panel with teal text (deliberately NOT the bar's teal/white).
-   `.auvd-nav-list > li` is position: relative, so this anchors to the
-   "Impact" item at top: 100%; inline-start: 0, above the page hero. */
+.auvd-nav-item--mega {
+  position: static;
+}
+
+.auvd-nav-about-trigger {
+  color: #ffffff;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.auvd-nav-about-trigger.is-active {
+  color: #ffffff;
+}
+
+.auvd-nav-about-mobile {
+  display: none;
+}
+
+.auvd-header--about-open {
+  z-index: 60;
+  background: #ffffff;
+}
+
+.auvd-header--about-open .auvd-brand-name,
+.auvd-header--about-open .auvd-nav-link:not(.auvd-nav-about-trigger),
+.auvd-header--about-open .auvd-search-toggle {
+  color: #263638;
+}
+
+.auvd-header--about-open .auvd-nav-link.is-active {
+  border-bottom-color: #155e62;
+}
+
+.auvd-header--about-open .lang-switch__trigger {
+  color: #155e62;
+}
+
+.auvd-header--about-open .lang-switch__trigger:hover {
+  color: #123f41;
+}
+
+.auvd-header--about-open .auvd-nav-link:focus-visible,
+.auvd-header--about-open .auvd-search-toggle:focus-visible,
+.auvd-header--about-open .lang-switch__trigger:focus-visible {
+  outline-color: #155e62;
+}
+
+.auvd-header--about-open .auvd-nav-list {
+  align-self: stretch;
+}
+
+.auvd-header--about-open .auvd-nav {
+  align-self: stretch;
+}
+
+.auvd-header--about-open .auvd-nav-item--mega.is-open {
+  display: flex;
+  align-self: stretch;
+  align-items: stretch;
+}
+
+.auvd-header--about-open .auvd-nav-about-trigger[aria-expanded='true'] {
+  box-sizing: border-box;
+  height: 100%;
+  padding-inline: 0.75rem;
+  padding-block: 0;
+  color: #2b3a3d;
+  background: #e5e5e5;
+  border-block-end-color: #e5e5e5;
+}
+
+.auvd-header--about-open .auvd-nav-about-trigger[aria-expanded='true']:hover {
+  color: #2b3a3d;
+  border-block-end-color: #e5e5e5;
+}
+
+/* ---------- Navigation submenus ---------- */
 
 .auvd-nav-sub {
   position: absolute;
@@ -488,6 +563,76 @@
     font-weight: 600;
     text-align: start;
     border-block-end: 2px solid transparent;
+  }
+
+  .auvd-nav-item--mega {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .auvd-nav-item--mega > .auvd-nav-about-trigger {
+    flex: 1 1 auto;
+  }
+
+  .auvd-nav-about-trigger {
+    justify-content: space-between;
+    min-height: 48px;
+    padding-block: 0.5rem;
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: start;
+    border-block-end: 2px solid transparent;
+  }
+
+  .auvd-nav-about-trigger.is-active {
+    border-block-end-color: #f6b95c;
+  }
+
+  .auvd-nav-item--mega.mobile-open .auvd-nav-chevron {
+    transform: rotate(180deg);
+  }
+
+  .auvd-nav-about-mobile {
+    display: block;
+    position: static;
+    flex: 1 1 100%;
+    min-width: 0;
+    max-height: 0;
+    margin-block-end: 0.25rem;
+    margin-inline-start: 1rem;
+    padding-inline-start: 0.75rem;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: none;
+    pointer-events: none;
+    transition:
+      max-height 250ms ease,
+      opacity 200ms ease,
+      visibility 0s linear 250ms;
+  }
+
+  .auvd-nav-item--mega.mobile-open .auvd-nav-about-mobile {
+    max-height: 40rem;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition:
+      max-height 250ms ease,
+      opacity 200ms ease;
+  }
+
+  .auvd-nav-about-mobile > li {
+    list-style: none;
+  }
+
+  .auvd-nav-about-mobile .auvd-nav-about-child {
+    padding-inline-start: 1.5rem;
+    opacity: 0.92;
   }
 
   .auvd-nav-link.is-active {
