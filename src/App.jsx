@@ -21,6 +21,8 @@ import Resources from './pages/Resources.jsx'
 import Safeguarding from './pages/Safeguarding.jsx'
 import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
+import CookiePolicy from './pages/CookiePolicy.jsx'
+import CookieBanner from './components/CookieBanner.jsx'
 
 const LivelihoodWhatWeDo = lazy(() => import('./pages/LivelihoodWhatWeDo.jsx'))
 const LivelihoodOurApproach = lazy(
@@ -30,65 +32,69 @@ const Volunteer = lazy(() => import('./pages/Volunteer.jsx'))
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about/" element={<About />} />
-        <Route path="/about/our-team/" element={<OurTeam />} />
-        <Route
-          path="/about/our-team/malua-lugazo/"
-          element={<MaluaLugazoProfile />}
-        />
-        <Route path="/programs/" element={<Programs />} />
-        <Route
-          path="/programs/education-literacy/"
-          element={<Navigate to="/programs/second-chance-education/" replace />}
-        />
-        <Route
-          path="/programs/livelihood-economic-empowerment/what-we-do/"
-          element={
-            <Suspense fallback={null}>
-              <LivelihoodWhatWeDo />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/programs/livelihood-economic-empowerment/our-approach/"
-          element={
-            <Suspense fallback={null}>
-              <LivelihoodOurApproach />
-            </Suspense>
-          }
-        />
-        <Route path="/programs/:slug/" element={<ProgramDetail />} />
-        <Route path="/impact/" element={<Impact />} />
-        <Route path="/impact/news/" element={<News />} />
-        <Route path="/impact/blogs/" element={<Blogs />} />
-        <Route path="/impact/report/" element={<Report />} />
-        <Route path="/impact/post/" element={<Post />} />
-        <Route path="/about/our-story/" element={<OurStory />} />
-        <Route path="/updates/" element={<Updates />} />
-        <Route path="/updates/:slug/" element={<UpdateDetail />} />
-        <Route
-          path="/impact/our-story/"
-          element={<Navigate to="/about/our-story/" replace />}
-        />
-        <Route path="/stories/*" element={<Navigate to="/updates/" replace />} />
-        <Route path="/get-involved/" element={<GetInvolved />} />
-        <Route
-          path="/get-involved/volunteer/"
-          element={
-            <Suspense fallback={null}>
-              <Volunteer />
-            </Suspense>
-          }
-        />
-        <Route path="/get-involved/:slug/" element={<InvolvementDetail />} />
-        <Route path="/resources/" element={<Resources />} />
-        <Route path="/safeguarding/" element={<Safeguarding />} />
-        <Route path="/contact/" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about/" element={<About />} />
+          <Route path="/about/our-team/" element={<OurTeam />} />
+          <Route
+            path="/about/our-team/malua-lugazo/"
+            element={<MaluaLugazoProfile />}
+          />
+          <Route path="/programs/" element={<Programs />} />
+          <Route
+            path="/programs/education-literacy/"
+            element={<Navigate to="/programs/second-chance-education/" replace />}
+          />
+          <Route
+            path="/programs/livelihood-economic-empowerment/what-we-do/"
+            element={
+              <Suspense fallback={null}>
+                <LivelihoodWhatWeDo />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/programs/livelihood-economic-empowerment/our-approach/"
+            element={
+              <Suspense fallback={null}>
+                <LivelihoodOurApproach />
+              </Suspense>
+            }
+          />
+          <Route path="/programs/:slug/" element={<ProgramDetail />} />
+          <Route path="/impact/" element={<Impact />} />
+          <Route path="/impact/news/" element={<News />} />
+          <Route path="/impact/blogs/" element={<Blogs />} />
+          <Route path="/impact/report/" element={<Report />} />
+          <Route path="/impact/post/" element={<Post />} />
+          <Route path="/about/our-story/" element={<OurStory />} />
+          <Route path="/updates/" element={<Updates />} />
+          <Route path="/updates/:slug/" element={<UpdateDetail />} />
+          <Route
+            path="/impact/our-story/"
+            element={<Navigate to="/about/our-story/" replace />}
+          />
+          <Route path="/stories/*" element={<Navigate to="/updates/" replace />} />
+          <Route path="/get-involved/" element={<GetInvolved />} />
+          <Route
+            path="/get-involved/volunteer/"
+            element={
+              <Suspense fallback={null}>
+                <Volunteer />
+              </Suspense>
+            }
+          />
+          <Route path="/get-involved/:slug/" element={<InvolvementDetail />} />
+          <Route path="/resources/" element={<Resources />} />
+          <Route path="/safeguarding/" element={<Safeguarding />} />
+          <Route path="/contact/" element={<Contact />} />
+          <Route path="/privacy/" element={<CookiePolicy />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+      <CookieBanner />
+    </>
   )
 }

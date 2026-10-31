@@ -6,6 +6,25 @@
   "brand": {
     "name": "Women Without Borders Hub"
   },
+  "cookieConsent": {
+    "ariaLabel": "Preferenze sui cookie",
+    "message": "Usiamo la memoria essenziale per mantenere il sito funzionante e ricordare la tua scelta. Puoi accettare o rifiutare i cookie facoltativi.",
+    "acceptAll": "Accetta tutti i cookie",
+    "rejectNonEssential": "Rifiuta quelli non essenziali",
+    "customize": "Personalizza",
+    "policyLink": "Informativa sui cookie",
+    "settings": "Impostazioni dei cookie",
+    "essential": "Essenziali",
+    "alwaysOn": "Sempre attivi",
+    "analytics": "Analisi",
+    "marketing": "Pubblicità",
+    "savePreferences": "Salva le preferenze",
+    "policyTitle": "Informativa sui cookie",
+    "policyIntro": "Questo sito salva nel browser la tua preferenza sui cookie per ricordare la scelta che hai fatto.",
+    "policyStorage": "La memoria essenziale registra se hai accettato, rifiutato o personalizzato i cookie facoltativi. Serve a rispettare la tua preferenza nelle visite successive.",
+    "policyOptional": "La memoria per analisi e marketing è facoltativa. Al momento questo sito non carica script di analisi o marketing. Se verranno aggiunti, si attiveranno solo dopo il consenso corrispondente.",
+    "policyManage": "Puoi modificare la tua scelta in qualsiasi momento dalle impostazioni dei cookie nel piè di pagina."
+  },
   "a11y": {
     "skipToMain": "Vai al contenuto principale",
     "openMenu": "Apri il menu",

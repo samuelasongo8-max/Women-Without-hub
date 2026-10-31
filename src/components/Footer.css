@@ -10,6 +10,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap');
 
+.cookie-settings-button {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  text-align: start;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  cursor: pointer;
+}
+
 /* Logo at the top of the left column, linked to the home page. */
 .footer-about .footer-subscribe__logo-link {
   display: inline-block;
