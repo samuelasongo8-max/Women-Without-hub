@@ -5,19 +5,24 @@ import './AdminAuth.css'
 
 export default function AdminRegister() {
   const navigate = useNavigate()
-  const [form, setForm] = useState({ username: '', password: '', confirm: '' })
+  const [form, setForm] = useState({ username: '', password: '', confirm: '', registrationKey: '' })
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)
 
   function handleSubmit(event) {
     event.preventDefault()
+    if (!form.registrationKey) return setError('Enter your registration key.')
     if (!form.username.trim() || form.username.trim().length < 3) return setError('Username must be at least 3 characters.')
     if (form.password.length < 8) return setError('Password must be at least 8 characters.')
     if (form.password !== form.confirm) return setError('Passwords do not match.')
     setSubmitting(true)
     setError('')
-    api.post('/api/admin/register', { username: form.username.trim(), password: form.password })
+    api.post('/api/admin/register', {
+      username: form.username.trim(),
+      password: form.password,
+      registrationKey: form.registrationKey,
+    })
       .then(() => { setSuccess(true); setTimeout(() => navigate('/manage'), 1200) })
       .catch((err) => setError(err.response?.data?.message || 'Unable to create the account.'))
       .finally(() => setSubmitting(false))
@@ -30,6 +35,7 @@ export default function AdminRegister() {
         <div className="admin-auth-mark" aria-hidden="true">•</div><h1 id="setup-title">Create account</h1><p className="admin-auth-subtitle">Set up your access account.</p>
         {error && <p className="admin-auth-error" role="alert">{error}</p>}
         <form onSubmit={handleSubmit} className="admin-auth-form" autoComplete="off">
+          <label>Registration key<input type="password" name="registrationKey" value={form.registrationKey} onChange={(e) => setForm({ ...form, registrationKey: e.target.value })} autoComplete="off" /></label>
           <label>Username<input name="username" value={form.username} onChange={(e) => setForm({ ...form, username: e.target.value })} autoComplete="off" /></label>
           <label>Password<input type="password" name="password" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} autoComplete="new-password" /></label>
           <label>Confirm password<input type="password" name="confirm" value={form.confirm} onChange={(e) => setForm({ ...form, confirm: e.target.value })} autoComplete="new-password" /></label>
