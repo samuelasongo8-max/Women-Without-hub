@@ -163,3 +163,16 @@
     max-width: 100%;
   }
 }
+
+.footer-utility-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+.footer-utility-link:hover,
+.footer-utility-link:focus-visible {
+  color: #f2c572;
+}
