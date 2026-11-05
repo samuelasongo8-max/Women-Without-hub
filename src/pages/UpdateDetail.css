@@ -1,0 +1,204 @@
+.update-detail-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  color: var(--upd-navy);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.update-detail__back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #1e8e96;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.update-detail__back-link:hover {
+  text-decoration: underline;
+}
+
+.update-detail__header {
+  max-width: 900px;
+  margin-bottom: 2.5rem;
+}
+
+.update-detail__category {
+  margin: 0 0 0.75rem;
+  color: #f6a623;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.update-detail__title {
+  margin: 0 0 1rem;
+  color: var(--upd-navy);
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.update-detail__meta {
+  margin: 0;
+  color: #66788a;
+  font-size: 0.95rem;
+}
+
+.update-detail__content {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.update-detail__image-column,
+.update-detail__text-column {
+  min-width: 0;
+}
+
+.update-detail__image-column {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.update-detail__image {
+  display: block;
+  width: 100%;
+  max-height: 720px;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(16, 44, 79, 0.16);
+}
+
+.update-detail__text {
+  color: #243b53;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.update-detail__error {
+  margin: 2rem 0;
+  color: #b3261e;
+  font-weight: 600;
+}
+
+.update-detail__state {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.update-detail-page--no-image .update-detail__content {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (max-width: 767px) {
+  .update-detail-page {
+    padding-top: 1.5rem;
+  }
+
+  .update-detail__content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .update-detail__image-column {
+    grid-row: 1;
+  }
+
+  .update-detail__text-column {
+    grid-row: 2;
+  }
+
+  .update-detail__image-column {
+    position: static;
+  }
+
+  .update-detail__image {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* Preserve the original translated/static update detail design. */
+.update-detail-page--static {
+  max-width: 960px;
+  padding: 2rem 1rem;
+}
+
+.update-detail-page--static .update-detail__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+.update-detail-page--static .update-detail__breadcrumb a {
+  color: #1e8e96;
+  text-decoration: none;
+}
+
+.update-detail-page--static .update-detail__breadcrumb-title {
+  font-weight: 700;
+}
+
+.update-detail-page--static .update-detail__media {
+  margin: 0 0 2rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.update-detail-page--static .update-detail__media-image {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.update-detail-page--static .update-detail {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.update-detail-page--static .update-detail__title {
+  margin: 0 0 1rem;
+  color: var(--upd-navy);
+  font-size: 2rem;
+}
+
+.update-detail-page--static .update-detail__body {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #333;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.update-detail-page--static .update-detail__body p {
+  margin: 0 0 1.25rem;
+}
+
+.update-detail-page--static .update-detail__back-link {
+  margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+  .update-detail-page--static .update-detail__media-image {
+    height: 260px;
+  }
+}
