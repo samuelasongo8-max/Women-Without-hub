@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Reveal from '../components/Reveal.jsx'
+import useCommunityUpdates from '../hooks/useCommunityUpdates.js'
 import './CommunityUpdates.css'
 
 export function formatPostDate(dateString, language = 'en') {
@@ -15,10 +16,6 @@ export function formatPostDate(dateString, language = 'en') {
   }).format(d)
 }
 
-/* Systematic relative date, counted live from today on every render, so
- * the label moves day by day (Today → Yesterday → N days ago →
- * N weeks ago) instead of showing one fixed string. Shared by the
- * Community Updates cards and the Impact Post badges. */
 export function formatRelativeDate(dateString, language = 'en') {
   if (!dateString) return ''
   const DAY = 24 * 60 * 60 * 1000
@@ -33,10 +30,6 @@ export function formatRelativeDate(dateString, language = 'en') {
   return formatter.format(-Math.floor(diffDays / 7), 'week')
 }
 
-// Community updates — photos served from /public.
-// One source of truth; /updates/ and the Home section reuse this data.
-// Any update with image: null shows a placeholder (photo coming soon).
-// Adding an image path to the data restores the real photo automatically.
 export const updates = [
   {
     slug: 'building-pathways-for-women-and-girls',
@@ -57,53 +50,59 @@ export const updates = [
   },
 ]
 
-/**
- * Card markup — identical for the Home section and the /updates/ page.
- * The image slot shows a placeholder when image is null.
- */
-function renderCards(t, language) {
-  return updates.map((u, index) => {
-    const content = t(`updates.items.${u.slug}`, { returnObjects: true })
-    return (
-      <Reveal
-        key={u.slug}
-        as="article"
-        className="updates-card"
-        direction="up"
-        delay={index * 150}
-      >
-        <Link
-          to={u.to}
-          className="updates-img-link"
-          tabIndex={-1}
-          aria-hidden="true"
-        >
-          {u.image ? (
-            <img src={u.image} alt={content.alt} loading="lazy" />
-          ) : (
-            <div className="updates-card__placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2h6l2 2h3v11H4z" fill="none" stroke="#2E8C8C" strokeWidth="1.8" strokeLinejoin="round" /><circle cx="12" cy="13" r="3.2" fill="none" stroke="#2E8C8C" strokeWidth="1.8" /></svg>
-              <p className="updates-card__placeholder-text">{t('common.photoComingSoon')}</p>
-            </div>
-          )}
-        </Link>
-        <h3>
-          <Link to={u.to}>{content.title}</Link>
-        </h3>
-        <p className="updates-card__preview">{content.summary}</p>
-        {u.date ? (
-          <p className="updates-card__date">
-            {formatPostDate(u.date, language)} · {formatRelativeDate(u.date, language)}
-          </p>
-        ) : null}
-        <Link
-          to={u.to}
-          className="updates-card__readmore"
-        >
-          {t('common.readMore')} <span aria-hidden="true">›</span>
-        </Link>
-      </Reveal>
-    )
+function renderCard(item, index, t, language, staticIndex = null) {
+  const isDynamic = item.isDynamic
+  const to = isDynamic ? `/updates/${item._id}` : `/updates/s/${staticIndex}`
+  const translated = isDynamic ? null : t(`updates.items.${item.slug}`, { returnObjects: true })
+  const title = isDynamic ? item.title : translated.title
+  const excerpt = isDynamic ? item.excerpt : translated.summary
+  const image = item.isDynamic ? item.image : item.image
+  const alt = isDynamic ? item.title : translated.alt
+  const date = item.isDynamic ? item.date : item.date
+  return (
+    <Reveal
+      key={isDynamic ? item._id : item.slug}
+      as="article"
+      className="updates-card"
+      direction="up"
+      delay={index * 150}
+    >
+      <Link to={to} className="updates-img-link" tabIndex={-1} aria-hidden="true">
+        {image ? (
+          <img
+            src={image}
+            alt={alt}
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            onError={(event) => { event.currentTarget.style.display = 'none' }}
+          />
+        ) : (
+          <div className="updates-card__placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2h6l2 2h3v11H4z" fill="none" stroke="#2E8C8C" strokeWidth="1.8" strokeLinejoin="round" /><circle cx="12" cy="13" r="3.2" fill="none" stroke="#2E8C8C" strokeWidth="1.8" /></svg>
+            <p className="updates-card__placeholder-text">{t('common.photoComingSoon')}</p>
+          </div>
+        )}
+      </Link>
+      <h3><Link to={to}>{title}</Link></h3>
+      <p className="updates-card__preview">{excerpt}</p>
+      {date ? (
+        <p className="updates-card__date">
+          {formatPostDate(date, language)} · {formatRelativeDate(date, language)}
+        </p>
+      ) : null}
+      <Link to={to} className="updates-card__readmore">
+        {t('common.readMore')} <span aria-hidden="true">›</span>
+      </Link>
+    </Reveal>
+  )
+}
+
+function renderCards(t, language, dynamicUpdates, page) {
+  const combined = [...dynamicUpdates, ...updates]
+  const visible = page ? combined : combined.slice(0, updates.length)
+  return visible.map((item, index) => {
+    const staticIndex = item.isDynamic ? null : updates.indexOf(item)
+    return renderCard(item, index, t, language, staticIndex)
   })
 }
 
@@ -112,8 +111,9 @@ export default function CommunityUpdatesSection({ isPage, variant }) {
   const trackRef = useRef(null)
   const page = Boolean(isPage) || variant === 'page'
   const [progress, setProgress] = useState(0)
+  const { updates: dynamicUpdates } = useCommunityUpdates()
   const language = i18n.resolvedLanguage || 'en'
-  const cards = renderCards(t, language)
+  const cards = renderCards(t, language, dynamicUpdates, page)
 
   const scrollByCard = (dir) => {
     const el = trackRef.current
@@ -135,32 +135,15 @@ export default function CommunityUpdatesSection({ isPage, variant }) {
     <section className="updates">
       <div className="updates-head">
         {page ? (
-          <Reveal as="h1" direction="up" duration={650}>
-            {t('updates.title')}
-          </Reveal>
+          <Reveal as="h1" direction="up" duration={650}>{t('updates.title')}</Reveal>
         ) : (
-          <Reveal as="h2" direction="up" duration={650}>
-            {t('updates.title')}
-          </Reveal>
+          <Reveal as="h2" direction="up" duration={650}>{t('updates.title')}</Reveal>
         )}
         {!page && (
           <Link to="/updates/" className="updates-viewall">
             {t('common.viewAll')}
-            <svg
-              width="10"
-              height="10"
-              viewBox="0 0 10 10"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path
-                d="M3 1l4 4-4 4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+              <path d="M3 1l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>
         )}
@@ -169,57 +152,14 @@ export default function CommunityUpdatesSection({ isPage, variant }) {
       {!page && (
         <div className="updates-controls">
           <div className="updates-progress">
-            <span
-              className="updates-progress-thumb"
-              style={{ left: `calc(${progress} * (100% - 14px))` }}
-            />
+            <span className="updates-progress-thumb" style={{ left: `calc(${progress} * (100% - 14px))` }} />
           </div>
           <div className="updates-arrows">
-            <button
-              type="button"
-              className="updates-arrow"
-              aria-label={t('updates.previous', { defaultValue: 'Previous updates' })}
-              onClick={() => scrollByCard(-1)}
-            >
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path
-                  d="M15 5l-7 7 7 7"
-                  fill="none"
-                  stroke="#fff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+            <button type="button" className="updates-arrow" aria-label={t('updates.previous', { defaultValue: 'Previous updates' })} onClick={() => scrollByCard(-1)}>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </button>
-            <button
-              type="button"
-              className="updates-arrow"
-              aria-label={t('updates.next', { defaultValue: 'Next updates' })}
-              onClick={() => scrollByCard(1)}
-            >
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path
-                  d="M9 5l7 7-7 7"
-                  fill="none"
-                  stroke="#fff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+            <button type="button" className="updates-arrow" aria-label={t('updates.next', { defaultValue: 'Next updates' })} onClick={() => scrollByCard(1)}>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </button>
           </div>
         </div>
@@ -228,13 +168,7 @@ export default function CommunityUpdatesSection({ isPage, variant }) {
       {page ? (
         <div className="updates-grid">{cards}</div>
       ) : (
-        <div
-          className="updates-track"
-          ref={trackRef}
-          onScroll={handleScroll}
-        >
-          {cards}
-        </div>
+        <div className="updates-track" ref={trackRef} onScroll={handleScroll}>{cards}</div>
       )}
     </section>
   )

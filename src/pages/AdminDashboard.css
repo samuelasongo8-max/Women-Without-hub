@@ -180,7 +180,8 @@
   gap: 1rem;
 }
 
-.admin-dashboard-fields label {
+.admin-dashboard-fields label,
+.admin-dashboard-fields > .is-wide {
   display: grid;
   align-content: start;
   gap: 0.4rem;
@@ -190,11 +191,13 @@
   font-weight: 650;
 }
 
-.admin-dashboard-fields label.is-wide {
+.admin-dashboard-fields label.is-wide,
+.admin-dashboard-fields > .is-wide {
   grid-column: 1 / -1;
 }
 
-.admin-dashboard-fields label em {
+.admin-dashboard-fields label em,
+.admin-dashboard-fields > .is-wide em {
   color: #b5473b;
   font-style: normal;
 }

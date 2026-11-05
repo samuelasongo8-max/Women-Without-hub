@@ -1,0 +1,160 @@
+.rich-text-editor {
+  min-width: 0;
+}
+
+.rich-text-editor__toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem;
+  background: #f7faf9;
+  border: 1px solid #ccd8d4;
+  border-bottom: 0;
+  border-radius: 0.45rem 0.45rem 0 0;
+}
+
+.rich-text-editor__toolbar button,
+.rich-text-editor__toolbar select,
+.rich-text-editor__toolbar input {
+  min-height: 2rem;
+  color: #344842;
+  background: #fff;
+  border: 1px solid #ccd8d4;
+  border-radius: 0.3rem;
+  font: inherit;
+}
+
+.rich-text-editor__toolbar button,
+.rich-text-editor__toolbar select {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.rich-text-editor__toolbar button:hover,
+.rich-text-editor__toolbar button.is-active,
+.rich-text-editor__toolbar select:focus-visible {
+  color: #1d5e57;
+  background: #e7eeeb;
+}
+
+.rich-text-editor__toolbar button:focus-visible,
+.rich-text-editor__toolbar input:focus-visible,
+.rich-text-editor__toolbar select:focus-visible {
+  outline: 2px solid #4b9b8c;
+  outline-offset: 1px;
+}
+
+.rich-text-editor__toolbar select {
+  max-width: 9rem;
+}
+
+.rich-text-editor__toolbar input[type='color'] {
+  width: 2.2rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.rich-text-editor__font-size {
+  min-width: 3.1rem;
+  color: #53615e;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.rich-text-editor__surface {
+  position: relative;
+  min-height: 220px;
+  padding: 0.9rem 1rem;
+  overflow-y: auto;
+  resize: vertical;
+  background: #fff;
+  border: 1px solid #ccd8d4;
+  border-radius: 0 0 0.45rem 0.45rem;
+  cursor: text;
+}
+
+.rich-text-editor__surface[data-placeholder]:has(.ProseMirror p:only-child:empty)::before {
+  position: absolute;
+  top: 0.9rem;
+  left: 1rem;
+  color: #9aa7a3;
+  content: attr(data-placeholder);
+  pointer-events: none;
+}
+
+.rich-text-editor .ProseMirror {
+  min-height: 190px;
+  outline: none;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.rich-text-editor .ProseMirror p,
+.rich-text-editor .ProseMirror h1,
+.rich-text-editor .ProseMirror h2,
+.rich-text-editor .ProseMirror h3,
+.rich-text-editor .ProseMirror ul,
+.rich-text-editor .ProseMirror ol {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.rich-text-editor .ProseMirror p {
+  margin: 0 0 0.85rem;
+  line-height: 1.65;
+}
+
+.rich-text-editor .ProseMirror p.no-spacing {
+  margin: 0;
+}
+
+.rich-text-editor .ProseMirror h1 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.rich-text-editor .ProseMirror h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.rich-text-editor .ProseMirror h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.rich-text-editor .ProseMirror ul,
+.rich-text-editor .ProseMirror ol {
+  margin: 0 0 0.85rem;
+  padding-left: 1.5rem;
+  line-height: 1.65;
+}
+
+.rich-text-editor .ProseMirror ul {
+  list-style-type: disc;
+}
+
+.rich-text-editor .ProseMirror ol {
+  list-style-type: decimal;
+}
+
+.rich-text-editor .ProseMirror li {
+  margin: 0.15rem 0;
+}
+
+@media (max-width: 560px) {
+  .rich-text-editor__toolbar {
+    position: static;
+  }
+
+  .rich-text-editor__surface {
+    min-height: 220px;
+  }
+}
