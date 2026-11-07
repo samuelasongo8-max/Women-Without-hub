@@ -1,6 +1,9 @@
 import { convertGoogleDriveUrl } from './driveUrl.js'
 
-const backendOrigin = import.meta.env.VITE_API_URL || 'http://localhost:4000'
+const configuredBackendOrigin = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '')
+const backendOrigin = configuredBackendOrigin || (import.meta.env.PROD
+  ? 'https://auvds-backend.onrender.com'
+  : 'http://localhost:4000')
 
 function normalizeImage(value) {
   if (!value) return ''
@@ -9,16 +12,19 @@ function normalizeImage(value) {
 }
 
 export function normalizeUpdate(item = {}) {
-  const content = String(item.update || '')
+  const content = String(item.update || item.content || '')
   return {
     _id: item._id?.toString?.() || item._id,
     title: item.title || '',
     category: item.category || 'Community',
     author: item.author || '',
-    excerpt: item.excerpt || content.slice(0, 140),
+    excerpt: item.excerpt || content.slice(0, 120),
     content,
-    date: item.createdAt,
-    image: normalizeImage(item.coverImageLink),
+    date: item.publishedAt || item.createdAt || item.date,
+    image: normalizeImage(item.coverImageLink || item.image),
+    images: Array.isArray(item.images)
+      ? item.images.map(normalizeImage).filter(Boolean)
+      : [],
     isDynamic: true,
   }
 }

@@ -258,9 +258,6 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {SITE.name}. {t('footer.rightsReserved')}
           </p>
-          <a href="/manage" className="footer-utility-link">
-            Admin Login
-          </a>
         </div>
       </div>
     </footer>

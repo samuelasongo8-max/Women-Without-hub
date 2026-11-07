@@ -6,7 +6,7 @@ import Seo from './Seo.jsx'
 import ScrollArrows from './ScrollArrows.jsx'
 import ChatAssistantLauncher from './ChatAssistantLauncher.jsx'
 
-export default function Layout() {
+export default function Layout({ children }) {
   const { t } = useTranslation()
   return (
     <div className="site">
@@ -16,7 +16,7 @@ export default function Layout() {
       <Seo />
       <Navbar />
       <main id="main" className="site-main">
-        <Outlet />
+        {children ?? <Outlet />}
       </main>
       <Footer />
       <ScrollArrows />

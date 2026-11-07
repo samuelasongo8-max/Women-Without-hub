@@ -62,8 +62,9 @@ const contentTypes = [
       { name: 'category', label: 'Category', type: 'text' },
       { name: 'author', label: 'Author', type: 'text' },
       { name: 'coverImageLink', label: 'Cover image URL', type: 'url' },
+      { name: 'images', label: 'Upload images (up to 2)', type: 'file', accept: 'image/*', multiple: true },
       { name: 'excerpt', label: 'Short excerpt', type: 'textarea' },
-      { name: 'update', label: 'Update content', type: 'textarea', required: true, wide: true },
+      { name: 'update', label: 'Update content', type: 'richtext', required: true, wide: true },
     ],
   },
 ]
@@ -100,6 +101,7 @@ export default function AdminSession() {
   const [refreshKey, setRefreshKey] = useState(0)
   const [imagePreviews, setImagePreviews] = useState({})
   const [blogContentHtml, setBlogContentHtml] = useState('')
+  const [updateContentHtml, setUpdateContentHtml] = useState('')
   const activeType = contentTypes.find((type) => type.key === activeKey)
 
   useEffect(() => {
@@ -123,7 +125,7 @@ export default function AdminSession() {
         ])
       }
       if (type.key === 'updates') {
-        return api.get('/api/updates').then((res) => [
+        return api.get('/api/admin/content/updates').then((res) => [
           type.key,
           (res.data.updates || []).map(normalizeUpdate),
         ])
@@ -161,9 +163,12 @@ export default function AdminSession() {
     if (hasFiles) {
       payload = new FormData()
       activeType.fields.forEach((field) => {
+        if (field.type === 'richtext') return
         const value = formData.get(field.name)
         if (field.type === 'file') {
-          if (value instanceof File && value.size > 0) payload.append(field.name, value)
+          for (const file of formData.getAll(field.name)) {
+            if (file instanceof File && file.size > 0) payload.append(field.name, file)
+          }
         } else {
           payload.append(field.name, String(value || ''))
         }
@@ -179,6 +184,14 @@ export default function AdminSession() {
         return
       }
       payload.blogContent = blogContentHtml
+    }
+    if (activeKey === 'updates') {
+      if (!hasRichTextContent(updateContentHtml)) {
+        setFormMessage('')
+        setFormError('Update content is required.')
+        return
+      }
+      payload.append('update', updateContentHtml)
     }
 
     setSubmitting(true)
@@ -202,7 +215,7 @@ export default function AdminSession() {
           : activeKey === 'reports'
             ? '/api/reports'
           : activeKey === 'updates'
-            ? '/api/updates'
+            ? '/api/admin/content/updates'
             : `/api/admin/content/${activeKey}`
       const response = await api.post(endpoint, payload, requestConfig)
       if (activeKey === 'blogs') {
@@ -217,17 +230,20 @@ export default function AdminSession() {
         }))
         setFormMessage('Report published successfully!')
       } else if (activeKey === 'updates') {
-        const updatesResponse = await api.get('/api/updates')
+        const updatesResponse = await api.get('/api/admin/content/updates')
         setItems((current) => ({
           ...current,
           updates: (updatesResponse.data.updates || []).map(normalizeUpdate),
         }))
+        // Invalidate frontend cache so the public site picks up the new update
+        try { localStorage.setItem('community_updates_invalidated', Date.now().toString()) } catch {}
         setFormMessage('Community update published successfully!')
       } else {
         setFormMessage(response.data.message || `${activeType.label} item saved.`)
       }
       form.reset()
       if (activeKey === 'blogs') setBlogContentHtml('')
+      if (activeKey === 'updates') setUpdateContentHtml('')
       setImagePreviews({})
       setRefreshKey((key) => key + 1)
     } catch (error) {
@@ -261,6 +277,10 @@ export default function AdminSession() {
         ...current,
         [activeKey]: (current[activeKey] || []).filter((item) => item._id !== itemId),
       }))
+      // Invalidate frontend cache if a community update was deleted
+      if (activeKey === 'updates') {
+        try { localStorage.setItem('community_updates_invalidated', Date.now().toString()) } catch {}
+      }
       setFormMessage(`${activeType.label} item deleted.`)
     } catch (error) {
       setFormError(error.response?.data?.message || 'Unable to delete this item.')
@@ -419,7 +439,7 @@ export default function AdminSession() {
     event.preventDefault()
     setFormError('')
     setFormMessage('')
-    const payload = {
+    const values = {
       title: editingItem.title || '',
       category: editingItem.category || '',
       author: editingItem.author || '',
@@ -427,18 +447,28 @@ export default function AdminSession() {
       coverImageLink: convertGoogleDriveUrl(editingItem.coverImageLink || ''),
       update: editingItem.update || editingItem.content || '',
     }
-    if (!payload.title.trim() || !payload.update.trim()) {
+    if (!values.title.trim() || !values.update.trim()) {
       setFormError('Title and update content are required.')
       return
     }
+    const formData = new FormData(event.currentTarget)
+    const payload = new FormData()
+    Object.entries(values).forEach(([key, value]) => payload.append(key, value))
+    for (const file of formData.getAll('images')) {
+      if (file instanceof File && file.size > 0) payload.append('images', file)
+    }
     setSavingEdit(true)
     try {
-      await api.put(`/api/updates/${editingId}`, payload)
-      const updatesResponse = await api.get('/api/updates')
+      await api.put(`/api/admin/content/updates/${editingId}`, payload, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      })
+      const updatesResponse = await api.get('/api/admin/content/updates')
       setItems((current) => ({
         ...current,
         updates: (updatesResponse.data.updates || []).map(normalizeUpdate),
       }))
+      // Invalidate frontend cache so the public site picks up the updated update
+      try { localStorage.setItem('community_updates_invalidated', Date.now().toString()) } catch {}
       setFormMessage('Community update updated.')
       setEditingId('')
       setEditingItem({})
@@ -548,6 +578,19 @@ export default function AdminSession() {
                     )
                   }
 
+                  if (activeKey === 'updates' && field.name === 'update') {
+                    return (
+                      <div className="is-wide" key={field.name}>
+                        {fieldLabel}
+                        <RichTextEditor
+                          value={updateContentHtml}
+                          onChange={setUpdateContentHtml}
+                          placeholder="Write your community update…"
+                        />
+                      </div>
+                    )
+                  }
+
                   return (
                     <label className={fieldClassName} key={field.name}>
                       {fieldLabel}
@@ -572,7 +615,7 @@ export default function AdminSession() {
                               field.name === 'contentImageUrl'
                             )) ||
                             ((activeKey === 'reports' || activeKey === 'updates') && field.name === 'coverImageLink') ? (
-                            <small>Drive image must be shared as "Anyone with the link".</small>
+                            <small>{activeKey === 'updates' ? 'Share the image as "Anyone with the link" (Viewer). Folder links do not work, use the image file link.' : 'Drive image must be shared as "Anyone with the link".'}</small>
                           ) : activeKey === 'reports' && field.name === 'reportFileLink' ? (
                             <small>Paste the Drive link of the PDF, shared as "Anyone with the link".</small>
                           ) : null}
@@ -585,13 +628,18 @@ export default function AdminSession() {
                               onError={(e) => { e.target.style.display = 'none' }}
                             />
                           )}
-                        </>
+                        {activeKey === 'updates' && field.name === 'coverImageLink' && (
+                            <p style={{ marginTop: '0.3rem', fontSize: '0.78rem', color: '#74817e' }}>
+                              Tip: Drive links can break over time. For a more reliable image, upload to Cloudinary (already used by this project) and paste that URL instead.
+                            </p>
+                          )}</>
                       ) : (
                         <input
                           name={field.name}
                           type={field.type}
                           required={field.required}
                           accept={field.accept}
+                          multiple={field.multiple}
                           maxLength={field.type === 'text' ? 200 : undefined}
                         />
                       )}
@@ -916,9 +964,17 @@ export default function AdminSession() {
                             <label><span>Update title <em aria-hidden="true">*</em></span><input type="text" required maxLength={200} value={editingItem.title || ''} onChange={editField('title')} /></label>
                             <label><span>Category</span><input type="text" value={editingItem.category || ''} onChange={editField('category')} /></label>
                             <label><span>Author</span><input type="text" value={editingItem.author || ''} onChange={editField('author')} /></label>
-                            <label><span>Cover image URL</span><input type="url" value={editingItem.coverImageLink || ''} onChange={editField('coverImageLink')} /><small>Drive image must be shared as "Anyone with the link".</small>{editingItem.coverImageLink && <img src={convertGoogleDriveUrl(editingItem.coverImageLink)} alt="Cover image preview" className="admin-dashboard-image-preview" referrerPolicy="no-referrer" onError={(e) => { e.target.style.display = 'none' }} />}</label>
+                            <label><span>Cover image URL</span><input type="url" value={editingItem.coverImageLink || ''} onChange={editField('coverImageLink')} /><small>Share the image as "Anyone with the link" (Viewer). Folder links do not work, use the image file link.</small>{editingItem.coverImageLink && <img src={convertGoogleDriveUrl(editingItem.coverImageLink)} alt="Cover image preview" className="admin-dashboard-image-preview" referrerPolicy="no-referrer" onError={(e) => { e.target.style.display = 'none' }} />}</label>
+                            <label><span>Replace or add images (up to 2)</span><input name="images" type="file" accept="image/*" multiple /><small>Uploading images replaces the current image set. JPG, PNG, GIF, or WEBP; 5 MB maximum per image.</small></label>
                             <label className="is-wide"><span>Short excerpt</span><textarea rows={3} value={editingItem.excerpt || ''} onChange={editField('excerpt')} /></label>
-                            <label className="is-wide"><span>Update content <em aria-hidden="true">*</em></span><textarea required rows={8} value={editingItem.update || editingItem.content || ''} onChange={editField('update')} /></label>
+                            <div className="is-wide">
+                              <span>Update content <em aria-hidden="true">*</em></span>
+                              <RichTextEditor
+                                value={editingItem.update || editingItem.content || ''}
+                                onChange={(html) => setEditingItem((current) => ({ ...current, update: html }))}
+                                placeholder="Write your community update…"
+                              />
+                            </div>
                           </div>
                           <button className="admin-dashboard-primary" type="submit" disabled={savingEdit}>{savingEdit ? 'Saving…' : 'Save changes'}</button>
                           <button type="button" onClick={cancelEdit} disabled={savingEdit}>Cancel</button>

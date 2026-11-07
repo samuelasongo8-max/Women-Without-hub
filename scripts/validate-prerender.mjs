@@ -11,9 +11,6 @@ const titles = new Map()
 const descriptions = new Map()
 const shareImageRoutes = new Set([
   '/',
-  '/updates/building-pathways-for-women-and-girls/',
-  '/updates/graduation-celebration-skills/',
-  '/updates/health-advocacy/',
 ])
 
 function jpegDimensions(buffer) {
