@@ -16,8 +16,8 @@ function postFromUpdate(slug, { id, date }) {
     type: 'Post',
     slug,
     date,
-    image: update.image,
-    to: update.to,
+    image: update ? update.image : '',
+    to: update ? update.to : '/updates/',
   }
 }
 

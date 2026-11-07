@@ -15,3 +15,4 @@ nul
 
 # gstack (global install)
 .amazonq/rules/gstack.md
+.ai-code-tracker.json

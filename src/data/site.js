@@ -132,18 +132,6 @@ export const routeMeta = {
   '/impact/': { labelKey: 'breadcrumb.impact', parent: '/' },
   '/about/our-story/': { labelKey: 'breadcrumb.ourStory', parent: '/about/' },
   '/updates/': { labelKey: 'breadcrumb.communityUpdates', parent: '/' },
-  '/updates/building-pathways-for-women-and-girls/': {
-    labelKey: 'updates.items.building-pathways-for-women-and-girls.title',
-    parent: '/updates/',
-  },
-  '/updates/graduation-celebration-skills/': {
-    labelKey: 'updates.items.graduation-celebration-skills.title',
-    parent: '/updates/',
-  },
-  '/updates/health-advocacy/': {
-    labelKey: 'updates.items.health-advocacy.title',
-    parent: '/updates/',
-  },
   '/impact/blogs/': { labelKey: 'breadcrumb.blogs', parent: '/impact/' },
   '/impact/report/': { labelKey: 'breadcrumb.report', parent: '/impact/' },
   '/impact/post/': { labelKey: 'breadcrumb.post', parent: '/impact/' },

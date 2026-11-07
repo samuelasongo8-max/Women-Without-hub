@@ -1,0 +1,15 @@
+.admin-auth-page { min-height: 100vh; display: grid; place-items: center; padding: 2rem 1rem; background: var(--bg, #f2f2f0); }
+.admin-auth-card { width: min(100%, 28rem); padding: 2.25rem; background: #fff; border: 1px solid var(--color-border, #e5e7eb); box-shadow: var(--shadow, 0 4px 16px rgba(31,36,48,.08)); }
+.admin-auth-card h1 { margin: 0 0 .35rem; color: var(--brand, #2e8c8c); font-size: 1.7rem; }
+.admin-auth-subtitle { margin: 0 0 1.5rem; color: var(--color-muted, #5b6472); }
+.admin-auth-mark { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; margin-bottom: 1rem; border-radius: 50%; color: #fff; background: var(--brand, #2e8c8c); font-weight: 700; }
+.admin-auth-form { display: grid; gap: 1rem; }
+.admin-auth-form label { display: grid; gap: .35rem; color: var(--color-ink, #1f2430); font-weight: 600; }
+.admin-auth-form input { width: 100%; padding: .7rem .75rem; border: 1px solid #cbd5e1; border-radius: 4px; font: inherit; }
+.admin-auth-form input:focus { outline: 2px solid var(--brand, #2e8c8c); outline-offset: 1px; }
+.admin-session-button { width: 100%; margin-top: 1rem; }
+
+.admin-auth-form button { padding: .75rem 1rem; border: 0; border-radius: 4px; color: #fff; background: var(--brand, #2e8c8c); font: inherit; font-weight: 700; cursor: pointer; }
+.admin-auth-form button:disabled { opacity: .65; cursor: wait; }
+.admin-auth-error { margin: 0 0 1rem; padding: .7rem; color: #991b1b; background: #fef2f2; border: 1px solid #fecaca; }
+.admin-auth-secondary { display: inline-block; margin-top: 1.25rem; color: var(--brand, #2e8c8c); font-size: .9rem; }

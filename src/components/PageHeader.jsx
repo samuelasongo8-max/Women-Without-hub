@@ -35,7 +35,7 @@ export default function PageHeader({
         minHeight: minHeight ?? undefined,
       }}
       aria-label={t('a11y.heroLabel', { title })}
-      fetchPriority="high"
+      fetchpriority="high"
     >
       <div className="page-header__overlay" aria-hidden="true" />
       <div className="container">

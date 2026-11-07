@@ -9,9 +9,12 @@ import Programs from './pages/Programs.jsx'
 import ProgramDetail from './pages/ProgramDetail.jsx'
 import Impact from './pages/Impact.jsx'
 import News from './pages/News.jsx'
-import Blogs from './pages/Blogs.jsx'
 import Report from './pages/Report.jsx'
 import Post from './pages/Post.jsx'
+import PostDetail from './pages/PostDetail.jsx'
+import Blog from './pages/Blog.jsx'
+import BlogDetail from './pages/BlogDetail.jsx'
+import Posts from './pages/Posts.jsx'
 import Updates from './pages/Updates.jsx'
 import UpdateDetail from './pages/UpdateDetail.jsx'
 import OurStory from './pages/OurStory.jsx'
@@ -20,9 +23,11 @@ import InvolvementDetail from './pages/InvolvementDetail.jsx'
 import Resources from './pages/Resources.jsx'
 import Safeguarding from './pages/Safeguarding.jsx'
 import Contact from './pages/Contact.jsx'
-import NotFound from './pages/NotFound.jsx'
 import CookiePolicy from './pages/CookiePolicy.jsx'
 import CookieBanner from './components/CookieBanner.jsx'
+import AdminRegister from './pages/AdminRegister.jsx'
+import AdminSession from './pages/AdminSession.jsx'
+import PrivateAdminEntry from './pages/PrivateAdminEntry.jsx'
 
 const LivelihoodWhatWeDo = lazy(() => import('./pages/LivelihoodWhatWeDo.jsx'))
 const LivelihoodOurApproach = lazy(
@@ -34,6 +39,8 @@ export default function App() {
   return (
     <>
       <Routes>
+        <Route path="/manage/setup" element={<AdminRegister />} />
+        <Route path="/manage/session" element={<AdminSession />} />
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about/" element={<About />} />
@@ -66,11 +73,16 @@ export default function App() {
           <Route path="/programs/:slug/" element={<ProgramDetail />} />
           <Route path="/impact/" element={<Impact />} />
           <Route path="/impact/news/" element={<News />} />
-          <Route path="/impact/blogs/" element={<Blogs />} />
+          <Route path="/impact/blogs/" element={<Blog />} />
           <Route path="/impact/report/" element={<Report />} />
           <Route path="/impact/post/" element={<Post />} />
+          <Route path="/impact/post/:id" element={<PostDetail />} />
+          <Route path="/impact/blogs" element={<Blog />} />
+          <Route path="/impact/blogs/:id" element={<BlogDetail />} />
+          <Route path="/posts/" element={<Posts />} />
           <Route path="/about/our-story/" element={<OurStory />} />
           <Route path="/updates/" element={<Updates />} />
+          <Route path="/updates/s/:index/" element={<UpdateDetail />} />
           <Route path="/updates/:slug/" element={<UpdateDetail />} />
           <Route
             path="/impact/our-story/"
@@ -91,8 +103,8 @@ export default function App() {
           <Route path="/safeguarding/" element={<Safeguarding />} />
           <Route path="/contact/" element={<Contact />} />
           <Route path="/privacy/" element={<CookiePolicy />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<PrivateAdminEntry />} />
       </Routes>
       <CookieBanner />
     </>
