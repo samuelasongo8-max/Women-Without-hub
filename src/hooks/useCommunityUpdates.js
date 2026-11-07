@@ -6,17 +6,20 @@ export default function useCommunityUpdates() {
   const [updates, setUpdates] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const url = '/api/updates'
 
   useEffect(() => {
     let active = true
-    api.get('/api/updates')
+    setLoading(true)
+    setError(null)
+
+    api
+      .get(url)
       .then((response) => {
         if (!active) return
-        const seen = new Set()
-        const next = (response.data?.updates || [])
-          .map(normalizeUpdate)
-          .filter((item) => item._id && !seen.has(item._id) && seen.add(item._id))
-        setUpdates(next)
+        const publicUpdates = response.data.updates || []
+        const normalized = publicUpdates.map((item) => normalizeUpdate(item))
+        setUpdates(normalized)
       })
       .catch((requestError) => {
         if (!active) return
@@ -26,7 +29,10 @@ export default function useCommunityUpdates() {
       .finally(() => {
         if (active) setLoading(false)
       })
-    return () => { active = false }
+
+    return () => {
+      active = false
+    }
   }, [])
 
   return { updates, loading, error }

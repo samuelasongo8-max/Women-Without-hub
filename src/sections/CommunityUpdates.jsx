@@ -1,8 +1,10 @@
 import { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
 import { useTranslation } from 'react-i18next'
 import Reveal from '../components/Reveal.jsx'
 import useCommunityUpdates from '../hooks/useCommunityUpdates.js'
+import { convertGoogleDriveUrl } from '../utils/driveUrl.js'
+import { toDisplayImageUrl } from '../utils/updateImages.js'
 import './CommunityUpdates.css'
 
 export function formatPostDate(dateString, language = 'en') {
@@ -30,35 +32,21 @@ export function formatRelativeDate(dateString, language = 'en') {
   return formatter.format(-Math.floor(diffDays / 7), 'week')
 }
 
-export const updates = [
-  {
-    slug: 'building-pathways-for-women-and-girls',
-    image: '/images/women-hub7.png',
-    to: '/updates/building-pathways-for-women-and-girls',
-    date: '2026-05-30',
-  },
-  {
-    slug: 'graduation-celebration-skills',
-    image: '/images/graduation-at-women-without-border.jpg',
-    to: '/updates/graduation-celebration-skills',
-    date: '2026-06-18',
-  },
-  {
-    slug: 'health-advocacy',
-    image: '/images/avocating-health.jpg',
-    to: '/updates/health-advocacy',
-  },
-]
+export const updates = []
 
-function renderCard(item, index, t, language, staticIndex = null) {
+function UpdateCard({ item, index, t, language }) {
+  const [imageFailed, setImageFailed] = useState(false)
   const isDynamic = item.isDynamic
-  const to = isDynamic ? `/updates/${item._id}` : `/updates/s/${staticIndex}`
+  const to = isDynamic ? `/updates/${item._id}/` : `/updates/`
+  const displayImage = toDisplayImageUrl(item.image, 'w600')
+
   const translated = isDynamic ? null : t(`updates.items.${item.slug}`, { returnObjects: true })
   const title = isDynamic ? item.title : translated.title
-  const excerpt = isDynamic ? item.excerpt : translated.summary
-  const image = item.isDynamic ? item.image : item.image
-  const alt = isDynamic ? item.title : translated.alt
-  const date = item.isDynamic ? item.date : item.date
+  const excerpt = isDynamic ? item.excerpt : (translated.summary || '')
+  const image = item.isDynamic ? item.image : (item.image || '')
+  const alt = isDynamic ? item.title : (translated.alt || '')
+  const date = item.isDynamic ? item.date : (item.date || '')
+
   return (
     <Reveal
       key={isDynamic ? item._id : item.slug}
@@ -67,30 +55,43 @@ function renderCard(item, index, t, language, staticIndex = null) {
       direction="up"
       delay={index * 150}
     >
-      <Link to={to} className="updates-img-link" tabIndex={-1} aria-hidden="true">
-        {image ? (
+      <Link
+        to={to}
+        state={{ update: item }}
+        className="updates-img-link"
+        tabIndex={-1}
+        aria-hidden="true"
+      >
+        {image && !imageFailed ? (
           <img
-            src={image}
+            src={displayImage}
             alt={alt}
             loading="lazy"
             referrerPolicy="no-referrer"
-            onError={(event) => { event.currentTarget.style.display = 'none' }}
+            onError={() => setImageFailed(true)}
           />
         ) : (
           <div className="updates-card__placeholder">
-            <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2h6l2 2h3v11H4z" fill="none" stroke="#2E8C8C" strokeWidth="1.8" strokeLinejoin="round" /><circle cx="12" cy="13" r="3.2" fill="none" stroke="#2E8C8C" strokeWidth="1.8" /></svg>
+            <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 8h3l2-2h6l2 2h3v11H4z" fill="none" stroke="#2E8C8C" strokeWidth="1.8" strokeLinejoin="round" />
+              <circle cx="12" cy="13" r="3.2" fill="none" stroke="#2E8C8C" strokeWidth="1.8" />
+            </svg>
             <p className="updates-card__placeholder-text">{t('common.photoComingSoon')}</p>
           </div>
         )}
       </Link>
-      <h3><Link to={to}>{title}</Link></h3>
+      {(isDynamic ? item.category : translated.category) && (
+        <p className="updates-card__category">{isDynamic ? item.category : (translated.category || '')}</p>
+      )}
+      <h3><Link to={to} state={{ update: item }}>{title}</Link></h3>
       <p className="updates-card__preview">{excerpt}</p>
+      {isDynamic && item.author && <p className="updates-card__author">{item.author}</p>}
       {date ? (
         <p className="updates-card__date">
           {formatPostDate(date, language)} · {formatRelativeDate(date, language)}
         </p>
       ) : null}
-      <Link to={to} className="updates-card__readmore">
+      <Link to={to} state={{ update: item }} className="updates-card__readmore">
         {t('common.readMore')} <span aria-hidden="true">›</span>
       </Link>
     </Reveal>
@@ -99,10 +100,9 @@ function renderCard(item, index, t, language, staticIndex = null) {
 
 function renderCards(t, language, dynamicUpdates, page) {
   const combined = [...dynamicUpdates, ...updates]
-  const visible = page ? combined : combined.slice(0, updates.length)
-  return visible.map((item, index) => {
-    const staticIndex = item.isDynamic ? null : updates.indexOf(item)
-    return renderCard(item, index, t, language, staticIndex)
+  return combined.map((item, index) => {
+    const staticIndex = item.isDynamic ? null : /* static updates removed */ null
+    return <UpdateCard key={item.isDynamic ? item._id : /* slug */ item.slug} item={item} index={index} t={t} language={language} /* staticIndex={staticIndex} */ />
   })
 }
 
@@ -113,6 +113,7 @@ export default function CommunityUpdatesSection({ isPage, variant }) {
   const [progress, setProgress] = useState(0)
   const { updates: dynamicUpdates } = useCommunityUpdates()
   const language = i18n.resolvedLanguage || 'en'
+  // Only show dynamic (backend) updates — static updates have been removed
   const cards = renderCards(t, language, dynamicUpdates, page)
 
   const scrollByCard = (dir) => {

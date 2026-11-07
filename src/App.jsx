@@ -23,12 +23,11 @@ import InvolvementDetail from './pages/InvolvementDetail.jsx'
 import Resources from './pages/Resources.jsx'
 import Safeguarding from './pages/Safeguarding.jsx'
 import Contact from './pages/Contact.jsx'
-import NotFound from './pages/NotFound.jsx'
 import CookiePolicy from './pages/CookiePolicy.jsx'
 import CookieBanner from './components/CookieBanner.jsx'
-import AdminLogin from './pages/AdminLogin.jsx'
 import AdminRegister from './pages/AdminRegister.jsx'
 import AdminSession from './pages/AdminSession.jsx'
+import PrivateAdminEntry from './pages/PrivateAdminEntry.jsx'
 
 const LivelihoodWhatWeDo = lazy(() => import('./pages/LivelihoodWhatWeDo.jsx'))
 const LivelihoodOurApproach = lazy(
@@ -40,7 +39,6 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/manage" element={<AdminLogin />} />
         <Route path="/manage/setup" element={<AdminRegister />} />
         <Route path="/manage/session" element={<AdminSession />} />
         <Route element={<Layout />}>
@@ -105,8 +103,8 @@ export default function App() {
           <Route path="/safeguarding/" element={<Safeguarding />} />
           <Route path="/contact/" element={<Contact />} />
           <Route path="/privacy/" element={<CookiePolicy />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<PrivateAdminEntry />} />
       </Routes>
       <CookieBanner />
     </>
