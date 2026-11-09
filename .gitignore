@@ -16,3 +16,9 @@ nul
 # gstack (global install)
 .amazonq/rules/gstack.md
 .ai-code-tracker.json
+
+# Local browser cookie exports
+cookies.txt
+cookies-*.txt
+session-cookies.txt
+*.cookiejar
