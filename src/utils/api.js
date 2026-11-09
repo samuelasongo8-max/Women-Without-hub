@@ -1,17 +1,7 @@
 import axios from 'axios'
 
-const isProd = import.meta.env.MODE === 'production'
-
-const baseURL = isProd
-  ? import.meta.env.VITE_API_URL || ''
-  : ''
-
-if (isProd && !import.meta.env.VITE_API_URL) {
-  console.warn('[API] VITE_API_URL not set in production!')
-}
-
 const api = axios.create({
-  baseURL,
+  baseURL: '',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',

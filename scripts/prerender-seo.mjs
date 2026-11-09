@@ -251,6 +251,15 @@ try {
     throw new Error(`Prerender failed:\n${errors.join('\n')}`)
   }
 
+  const appShell = await readFile(path.join(dist, 'index.html'), 'utf8')
+  const adminEntryShell = upsertMeta(
+    appShell,
+    'name',
+    'robots',
+    'noindex, nofollow',
+  )
+  await writeFile(path.join(dist, 'admin-entry-shell.html'), adminEntryShell, 'utf8')
+
   console.log(`Generated full static HTML for ${routes.length} routes.`)
 } finally {
   if (browser) await browser.close()

@@ -25,7 +25,6 @@ import Safeguarding from './pages/Safeguarding.jsx'
 import Contact from './pages/Contact.jsx'
 import CookiePolicy from './pages/CookiePolicy.jsx'
 import CookieBanner from './components/CookieBanner.jsx'
-import AdminRegister from './pages/AdminRegister.jsx'
 import AdminSession from './pages/AdminSession.jsx'
 import PrivateAdminEntry from './pages/PrivateAdminEntry.jsx'
 
@@ -39,7 +38,6 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/manage/setup" element={<AdminRegister />} />
         <Route path="/manage/session" element={<AdminSession />} />
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

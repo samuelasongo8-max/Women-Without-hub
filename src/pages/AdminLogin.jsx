@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import api from '../utils/api'
 import './AdminAuth.css'
 
@@ -40,7 +40,6 @@ export default function AdminLogin() {
           <label>Password<input type="password" name="password" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} autoComplete="current-password" /></label>
           <button disabled={submitting}>{submitting ? 'Signing in…' : 'Sign in'}</button>
         </form>
-        <Link className="admin-auth-secondary" to="/manage/setup">Create account</Link>
       </section>
     </main>
   )

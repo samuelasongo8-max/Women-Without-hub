@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://women-without-hub.vercel.app/sitemap.xml
+Sitemap: https://women-without-border-hub.vercel.app/sitemap.xml

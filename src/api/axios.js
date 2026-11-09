@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-const baseURL = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '')
-
 const api = axios.create({
-  baseURL,
+  // Keep admin cookies first party by sending API calls through Vercel's
+  // same-origin rewrite to Render.
+  baseURL: '',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',

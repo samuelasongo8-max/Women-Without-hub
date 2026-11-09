@@ -483,7 +483,7 @@ export default function AdminSession() {
     setFormError('')
     try {
       await api.post('/api/admin/logout', {})
-      window.location.assign('/manage')
+      window.location.assign('/')
     } catch (error) {
       setFormError(error.response?.data?.message || 'Unable to sign out. Please try again.')
     }

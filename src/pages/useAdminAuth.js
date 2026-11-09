@@ -14,10 +14,10 @@ export default function useAdminAuth() {
       .then((response) => {
         if (!active) return
         if (response.data.ok) setAdminUser(response.data.username)
-        else navigate('/manage', { replace: true })
+        else navigate('/', { replace: true })
       })
       .catch(() => {
-        if (active) navigate('/manage', { replace: true })
+        if (active) navigate('/', { replace: true })
       })
       .finally(() => {
         if (active) setChecking(false)
