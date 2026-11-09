@@ -110,12 +110,14 @@ try {
     defaultViewport: { width: 1280, height: 900 },
   })
   const page = await browser.newPage()
+  const privateEntryChecks = []
   await page.setRequestInterception(true)
   page.on('request', (request) => {
     const url = new URL(request.url())
     if (url.origin === origin && url.pathname.startsWith('/api/')) {
       const headers = request.headers()
       if (url.pathname === '/api/admin/private-entry-check') {
+        privateEntryChecks.push(headers['x-private-admin-path'])
         const isAllowed = headers['x-private-admin-path'] === secretPath
         request.respond({ status: isAllowed ? 200 : 404, contentType: 'application/json', body: JSON.stringify({ ok: isAllowed }) })
       } else if (url.pathname === '/api/admin/me') {
@@ -135,16 +137,24 @@ try {
   assert.equal(wrongResponse.headers()['x-robots-tag'], 'noindex, nofollow')
   assert.match(await page.$eval('h1', (el) => el.textContent), /not found/i)
   assert.equal(await page.$$eval('input[type="password"]', (elements) => elements.length), 0)
+  assert.ok(privateEntryChecks.length > 0)
+  assert.ok(privateEntryChecks.every((path) => path === '/manage/not-the-secret'))
+  const checksAfterWrongPath = privateEntryChecks.length
 
   const bareManageResponse = await page.goto(`${origin}/manage`, { waitUntil: 'networkidle0' })
   assert.equal(bareManageResponse.headers()['x-robots-tag'], 'noindex, nofollow')
   assert.equal(await page.$$eval('input[type="password"]', (elements) => elements.length), 0)
+  assert.equal(privateEntryChecks.length, checksAfterWrongPath)
 
   await page.goto(`${origin}/an-unknown-public-looking-route`, { waitUntil: 'networkidle0' })
   assert.match(await page.$eval('h1', (el) => el.textContent), /not found/i)
   assert.equal(await page.$$eval('input[type="password"]', (elements) => elements.length), 0)
+  assert.equal(privateEntryChecks.length, checksAfterWrongPath)
 
+  const checksBeforePrivatePath = privateEntryChecks.length
   const privateResponse = await page.goto(`${origin}${secretPath}`, { waitUntil: 'networkidle0' })
+  assert.ok(privateEntryChecks.length > checksBeforePrivatePath)
+  assert.ok(privateEntryChecks.slice(checksBeforePrivatePath).every((path) => path === secretPath))
   assert.equal(privateResponse.status(), 200)
   assert.equal(privateResponse.headers()['x-robots-tag'], 'noindex, nofollow')
   assert.match(await page.$eval('h1', (el) => el.textContent), /sign in/i)
@@ -159,6 +169,7 @@ try {
   assert.equal(homeResponse.status(), 200)
   assert.equal(homeResponse.headers()['x-robots-tag'], undefined)
   assert.match(await page.$eval('h1', (el) => el.textContent), /.+/)
+  assert.equal(await page.$$eval('a[href*="/manage"]', (links) => links.length), 0)
 
   console.log('Admin entry browser checks passed: wrong path, correct path, direct dashboard, initial noindex, and public homepage.')
 } finally {
