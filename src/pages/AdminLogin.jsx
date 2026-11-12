@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import api from '../utils/api'
 import './AdminAuth.css'
 
@@ -16,12 +16,20 @@ export default function AdminLogin() {
       .catch(() => setChecking(false))
   }, [navigate])
 
+  function updateField(event) {
+    const { name, value } = event.target
+    setForm((current) => ({ ...current, [name]: value }))
+  }
+
   function handleSubmit(event) {
     event.preventDefault()
-    if (!form.email.trim() || !form.password) return setError('Enter your email and password.')
+    const submitted = new FormData(event.currentTarget)
+    const email = String(submitted.get('email') || '').trim()
+    const password = String(submitted.get('password') || '')
+    if (!email || !password) return setError('Enter your email and password.')
     setSubmitting(true)
     setError('')
-    api.post('/api/admin/login', { email: form.email.trim(), password: form.password })
+    api.post('/api/admin/login', { email, password })
       .then(() => navigate('/manage/session', { replace: true }))
       .catch((err) => setError(err.response?.data?.message || 'Unable to sign in.'))
       .finally(() => setSubmitting(false))
@@ -36,10 +44,11 @@ export default function AdminLogin() {
         <p className="admin-auth-subtitle">Use your email and password to continue.</p>
         {error && <p className="admin-auth-error" role="alert">{error}</p>}
         <form onSubmit={handleSubmit} className="admin-auth-form">
-          <label>Email address<input type="text" name="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} autoComplete="username" /></label>
-          <label>Password<input type="password" name="password" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} autoComplete="current-password" /></label>
+          <label>Email address<input type="text" name="email" value={form.email} onChange={updateField} autoComplete="username" /></label>
+          <label>Password<input type="password" name="password" value={form.password} onChange={updateField} autoComplete="current-password" /></label>
           <button disabled={submitting}>{submitting ? 'Signing in…' : 'Sign in'}</button>
         </form>
+        <Link className="admin-auth-secondary" to="/manage/register">Create Admin Account</Link>
       </section>
     </main>
   )

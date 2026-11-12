@@ -94,7 +94,7 @@ export default function GetInvolvedCards() {
               src={GI_CONFIG.heroImage}
               alt={t(GI_CONFIG.heroAltKey)}
               loading="eager"
-              fetchPriority="high"
+              fetchpriority="high"
               width="1920"
               height="2899"
             />

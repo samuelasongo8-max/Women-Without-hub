@@ -40,7 +40,7 @@ export default function OurStory() {
                     src="/images/malua-lugazo.jpg"
                     alt={t('ourStory.photoAlt')}
                     loading="eager"
-                    fetchPriority="high"
+                    fetchpriority="high"
                     width="280"
                     height="375"
                     decoding="async"

@@ -25,14 +25,14 @@
 /* Logo at the top of the left column, linked to the home page. */
 .footer-about .footer-subscribe__logo-link {
   display: inline-block;
-  margin: 0 0 20px; /* 20px of space under the logo */
+  margin: 0 0 12px;
   text-decoration: none;
   line-height: 0;
 }
 
 .footer-about .footer-subscribe__logo {
   display: block;
-  height: 90px;
+  height: 72px;
   width: auto;
   object-fit: contain; /* normal image, not a circle */
 }
@@ -48,16 +48,16 @@
 .footer-about .footer-subscribe__heading {
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   line-height: 1.25;
   color: #ffffff;
   text-transform: none; /* normal case (overrides .footer-col h3 uppercase) */
   letter-spacing: normal;
-  margin: 0 0 14px;
+  margin: 0 0 8px;
 }
 
 .footer-about .footer-subscribe__field {
-  margin-bottom: 14px; /* space between fields */
+  margin-bottom: 10px;
 }
 
 .footer-about .footer-subscribe__label {
@@ -65,14 +65,14 @@
   color: #ffffff;
   font-size: 0.9rem;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .footer-about .footer-subscribe__input {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 12px;
+  padding: 8px 10px;
   font-size: 16px; /* 16px+ so phones don't zoom in on focus */
   color: #2b2b2b;
   background: #ffffff;
@@ -93,7 +93,7 @@
 /* Field-level validation error. */
 .footer-about .footer-subscribe__error {
   display: block;
-  margin-top: 6px;
+  margin-top: 4px;
   font-size: 0.82rem;
   font-weight: 600;
   color: #f2c572; /* readable gold on the teal footer */
@@ -113,7 +113,7 @@
 .footer-about .footer-subscribe__button {
   display: inline-block;
   width: auto;
-  padding: 10px 22px;
+  padding: 8px 18px;
   font-size: 0.95rem;
   font-weight: 600;
   color: #2b2b2b;
@@ -140,7 +140,7 @@
 
 /* Status message (aria-live). */
 .footer-about .footer-subscribe__status {
-  margin: 12px 0 0;
+  margin: 6px 0 0;
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.4;
@@ -156,7 +156,7 @@
   /* Phone: smaller logo and full-width form (footer stacks to 1 column
      at this width in site.css, so the left column is already on top). */
   .footer-about .footer-subscribe__logo {
-    height: 72px;
+    height: 64px;
   }
 
   .footer-about .footer-subscribe {

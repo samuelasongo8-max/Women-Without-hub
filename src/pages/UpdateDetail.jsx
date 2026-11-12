@@ -178,7 +178,7 @@ export default function UpdateDetail() {
                 alt={displayUpdate.title || ''}
                 referrerPolicy="no-referrer"
                 loading="eager"
-                fetchPriority="high"
+                fetchpriority="high"
                 onError={() => setImageFailed(true)}
               />
             ) : (

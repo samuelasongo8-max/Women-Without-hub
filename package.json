@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test",
-    "test:admin-entry": "npm run build && node scripts/admin-entry-browser-check.mjs",
+    "test:admin-entry": "node scripts/run-admin-entry-check.mjs",
     "dev": "vite",
     "build": "vite build && node scripts/prerender-seo.mjs && node scripts/validate-prerender.mjs",
     "build:seo": "npm run build",

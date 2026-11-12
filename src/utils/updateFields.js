@@ -2,7 +2,7 @@ import { convertGoogleDriveUrl } from './driveUrl.js'
 
 const configuredBackendOrigin = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '')
 const backendOrigin = configuredBackendOrigin || (import.meta.env.PROD
-  ? 'https://auvds-backend.onrender.com'
+  ? 'https://women-without-borders-backend.onrender.com'
   : 'http://localhost:4000')
 
 function normalizeImage(value) {

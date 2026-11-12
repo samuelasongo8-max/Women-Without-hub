@@ -59,8 +59,6 @@ function UpdateCard({ item, index, t, language }) {
         to={to}
         state={{ update: item }}
         className="updates-img-link"
-        tabIndex={-1}
-        aria-hidden="true"
       >
         {image && !imageFailed ? (
           <img
@@ -80,20 +78,22 @@ function UpdateCard({ item, index, t, language }) {
           </div>
         )}
       </Link>
-      {(isDynamic ? item.category : translated.category) && (
-        <p className="updates-card__category">{isDynamic ? item.category : (translated.category || '')}</p>
-      )}
-      <h3><Link to={to} state={{ update: item }}>{title}</Link></h3>
-      <p className="updates-card__preview">{excerpt}</p>
-      {isDynamic && item.author && <p className="updates-card__author">{item.author}</p>}
-      {date ? (
-        <p className="updates-card__date">
-          {formatPostDate(date, language)} · {formatRelativeDate(date, language)}
-        </p>
-      ) : null}
-      <Link to={to} state={{ update: item }} className="updates-card__readmore">
-        {t('common.readMore')} <span aria-hidden="true">›</span>
-      </Link>
+      <div className="updates-card__body">
+        {(isDynamic ? item.category : translated.category) && (
+          <p className="updates-card__category">{isDynamic ? item.category : (translated.category || '')}</p>
+        )}
+        <h3><Link to={to} state={{ update: item }}>{title}</Link></h3>
+        <p className="updates-card__preview">{excerpt}</p>
+        {isDynamic && item.author && <p className="updates-card__author">{item.author}</p>}
+        {date ? (
+          <p className="updates-card__date">
+            {formatPostDate(date, language)} · {formatRelativeDate(date, language)}
+          </p>
+        ) : null}
+        <Link to={to} state={{ update: item }} className="updates-card__readmore">
+          {t('common.readMore')} <span aria-hidden="true">›</span>
+        </Link>
+      </div>
     </Reveal>
   )
 }

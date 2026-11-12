@@ -5,6 +5,7 @@ import { footerNav, donateCta } from '../data/site.js'
 import { SITE } from '../data/seo.js'
 import { ORG_NAME } from '../config/site.js'
 import emailjs from '@emailjs/browser'
+import { FiLogIn } from 'react-icons/fi'
 import './Footer.css'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -254,10 +255,18 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <div className="container">
+        <div className="container footer-bottom__inner">
           <p>
             © {new Date().getFullYear()} {SITE.name}. {t('footer.rightsReserved')}
           </p>
+          <Link
+            to="/manage"
+            className="footer-admin-access"
+            aria-label="Administrator access"
+            title="Administrator access"
+          >
+            <FiLogIn aria-hidden="true" focusable="false" />
+          </Link>
         </div>
       </div>
     </footer>
