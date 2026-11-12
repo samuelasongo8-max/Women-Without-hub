@@ -6,6 +6,7 @@ import { SITE } from '../data/seo.js'
 import { ORG_NAME } from '../config/site.js'
 import emailjs from '@emailjs/browser'
 import { FiLogIn } from 'react-icons/fi'
+import SocialLinks from './SocialLinks.jsx'
 import './Footer.css'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -259,6 +260,10 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {SITE.name}. {t('footer.rightsReserved')}
           </p>
+          <SocialLinks
+            className="footer-social-icons"
+            linkClassName="footer-social-link"
+          />
           <Link
             to="/manage"
             className="footer-admin-access"

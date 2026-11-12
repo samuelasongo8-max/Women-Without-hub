@@ -177,6 +177,7 @@
   flex: 0 0 auto;
   width: 44px;
   height: 44px;
+  color: #fff;
   border: 2px solid #fff;
   border-radius: 50%;
   text-decoration: none;
@@ -185,6 +186,8 @@
 
 .hero-social-link svg {
   display: block;
+  width: 20px;
+  height: 20px;
 }
 
 /* Official brand colours — hover must NOT change the colour, only lift. */

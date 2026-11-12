@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from "react-router-dom"
 import { useTranslation } from 'react-i18next'
 import Reveal from '../components/Reveal.jsx'
@@ -109,12 +109,40 @@ function renderCards(t, language, dynamicUpdates, page) {
 export default function CommunityUpdatesSection({ isPage, variant }) {
   const { t, i18n } = useTranslation()
   const trackRef = useRef(null)
+  const headingRef = useRef(null)
   const page = Boolean(isPage) || variant === 'page'
   const [progress, setProgress] = useState(0)
+  const [headingVisible, setHeadingVisible] = useState(false)
   const { updates: dynamicUpdates } = useCommunityUpdates()
   const language = i18n.resolvedLanguage || 'en'
   // Only show dynamic (backend) updates — static updates have been removed
   const cards = renderCards(t, language, dynamicUpdates, page)
+
+  useEffect(() => {
+    const heading = headingRef.current
+    if (!heading) return undefined
+
+    if (
+      window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ||
+      typeof IntersectionObserver === 'undefined'
+    ) {
+      setHeadingVisible(true)
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHeadingVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.12 },
+    )
+    observer.observe(heading)
+
+    return () => observer.disconnect()
+  }, [])
 
   const scrollByCard = (dir) => {
     const el = trackRef.current
@@ -136,9 +164,19 @@ export default function CommunityUpdatesSection({ isPage, variant }) {
     <section className="updates">
       <div className="updates-head">
         {page ? (
-          <Reveal as="h1" direction="up" duration={650}>{t('updates.title')}</Reveal>
+          <h1
+            ref={headingRef}
+            className={`updates-heading${headingVisible ? ' is-visible' : ''}`}
+          >
+            {t('updates.title')}
+          </h1>
         ) : (
-          <Reveal as="h2" direction="up" duration={650}>{t('updates.title')}</Reveal>
+          <h2
+            ref={headingRef}
+            className={`updates-heading${headingVisible ? ' is-visible' : ''}`}
+          >
+            {t('updates.title')}
+          </h2>
         )}
         {!page && (
           <Link to="/updates/" className="updates-viewall">

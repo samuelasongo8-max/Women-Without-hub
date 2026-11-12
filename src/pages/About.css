@@ -2,6 +2,204 @@
    Palette (only): #2E8C8C · #F2F2F0 · #F2C572 · #F2865E · #F26052,
    plus black/gray for text and borders. No shadows, cards or animation. */
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap');
+
+.about-page {
+  --about-motion-duration: 800ms;
+  --about-motion-easing: cubic-bezier(0.22, 1, 0.36, 1);
+  overflow-x: hidden;
+}
+
+.about-page .motion-reveal {
+  --reveal-duration: var(--about-motion-duration);
+  transition-timing-function: var(--about-motion-easing);
+}
+
+.about-page .about-feature-card[data-motion-state='hidden'][data-motion-direction='right'] {
+  transform: translateX(40px);
+}
+
+.about-page .about-feature-card[data-motion-state='hidden'][data-motion-direction='left'] {
+  transform: translateX(-40px);
+}
+
+.about-page .about-feature-image[data-motion-state='hidden'][data-motion-direction='scale'] {
+  transform: scale(1.08);
+}
+
+.about-page .about-feature-card .auvd-about-mission-title::after,
+.about-page .about-feature-card .auvd-about-vision-title::after,
+.about-page .about-info-heading::after,
+.about-page .auvd-about-title::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  display: block;
+  width: 48px;
+  height: 2px;
+  margin: 0;
+  background: #f26052;
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.about-page .about-feature-card .auvd-about-mission-title,
+.about-page .about-feature-card .auvd-about-vision-title,
+.about-page .about-info-heading,
+.about-page .auvd-about-title {
+  position: relative;
+}
+
+.about-page .about-feature-card .auvd-about-mission-title::after,
+.about-page .about-feature-card .auvd-about-vision-title::after {
+  transition: transform 450ms var(--about-motion-easing) 150ms;
+}
+
+.about-page .about-info-heading::after {
+  transition: transform 450ms var(--about-motion-easing) 150ms;
+}
+
+.about-page .auvd-about-title::after {
+  transition: transform 450ms var(--about-motion-easing) 150ms;
+}
+
+.about-page .about-feature-card[data-motion-state='visible'] .auvd-about-mission-title::after,
+.about-page .about-feature-card[data-motion-state='visible'] .auvd-about-vision-title::after,
+.about-page .about-info-heading[data-motion-state='visible']::after,
+.about-page .auvd-about-title[data-motion-state='visible']::after {
+  transform: scaleX(1);
+}
+
+.about-mission-section.section.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-feature {
+  position: relative;
+  min-height: 410px;
+}
+
+.about-feature-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 60%;
+  height: 410px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+}
+
+.about-feature-card-position {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  transform: translateY(-50%);
+}
+
+.about-feature-card-position .about-feature-card {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 48px;
+  color: #ffffff;
+  background: #2e8b8b;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  text-align: left;
+}
+
+.about-feature-card .auvd-about-mission-title,
+.about-feature-card .auvd-about-vision-title {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 3vw, 32px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.about-feature-card .auvd-about-mission-text,
+.about-feature-card .auvd-about-vision-text {
+  max-width: none;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 600;
+  line-height: 1.7;
+  font-style: normal;
+  text-align: left;
+}
+
+.about-feature-card .auvd-about-vision-text.vision-statement {
+  font-style: normal;
+}
+
+.about-feature + .about-feature {
+  margin-top: 40px;
+}
+
+.about-feature--reverse .about-feature-image {
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-position: center 15%;
+}
+
+.about-feature--reverse {
+  min-height: 420px;
+}
+
+.about-feature--reverse .about-feature-image-frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 60%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.about-feature--reverse .about-feature-image-frame img {
+  display: block;
+  object-fit: cover;
+}
+
+.about-feature--reverse .about-feature-card-position {
+  right: auto;
+  left: 0;
+}
+
+.about-feature--reverse .about-feature-card-position .about-feature-card {
+  background: #f26052;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-feature--reverse {
+    min-height: 360px;
+  }
+
+  .about-feature--reverse .about-feature-image-frame {
+    height: 360px;
+  }
+
+  .about-feature--reverse .about-feature-card-position .about-feature-card {
+    padding: 36px;
+  }
+}
+
 .about-info {
   background: #fff;
   overflow-x: clip;
@@ -113,5 +311,63 @@
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 40px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-mission-section.section.container {
+    padding: 32px 16px;
+  }
+
+  .about-feature {
+    min-height: 0;
+  }
+
+  .about-feature-image {
+    position: relative;
+    width: 100%;
+    height: 260px;
+  }
+
+  .about-feature--reverse {
+    min-height: 0;
+  }
+
+  .about-feature--reverse .about-feature-image-frame {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .about-feature--reverse .about-feature-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center 30%;
+  }
+
+  .about-feature-card-position {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    margin-top: -40px;
+    transform: none;
+  }
+
+  .about-feature-card-position .about-feature-card {
+    padding: 28px 22px;
+  }
+
+  .about-feature--reverse .about-feature-card-position {
+    width: calc(100% - 32px);
+    margin: -30px auto 0;
+  }
+
+  .about-feature + .about-feature {
+    margin-top: 24px;
   }
 }

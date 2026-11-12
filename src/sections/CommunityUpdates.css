@@ -16,6 +16,7 @@
   color: var(--upd-text);
   padding: 3rem 0 4.5rem;
   overflow: hidden;
+  overflow-x: hidden;
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial,
     sans-serif;
 }
@@ -37,6 +38,38 @@
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   line-height: 1.05;
   margin: 0;
+}
+
+.updates-heading {
+  width: fit-content;
+  max-width: 100%;
+  opacity: 0;
+  transform: translateX(120px);
+  filter: blur(6px);
+}
+
+.updates-heading.is-visible {
+  animation: updates-heading-enter 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes updates-heading-enter {
+  0% {
+    opacity: 0;
+    transform: translateX(120px);
+    filter: blur(6px);
+  }
+
+  84% {
+    opacity: 1;
+    transform: translateX(-4px);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
 }
 
 .updates h1 em,
@@ -346,6 +379,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .updates-heading {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    animation: none;
+    transition: none;
+  }
+
   .updates-card,
   .updates-card img,
   .updates-card__readmore {

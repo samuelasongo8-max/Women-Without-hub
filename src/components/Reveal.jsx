@@ -36,6 +36,7 @@ export default function Reveal({
   direction = 'up',
   duration = 650,
   once = true,
+  threshold = 0.12,
   playOnMount = false,
   wordStagger = false,
   ...props
@@ -74,12 +75,12 @@ export default function Reveal({
           setMotionState('hidden')
         }
       },
-      { threshold: 0.12 },
+      { threshold },
     )
     observer.observe(element)
 
     return () => observer.disconnect()
-  }, [once, playOnMount])
+  }, [once, playOnMount, threshold])
 
   return (
     <Element

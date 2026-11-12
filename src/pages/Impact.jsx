@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import ImpactsLayout from '../components/ImpactsLayout.jsx'
 import './Impact.css'
 
 const stats = [
@@ -36,13 +35,6 @@ export default function Impact() {
       </section>
 
       <div className="impact-body">
-        {/* "Impacts" sidebar (All) + full card grid. */}
-        <ImpactsLayout />
-
-     
-
-       
-
         {/* Image (left, full-bleed) + overlapping teal card — the
             redesigned "How we measure" block. measure-* classes are
             scoped in Impact.css so they can't clash with other styles. */}

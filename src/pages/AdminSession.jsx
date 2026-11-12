@@ -629,7 +629,7 @@ export default function AdminSession() {
                             />
                           )}
                         {activeKey === 'updates' && field.name === 'coverImageLink' && (
-                            <p style={{ marginTop: '0.3rem', fontSize: '0.78rem', color: '#74817e' }}>
+                            <p className="admin-dashboard-field-tip">
                               Tip: Drive links can break over time. For a more reliable image, upload to Cloudinary (already used by this project) and paste that URL instead.
                             </p>
                           )}</>
@@ -666,7 +666,7 @@ export default function AdminSession() {
             ) : (
               <ul>
                 {currentItems.map((item) => (
-                  <li key={item._id} style={{ flexWrap: 'wrap' }}>
+                  <li key={item._id}>
                     <div className="admin-dashboard-item-copy">
                       <h3>{activeType.title(item) || 'Untitled'}</h3>
                       <p>
@@ -698,7 +698,7 @@ export default function AdminSession() {
                     </button>
 
                     {activeKey === 'posts' && editingId === item._id && (
-                      <div style={{ flexBasis: '100%', width: '100%' }}>
+                      <div className="admin-dashboard-edit-form">
                         <form className="admin-dashboard-form" onSubmit={handleEditPost}>
                           <h4>Edit post</h4>
                           <div className="admin-dashboard-fields">
@@ -778,7 +778,7 @@ export default function AdminSession() {
                     )}
 
                     {activeKey === 'blogs' && editingId === item._id && (
-                      <div style={{ flexBasis: '100%', width: '100%' }}>
+                      <div className="admin-dashboard-edit-form">
                         <form className="admin-dashboard-form" onSubmit={handleEditBlog}>
                           <h4>Edit blog</h4>
                           <div className="admin-dashboard-fields">
@@ -869,7 +869,7 @@ export default function AdminSession() {
                     )}
 
                     {activeKey === 'reports' && editingId === item._id && (
-                      <div style={{ flexBasis: '100%', width: '100%' }}>
+                      <div className="admin-dashboard-edit-form">
                         <form className="admin-dashboard-form" onSubmit={handleEditReport}>
                           <h4>Edit report</h4>
                           <div className="admin-dashboard-fields">
@@ -957,7 +957,7 @@ export default function AdminSession() {
                     )}
 
                     {activeKey === 'updates' && editingId === item._id && (
-                      <div style={{ flexBasis: '100%', width: '100%' }}>
+                      <div className="admin-dashboard-edit-form">
                         <form className="admin-dashboard-form" onSubmit={handleEditUpdate}>
                           <h4>Edit community update</h4>
                           <div className="admin-dashboard-fields">

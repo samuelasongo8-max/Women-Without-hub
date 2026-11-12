@@ -25,14 +25,14 @@
 /* Logo at the top of the left column, linked to the home page. */
 .footer-about .footer-subscribe__logo-link {
   display: inline-block;
-  margin: 0 0 12px;
+  margin: 0 0 6px;
   text-decoration: none;
   line-height: 0;
 }
 
 .footer-about .footer-subscribe__logo {
   display: block;
-  height: 72px;
+  height: 36px;
   width: auto;
   object-fit: contain; /* normal image, not a circle */
 }
@@ -48,31 +48,31 @@
 .footer-about .footer-subscribe__heading {
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 0.95rem;
+  line-height: 1.4;
   color: #ffffff;
   text-transform: none; /* normal case (overrides .footer-col h3 uppercase) */
   letter-spacing: normal;
-  margin: 0 0 8px;
+  margin: 0 0 5px;
 }
 
 .footer-about .footer-subscribe__field {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .footer-about .footer-subscribe__label {
   display: block;
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .footer-about .footer-subscribe__input {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 8px 10px;
+  padding: 6px 8px;
   font-size: 16px; /* 16px+ so phones don't zoom in on focus */
   color: #2b2b2b;
   background: #ffffff;
@@ -113,8 +113,8 @@
 .footer-about .footer-subscribe__button {
   display: inline-block;
   width: auto;
-  padding: 8px 18px;
-  font-size: 0.95rem;
+  padding: 6px 12px;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #2b2b2b;
   background: #f2c572;
@@ -140,11 +140,15 @@
 
 /* Status message (aria-live). */
 .footer-about .footer-subscribe__status {
-  margin: 6px 0 0;
-  font-size: 0.9rem;
+  margin: 4px 0 0;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.4;
   color: #ffffff;
+}
+
+.footer-about .footer-subscribe__status:empty {
+  display: none;
 }
 
 .footer-about .footer-subscribe__status--error {
@@ -156,10 +160,76 @@
   /* Phone: smaller logo and full-width form (footer stacks to 1 column
      at this width in site.css, so the left column is already on top). */
   .footer-about .footer-subscribe__logo {
-    height: 64px;
+    height: 32px;
   }
 
   .footer-about .footer-subscribe {
     max-width: 100%;
+  }
+}
+
+.footer-social-icons {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.footer-bottom.footer-bottom {
+  padding-block: 0;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-social-link svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus-visible {
+  color: #f26052;
+}
+
+.footer-social-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+}
+
+@media (max-width: 560px) {
+  .footer-bottom .footer-bottom__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 1.5rem;
+    column-gap: 0.25rem;
+    row-gap: 0;
+  }
+
+  .footer-bottom .footer-bottom__inner > p {
+    grid-row: 1;
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom .footer-social-icons {
+    grid-row: 2;
+    grid-column: 1;
+    justify-self: center;
+    margin-left: 0;
+  }
+
+  .footer-bottom .footer-admin-access {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: end;
   }
 }

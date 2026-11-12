@@ -122,6 +122,43 @@
   }
 }
 
+/* Partner detail hero only. */
+.getinvolved-page .page-header--partner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+  margin-block-end: 0;
+  padding: 60px 20px;
+  color: #ffffff;
+  background-color: #1f3b3a;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/We%20Aim%20to%20Support.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.getinvolved-page .page-header--partner .container {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 75rem);
+  margin-inline: auto;
+  text-align: start;
+}
+
+.getinvolved-page .page-header--partner h1,
+.getinvolved-page .page-header--partner .page-intro {
+  color: #ffffff;
+}
+
+@media (max-width: 599px) {
+  .getinvolved-page .page-header--partner {
+    padding: 48px 16px;
+  }
+}
+
 .getinvolved-page .page-header--get-involved {
   --hero-scrim-direction: to right;
   --hero-overlay-start: 0.75;

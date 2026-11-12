@@ -27,15 +27,28 @@ export default function InvolvementDetail() {
   if (!item) return <Navigate to="/get-involved/" replace />
 
   const isDonatePage = slug === 'donate'
+  const isMembershipPage = slug === 'membership'
+  const isPartnerPage = slug === 'partner'
 
   return (
     <div className={`getinvolved-page${isDonatePage ? ' getinvolved-page--donate' : ''}`}>
-      <PageHeader
-        title={t(item.titleKey)}
-        intro={t(item.summaryKey)}
-        className={isDonatePage ? 'page-header--donate' : ''}
-        minHeight={isDonatePage ? null : '420px'}
-      />
+      {isMembershipPage && (
+        <h1 className="visually-hidden">{t(item.titleKey)}</h1>
+      )}
+      {!isMembershipPage && (
+        <PageHeader
+          title={t(item.titleKey)}
+          intro={t(item.summaryKey)}
+          className={
+            isDonatePage
+              ? 'page-header--donate'
+              : isPartnerPage
+                ? 'page-header--partner'
+                : ''
+          }
+          minHeight={isDonatePage ? null : isPartnerPage ? '300px' : '420px'}
+        />
+      )}
 
       <div className="getinvolved-split-list">
         <section className="getinvolved-split-row getinvolved-detail-card">
